@@ -1,0 +1,28 @@
+{
+  "newsletters": [
+    {
+      "title": "Newsletter Week 1",
+      "description": "Weekly newsletter covering market insights, trading strategies, and algorithmic analysis for the first week.",
+      "fileName": "Newsletter week 1.pdf",
+      "uploadDate": "2025-02-08"
+    },
+    {
+      "title": "Market Analysis Q1 2025",
+      "description": "Comprehensive analysis of market trends and algorithmic trading opportunities for the first quarter of 2025.",
+      "fileName": "market-analysis-q1-2025.pdf",
+      "uploadDate": "2025-01-15"
+    },
+    {
+      "title": "Trading Strategies Guide",
+      "description": "Essential guide to implementing automated trading strategies using MeridianAlgo tools and methodologies.",
+      "fileName": "trading-strategies-guide.pdf",
+      "uploadDate": "2025-01-10"
+    },
+    {
+      "title": "Algorithmic Trading Fundamentals",
+      "description": "Introduction to algorithmic trading concepts, risk management, and best practices for beginners.",
+      "fileName": "algo-trading-fundamentals.pdf",
+      "uploadDate": "2025-01-05"
+    }
+  ]
+}
