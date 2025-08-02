@@ -1,5 +1,6 @@
 import 'react/jsx-runtime';
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const HERO_BUTTONS = [
   { name: 'Learn More', to: '/about' },
@@ -82,14 +83,14 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
             {HERO_BUTTONS.map((btn) => (
-              <a
+              <Link
                 key={btn.name}
-                href={btn.to}
+                to={btn.to}
                 className="relative group inline-block px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out transform hover:scale-105 hover:from-blue-700 hover:to-blue-500 hover:shadow-2xl active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400/40"
               >
                 <span className="relative z-10">{btn.name}</span>
                 <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/10"></span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
