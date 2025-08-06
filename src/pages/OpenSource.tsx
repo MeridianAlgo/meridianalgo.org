@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Github, Users, Code2 } from 'lucide-react';
+import { Github, Users, Code2, Star, GitFork, ExternalLink } from 'lucide-react';
 
 function useScrollFadeIn() {
   useEffect(() => {
@@ -22,86 +22,265 @@ const PROJECTS = [
   {
     name: 'In-NodeJS',
     url: 'https://github.com/MeridianAlgo/In-NodeJS',
-    desc: 'Advanced Node.js-based trading tools for algorithmic research, leveraging Alpaca’s paper trading API for stocks and crypto.'
+    description: 'Advanced Node.js-based trading tools for algorithmic research, leveraging Alpaca\'s paper trading API for stocks and crypto.',
+    category: 'Trading Engine',
+    language: 'JavaScript',
+    features: ['Paper Trading', 'Stock & Crypto APIs', 'Real-time Data']
   },
   {
     name: 'In-Pine',
     url: 'https://github.com/MeridianAlgo/In-Pine',
-    desc: 'Machine-learning-driven trading tools and indicators for TradingView, written in Pine Script.'
+    description: 'Machine-learning-driven trading tools and indicators for TradingView, written in Pine Script.',
+    category: 'Indicators',
+    language: 'Pine Script',
+    features: ['TradingView Integration', 'ML Indicators', 'Custom Strategies']
   },
   {
     name: 'Utils',
     url: 'https://github.com/MeridianAlgo/Utils',
-    desc: 'Utility scripts and tools for research and automation.'
+    description: 'Utility scripts and tools for research and automation in algorithmic trading.',
+    category: 'Utilities',
+    language: 'Python',
+    features: ['Data Processing', 'Automation', 'Research Tools']
   },
   {
     name: 'Python Library',
     url: 'https://github.com/MeridianAlgo/Packages',
-    desc: 'A comprehensive Python library for algorithmic trading and financial analysis. Also available on PyPI.'
+    description: 'A comprehensive Python library for algorithmic trading and financial analysis. Also available on PyPI.',
+    category: 'Core Library',
+    language: 'Python',
+    features: ['PyPI Package', 'Financial Analysis', 'Backtesting']
+  },
+  {
+    name: 'Cryptvault',
+    url: 'https://github.com/MeridianAlgo/Cryptvault',
+    description: 'Secure cryptocurrency portfolio management and tracking system with advanced analytics.',
+    category: 'Portfolio Management',
+    language: 'Python',
+    features: ['Portfolio Tracking', 'Security Focus', 'Analytics Dashboard']
+  },
+  {
+    name: 'Ara',
+    url: 'https://github.com/MeridianAlgo/Ara',
+    description: 'Advanced risk assessment and analysis tools for algorithmic trading strategies.',
+    category: 'Risk Management',
+    language: 'Python',
+    features: ['Risk Analysis', 'Strategy Assessment', 'Performance Metrics']
   }
+];
+
+const CATEGORIES = [
+  { name: 'All', color: 'blue' },
+  { name: 'Trading Engine', color: 'green' },
+  { name: 'Indicators', color: 'purple' },
+  { name: 'Core Library', color: 'indigo' },
+  { name: 'Portfolio Management', color: 'yellow' },
+  { name: 'Risk Management', color: 'red' },
+  { name: 'Utilities', color: 'gray' }
 ];
 
 const OpenSource = () => {
   useScrollFadeIn();
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+
+  const filteredProjects = selectedCategory === 'All' 
+    ? PROJECTS 
+    : PROJECTS.filter(project => project.category === selectedCategory);
+
+  const getLanguageColor = (language: string) => {
+    const colors = {
+      'JavaScript': 'bg-yellow-500',
+      'Python': 'bg-blue-500',
+      'Pine Script': 'bg-purple-500',
+      'TypeScript': 'bg-blue-600'
+    };
+    return colors[language] || 'bg-gray-500';
+  };
+
+  const getCategoryColor = (category: string) => {
+    const categoryData = CATEGORIES.find(cat => cat.name === category);
+    const colorMap = {
+      'blue': 'border-blue-400 bg-blue-400/10',
+      'green': 'border-green-400 bg-green-400/10',
+      'purple': 'border-purple-400 bg-purple-400/10',
+      'indigo': 'border-indigo-400 bg-indigo-400/10',
+      'yellow': 'border-yellow-400 bg-yellow-400/10',
+      'red': 'border-red-400 bg-red-400/10',
+      'gray': 'border-gray-400 bg-gray-400/10'
+    };
+    return colorMap[categoryData?.color] || 'border-blue-400 bg-blue-400/10';
+  };
+
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24">
+      {/* Starry Background */}
+      <div className="stars" />
+      <div className="stars2" />
+      <div className="stars3" />
+      
       {/* Mountain Background */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url(\"/mountain.jpg\")' }}>
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/40 via-[#23243a]/20 to-[#181a23]/80"></div>
       </div>
-      {/* Why Open Source Section */}
+
+      {/* Hero Section */}
       <section className="py-24 fade-in-up bg-transparent">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-8 font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
-            Open Source
-          </h1>
-          <p className="text-xl md:text-2xl text-slate-200 mb-10 font-inter font-light" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}>
-            MeridianAlgo is built on the belief that transparency and collaboration drive innovation. Our core trading engine and tools are open source, empowering anyone to learn, build, and contribute.
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="flex items-center justify-center mb-6">
+            <Github className="w-16 h-16 text-blue-400 mr-4" />
+            <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
+              Open Source
+            </h1>
+          </div>
+          <p className="text-xl md:text-2xl text-slate-200 mb-8 font-inter font-light max-w-4xl mx-auto" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}>
+            MeridianAlgo is built on the belief that transparency and collaboration drive innovation. Our comprehensive suite of trading tools and libraries are open source, empowering anyone to learn, build, and contribute to the future of algorithmic finance.
           </p>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto mb-12">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-400 mb-2">{PROJECTS.length}</div>
+              <div className="text-slate-300 font-inter">Active Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
+              <div className="text-slate-300 font-inter">Open Source</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">MIT</div>
+              <div className="text-slate-300 font-inter">Licensed</div>
+            </div>
+          </div>
         </div>
       </section>
-      {/* Divider */}
-      <div className="flex justify-center items-center">
-        <div className="w-32 h-0.5 bg-blue-400/40 rounded-full blur-[1px] my-2" />
-      </div>
-      {/* Projects List Section */}
+
+      {/* Category Filter */}
+      <section className="py-8 fade-in-up bg-transparent">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {CATEGORIES.map((category) => (
+              <button
+                key={category.name}
+                onClick={() => setSelectedCategory(category.name)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 font-inter ${
+                  selectedCategory === category.name
+                    ? 'bg-blue-600 text-white shadow-lg scale-105'
+                    : 'bg-slate-800/60 text-slate-300 hover:bg-slate-700/60 hover:text-white'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Grid */}
+      <section className="py-16 fade-in-up bg-transparent">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => (
+              <div 
+                key={project.name} 
+                className={`group bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 border-2 ${getCategoryColor(project.category)} hover:shadow-2xl hover:scale-105 transition-all duration-300 fade-in-up-delayed`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <Code2 className="w-8 h-8 text-blue-400" />
+                    <div>
+                      <h3 className="text-xl font-bold text-white font-inter group-hover:text-blue-300 transition-colors">
+                        {project.name}
+                      </h3>
+                      <div className="flex items-center space-x-2 mt-1">
+                        <span className={`w-3 h-3 rounded-full ${getLanguageColor(project.language)}`}></span>
+                        <span className="text-sm text-slate-400 font-inter">{project.language}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-slate-700 text-slate-300 font-inter">
+                    {project.category}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-slate-300 mb-6 font-inter font-light leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-2">
+                    {project.features.map((feature) => (
+                      <span 
+                        key={feature}
+                        className="px-3 py-1 text-xs bg-blue-900/40 text-blue-300 rounded-full font-inter"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Actions */}
+                <div className="flex space-x-3">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter group-hover:shadow-lg"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>View Code</span>
+                  </a>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-xl transition-all duration-300 flex items-center justify-center"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
       <section className="py-24 fade-in-up bg-transparent">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-400 mb-8 font-inter">Our Open Source Projects</h2>
-          <ul className="space-y-8">
-            {PROJECTS.map((project) => (
-              <li key={project.name} className="bg-gradient-to-r from-blue-900/60 to-blue-800/40 rounded-xl p-8 shadow-lg border border-blue-800/40 hover:shadow-2xl transition-all duration-300">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-2xl font-semibold text-blue-300 hover:text-blue-100 underline underline-offset-4 transition-colors duration-200"
-                >
-                  {project.name}
-                </a>
-                <p className="text-blue-100 mt-2 text-base font-inter font-light">
-                  {project.desc}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-      {/* Divider */}
-      <div className="flex justify-center items-center">
-        <div className="w-32 h-0.5 bg-blue-400/40 rounded-full blur-[1px] my-2" />
-      </div>
-      {/* Community Impact Section */}
-      <section className="py-24 fade-in-up bg-transparent">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-400 mb-4 font-inter">Community Impact</h2>
-          <p className="text-lg md:text-xl text-slate-200 mb-4 font-inter font-light">
-            By making our technology open, we empower a global community to innovate, learn, and build a more equitable financial future—together.
-          </p>
+          <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-3xl p-12 border border-blue-400/30">
+            <Users className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-inter">Join Our Community</h2>
+            <p className="text-xl text-slate-200 mb-8 font-inter font-light">
+              By making our technology open, we empower a global community to innovate, learn, and build a more equitable financial future—together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://github.com/MeridianAlgo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter"
+              >
+                <Github className="w-5 h-5" />
+                <span>Explore All Repositories</span>
+              </a>
+              <a
+                href="/contact"
+                className="bg-slate-700 hover:bg-slate-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter"
+              >
+                <Users className="w-5 h-5" />
+                <span>Get Involved</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   );
 };
 
-export default OpenSource; 
+export default OpenSource;
