@@ -31,51 +31,49 @@ const PROJECTS = [
     name: 'In-Pine',
     url: 'https://github.com/MeridianAlgo/In-Pine',
     description: 'Machine-learning-driven trading tools and indicators for TradingView, written in Pine Script.',
-    category: 'Indicators',
+    category: 'Machine Learning',
     language: 'Pine Script',
     features: ['TradingView Integration', 'ML Indicators', 'Custom Strategies']
-  },
-  {
-    name: 'Utils',
-    url: 'https://github.com/MeridianAlgo/Utils',
-    description: 'Utility scripts and tools for research and automation in algorithmic trading.',
-    category: 'Utilities',
-    language: 'Python',
-    features: ['Data Processing', 'Automation', 'Research Tools']
   },
   {
     name: 'Python Library',
     url: 'https://github.com/MeridianAlgo/Packages',
     description: 'A comprehensive Python library for algorithmic trading and financial analysis. Also available on PyPI.',
-    category: 'Core Library',
+    category: 'Resources',
     language: 'Python',
     features: ['PyPI Package', 'Financial Analysis', 'Backtesting']
   },
   {
     name: 'Cryptvault',
     url: 'https://github.com/MeridianAlgo/Cryptvault',
-    description: 'Secure cryptocurrency portfolio management and tracking system with advanced analytics.',
-    category: 'Portfolio Management',
+    description: 'Charting resource using machine learning to identify the best types of charting on specific tickers.',
+    category: 'Machine Learning',
     language: 'Python',
-    features: ['Portfolio Tracking', 'Security Focus', 'Analytics Dashboard']
+    features: ['Charting Analysis', 'ML Optimization', 'Ticker-Specific Charts']
   },
   {
     name: 'Ara',
     url: 'https://github.com/MeridianAlgo/Ara',
-    description: 'Advanced risk assessment and analysis tools for algorithmic trading strategies.',
-    category: 'Risk Management',
+    description: 'Machine learning tools for education and volatility metrics analysis in trading strategies.',
+    category: 'Machine Learning',
     language: 'Python',
-    features: ['Risk Analysis', 'Strategy Assessment', 'Performance Metrics']
+    features: ['ML Education', 'Volatility Metrics', 'Strategy Analysis']
+  },
+  {
+    name: 'Utilities',
+    url: 'https://github.com/MeridianAlgo/Utils',
+    description: 'Utility scripts and tools for research and automation in algorithmic trading.',
+    category: 'Utilities',
+    language: 'Python',
+    features: ['Data Processing', 'Automation', 'Research Tools']
   }
 ];
 
 const CATEGORIES = [
   { name: 'All', color: 'blue' },
   { name: 'Trading Engine', color: 'green' },
-  { name: 'Indicators', color: 'purple' },
-  { name: 'Core Library', color: 'indigo' },
-  { name: 'Portfolio Management', color: 'yellow' },
-  { name: 'Risk Management', color: 'red' },
+  { name: 'Machine Learning', color: 'purple' },
+  { name: 'Resources', color: 'indigo' },
   { name: 'Utilities', color: 'gray' }
 ];
 
@@ -229,7 +227,7 @@ const OpenSource = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter group-hover:shadow-lg"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter group-hover:shadow-lg min-h-[48px]"
                   >
                     <Github className="w-4 h-4" />
                     <span>View Code</span>
@@ -238,7 +236,7 @@ const OpenSource = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-xl transition-all duration-300 flex items-center justify-center"
+                    className="px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-xl transition-all duration-300 flex items-center justify-center min-h-[48px] min-w-[48px]"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
