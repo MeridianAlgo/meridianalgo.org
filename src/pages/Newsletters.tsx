@@ -44,7 +44,7 @@ const Newsletters = () => {
           const newsletterList = manifestData.newsletters.map((item: any) => ({
             ...item,
             fileUrl: `/newsletters/${item.fileName}`,
-            id: item.fileName.replace('.pdf', '')
+            id: item.fileName.replace(/\.pdf$/i, '').replace(/[^a-zA-Z0-9]/g, '-')
           }));
           setNewsletters(newsletterList);
         } else {
