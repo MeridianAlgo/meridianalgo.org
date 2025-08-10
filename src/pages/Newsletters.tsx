@@ -190,7 +190,7 @@ const Newsletters = () => {
                   <div className="flex space-x-3">
                     <button
                       onClick={() => openPdfViewer(newsletter)}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter"
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter min-h-[44px]"
                     >
                       <Eye className="w-4 h-4" />
                       <span>View</span>
@@ -198,7 +198,7 @@ const Newsletters = () => {
                     <a
                       href={newsletter.fileUrl}
                       download={newsletter.fileName}
-                      className="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter"
+                      className="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter min-h-[44px]"
                     >
                       <Download className="w-4 h-4" />
                       <span>Download</span>
