@@ -23,7 +23,7 @@ const PROJECTS = [
     name: 'In-NodeJS',
     url: 'https://github.com/MeridianAlgo/In-NodeJS',
     description: 'Advanced Node.js-based trading tools for algorithmic research, leveraging Alpaca\'s paper trading API for stocks and crypto.',
-    category: 'Trading Engine',
+    category: 'Resources',
     language: 'JavaScript',
     features: ['Paper Trading', 'Stock & Crypto APIs', 'Real-time Data']
   },
@@ -44,6 +44,30 @@ const PROJECTS = [
     features: ['PyPI Package', 'Financial Analysis', 'Backtesting']
   },
   {
+    name: 'JavaScript Packages',
+    url: 'https://github.com/MeridianAlgo/Javascript-Packages',
+    description: 'Collection of JavaScript packages and utilities for algorithmic trading and financial analysis.',
+    category: 'Resources',
+    language: 'JavaScript',
+    features: ['NPM Packages', 'Trading Utilities', 'Financial Tools']
+  },
+  {
+    name: 'Utilities',
+    url: 'https://github.com/MeridianAlgo/Utils',
+    description: 'Utility scripts and tools for research and automation in algorithmic trading.',
+    category: 'Resources',
+    language: 'Python',
+    features: ['Data Processing', 'Automation', 'Research Tools']
+  },
+  {
+    name: 'BitFlow',
+    url: 'https://github.com/MeridianAlgo/In-NodeJS/tree/main/BitFlow',
+    description: 'Advanced trading engine built with Node.js for high-performance algorithmic trading and real-time market data processing.',
+    category: 'Trading Engine',
+    language: 'JavaScript',
+    features: ['Real-time Trading', 'Market Data', 'High Performance']
+  },
+  {
     name: 'Cryptvault',
     url: 'https://github.com/MeridianAlgo/Cryptvault',
     description: 'Charting resource using machine learning to identify the best types of charting on specific tickers.',
@@ -58,14 +82,6 @@ const PROJECTS = [
     category: 'Machine Learning',
     language: 'Python',
     features: ['ML Education', 'Volatility Metrics', 'Strategy Analysis']
-  },
-  {
-    name: 'Utilities',
-    url: 'https://github.com/MeridianAlgo/Utils',
-    description: 'Utility scripts and tools for research and automation in algorithmic trading.',
-    category: 'Utilities',
-    language: 'Python',
-    features: ['Data Processing', 'Automation', 'Research Tools']
   }
 ];
 
@@ -73,8 +89,7 @@ const CATEGORIES = [
   { name: 'All', color: 'blue' },
   { name: 'Trading Engine', color: 'green' },
   { name: 'Machine Learning', color: 'purple' },
-  { name: 'Resources', color: 'indigo' },
-  { name: 'Utilities', color: 'gray' }
+  { name: 'Resources', color: 'indigo' }
 ];
 
 const OpenSource = () => {
@@ -96,21 +111,12 @@ const OpenSource = () => {
   };
 
   const getCategoryColor = (category: string) => {
-    const categoryData = CATEGORIES.find(cat => cat.name === category);
-    const colorMap = {
-      'blue': 'border-blue-400 bg-blue-400/10',
-      'green': 'border-green-400 bg-green-400/10',
-      'purple': 'border-purple-400 bg-purple-400/10',
-      'indigo': 'border-indigo-400 bg-indigo-400/10',
-      'yellow': 'border-yellow-400 bg-yellow-400/10',
-      'red': 'border-red-400 bg-red-400/10',
-      'gray': 'border-gray-400 bg-gray-400/10'
-    };
-    return colorMap[categoryData?.color] || 'border-blue-400 bg-blue-400/10';
+    // Unified blue theme for all cards
+    return 'border-blue-400 bg-blue-400/10';
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24">
+    <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24 overflow-x-hidden">
       {/* Starry Background */}
       <div className="stars" />
       <div className="stars2" />

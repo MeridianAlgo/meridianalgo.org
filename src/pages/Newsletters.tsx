@@ -110,7 +110,7 @@ const Newsletters = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24">
+    <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24 overflow-x-hidden">
       {/* Starry Background */}
       <div className="stars" />
       <div className="stars2" />
@@ -167,7 +167,7 @@ const Newsletters = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsletters.map((newsletter) => (
-                <div key={newsletter.id} className="bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:transform hover:scale-105">
+                <div key={newsletter.id} className="bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:transform hover:scale-105 flex flex-col">
                   <div className="flex items-start justify-between mb-4">
                     <FileText className="w-8 h-8 text-blue-400 flex-shrink-0" />
                   </div>
@@ -187,10 +187,10 @@ const Newsletters = () => {
                     {formatDate(newsletter.uploadDate)}
                   </div>
                   
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-3 mt-auto">
                     <button
                       onClick={() => openPdfViewer(newsletter)}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter min-h-[44px]"
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter h-12"
                     >
                       <Eye className="w-4 h-4" />
                       <span>View</span>
@@ -198,7 +198,7 @@ const Newsletters = () => {
                     <a
                       href={newsletter.fileUrl}
                       download={newsletter.fileName}
-                      className="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter min-h-[44px]"
+                      className="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter h-12"
                     >
                       <Download className="w-4 h-4" />
                       <span>Download</span>
