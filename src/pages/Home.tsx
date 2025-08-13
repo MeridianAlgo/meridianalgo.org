@@ -65,7 +65,7 @@ const Home = () => {
         style={{ backgroundImage: 'url("/mountain.jpg")' }}
       >
         {/* Progressive fade overlay that gets darker as you scroll down */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/40 via-[#23243a]/60 via-50% to-[#181a23] to-80%"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/20 via-[#23243a]/40 via-50% to-[#181a23] to-80%"></div>
       </div>
       
       {/* Landing Section */}

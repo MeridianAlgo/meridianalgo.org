@@ -50,7 +50,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24">
+    <div className="relative min-h-screen w-full bg-black pt-24">
       {/* Hero Section */}
       <section className="py-24 fade-in-up bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
