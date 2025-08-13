@@ -65,7 +65,7 @@ const Home = () => {
         style={{ backgroundImage: 'url("/mountain.jpg")' }}
       >
         {/* Progressive fade overlay that gets darker as you scroll down */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/20 via-[#23243a]/40 via-50% to-[#181a23] to-80%"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#181a23]/60 via-70% to-[#181a23]"></div>
       </div>
       
       {/* Landing Section */}
@@ -87,7 +87,7 @@ const Home = () => {
               <Link
                 key={btn.name}
                 to={btn.to}
-                className="relative group inline-block px-8 py-3 rounded-full border-2 border-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400/40 overflow-hidden"
+                className="relative group inline-block px-8 py-3 rounded-full border-2 border-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-blue-400/40 overflow-hidden"
               >
                 <span className="relative z-10">{btn.name}</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
@@ -121,10 +121,11 @@ const Home = () => {
             <p className="text-xl text-slate-200 mb-8 font-inter font-light">
               Explore our open-source projects powering MeridianAlgo:
             </p>
-            <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-              <a href="https://github.com/MeridianAlgo/In-NodeJS" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:from-blue-900 hover:to-blue-700 transition-all duration-300 mb-4 md:mb-0">In-NodeJS</a>
-              <a href="https://github.com/MeridianAlgo/In-Pine" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:from-blue-900 hover:to-blue-700 transition-all duration-300 mb-4 md:mb-0">In-Pine</a>
-              <a href="https://github.com/MeridianAlgo/Utils" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-8 py-4 rounded-2xl shadow-lg font-semibold text-lg hover:from-blue-900 hover:to-blue-700 transition-all duration-300">Utils</a>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center items-center max-w-4xl mx-auto">
+              <a href="https://github.com/MeridianAlgo/In-NodeJS" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">In-NodeJS</a>
+              <a href="https://github.com/MeridianAlgo/In-Pine" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">In-Pine</a>
+              <a href="https://github.com/MeridianAlgo/Javascript-Packages" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">JS Packages</a>
+              <a href="https://github.com/MeridianAlgo/Utils" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">Utils</a>
             </div>
           </div>
         </section>

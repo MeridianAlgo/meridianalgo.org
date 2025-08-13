@@ -30,13 +30,13 @@ const Footer = () => {
               <a href="mailto:meridianalgo@gmail.com" className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-all duration-300 hover:scale-110">
                 <Mail className="w-5 h-5 text-slate-400 hover:text-white" />
               </a>
-              <a href="https://github.com/MeridianAlgo" className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-all duration-300 hover:scale-110">
+              <a href="https://github.com/MeridianAlgo" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-all duration-300 hover:scale-110">
                 <Github className="w-5 h-5 text-slate-400 hover:text-white" />
               </a>
-              <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A107717373&keywords=meridianalgo&origin=RICH_QUERY_SUGGESTION&position=0&searchId=78e6a6ae-9729-449e-8747-3931ace9b150&sid=M2v&spellCorrectionEnabled=false" className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-all duration-300 hover:scale-110">
+              <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A107717373&keywords=meridianalgo&origin=RICH_QUERY_SUGGESTION&position=0&searchId=78e6a6ae-9729-449e-8747-3931ace9b150&sid=M2v&spellCorrectionEnabled=false" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-all duration-300 hover:scale-110">
                 <Linkedin className="w-5 h-5 text-slate-400 hover:text-white" />
               </a>
-              <a href="https://x.com/MeridianAlgo" className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-all duration-300 hover:scale-110">
+              <a href="https://x.com/MeridianAlgo" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-blue-600 p-2 rounded-lg transition-all duration-300 hover:scale-110">
                 <X className="w-5 h-5 text-slate-400 hover:text-white" />
               </a>
             </div>
@@ -55,8 +55,8 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:translate-x-1">Open Source Code</a></li>
-              <li><a href="#" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:translate-x-1">Newsletter</a></li>
+              <li><a href="https://github.com/MeridianAlgo" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:translate-x-1">Open Source Code</a></li>
+              <li><Link to="/newsletters" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:translate-x-1">Newsletter</Link></li>
             </ul>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="flex space-x-6 text-sm">
               <a href="/Privacy Policy for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">Privacy Policy</a>
               <a href="/Terms of Service for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">Terms of Service</a>
-              <a href="https://opensource.org/license/apache-2-0" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">Open Source License</a>
+              <a href="https://opensource.org/license/apache-2-0" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">Open Source License</a>
             </div>
           </div>
         </div>

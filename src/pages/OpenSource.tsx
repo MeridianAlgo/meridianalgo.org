@@ -177,7 +177,7 @@ const OpenSource = () => {
             {filteredProjects.map((project, index) => (
               <div 
                 key={project.name} 
-                className={`group bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 border-2 ${getCategoryColor(project.category)} hover:shadow-2xl hover:scale-105 transition-all duration-300 fade-in-up-delayed`}
+                className={`group bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 border-2 ${getCategoryColor(project.category)} hover:shadow-2xl hover:scale-105 transition-all duration-300 fade-in-up-delayed flex flex-col`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Header */}
@@ -219,12 +219,12 @@ const OpenSource = () => {
                 </div>
 
                 {/* Actions */}
-                <div className="flex space-x-3">
+                <div className="flex space-x-3 mt-auto">
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter group-hover:shadow-lg min-h-[48px]"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter group-hover:shadow-lg h-12"
                   >
                     <Github className="w-4 h-4" />
                     <span>View Code</span>
@@ -233,7 +233,7 @@ const OpenSource = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-xl transition-all duration-300 flex items-center justify-center min-h-[48px] min-w-[48px]"
+                    className="px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-xl transition-all duration-300 flex items-center justify-center h-12 w-12"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
