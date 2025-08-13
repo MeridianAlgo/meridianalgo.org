@@ -87,10 +87,10 @@ const Home = () => {
               <Link
                 key={btn.name}
                 to={btn.to}
-                className="relative group inline-block px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out transform hover:scale-105 hover:from-blue-700 hover:to-blue-500 hover:shadow-2xl active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400/40"
+                className="relative group inline-block px-8 py-3 rounded-full border-2 border-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-400/40 overflow-hidden"
               >
                 <span className="relative z-10">{btn.name}</span>
-                <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/10"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
               </Link>
             ))}
           </div>

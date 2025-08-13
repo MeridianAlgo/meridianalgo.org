@@ -111,15 +111,6 @@ const Newsletters = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24 overflow-x-hidden">
-      {/* Starry Background */}
-      <div className="stars" />
-      <div className="stars2" />
-      <div className="stars3" />
-      
-      {/* Mountain Background */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/60 via-[#23243a]/40 to-[#181a23]/80"></div>
-      </div>
 
       {/* Hero Section */}
       <section className="py-24 fade-in-up bg-transparent">

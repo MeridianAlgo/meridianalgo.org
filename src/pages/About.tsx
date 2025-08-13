@@ -22,10 +22,6 @@ const About = () => {
   useScrollFadeIn();
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-b from-[#21273b] via-[#23243a] via-60% to-black pt-24">
-      {/* Mountain Background */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat -z-10" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e293b]/40 via-[#23243a]/20 to-[#181a23]/80"></div>
-      </div>
       {/* About Title Section */}
       <section className="py-24 fade-in-up bg-transparent">
         <div className="max-w-3xl mx-auto px-4 text-center">
