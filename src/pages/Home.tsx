@@ -60,7 +60,9 @@ const Home = () => {
   return (
     <div className="relative min-h-screen w-full bg-black">
       {/* Landing Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-black">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
+        {/* Mountain overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
         {/* Centered Title, Subtitle, and Buttons */}
         <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
           <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-4 font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
