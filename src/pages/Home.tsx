@@ -58,22 +58,9 @@ function useScrollFadeIn() {
 const Home = () => {
   useScrollFadeIn();
   return (
-    <div className="relative min-h-screen w-full">
-      {/* Global Mountain Background - extends across entire page */}
-      <div
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
-        style={{ backgroundImage: 'url("/mountain.jpg")' }}
-      >
-        {/* Progressive fade overlay that gets darker as you scroll down */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-[#181a23]/40 via-85% to-[#181a23]"></div>
-      </div>
-      
+    <div className="relative min-h-screen w-full bg-black">
       {/* Landing Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-transparent">
-        {/* Starry Sky Layers */}
-        <div className="stars" />
-        <div className="stars2" />
-        <div className="stars3" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-black">
         {/* Centered Title, Subtitle, and Buttons */}
         <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
           <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-4 font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
@@ -97,8 +84,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Main Content - now with transparent background to show mountain fade */}
-      <div className="w-full relative z-10">
+      {/* Main Content */}
+      <div className="w-full relative z-10 bg-black">
         {/* Our Mission Section */}
         <section className="py-32 fade-in-up bg-transparent">
           <div className="max-w-4xl mx-auto px-4 text-center">
