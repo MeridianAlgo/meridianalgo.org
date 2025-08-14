@@ -40,6 +40,9 @@ const FEATURES = [
 
 function useScrollFadeIn() {
   useEffect(() => {
+    // Reset scroll position to top on page load
+    window.scrollTo(0, 0);
+    
     const elements = document.querySelectorAll('.fade-in-up, .fade-in-up-delayed');
     const onScroll = () => {
       elements.forEach(el => {
@@ -50,7 +53,7 @@ function useScrollFadeIn() {
       });
     };
     window.addEventListener('scroll', onScroll);
-    onScroll();
+    // Don't call onScroll immediately to prevent auto-scroll
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 }
