@@ -68,11 +68,11 @@ const Home = () => {
     <div className="relative min-h-screen w-full bg-black">
       {/* Landing Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
-        {/* Grid overlay with smaller dots and bottom-left to top-right animation */}
-        <div className="absolute inset-0 opacity-30 animate-pulse" style={{
+        {/* Grid overlay with pulsing wave effect */}
+        <div className="absolute inset-0 opacity-30" style={{
           backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)`,
           backgroundSize: '30px 30px',
-          animation: 'moveGrid 20s linear infinite'
+          animation: 'pulseWave 3s ease-in-out infinite'
         }}></div>
         {/* Mountain overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20"></div>

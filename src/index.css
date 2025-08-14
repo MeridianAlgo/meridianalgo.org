@@ -49,13 +49,22 @@ body {
   70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
 }
 
-/* Grid animation from bottom-left to top-right */
-@keyframes moveGrid {
+/* Grid pulse wave animation from bottom-left to top-right */
+@keyframes pulseWave {
   0% { 
-    background-position: 0% 100%; 
+    background-image: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+  }
+  25% { 
+    background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px);
+  }
+  50% { 
+    background-image: radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px);
+  }
+  75% { 
+    background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px);
   }
   100% { 
-    background-position: 100% 0%; 
+    background-image: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
   }
 }
 
