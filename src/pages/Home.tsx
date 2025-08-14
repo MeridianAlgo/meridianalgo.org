@@ -40,22 +40,9 @@ const FEATURES = [
 
 function useScrollFadeIn() {
   useEffect(() => {
-    // Reset scroll position to top on page load
-    window.scrollTo(0, 0);
-    
     const elements = document.querySelectorAll('.fade-in-up, .fade-in-up-delayed');
-    const mountainFade = document.getElementById('mountain-fade');
     
     const onScroll = () => {
-      const scrollY = window.scrollY;
-      
-      // Show mountain fade when scrolling starts
-      if (mountainFade) {
-        const fadeOpacity = Math.min(scrollY / 200, 1);
-        mountainFade.style.opacity = fadeOpacity.toString();
-      }
-      
-      // Existing fade-in animation
       elements.forEach(el => {
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight - 40) {
@@ -65,7 +52,7 @@ function useScrollFadeIn() {
     };
     
     window.addEventListener('scroll', onScroll);
-    // Don't call onScroll immediately to prevent auto-scroll
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 }
@@ -81,26 +68,14 @@ const Home = () => {
     <div className="relative min-h-screen w-full bg-black">
       {/* Landing Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
-        {/* Grid overlay */}
-        <div className="absolute inset-0 opacity-40" style={{
-          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.6) 2px, transparent 2px)`,
-          backgroundSize: '40px 40px'
+        {/* Grid overlay with smaller dots and bottom-left to top-right animation */}
+        <div className="absolute inset-0 opacity-30 animate-pulse" style={{
+          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)`,
+          backgroundSize: '30px 30px',
+          animation: 'moveGrid 20s linear infinite'
         }}></div>
         {/* Mountain overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30"></div>
-        {/* Custom mountain silhouette fade - only visible after scrolling */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 opacity-0 transition-opacity duration-500" id="mountain-fade">
-          <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1200 200" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="transparent" />
-                <stop offset="50%" stopColor="rgba(0,0,0,0.3)" />
-                <stop offset="100%" stopColor="black" />
-              </linearGradient>
-            </defs>
-            <path d="M0,200 L0,120 Q150,80 300,100 Q450,60 600,90 Q750,50 900,80 Q1050,70 1200,100 L1200,200 Z" fill="url(#mountainGradient)" />
-          </svg>
-        </div>
+        <div className="absolute inset-0 bg-black/20"></div>
         {/* Centered Title, Subtitle, and Buttons */}
         <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
           <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-4 font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
