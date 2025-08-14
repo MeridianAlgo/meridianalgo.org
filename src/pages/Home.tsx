@@ -68,23 +68,24 @@ const Home = () => {
     <div className="relative min-h-screen w-full bg-black">
       {/* Landing Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
-
         {/* Mountain overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20"></div>
+        {/* Fade to black at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
         {/* Centered Title, Subtitle, and Buttons */}
-        <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
-          <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-4 font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
+        <div className="relative z-20 flex flex-col items-center justify-center w-full h-full px-4 sm:px-6 lg:px-8">
+          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold drop-shadow-2xl mb-4 font-inter text-center" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
             Chart Your Path
           </h1>
-          <p className="text-xl md:text-2xl text-slate-200 mb-10 font-light font-inter" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-200 mb-8 sm:mb-10 font-light font-inter text-center max-w-4xl" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}>
             Empowering you to reach new heights in finance and technology
           </p>
-          <div className="flex flex-wrap gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full max-w-md sm:max-w-none">
             {HERO_BUTTONS.map((btn) => (
               <Link
                 key={btn.name}
                 to={btn.to}
-                className="relative group inline-block px-8 py-3 rounded-full border-2 border-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-blue-400/40 overflow-hidden bg-transparent"
+                className="relative group inline-block px-6 sm:px-8 py-3 rounded-full border-2 border-blue-400 text-white font-semibold text-base sm:text-lg shadow-lg transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-blue-400/40 overflow-hidden bg-transparent text-center"
               >
                 <span className="relative z-10">{btn.name}</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
@@ -97,10 +98,10 @@ const Home = () => {
       {/* Main Content */}
       <div className="w-full relative z-10 bg-black">
         {/* Our Mission Section */}
-        <section className="py-32 fade-in-up bg-transparent">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-inter">Our Mission</h2>
-            <p className="text-xl text-slate-200 mb-8 font-inter font-light">
+        <section className="py-16 sm:py-24 lg:py-32 fade-in-up bg-transparent">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 font-inter">Our Mission</h2>
+            <p className="text-lg sm:text-xl text-slate-200 mb-6 sm:mb-8 font-inter font-light leading-relaxed">
               We believe that <span className="text-blue-400 font-semibold">financial opportunity</span> should be accessible to all. Our mission is to <span className="text-blue-400 font-semibold">democratize</span> advanced trading and investment tools, making them <span className="text-blue-400 font-semibold">open, ethical, and easy</span> to use for everyone—no matter where you start.
             </p>
           </div>
@@ -112,20 +113,20 @@ const Home = () => {
         </div>
 
         {/* Our Code Section */}
-        <section className="py-32 fade-in-up bg-transparent">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-inter">Our Code</h2>
-            <p className="text-xl text-slate-200 mb-4 font-inter font-light">
+        <section className="py-16 sm:py-24 lg:py-32 fade-in-up bg-transparent">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 font-inter">Our Code</h2>
+            <p className="text-lg sm:text-xl text-slate-200 mb-3 sm:mb-4 font-inter font-light">
               Explore our <span className="text-blue-400 font-semibold">open-source ecosystem</span> powering the future of algorithmic trading.
             </p>
-            <p className="text-lg text-slate-300 mb-8 font-inter font-light max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-300 mb-6 sm:mb-8 font-inter font-light max-w-3xl mx-auto leading-relaxed">
               From <span className="text-blue-400 font-semibold">Node.js trading engines</span> to <span className="text-blue-400 font-semibold">Pine Script indicators</span>, our repositories provide the building blocks for sophisticated trading strategies accessible to everyone.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center max-w-2xl mx-auto">
-              <a href="https://github.com/MeridianAlgo/In-NodeJS" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">In-NodeJS</a>
-              <a href="https://github.com/MeridianAlgo/In-Pine" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">In-Pine</a>
-              <a href="https://github.com/MeridianAlgo/Cryptvault" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">Cryptvault</a>
-              <a href="https://github.com/MeridianAlgo/Ara" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">Ara</a>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 justify-center items-center max-w-2xl mx-auto">
+              <a href="https://github.com/MeridianAlgo/In-NodeJS" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-4 sm:px-6 py-3 rounded-2xl shadow-lg font-semibold text-sm sm:text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">In-NodeJS</a>
+              <a href="https://github.com/MeridianAlgo/In-Pine" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-4 sm:px-6 py-3 rounded-2xl shadow-lg font-semibold text-sm sm:text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">In-Pine</a>
+              <a href="https://github.com/MeridianAlgo/Cryptvault" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-4 sm:px-6 py-3 rounded-2xl shadow-lg font-semibold text-sm sm:text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">Cryptvault</a>
+              <a href="https://github.com/MeridianAlgo/Ara" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-800 to-blue-600 text-white px-4 sm:px-6 py-3 rounded-2xl shadow-lg font-semibold text-sm sm:text-base hover:from-blue-900 hover:to-blue-700 transition-all duration-300 text-center">Ara</a>
             </div>
           </div>
         </section>
@@ -136,17 +137,17 @@ const Home = () => {
         </div>
 
         {/* Features Section */}
-        <section className="py-32 fade-in-up bg-transparent">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center font-inter">Features of Our Code</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <section className="py-16 sm:py-24 lg:py-32 fade-in-up bg-transparent">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 sm:mb-12 text-center font-inter">Features of Our Code</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {FEATURES.map((feature, i) => (
-                <div key={i} className="group bg-[#23243a]/80 border border-blue-400/30 rounded-2xl p-8 flex flex-col items-center text-center shadow-xl hover:shadow-2xl hover:border-blue-400/60 transition-all duration-300 fade-in-up-delayed">
+                <div key={i} className="group bg-[#23243a]/80 border border-blue-400/30 rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow-xl hover:shadow-2xl hover:border-blue-400/60 transition-all duration-300 fade-in-up-delayed">
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 font-inter">{feature.title}</h3>
-                  <p className="text-slate-200 font-inter font-light">{feature.desc}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 font-inter">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-slate-200 font-inter font-light leading-relaxed">{feature.desc}</p>
                 </div>
               ))}
             </div>
@@ -159,16 +160,16 @@ const Home = () => {
         </div>
 
         {/* Community Section */}
-        <section className="py-32 fade-in-up bg-transparent">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-inter">Community</h2>
-            <p className="text-xl text-slate-200 mb-6 font-inter font-light">
+        <section className="py-16 sm:py-24 lg:py-32 fade-in-up bg-transparent">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 font-inter">Community</h2>
+            <p className="text-lg sm:text-xl text-slate-200 mb-4 sm:mb-6 font-inter font-light leading-relaxed">
               MeridianAlgo connects <span className="text-blue-400 font-semibold">innovators, traders, and researchers</span> from around the world. Share strategies, learn from others, and build together in a truly <span className="text-blue-400 font-semibold">open environment</span>.
             </p>
-            <p className="text-lg text-slate-300 mb-4 font-inter font-light max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-300 mb-3 sm:mb-4 font-inter font-light max-w-4xl mx-auto leading-relaxed">
               Join our growing community of <span className="text-blue-400 font-semibold">developers and traders</span> who contribute to cutting-edge financial technology. Whether you're sharing <span className="text-blue-400 font-semibold">trading algorithms</span>, discussing <span className="text-blue-400 font-semibold">market insights</span>, or collaborating on new features, our community thrives on <span className="text-blue-400 font-semibold">knowledge sharing</span> and mutual growth.
             </p>
-            <p className="text-base text-slate-400 font-inter font-light max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base text-slate-400 font-inter font-light max-w-3xl mx-auto leading-relaxed">
               From <span className="text-blue-400 font-semibold">Discord discussions</span> to <span className="text-blue-400 font-semibold">GitHub contributions</span>, every voice matters in shaping the future of accessible algorithmic trading.
             </p>
           </div>
@@ -180,16 +181,16 @@ const Home = () => {
         </div>
 
         {/* Technology Section */}
-        <section className="py-32 fade-in-up bg-transparent">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-inter">Technology</h2>
-            <p className="text-xl text-slate-200 mb-6 font-inter font-light">
+        <section className="py-16 sm:py-24 lg:py-32 fade-in-up bg-transparent">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 font-inter">Technology</h2>
+            <p className="text-lg sm:text-xl text-slate-200 mb-4 sm:mb-6 font-inter font-light leading-relaxed">
               Our platform is built with <span className="text-blue-400 font-semibold">modern, scalable technology</span>—<span className="text-blue-400 font-semibold">open APIs</span>, <span className="text-blue-400 font-semibold">robust backtesting</span>, and <span className="text-blue-400 font-semibold">transparent algorithms</span>. Everything is designed for flexibility and growth.
             </p>
-            <p className="text-lg text-slate-300 mb-4 font-inter font-light max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-300 mb-3 sm:mb-4 font-inter font-light max-w-4xl mx-auto leading-relaxed">
               Leveraging <span className="text-blue-400 font-semibold">cloud-native architecture</span>, our systems handle <span className="text-blue-400 font-semibold">real-time market data</span> processing with microsecond precision. Built on <span className="text-blue-400 font-semibold">Node.js</span>, <span className="text-blue-400 font-semibold">Python</span>, and <span className="text-blue-400 font-semibold">Pine Script</span>, our technology stack ensures <span className="text-blue-400 font-semibold">reliability</span> and <span className="text-blue-400 font-semibold">performance</span> at scale.
             </p>
-            <p className="text-base text-slate-400 font-inter font-light max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base text-slate-400 font-inter font-light max-w-3xl mx-auto leading-relaxed">
               From <span className="text-blue-400 font-semibold">machine learning models</span> to <span className="text-blue-400 font-semibold">distributed computing</span>, every component is optimized for the demanding requirements of modern algorithmic trading.
             </p>
           </div>
