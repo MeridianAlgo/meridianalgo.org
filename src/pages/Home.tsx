@@ -68,11 +68,7 @@ const Home = () => {
     <div className="relative min-h-screen w-full bg-black">
       {/* Landing Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
-        {/* Grid overlay with sequential wave effect */}
-        <div className="absolute inset-0 opacity-40" style={{
-          backgroundSize: '40px 40px',
-          animation: 'waveSequence 4s ease-in-out infinite'
-        }}></div>
+
         {/* Mountain overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20"></div>
         {/* Centered Title, Subtitle, and Buttons */}
