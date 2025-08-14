@@ -65,6 +65,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-slate-400 text-sm mb-4 md:mb-0">
               © 2025 MeridianAlgo. All rights reserved. Open source, transparent, accessible.
+              <br />
+              <span className="text-slate-500 text-xs">Version 1.0.0</span>
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="/Privacy Policy for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">Privacy Policy</a>

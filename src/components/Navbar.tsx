@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 w-full z-30 flex items-center justify-between px-8 py-6 bg-gradient-to-b from-black/80 via-black/60 to-transparent">
       <Link to="/" className="flex items-center group focus:outline-none">
         <img src="/bitflow_logo.png" alt="Meridian Algo Logo" className="h-9 w-auto mr-3 select-none rounded-xl transition-all duration-200 group-hover:shadow-lg" />
-        <span className="text-white text-2xl font-bold tracking-tight font-inter">Meridian Algo</span>
+        <span className="text-white text-2xl font-bold tracking-tight font-inter">MeridianAlgo</span>
       </Link>
       <div className="flex items-center space-x-8">
         {showHome && (

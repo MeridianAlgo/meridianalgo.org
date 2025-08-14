@@ -22,6 +22,10 @@ function useScrollFadeIn() {
 const Contact = () => {
   useScrollFadeIn();
   const [state, handleSubmit] = useForm("xkgzwdoa");
+  
+  useEffect(() => {
+    document.title = 'MeridianAlgo - Contact';
+  }, []);
 
   if (state.succeeded) {
     return (

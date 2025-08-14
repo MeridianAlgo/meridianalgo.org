@@ -95,6 +95,10 @@ const CATEGORIES = [
 const OpenSource = () => {
   useScrollFadeIn();
   const [selectedCategory, setSelectedCategory] = React.useState('All');
+  
+  React.useEffect(() => {
+    document.title = 'MeridianAlgo - Open Source';
+  }, []);
 
   const filteredProjects = selectedCategory === 'All' 
     ? PROJECTS 

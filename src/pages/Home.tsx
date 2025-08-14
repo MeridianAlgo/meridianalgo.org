@@ -60,6 +60,11 @@ function useScrollFadeIn() {
 
 const Home = () => {
   useScrollFadeIn();
+  
+  useEffect(() => {
+    document.title = 'MeridianAlgo - Home';
+  }, []);
+  
   return (
     <div className="relative min-h-screen w-full bg-black">
       {/* Landing Section */}

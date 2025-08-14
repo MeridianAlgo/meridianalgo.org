@@ -20,6 +20,11 @@ function useScrollFadeIn() {
 
 const About = () => {
   useScrollFadeIn();
+  
+  useEffect(() => {
+    document.title = 'MeridianAlgo - About';
+  }, []);
+  
   return (
     <div className="relative min-h-screen w-full bg-black pt-24">
       {/* About Title Section */}

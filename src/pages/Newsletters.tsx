@@ -32,6 +32,10 @@ const Newsletters = () => {
   const [newsletters, setNewsletters] = useState<Newsletter[]>([]);
   const [selectedPdf, setSelectedPdf] = useState<Newsletter | null>(null);
   const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    document.title = 'MeridianAlgo - Newsletters';
+  }, []);
 
   // Load newsletters from the newsletters folder
   useEffect(() => {
