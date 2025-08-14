@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const HERO_BUTTONS = [
-  { name: 'Learn More', to: '/about' },
+  { name: 'Open Source', to: '/opensource' },
   { name: 'Newsletters', to: '/newsletters' },
 ];
 
@@ -70,14 +70,14 @@ const Home = () => {
       {/* Landing Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden fade-in-up bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/mountain.jpg")' }}>
         {/* Grid overlay */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
+        <div className="absolute inset-0 opacity-40" style={{
+          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.6) 2px, transparent 2px)`,
+          backgroundSize: '40px 40px'
         }}></div>
         {/* Mountain overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
-        {/* Fade to black at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Fade to black at bottom - moved much lower */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
         {/* Centered Title, Subtitle, and Buttons */}
         <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
           <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl mb-4 font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
@@ -91,7 +91,7 @@ const Home = () => {
               <Link
                 key={btn.name}
                 to={btn.to}
-                className="relative group inline-block px-8 py-3 rounded-full border-2 border-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-blue-400/40 cursor-hover-btn"
+                className="relative group inline-block px-8 py-3 rounded-full border-2 border-blue-400 text-white font-semibold text-lg shadow-lg transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-blue-400/40 hover:bg-blue-600 hover:border-blue-600"
               >
                 <span className="relative z-10">{btn.name}</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
@@ -169,8 +169,14 @@ const Home = () => {
         <section className="py-32 fade-in-up bg-transparent">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-inter">Community</h2>
-            <p className="text-xl text-slate-200 mb-8 font-inter font-light">
+            <p className="text-xl text-slate-200 mb-6 font-inter font-light">
               MeridianAlgo connects <span className="text-blue-400 font-semibold">innovators, traders, and researchers</span> from around the world. Share strategies, learn from others, and build together in a truly <span className="text-blue-400 font-semibold">open environment</span>.
+            </p>
+            <p className="text-lg text-slate-300 mb-4 font-inter font-light max-w-4xl mx-auto">
+              Join our growing community of <span className="text-blue-400 font-semibold">developers and traders</span> who contribute to cutting-edge financial technology. Whether you're sharing <span className="text-blue-400 font-semibold">trading algorithms</span>, discussing <span className="text-blue-400 font-semibold">market insights</span>, or collaborating on new features, our community thrives on <span className="text-blue-400 font-semibold">knowledge sharing</span> and mutual growth.
+            </p>
+            <p className="text-base text-slate-400 font-inter font-light max-w-3xl mx-auto">
+              From <span className="text-blue-400 font-semibold">Discord discussions</span> to <span className="text-blue-400 font-semibold">GitHub contributions</span>, every voice matters in shaping the future of accessible algorithmic trading.
             </p>
           </div>
         </section>
@@ -184,11 +190,20 @@ const Home = () => {
         <section className="py-32 fade-in-up bg-transparent">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-inter">Technology</h2>
-            <p className="text-xl text-slate-200 mb-8 font-inter font-light">
+            <p className="text-xl text-slate-200 mb-6 font-inter font-light">
               Our platform is built with <span className="text-blue-400 font-semibold">modern, scalable technology</span>—<span className="text-blue-400 font-semibold">open APIs</span>, <span className="text-blue-400 font-semibold">robust backtesting</span>, and <span className="text-blue-400 font-semibold">transparent algorithms</span>. Everything is designed for flexibility and growth.
+            </p>
+            <p className="text-lg text-slate-300 mb-4 font-inter font-light max-w-4xl mx-auto">
+              Leveraging <span className="text-blue-400 font-semibold">cloud-native architecture</span>, our systems handle <span className="text-blue-400 font-semibold">real-time market data</span> processing with microsecond precision. Built on <span className="text-blue-400 font-semibold">Node.js</span>, <span className="text-blue-400 font-semibold">Python</span>, and <span className="text-blue-400 font-semibold">Pine Script</span>, our technology stack ensures <span className="text-blue-400 font-semibold">reliability</span> and <span className="text-blue-400 font-semibold">performance</span> at scale.
+            </p>
+            <p className="text-base text-slate-400 font-inter font-light max-w-3xl mx-auto">
+              From <span className="text-blue-400 font-semibold">machine learning models</span> to <span className="text-blue-400 font-semibold">distributed computing</span>, every component is optimized for the demanding requirements of modern algorithmic trading.
             </p>
           </div>
         </section>
+        
+        {/* Fade to footer */}
+        <div className="h-24 bg-gradient-to-b from-black to-[#23243a]"></div>
       </div>
     </div>
   );
