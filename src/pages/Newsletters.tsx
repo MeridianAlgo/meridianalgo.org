@@ -163,15 +163,17 @@ const Newsletters = () => {
                     <FileText className="w-8 h-8 text-blue-400 flex-shrink-0" />
                   </div>
                   
-                  <h3 className="text-white font-semibold text-lg mb-2 font-inter line-clamp-2">
+                  <h3 className="text-white font-semibold text-lg mb-2 font-inter line-clamp-2 min-h-[3.5rem]">
                     {newsletter.title}
                   </h3>
                   
-                  {newsletter.description && (
-                    <p className="text-slate-300 text-sm mb-4 font-inter font-light line-clamp-3">
-                      {newsletter.description}
-                    </p>
-                  )}
+                  <div className="flex-grow">
+                    {newsletter.description && (
+                      <p className="text-slate-300 text-sm mb-4 font-inter font-light line-clamp-3 min-h-[4.5rem]">
+                        {newsletter.description}
+                      </p>
+                    )}
+                  </div>
                   
                   <div className="flex items-center text-slate-400 text-sm mb-4 font-inter">
                     <Calendar className="w-4 h-4 mr-2" />
