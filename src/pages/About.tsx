@@ -8,6 +8,7 @@ const About = () => {
   
   return (
     <div className="relative min-h-screen w-full bg-black pt-24">
+
       {/* About Title Section */}
       <section className="py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -16,17 +17,23 @@ const About = () => {
           </h1>
           <div className="w-24 h-1 bg-orange-400 rounded-full mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 leading-relaxed">
-            MeridianAlgo is an open-source platform for democratizing access to sophisticated trading tools and algorithmic finance. Our mission is to empower everyone—from curious beginners to advanced quants—with transparent, ethical, and powerful technology.
+            We’re a student-led team in high school building a community around financial literacy and open-source tools. Our mission is to make finance simple, practical, and accessible—especially for young people learning how to build wealth the right way. We publish guides, research, and code that anyone can learn from today. Many of us plan to study finance, data analytics, or economics in college—and we’re using MeridianAlgo to start that journey now.
           </p>
         </div>
       </section>
-      
+
       {/* Divider */}
       <div className="w-full h-px bg-gray-800 my-12"></div>
       
       {/* Approach Section */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-24 relative overflow-hidden">
+        {/* Subtle, modern background unique to About */}
+        <div className="pointer-events-none absolute inset-0 opacity-90">
+          <div className="absolute inset-0 [background-image:radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:44px_44px]"></div>
+          <div className="absolute -top-40 -right-40 w-[480px] h-[480px] rounded-full bg-orange-500/10 blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-[420px] h-[420px] rounded-full bg-yellow-500/10 blur-3xl"></div>
+        </div>
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="text-white">Our </span>
@@ -35,11 +42,11 @@ const About = () => {
             <div className="w-24 h-1 bg-orange-400 rounded-full mx-auto"></div>
           </div>
           <p className="text-lg text-gray-300 text-center leading-relaxed max-w-3xl mx-auto">
-            We simplify the complexities of global financial markets through cutting-edge algorithmic systems that are transparent, powerful, and easy to use. Whether you're a curious beginner or a seasoned trader, our resources are designed to meet you where you are—no jargon, no barriers, just clarity and possibility.
+            We teach finance to the next generation and help people build wealth over time through practical education, open-source tools, and collaborative research. From newsletters and tutorials to hands-on code and community projects, we meet you where you are—no jargon, no gatekeeping, just clarity and opportunity.
           </p>
         </div>
       </section>
-      
+
       {/* Gradient Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent my-12"></div>
       
@@ -78,7 +85,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Gradient Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent my-12"></div>
       
@@ -110,103 +117,90 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-orange-400 rounded-full mx-auto"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              { name: 'Ishaan Manoor', role: 'Founder & Lead Researcher', desc: 'Leads research and development across open-source trading systems and youth literacy.' },
-              { name: 'Dennis Talpa', role: 'Quant Research', desc: 'Focuses on model design, backtesting, and infrastructure.' },
-              { name: 'Daniel Dimov', role: 'Research & Compliance', desc: 'Guides research review and ethical standards.' },
-              { name: 'Ethan Hsu', role: 'Content & Strategy', desc: 'Creates accessible finance content and tutorials.' },
-              { name: 'Likhit Siva Reddy', role: 'Youth Literacy', desc: 'Builds curriculum and resources for Gen Z finance.' },
-              { name: 'Amogh Natarajan', role: 'Content Engineering', desc: 'Translates complex topics into practical guides.' },
-              { name: 'Ibrahim Arif', role: 'Data & Ops', desc: 'Supports data workflows and operations.' },
-              { name: 'Ameen Baig', role: 'Fundraising', desc: 'Helps partnerships, fundraising, and outreach.' },
-              { name: 'Kaushal Pratury', role: 'Fundraising', desc: 'Drives community and donor relations.' },
-              { name: 'Tanish Patel', role: 'Quant Research', desc: 'Contributes to tooling and performance analysis.' },
-            ].map((member) => (
-              <div key={member.name} className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800 hover:border-orange-400/40 transition-colors text-center">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 font-bold">
-                  {member.name.split(' ').map(n => n[0]).slice(0,2).join('')}
-                </div>
-                <div className="text-white font-semibold">{member.name}</div>
-                <div className="text-orange-300 text-sm">{member.role}</div>
-                <p className="text-gray-400 text-sm mt-2">{member.desc}</p>
+          <div className="space-y-10 max-w-5xl mx-auto">
+            {/* Leadership */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-white">Leadership</h3>
+                <span className="text-xs text-orange-300 uppercase tracking-widest">Core</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="w-full h-px bg-gray-800 my-12"></div>
-
-      {/* Team Structure */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-white">Team </span>
-              <span className="text-orange-400">Structure</span>
-            </h2>
-            <div className="w-24 h-1 bg-orange-400 rounded-full mx-auto"></div>
-          </div>
-
-          <div className="space-y-8 max-w-5xl mx-auto">
-            <div className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-2">MeridianAlgo Algorithmic Research Team (Quantam Meridian)</h3>
-              <p className="text-slate-300 mb-4">Open source software for financial research and streamlining complex trend analysis.</p>
-              <ul className="list-disc list-inside text-gray-300 grid md:grid-cols-2 gap-2">
-                <li>Ishaan Manoor</li>
-                <li>Dennis Talpa</li>
-                <li>Tanish Patel</li>
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { name: 'Ishaan Manoor', role: 'Founder & Lead Researcher', desc: 'Leads research and development across open-source trading systems and youth literacy.' },
+                  { name: 'Daniel Dimov', role: 'Research & Compliance', desc: 'Guides research review and ethical standards.' },
+                  { name: 'Dennis Talpa', role: 'SysAdmin & Quant Research', desc: 'Leads systems administration and contributes to model design and infrastructure.' },
+                ].map((m) => (
+                  <div key={m.name} className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800 hover:border-orange-400/40 transition-colors text-center">
+                    <img src="/Profile Logo (1).png" alt="avatar" className="w-12 h-12 mx-auto mb-3 rounded-full object-cover border border-orange-400/30" />
+                    <div className="text-white font-semibold">{m.name}</div>
+                    <div className="text-orange-300 text-sm">{m.role}</div>
+                    <p className="text-gray-400 text-sm mt-2">{m.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-2">MeridianAlgo Youth Literacy Team (Smart Cents Weekly)</h3>
-              <p className="text-slate-300 mb-4">Creating online content to improve Generation Z's understanding of finance and wealth-building in unique areas of life.</p>
-              <ul className="list-disc list-inside text-gray-300 grid md:grid-cols-2 gap-2">
-                <li>Likhit (Siva) Reddy</li>
-                <li>Ethan Hsu</li>
-                <li>Amogh Natarajan</li>
-                <li className="opacity-80">Sub-Review: Ishaan Manoor</li>
-                <li className="opacity-80">Sub-Review: Daniel Dimov</li>
-              </ul>
+            {/* Quant Researchers */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-white">Quant Researchers</h3>
+                <span className="text-xs text-orange-300 uppercase tracking-widest">Research</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { name: 'Ibrahim Arif', role: 'Quant Research', desc: 'Builds data pipelines and contributes to research and backtesting.' },
+                  { name: 'Tanish Patel', role: 'Quant Research', desc: 'Contributes to tooling and performance analysis.' },
+                ].map((m) => (
+                  <div key={m.name} className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800 hover:border-orange-400/40 transition-colors text-center">
+                    <img src="/Profile Logo (2).png" alt="avatar" className="w-12 h-12 mx-auto mb-3 rounded-full object-cover border border-orange-400/30" />
+                    <div className="text-white font-semibold">{m.name}</div>
+                    <div className="text-orange-300 text-sm">{m.role}</div>
+                    <p className="text-gray-400 text-sm mt-2">{m.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-2">MeridianAlgo General Literacy Team (Corporate Compass)</h3>
-              <p className="text-slate-300 mb-4">Creating online content to improve investors' understanding of current corporate events (e.g., earnings, news effects on sentiment, future trend analysis, and organizational structure).</p>
-              <ul className="list-disc list-inside text-gray-300 grid md:grid-cols-2 gap-2">
-                <li>Daniel Dimov</li>
-                <li className="opacity-80">Sub-Review: Ishaan Manoor</li>
-              </ul>
+            {/* Content & Education */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-white">Content & Education</h3>
+                <span className="text-xs text-orange-300 uppercase tracking-widest">Learning</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { name: 'Ethan Hsu', role: 'Content & Strategy', desc: 'Creates accessible finance content and tutorials.' },
+                  { name: 'Amogh Natarajan', role: 'Content Engineering', desc: 'Translates complex topics into practical guides.' },
+                  { name: 'Likhit Siva Reddy', role: 'Youth Literacy', desc: 'Builds curriculum and resources for Gen Z finance.' },
+                ].map((m) => (
+                  <div key={m.name} className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800 hover:border-orange-400/40 transition-colors text-center">
+                    <img src="/Profile Logo (3).png" alt="avatar" className="w-12 h-12 mx-auto mb-3 rounded-full object-cover border border-orange-400/30" />
+                    <div className="text-white font-semibold">{m.name}</div>
+                    <div className="text-orange-300 text-sm">{m.role}</div>
+                    <p className="text-gray-400 text-sm mt-2">{m.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800">
-              <h3 className="text-xl font-bold text-white mb-2">MeridianAlgo Directory and Operations</h3>
-              <div className="grid md:grid-cols-2 gap-6 mt-2">
-                <div>
-                  <h4 className="text-orange-400 font-semibold mb-2">Board</h4>
-                  <ul className="list-disc list-inside text-gray-300 space-y-1">
-                    <li>Ishaan Manoor</li>
-                    <li>Daniel Dimov</li>
-                    <li>Dennis Talpa</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-orange-400 font-semibold mb-2">SysAdmin</h4>
-                  <ul className="list-disc list-inside text-gray-300 space-y-1">
-                    <li>Ishaan Manoor</li>
-                    <li>Dennis Talpa</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-orange-400 font-semibold mb-2">Fundraising</h4>
-                  <ul className="list-disc list-inside text-gray-300 space-y-1">
-                    <li>Kaushal Pratury</li>
-                    <li>Ameen Baig</li>
-                  </ul>
-                </div>
+            {/* Fundraising */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-white">Fundraising</h3>
+                <span className="text-xs text-orange-300 uppercase tracking-widest">Growth</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { name: 'Ameen Baig', role: 'Fundraising', desc: 'Helps partnerships, fundraising, and outreach.' },
+                  { name: 'Kaushal Pratury', role: 'Fundraising', desc: 'Drives community and donor relations.' },
+                ].map((m) => (
+                  <div key={m.name} className="bg-gray-900/70 p-6 rounded-2xl border border-gray-800 hover:border-orange-400/40 transition-colors text-center">
+                    <img src="/Profile Logo (1).png" alt="avatar" className="w-12 h-12 mx-auto mb-3 rounded-full object-cover border border-orange-400/30" />
+                    <div className="text-white font-semibold">{m.name}</div>
+                    <div className="text-orange-300 text-sm">{m.role}</div>
+                    <p className="text-gray-400 text-sm mt-2">{m.desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

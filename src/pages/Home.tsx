@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Code2, Github } from 'lucide-react';
+import { Code2, Github, Newspaper, FlaskConical } from 'lucide-react';
 
 const OPEN_SOURCE_PROJECTS = [
   {
@@ -140,7 +140,7 @@ const Home = () => {
       if (carousel.scrollLeft >= half) {
         carousel.scrollLeft = 0;
       }
-      carousel.scrollLeft += 0.6; // Adjust speed
+      carousel.scrollLeft += 0.85; // Adjust speed
       animationFrameId = requestAnimationFrame(scroll);
     };
 
@@ -220,7 +220,7 @@ const Home = () => {
               Chart Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400">Ascent</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Empowering your trading journey with open-source AI algorithms and data-driven insights.
+              We teach finance to the next generation and help people build lasting wealth through practical education, research, and open-source tools.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               {HERO_BUTTONS.map((button) => (
@@ -244,14 +244,24 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {/* Scroll-down indicator */}
+        <a href="#purpose" aria-label="Scroll to content" className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-white/80 hover:text-white transition-colors">
+          <span className="inline-flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-white/40 bg-transparent animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </a>
       </section>
 
       {/* Main Content */}
       <div className="w-full relative z-10 bg-black">
         {/* Hero Section */}
-        <section className="py-32 relative overflow-hidden border-b border-gray-800">
+        <section id="purpose" className="py-32 relative overflow-hidden border-b border-gray-800">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTIxIDMyYzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00em0tMiAwYzAtMS4xMDQtLjg5Ni0yLTItMnMtMiAuODk2LTIgMiAuODk2IDIgMiAyIDItLjg5NiAyLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>
+            {/* Ultra small ring pattern */}
+            <div className="absolute inset-0 [background-image:radial-gradient(circle,transparent_2px,rgba(255,255,255,0.18)_2px,rgba(255,255,255,0.18)_3px,transparent_3px)] [background-size:24px_24px]"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-8">
@@ -273,9 +283,7 @@ const Home = () => {
                   <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/60 transition-colors">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mt-1">
-                        <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
+                        <Newspaper className="w-6 h-6 text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">Weekly Newsletter</h3>
@@ -287,9 +295,7 @@ const Home = () => {
                   <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/30 transition-colors">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mt-1">
-                        <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
+                        <Code2 className="w-6 h-6 text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">Open Source Code</h3>
@@ -301,9 +307,7 @@ const Home = () => {
                   <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/30 transition-colors">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mt-1">
-                        <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
+                        <FlaskConical className="w-6 h-6 text-orange-400" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white mb-2">Research</h3>

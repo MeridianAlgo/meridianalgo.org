@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -19,6 +20,9 @@ const Navbar: React.FC = () => {
   const showHome = location.pathname !== '/';
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [learnOpen, setLearnOpen] = useState(false);
+  const learnCloseTimer = useRef<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,8 +43,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, isScrollingDown]);
 
-  const [mobileOpen, setMobileOpen] = useState(false);
-
   const closeMobile = () => setMobileOpen(false);
 
   return (
@@ -57,12 +59,11 @@ const Navbar: React.FC = () => {
           alt="Meridian Algo Logo" 
           className="h-full w-auto select-none rounded-xl transition-transform duration-300 group-hover:scale-105" 
         />
-        <span 
-          className={`text-orange-400 text-2xl mx-2 font-mono transition-opacity duration-300 ${
-            isScrollingDown ? 'opacity-0' : 'opacity-100'
-          }`}
+        <span
+          className={`mx-2 transition-opacity duration-300 ${isScrollingDown ? 'opacity-0' : 'opacity-100'}`}
+          aria-hidden="true"
         >
-          |
+          <span className="inline-block w-[3px] h-7 bg-orange-400 rounded-full align-middle"></span>
         </span>
         <span 
           className={`text-white text-2xl font-bold tracking-tight font-inter transition-all duration-300 ${
@@ -72,13 +73,14 @@ const Navbar: React.FC = () => {
           MeridianAlgo
         </span>
       </Link>
+
       {/* Desktop nav */}
       <div className="hidden md:flex items-center space-x-8">
         {showHome && (
           <>
             <Link
               to="/"
-              className={`text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
+              className={`inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
             >
               Home
             </Link>
@@ -89,34 +91,63 @@ const Navbar: React.FC = () => {
         {/* About next to Home */}
         <Link
           to="/about"
-          className={`text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
+          className={`inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
         >
           About
         </Link>
         <span className="mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
 
         {/* Learn dropdown */}
-        <div className="relative group">
-          <span className={`cursor-pointer text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${
-            (location.pathname === '/opensource' || location.pathname === '/newsletters') ? 'text-orange-400' : ''
-          }`}>
+        <div 
+          className="relative group"
+          onMouseEnter={() => {
+            if (learnCloseTimer.current) window.clearTimeout(learnCloseTimer.current);
+            setLearnOpen(true);
+          }}
+          onMouseLeave={() => {
+            if (learnCloseTimer.current) window.clearTimeout(learnCloseTimer.current);
+            learnCloseTimer.current = window.setTimeout(() => setLearnOpen(false), 150);
+          }}
+        >
+          <button
+            type="button"
+            onClick={() => setLearnOpen((v) => !v)}
+            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${
+              (location.pathname === '/opensource' || location.pathname === '/newsletters') ? 'text-orange-400' : ''
+            }`}
+            aria-haspopup="true"
+            aria-expanded={learnOpen}
+          >
             Learn
-          </span>
-          <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-black/90 backdrop-blur-sm border border-gray-800 rounded-lg shadow-lg py-2 z-50">
-            <Link
-              to="/opensource"
-              className="block px-4 py-2 text-sm text-white hover:bg-orange-600 hover:text-white"
-            >
-              Open Source
-            </Link>
-            <Link
-              to="/newsletters"
-              className="block px-4 py-2 text-sm text-white hover:bg-orange-600 hover:text-white"
-            >
-              Newsletters
-            </Link>
+          </button>
+          <div 
+            className={`${learnOpen ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'} transition-opacity duration-150 absolute left-1/2 -translate-x-1/2 top-full mt-0 w-48 z-50`}
+            onMouseEnter={() => {
+              if (learnCloseTimer.current) window.clearTimeout(learnCloseTimer.current);
+              setLearnOpen(true);
+            }}
+            onMouseLeave={() => {
+              if (learnCloseTimer.current) window.clearTimeout(learnCloseTimer.current);
+              learnCloseTimer.current = window.setTimeout(() => setLearnOpen(false), 150);
+            }}
+          >
+            <div className="bg-black/90 backdrop-blur-sm border border-gray-800 rounded-lg shadow-lg py-2">
+              <Link
+                to="/opensource"
+                className="block px-4 py-2 text-sm text-white hover:bg-orange-600 hover:text-white"
+              >
+                Open Source
+              </Link>
+              <Link
+                to="/newsletters"
+                className="block px-4 py-2 text-sm text-white hover:bg-orange-600 hover:text-white"
+              >
+                Newsletters
+              </Link>
+            </div>
           </div>
         </div>
+
         <span className="mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
         {NAV_LINKS.map((link, idx) => (
           <React.Fragment key={link.name}>
@@ -128,14 +159,14 @@ const Navbar: React.FC = () => {
                 href={link.to}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
+                className="inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
               >
                 {link.name}
               </a>
             ) : (
               <Link
                 to={link.to}
-                className={`text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
+                className={`inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
               >
                 {link.name}
               </Link>

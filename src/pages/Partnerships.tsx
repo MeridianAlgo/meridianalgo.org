@@ -108,7 +108,11 @@ const Partnerships: React.FC = () => {
         </div>
 
         <div className="mt-24 pt-12 border-t border-gray-800/50">
-          <h3 className="text-2xl font-semibold text-center mb-8 text-orange-400">Why Partner With Us?</h3>
+          <h3 className="text-2xl font-semibold text-center mb-8">
+            <span className="text-white">Why Partner with </span>
+            <span className="text-orange-400">Us</span>
+            <span className="text-white">?</span>
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
