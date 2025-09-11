@@ -1,0 +1,40 @@
+{
+  "newsletters": [
+    {
+      "title": "Smart Cents Weekly - Inaugural Newsletter",
+      "description": "Our first ever weekly newsletter covering market insights, trading strategies, and analysis for young investors.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 1 (2).pdf",
+      "uploadDate": "2025-08-03"
+    },
+    {
+      "title": "Smart Cents Weekly - 2nd Newsletter",
+      "description": "Our second newsletter covering market insights, stock picks, and analysis for young investors.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 2 (1).pdf",
+      "uploadDate": "2025-08-10"
+    },
+    {
+      "title": "Smart Cents Weekly - 5th Newsletter",
+      "description": "Continuing our weekly insights with market analysis, strategy spotlights, and timely finance tips.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 5 (1).pdf",
+      "uploadDate": "2025-08-31"
+    },
+    {
+      "title": "Smart Cents Weekly - 3rd Newsletter",
+      "description": "Week 3 edition with market updates and practical finance lessons.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 3.pdf",
+      "uploadDate": "2025-08-17"
+    },
+    {
+      "title": "Smart Cents Weekly - 4th Newsletter",
+      "description": "Week 4 edition continuing our series on financial literacy and markets.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 4.pdf",
+      "uploadDate": "2025-08-24"
+    },
+    {
+      "title": "Smart Cents Weekly - 6th Newsletter",
+      "description": "Week 6 edition with timely insights and youth-focused finance education.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 6.pdf",
+      "uploadDate": "2025-09-07"
+    }
+  ]
+}
