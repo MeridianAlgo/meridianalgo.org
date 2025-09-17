@@ -38,43 +38,17 @@ const OPEN_SOURCE_PROJECTS = [
   },
   {
     id: 4,
-    title: "BitFlow",
-    description: "Advanced trading engine built with Node.js for high-performance algorithmic trading and real-time market data processing.",
-    tags: ["Node.js", "Engine", "Real-time"],
+    title: "JavaScript Library",
+    description: "A collection of JavaScript utilities for financial calculations and API interactions.",
+    tags: ["JavaScript", "Utilities", "Finance"],
     icon: <Code2 className="w-7 h-7 text-yellow-400" />,
     bgColor: "bg-yellow-500/10",
     borderColor: "border-yellow-500/30",
     hoverBorderClass: "hover:border-yellow-400/60",
-    url: "https://github.com/MeridianAlgo/In-NodeJS/tree/main/BitFlow"
-  },
-  {
-    id: 5,
-    title: "Cryptvault",
-    description: "Charting resource using machine learning to identify the best types of charting on specific tickers.",
-    tags: ["Python", "ML", "Charting"],
-    icon: <Code2 className="w-7 h-7 text-red-400" />,
-    bgColor: "bg-red-500/10",
-    borderColor: "border-red-500/30",
-    hoverBorderClass: "hover:border-red-400/60",
-    url: "https://github.com/MeridianAlgo/Cryptvault"
-  },
-  {
-    id: 6,
-    title: "Time Series Research",
-    description: "Advanced time series analysis and prediction models for financial market data.",
-    tags: ["Python", "ML", "Prediction"],
-    icon: <Code2 className="w-7 h-7 text-indigo-400" />,
-    bgColor: "bg-indigo-500/10",
-    borderColor: "border-indigo-500/30",
-    hoverBorderClass: "hover:border-indigo-400/60",
-    url: "https://github.com/MeridianAlgo/TimeSeries-Prediction"
+    url: "https://github.com/MeridianAlgo/"
   }
 ];
 
-const HERO_BUTTONS = [
-  { name: 'Open Source', to: '/opensource' },
-  { name: 'Newsletters', to: '/newsletters' },
-];
 
 const FEATURES = [
   {
@@ -106,8 +80,8 @@ const FEATURES = [
         <path d="M2 10h20" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'Easily Understandable',
-    desc: 'Intuitive tools and clear documentation for all experience levels.',
+    title: 'Easy to Use',
+    desc: 'We make everything we do repeatable and easy allowing you to focus on what matters most.',
     color: 'text-purple-400'
   },
   {
@@ -119,6 +93,28 @@ const FEATURES = [
     title: 'Accuracy First',
     desc: 'Precision and reliability are at the core of every strategy.',
     color: 'text-amber-400'
+  },
+  {
+    icon: (
+      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: 'Lightning Fast',
+    desc: 'Our code is optimized for speed and performance.',
+    color: 'text-yellow-400'
+  },
+  {
+    icon: (
+      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2 17l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: 'Scalable',
+    desc: 'From individual investors to institutional portfolios.',
+    color: 'text-cyan-400'
   },
 ];
 
@@ -140,7 +136,7 @@ const Home = () => {
       if (carousel.scrollLeft >= half) {
         carousel.scrollLeft = 0;
       }
-      carousel.scrollLeft += 0.85; // Adjust speed
+      carousel.scrollLeft += 1.5; // Adjust speed
       animationFrameId = requestAnimationFrame(scroll);
     };
 
@@ -209,50 +205,44 @@ const Home = () => {
   return (
     <div className="relative min-h-screen w-full bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("/mountain.jpg")', backgroundPosition: 'center 30%' }}>
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/80"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/mountain.jpg')",
+            filter: 'blur(0px) brightness(0.65)',
+          }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
         
-        {/* Content */}
-        <div className="container mx-auto px-6 relative z-10 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+          <div className="animate-fade-in-up">
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 text-white">
               Chart Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400">Ascent</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              We teach finance to the next generation and help people build lasting wealth through practical education, research, and open-source tools.
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+            <p className="text-xl md:text-2xl text-gray-200 font-light mb-12 max-w-3xl mx-auto leading-relaxed">
+              Empowering the next generation with practical finance education, research, and open-source tools for lasting wealth.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              {HERO_BUTTONS.map((button) => (
-                <Link
-                  key={button.name}
-                  to={button.to}
-                  className="px-8 py-3 text-lg font-medium rounded-lg border-2 border-white text-white hover:bg-orange-600 hover:border-orange-600 transition-all duration-300 flex items-center space-x-2 group"
-                >
-                  <span>{button.name}</span>
-                  <svg 
-                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24" 
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
-              ))}
-            </div>
+          </div>
+          <div className="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center items-center" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+            <Link 
+              to="/newsletters" 
+              className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 group"
+            >
+              <span className="group-hover:animate-pulse">Get Started</span>
+            </Link>
+            <Link 
+              to="/opensource" 
+              className="px-8 py-4 border-2 border-white/20 hover:border-orange-400 text-white hover:text-orange-400 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 group"
+            >
+              <span className="group-hover:animate-pulse">Explore Open Source</span>
+            </Link>
           </div>
         </div>
 
-        {/* Scroll-down indicator */}
-        <a href="#purpose" aria-label="Scroll to content" className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-white/80 hover:text-white transition-colors">
-          <span className="inline-flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-white/40 bg-transparent animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </span>
-        </a>
+   
       </section>
 
       {/* Main Content */}
@@ -260,61 +250,61 @@ const Home = () => {
         {/* Hero Section */}
         <section id="purpose" className="py-32 relative overflow-hidden border-b border-gray-800">
           <div className="absolute inset-0">
-            {/* Ultra small ring pattern */}
-            <div className="absolute inset-0 [background-image:radial-gradient(circle,transparent_2px,rgba(255,255,255,0.18)_2px,rgba(255,255,255,0.18)_3px,transparent_3px)] [background-size:24px_24px]"></div>
+            {/* Tiny dots pattern */}
+            <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
           </div>
           
           <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-8">
-              <div className="text-center mb-16 max-w-5xl mx-auto">
-              <span className="text-sm uppercase tracking-wider text-orange-400 font-mono mb-4 inline-block">Our Purpose</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Teaching <span className="text-orange-400">Finance to Everyone</span>
+              <div className="text-center mb-20 max-w-4xl mx-auto">
+              <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-6 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Our Purpose</span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                Teaching <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Finance to Everyone</span>
               </h2>
-              <div className="w-24 h-1 bg-orange-400 mx-auto mb-8"></div>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
             </div>
             
             <div className="bg-black/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 md:p-12 max-w-5xl mx-auto">
               <div className="prose prose-invert max-w-none text-lg text-gray-300 leading-relaxed">
-                <p className="text-xl mb-6">
-                  We believe that <span className="text-white font-medium">financial literacy should be accessible to all age groups</span>, regardless of their background or experience. Our mission is to empower individuals through comprehensive financial education, research, and practical tools for the modern digital economy.
+                <p className="text-lg mb-8 text-gray-200 font-light max-w-3xl mx-auto">
+                  We believe <span className="text-white font-medium">financial literacy should be accessible to everyone</span>, regardless of background or experience. Our mission: empower individuals through practical education, research, and open-source tools.
                 </p>
                 
                 <div className="grid md:grid-cols-3 gap-6 mt-12">
-                  <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/60 transition-colors">
+                  <Link to="/newsletters" className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/60 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mt-1">
                         <Newspaper className="w-6 h-6 text-orange-400" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-2">Weekly Newsletter</h3>
-                        <p className="text-gray-400">Stay updated with our weekly insights on markets, strategies, and financial education.</p>
+                        <h3 className="text-lg font-semibold text-white mb-2">Weekly Newsletter</h3>
+                        <p className="text-gray-400 text-sm">Weekly insights on markets, strategies, and financial education.</p>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   
-                  <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/30 transition-colors">
+                  <Link to="/opensource" className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mt-1">
                         <Code2 className="w-6 h-6 text-orange-400" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-2">Open Source Code</h3>
-                        <p className="text-gray-400">Explore our public repos and contribute to advanced trading tools.</p>
+                        <h3 className="text-lg font-semibold text-white mb-2">Open Source Code</h3>
+                        <p className="text-gray-400 text-sm">Explore our public repos and contribute to advanced trading tools.</p>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   
-                  <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/30 transition-colors">
+                  <Link to="/research" className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mt-1">
                         <FlaskConical className="w-6 h-6 text-orange-400" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-2">Research</h3>
-                        <p className="text-gray-400">Advancing financial knowledge through cutting-edge research and analysis.</p>
+                        <h3 className="text-lg font-semibold text-white mb-2">Research</h3>
+                        <p className="text-gray-400 text-sm">Advancing financial knowledge through cutting-edge research and analysis.</p>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
               
@@ -337,53 +327,42 @@ const Home = () => {
         <section className="py-24 bg-black">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <div className="mb-16">
-              <span className="text-sm uppercase tracking-wider text-orange-400 font-mono mb-4 inline-block">Our Work</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Open Source <span className="text-orange-400">Codebase</span>
+              <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-6 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Our Work</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 leading-tight">
+                Open Source <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Codebase</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Explore our growing collection of open-source projects designed to democratize access to algorithmic trading tools and education.
+              <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
+              <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
+                Explore our growing collection of open-source projects designed to democratize algorithmic trading tools and education.
               </p>
             </div>
             
-            <div className="relative overflow-hidden group">
-              <div 
-                ref={carouselRef}
-                className="flex overflow-x-auto pb-8 -mx-4 px-4 hide-scrollbar"
-                style={{ scrollBehavior: 'smooth' }}
-              >
-                <div className="flex space-x-6">
-                  {[...OPEN_SOURCE_PROJECTS, ...OPEN_SOURCE_PROJECTS].map((project, index) => (
-                    <div 
-                      key={`${project.id}-${index}`}
-                      className={`carousel-card flex-none w-72 md:w-80 bg-gray-900/80 p-6 rounded-2xl border ${project.borderColor} ${project.hoverBorderClass} transition-colors duration-300 h-full flex flex-col`}
-                    >
-                      <div className={`w-14 h-14 ${project.bgColor} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
-                        {project.icon}
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-3 text-center">{project.title}</h3>
-                      <p className="text-gray-300 text-sm mb-4 text-center">{project.description}</p>
-                      <div className="flex flex-wrap justify-center gap-2 mb-4">
-                        {project.tags.map((tag, tagIndex) => (
-                          <span key={tagIndex} className="text-xs px-3 py-1 bg-gray-800 text-gray-300 rounded-full">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <a 
-                        href={project.url}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="mt-auto w-full inline-flex items-center justify-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm font-medium transition-colors"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        View on GitHub
-                      </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {OPEN_SOURCE_PROJECTS.map((project, index) => (
+                  <div key={index} className="bg-gray-900/50 rounded-2xl p-6 border border-gray-800 hover:border-orange-400/40 transition-all duration-300 flex flex-col">
+                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-xl mb-4 mx-auto">
+                      <Github className="w-8 h-8 text-orange-400" />
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <h3 className="text-lg font-semibold text-white mb-3 text-center">{project.title}</h3>
+                    <p className="text-gray-300 text-xs mb-4 text-center leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap justify-center gap-2 mb-4">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="text-xs px-3 py-1 bg-gray-800 text-gray-300 rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <a 
+                      href={project.url}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="mt-auto w-full inline-flex items-center justify-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm font-medium transition-colors"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View on GitHub
+                    </a>
+                  </div>
+                ))}
             </div>
           </div>
         </section>
@@ -391,33 +370,36 @@ const Home = () => {
         {/* Divider */}
         <div className="w-full h-px bg-gray-800 my-12"></div>
 
-        {/* Features Section */}
-        <section className="py-24 bg-black">
-          <div className="container mx-auto px-6">
+        {/* Why Choose Us Section */}
+        <section className="py-32 bg-black">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-20">
-              <span className="text-sm uppercase tracking-wider text-orange-400 font-mono mb-4 inline-block">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                The <span className="text-white">MeridianAlgo</span> <span className="text-orange-400">Advantage</span>
+              <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-6 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Why Choose Us</span>
+              <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">MeridianAlgo</span>?
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
+              <p className="text-lg text-gray-200 font-light max-w-3xl mx-auto">
+                We combine cutting-edge technology with transparent, open-source development to democratize financial markets.
+              </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {FEATURES.map((feature, index) => (
-                <div key={index} className="group relative p-0.5 rounded-2xl bg-gradient-to-br from-orange-500/20 to-yellow-500/20 hover:opacity-100 transition-all duration-300">
-                  <div className="bg-gray-900/80 p-8 rounded-2xl h-full backdrop-blur-sm">
-                    <div className={`w-16 h-16 ${feature.color} bg-opacity-10 rounded-xl flex items-center justify-center mb-6`}>
+                  <div 
+                    key={index} 
+                    className="bg-gray-900/50 rounded-2xl p-6 border border-gray-800 hover:border-orange-400/40 transition-all duration-300 flex flex-col"
+                  >
+                    <div className="w-16 h-16 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4 mx-auto">
                       {feature.icon}
                     </div>
-                    <h3 className={`text-2xl font-bold mb-4 ${feature.color}`}>{feature.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{feature.desc}</p>
+                    <h3 className="text-lg font-semibold text-white mb-3 text-center">{feature.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4 text-center leading-relaxed">{feature.desc}</p>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </section>
-
 
         {/* Divider */}
         <div className="w-full h-px bg-gray-800 my-12"></div>
@@ -425,61 +407,64 @@ const Home = () => {
         {/* Community Section */}
         <section className="py-20 bg-black">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <span className="text-sm uppercase tracking-wider text-orange-400 font-mono mb-4 inline-block">Join Us</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="text-orange-400">Community</span>
+            <div className="text-center mb-16 animate-fade-in-up">
+              <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-6 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Join Us</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 leading-tight">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Community</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Join a growing community of traders, developers, and financial enthusiasts working together to democratize access to algorithmic trading tools and education.
-              </p>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
             </div>
-
+            <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-light mb-12">
+              Join traders, developers, and financial enthusiasts working together to democratize algorithmic trading tools and education.
+            </p>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02]">
+              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02] animate-slide-in-left">
                 <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Collaborate</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">Collaborate</h3>
                 <p className="text-gray-300 text-sm mb-4">Work with like-minded individuals on open-source projects and trading strategies.</p>
               </div>
 
-              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02]">
+              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02] animate-scale-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
                 <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0114 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Learn & Grow</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">Learn & Grow</h3>
                 <p className="text-gray-300 text-sm mb-4">Access educational resources and learn from experienced traders and developers.</p>
               </div>
 
-              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02]">
+              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02] animate-slide-in-right" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
                 <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <svg className="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Contribute</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">Contribute</h3>
                 <p className="text-gray-300 text-sm mb-4">Share your knowledge and contribute to the future of open-source trading tools.</p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* Divider */}
+        <div className="w-full h-px bg-gray-800 my-12"></div>
+
         {/* Technology Section */}
         <section className="py-20 bg-black">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
-              <span className="text-sm uppercase tracking-wider text-orange-400 font-mono mb-4 inline-block">Our Stack</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Modern <span className="text-orange-400">Technology</span>
+              <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-6 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Our Stack</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 leading-tight">
+                Modern <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Technology</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
+              <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
                 Built with cutting-edge technologies to deliver powerful and reliable trading tools.
               </p>
             </div>
@@ -489,8 +474,8 @@ const Home = () => {
                 <div className="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Code2 className="w-7 h-7 text-orange-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Node.js</h3>
-                <p className="text-gray-300 text-sm">High-performance JavaScript runtime for building scalable back-end services.</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Node.js</h3>
+                <p className="text-gray-300 text-xs">High-performance JavaScript runtime for building scalable back-end services.</p>
               </div>
 
               <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-yellow-400/30 transition-all hover:scale-[1.02]">
@@ -499,8 +484,8 @@ const Home = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Pine Script</h3>
-                <p className="text-gray-300 text-sm">Powerful scripting language for developing custom indicators and strategies.</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Pine Script</h3>
+                <p className="text-gray-300 text-xs">Powerful scripting language for developing custom indicators and strategies.</p>
               </div>
 
               <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-green-400/30 transition-all hover:scale-[1.02]">
@@ -510,8 +495,38 @@ const Home = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10.538 3.501a.75.75 0 011.043.85l-3.18 6.678a.75.75 0 00.688.971H13.5a.75.75 0 010 1.5H9.088a.75.75 0 00-.688.97l3.18 6.679a.75.75 0 11-1.316.624l-3.5-7.333a.75.75 0 010-.85l3.5-7.333a.75.75 0 01.273-.226z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Python</h3>
-                <p className="text-gray-300 text-sm">Versatile language for backtesting, data analysis, and strategy development.</p>
+                <h3 className="text-lg font-semibold text-white mb-3">Python</h3>
+                <p className="text-gray-300 text-xs">Versatile language for backtesting, data analysis, and strategy development.</p>
+              </div>
+
+              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-blue-400/30 transition-all hover:scale-[1.02]">
+                <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <svg className="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">Java</h3>
+                <p className="text-gray-300 text-xs">Enterprise-grade language for robust, scalable trading applications.</p>
+              </div>
+
+              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-purple-400/30 transition-all hover:scale-[1.02]">
+                <div className="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">HTML</h3>
+                <p className="text-gray-300 text-xs">Foundation markup language for building modern web interfaces.</p>
+              </div>
+
+              <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-cyan-400/30 transition-all hover:scale-[1.02]">
+                <div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.611L5 14.5" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">React</h3>
+                <p className="text-gray-300 text-xs">Modern JavaScript library for building interactive user interfaces.</p>
               </div>
             </div>
           </div>

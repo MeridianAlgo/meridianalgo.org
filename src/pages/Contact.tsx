@@ -54,116 +54,138 @@ const Contact = () => {
   }
 
   return (
-    <div className="relative min-h-screen w-full bg-black pt-24">
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="py-24 fade-in-up bg-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-inter">
-              Contact
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-8">
+              <Mail className="w-10 h-10 text-orange-400" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Touch</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 max-w-4xl mx-auto leading-relaxed font-inter font-light">
-              Ready to democratize financial markets? Connect with us to learn more about 
-              our algorithms, contribute to our open-source projects, or join our community.
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+              Ready to democratize financial markets? Connect with us to learn more about our algorithms, contribute to our open-source projects, or join our community.
             </p>
           </div>
         </div>
       </section>
-      {/* Divider */}
-      <div className="flex justify-center items-center">
-        <div className="w-32 h-0.5 bg-orange-400/40 rounded-full blur-[1px] my-2" />
-      </div>
       {/* Main Content */}
-      <section className="py-20 fade-in-up bg-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-black">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="text-3xl font-bold text-white mb-8 font-inter">Get Connected</h2>
-              <div className="space-y-8 mb-12">
-                <div className="flex items-start space-x-6 group">
-                  <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-4">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-lg mb-2 font-inter">Email</h3>
-                    <p className="text-slate-400 font-inter">meridianalgo@gmail.com</p>
-                    <p className="text-slate-500 text-sm mt-1 font-inter font-light">We respond within 24 hours</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-6 group">
-                  <div className="bg-gradient-to-r from-purple-600 to-purple-700 rounded-xl p-4">
-                    <Github className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-lg mb-2 font-inter">Open Source</h3>
-                    <a href="https://github.com/MeridianAlgo" className="text-orange-400 hover:text-orange-300 transition-colors duration-300 font-inter">
-                      github.com/MeridianAlgo
-                    </a>
-                    <p className="text-slate-500 text-sm mt-1 font-inter font-light">Contribute to our projects</p>
+              <div className="text-center mb-16">
+                <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-6 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Contact Information</span>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 leading-tight">
+                  Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Connect</span>
+                </h2>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
+              </div>
+              
+              <div className="space-y-6 mb-12">
+                <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-6 rounded-2xl">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-lg mb-2">Email</h3>
+                      <p className="text-gray-300">meridianalgo@gmail.com</p>
+                      <p className="text-gray-400 text-sm mt-1">We respond within 24 hours</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start space-x-6 group">
-                  <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-xl p-4">
-                    <MapPin className="w-6 h-6 text-white" />
+                
+                <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-6 rounded-2xl">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center">
+                      <Github className="w-6 h-6 text-purple-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-lg mb-2">Open Source</h3>
+                      <a href="https://github.com/MeridianAlgo" className="text-orange-400 hover:text-orange-300 transition-colors duration-300">
+                        github.com/MeridianAlgo
+                      </a>
+                      <p className="text-gray-400 text-sm mt-1">Contribute to our projects</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-lg mb-2 font-inter">Community</h3>
-                    <p className="text-slate-400 font-inter">Global • Remote First</p>
-                    <p className="text-slate-500 text-sm mt-1 font-inter font-light">Discord & Telegram coming soon</p>
+                </div>
+                
+                <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-6 rounded-2xl">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-green-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-lg mb-2">Community</h3>
+                      <p className="text-gray-300">Global • Remote First</p>
+                      <p className="text-gray-400 text-sm mt-1">Discord & Telegram coming soon</p>
+                    </div>
                   </div>
                 </div>
               </div>
               {/* Social Links */}
               <div className="mb-12">
-                <h3 className="text-white font-semibold text-lg mb-6 font-inter">Follow Us</h3>
+                <h3 className="text-white font-semibold text-lg mb-6">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a 
                     href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A107717373&keywords=meridianalgo&origin=RICH_QUERY_SUGGESTION&position=0&searchId=78e6a6ae-9729-449e-8747-3931ace9b150&sid=M2v&spellCorrectionEnabled=false"
-                    className="bg-slate-800 hover:bg-orange-600 p-3 rounded-xl transition-all duration-300 hover:scale-110"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
                   >
-                    <Linkedin className="w-6 h-6 text-slate-400 hover:text-white" />
+                    <Linkedin className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
                   <a 
                     href="https://x.com/MeridianAlgo"
-                    className="bg-slate-800 hover:bg-orange-600 p-3 rounded-xl transition-all duration-300 hover:scale-110"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
                   >
-                    <X className="w-6 h-6 text-slate-400 hover:text-white" />
+                    <X className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
                   <a 
                     href="https://github.com/MeridianAlgo"
-                    className="bg-slate-800 hover:bg-orange-600 p-3 rounded-xl transition-all duration-300 hover:scale-110"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
                   >
-                    <Github className="w-6 h-6 text-slate-400 hover:text-white" />
+                    <Github className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
                 </div>
               </div>
               {/* Engagement Options */}
-              <div className="rounded-2xl p-8 bg-transparent">
-                <h4 className="text-white font-semibold mb-6 text-lg font-inter">Ways to Engage</h4>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-slate-300 hover:text-orange-400 transition-colors duration-300">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
+                <h4 className="text-white font-semibold mb-6 text-lg">Ways to Engage</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                    <span className="font-inter font-light">Contribute to open-source algorithms</span>
+                    <span>Contribute to open-source algorithms</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-slate-300 hover:text-orange-400 transition-colors duration-300">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span className="font-inter font-light">Join our trading community</span>
+                    <span>Join our trading community</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-slate-300 hover:text-orange-400 transition-colors duration-300">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
-                    <span className="font-inter font-light">Access educational resources</span>
+                    <span>Access educational resources</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-slate-300 hover:text-orange-400 transition-colors duration-300">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-700 rounded-full"></div>
-                    <span className="font-inter font-light">Partner with our research initiatives</span>
+                    <span>Partner with our research initiatives</span>
                   </div>
                 </div>
               </div>
             </div>
             {/* Contact Form */}
-            <div className="rounded-3xl p-10 bg-transparent">
-              <h2 className="text-2xl font-bold text-white mb-8 font-inter">Send us a Message</h2>
+            <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 rounded-3xl p-10">
+              <div className="text-center mb-8">
+                <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-4 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Contact Form</span>
+                <h2 className="text-2xl font-bold text-white mb-4">Send us a Message</h2>
+                <div className="w-12 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
+              </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-white font-medium mb-3 font-inter">
@@ -174,7 +196,7 @@ const Contact = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full bg-slate-900/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-slate-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-slate-500 font-inter"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
                     placeholder="Your full name"
                   />
                   <ValidationError 
@@ -194,7 +216,7 @@ const Contact = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-slate-900/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-slate-400 focus:border-blue-500 focus:outline-none transition-all duration-300 hover:border-slate-500 font-inter"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
                     placeholder="your.email@example.com"
                   />
                   <ValidationError 
@@ -212,7 +234,7 @@ const Contact = () => {
                   <select
                     id="interest"
                     name="interest"
-                    className="w-full bg-slate-900/50 border border-slate-600 rounded-xl px-4 py-4 text-white focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-slate-500 font-inter"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
                   >
                     <option value="">Select your interest</option>
                     <option value="trading">Algorithmic Trading</option>
@@ -233,7 +255,7 @@ const Contact = () => {
                     name="message"
                     required
                     rows={6}
-                    className="w-full bg-slate-900/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-slate-400 focus:border-orange-500 focus:outline-none transition-all duration-300 resize-none hover:border-slate-500 font-inter"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 resize-none hover:border-gray-500"
                     placeholder="Tell us about your interest in MeridianAlgo..."
                   />
                   <ValidationError 
@@ -247,7 +269,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center space-x-3 hover:shadow-lg hover:shadow-orange-500/25 font-inter"
+                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center space-x-3 hover:shadow-lg hover:shadow-orange-500/25"
                 >
                   <Send className="w-5 h-5" />
                   <span>{state.submitting ? 'Sending...' : 'Send Message'}</span>

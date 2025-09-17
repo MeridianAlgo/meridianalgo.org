@@ -1,13 +1,21 @@
-import React, { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import OpenSource from './pages/OpenSource';
-import Newsletters from './pages/Newsletters';
-import Partnerships from './pages/Partnerships';
 import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import ScrollToTopButton from './components/ScrollToTopButton';
+import LoadingSpinner from './components/LoadingSpinner';
+import SkipToContent from './components/SkipToContent';
+
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Newsletters = lazy(() => import('./pages/Newsletters'));
+const Partnerships = lazy(() => import('./pages/Partnerships'));
+const Contact = lazy(() => import('./pages/Contact'));
+const OpenSource = lazy(() => import('./pages/OpenSource'));
+const Research = lazy(() => import('./pages/Research'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,21 +29,33 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-black">
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/opensource" element={<OpenSource />} />
-          <Route path="/newsletters" element={<Newsletters />} />
-          <Route path="/partnerships" element={<Partnerships />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-black">
+          <SkipToContent />
+          <ScrollToTop />
+          <Navbar />
+          <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center">
+              <LoadingSpinner size="lg" />
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/opensource" element={<OpenSource />} />
+              <Route path="/newsletters" element={<Newsletters />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="/partnerships" element={<Partnerships />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+          <Footer />
+          <ScrollToTopButton />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

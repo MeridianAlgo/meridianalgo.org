@@ -18,12 +18,12 @@ const Footer = () => {
               </div>
               <span className="text-white font-bold text-2xl">
                 <span className="text-white">Meridian</span><span className="text-white">Algo</span>
-                <span className="text-xs font-normal text-gray-400 block mt-1">v3.3.4</span>
+                <span className="text-xs font-normal text-gray-400 block mt-1">v3.3.5</span>
               </span>
             </Link>
             <p className="text-gray-400 mb-8 max-w-md leading-relaxed text-base">
-              Democratizing access to sophisticated trading tools through open-source algorithms. 
-              Empowering wealth creation for all, from the ground up.
+              Democratizing financial literacy through open-source trading tools and educational resources. 
+              <span className="text-orange-400 font-medium">Building the future of accessible finance.</span>
             </p>
             <div className="flex space-x-3">
               <a href="mailto:meridianalgo@gmail.com" className="bg-white/5 hover:bg-white/10 p-3 rounded-xl transition-all duration-300 hover:scale-105 border border-white/5">
@@ -53,27 +53,28 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Resources</h3>
-            <ul className="mt-4 space-y-2">
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Resources</h3>
+            <ul className="space-y-3">
               <li>
-                <a href="https://docs.meridianalgo.com" target="_blank" rel="noopener noreferrer" className="text-base text-gray-400 hover:text-orange-400 transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="https://api.meridianalgo.com" target="_blank" rel="noopener noreferrer" className="text-base text-gray-400 hover:text-orange-400 transition-colors">
-                  API Reference
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/MeridianAlgo" target="_blank" rel="noopener noreferrer" className="text-base text-gray-400 hover:text-orange-400 transition-colors">
+                <a href="https://github.com/MeridianAlgo" target="_blank" rel="noopener noreferrer" className="text-base text-gray-400 hover:text-orange-400 transition-colors duration-200 flex items-center group">
+                  <Github className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="/opensource" className="text-base text-gray-400 hover:text-orange-400 transition-colors">
+                <Link to="/opensource" className="text-base text-gray-400 hover:text-orange-400 transition-colors duration-200">
                   Open Source
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/research" className="text-base text-gray-400 hover:text-orange-400 transition-colors duration-200">
+                  Research
+                </Link>
+              </li>
+              <li>
+                <Link to="/partnerships" className="text-base text-gray-400 hover:text-orange-400 transition-colors duration-200">
+                  Partnerships
+                </Link>
               </li>
             </ul>
           </div>
@@ -84,7 +85,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} MeridianAlgo. All rights reserved.
-            <span className="ml-2 text-xs text-gray-500">v3.3.4</span>
+            <span className="ml-2 text-xs text-gray-500">v3.3.5</span>
           </p>
           <div className="flex items-center gap-4 ml-auto">
             <a href="/legal/Privacy Policy for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-orange-400 transition-colors">Privacy Policy</a>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-
+import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -11,7 +11,13 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
   { name: 'Partnerships', to: '/partnerships' },
-  { name: 'Contact Us', to: '/contact' },
+  { name: 'Contact', to: '/contact' },
+];
+
+const LEARN_LINKS: NavLink[] = [
+  { name: 'Open Source', to: '/opensource' },
+  { name: 'Newsletters', to: '/newsletters' },
+  { name: 'Research', to: '/research' },
 ];
 
 const Navbar: React.FC = () => {
@@ -19,7 +25,6 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const showHome = location.pathname !== '/';
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [learnOpen, setLearnOpen] = useState(false);
   const learnCloseTimer = useRef<number | null>(null);
@@ -27,12 +32,6 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const isScrollingDownNow = currentScrollY > lastScrollY;
-      
-      // Update scroll direction
-      if (isScrollingDownNow !== isScrollingDown && currentScrollY > 10) {
-        setIsScrollingDown(isScrollingDownNow);
-      }
       
       // Update navbar background
       setScrolled(currentScrollY > 10);
@@ -41,37 +40,30 @@ const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isScrollingDown]);
+  }, [lastScrollY]);
 
   const closeMobile = () => setMobileOpen(false);
 
   return (
     <nav 
-      className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-6 md:px-8 py-4 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-6 md:px-8 py-6 transition-all duration-300 ${
         scrolled 
           ? 'bg-black/90 backdrop-blur-sm border-b border-gray-800' 
           : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <Link to="/" className="flex items-center group focus:outline-none relative h-12">
+      <Link to="/" className="flex items-center group">
         <img 
           src="/bitflow_logo.png" 
           alt="Meridian Algo Logo" 
-          className="h-full w-auto select-none rounded-xl transition-transform duration-300 group-hover:scale-105" 
+          className="h-8 w-auto select-none rounded-xl transition-transform duration-300 group-hover:scale-105" 
         />
-        <span
-          className={`mx-2 transition-opacity duration-300 ${isScrollingDown ? 'opacity-0' : 'opacity-100'}`}
-          aria-hidden="true"
-        >
-          <span className="inline-block w-[3px] h-7 bg-orange-400 rounded-full align-middle"></span>
-        </span>
-        <span 
-          className={`text-white text-2xl font-bold tracking-tight font-inter transition-all duration-300 ${
-            isScrollingDown ? 'opacity-0 -translate-x-4' : 'opacity-100 translate-x-0'
-          }`}
-        >
-          MeridianAlgo
-        </span>
+        <div className="flex items-center">
+          <span className="h-8 w-0.5 bg-orange-400 mx-4"></span>
+          <span className="text-white text-2xl font-bold tracking-tight font-inter">
+            MeridianAlgo
+          </span>
+        </div>
       </Link>
 
       {/* Desktop nav */}
@@ -80,7 +72,7 @@ const Navbar: React.FC = () => {
           <>
             <Link
               to="/"
-              className={`inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
+              className={`inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
             >
               Home
             </Link>
@@ -91,7 +83,7 @@ const Navbar: React.FC = () => {
         {/* About next to Home */}
         <Link
           to="/about"
-          className={`inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
+          className={`inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
         >
           About
         </Link>
@@ -112,7 +104,7 @@ const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setLearnOpen((v) => !v)}
-            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${
+            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${
               (location.pathname === '/opensource' || location.pathname === '/newsletters') ? 'text-orange-400' : ''
             }`}
             aria-haspopup="true"
@@ -131,19 +123,17 @@ const Navbar: React.FC = () => {
               learnCloseTimer.current = window.setTimeout(() => setLearnOpen(false), 150);
             }}
           >
-            <div className="bg-black/90 backdrop-blur-sm border border-gray-800 rounded-lg shadow-lg py-2">
-              <Link
-                to="/opensource"
-                className="block px-4 py-2 text-sm text-white hover:bg-orange-600 hover:text-white"
-              >
-                Open Source
-              </Link>
-              <Link
-                to="/newsletters"
-                className="block px-4 py-2 text-sm text-white hover:bg-orange-600 hover:text-white"
-              >
-                Newsletters
-              </Link>
+            <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-800 rounded-xl shadow-2xl p-4 space-y-2">
+              {LEARN_LINKS.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.to}
+                  className="block px-4 py-3 text-sm text-white hover:text-orange-400 hover:bg-gray-800/50 rounded-lg transition-colors text-center"
+                  onClick={() => setLearnOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -159,14 +149,14 @@ const Navbar: React.FC = () => {
                 href={link.to}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
+                className="inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
               >
                 {link.name}
               </a>
             ) : (
               <Link
                 to={link.to}
-                className={`inline-flex items-center h-8 leading-none text-white text-sm font-semibold tracking-widest hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
+                className={`inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
               >
                 {link.name}
               </Link>
@@ -184,10 +174,11 @@ const Navbar: React.FC = () => {
         {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
       
-      {/* Mobile menu panel */}
-      {mobileOpen && (
-        <div className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-b border-gray-800 md:hidden">
-          <div className="px-4 py-4 space-y-2">
+      {/* Mobile menu panel with slide animation */}
+      <div className={`absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-b border-gray-800 md:hidden transition-all duration-300 ${
+        mobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+      }`}>
+        <div className="px-4 py-4 space-y-2">
             <Link onClick={closeMobile} to="/" className={`block px-2 py-2 text-white hover:text-orange-400 ${location.pathname === '/' ? 'text-orange-400' : ''}`}>Home</Link>
             <Link onClick={closeMobile} to="/about" className={`block px-2 py-2 text-white hover:text-orange-400 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}>About</Link>
             <div className="pt-2">
@@ -203,8 +194,7 @@ const Navbar: React.FC = () => {
               )
             ))}
           </div>
-        </div>
-      )}
+      </div>
     </nav>
   );
 };
