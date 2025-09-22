@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Handshake, ArrowRight } from 'lucide-react';
+import jukeboxLogo from '../assets/images/jukebox.png';
+import costcoLogo from '../assets/images/Costco.png';
 
 const Partnerships = () => {
   useEffect(() => {
@@ -49,14 +51,9 @@ const Partnerships = () => {
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
                     <img 
-                      src="/jukebox.png" 
+                      src={jukeboxLogo} 
                       alt="Jukebox Print Logo" 
                       className="h-16 w-auto object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.onerror = null;
-                        target.src = '/Profile Logo (1).png';
-                      }}
                     />
                   </div>
                   <h3 className="text-2xl font-display font-bold text-white text-center mb-2">Jukebox Print</h3>
@@ -85,14 +82,9 @@ const Partnerships = () => {
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
                     <img 
-                      src="/Costco.png" 
+                      src={costcoLogo} 
                       alt="Costco Logo" 
                       className="h-16 w-auto object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.onerror = null;
-                        target.src = '/Profile Logo (1).png';
-                      }}
                     />
                   </div>
                   <h3 className="text-2xl font-display font-bold text-white text-center mb-2">Costco</h3>
