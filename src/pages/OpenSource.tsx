@@ -67,9 +67,17 @@ const PROJECTS = [
     features: ['ML Education', 'Volatility Metrics', 'Strategy Analysis']
   },
   {
-    name: 'Time Series Research',
+    name: 'Option Pricing Research',
+    url: 'https://github.com/MeridianAlgo/Option-Pricing-Research',
+    description: 'Comprehensive research and analysis tools for option pricing models and strategies in financial markets.',
+    category: 'Machine Learning',
+    language: 'Python',
+    features: ['Option Pricing Models', 'Market Analysis', 'Research Tools']
+  },
+  {
+    name: 'TimeSeries Research',
     url: 'https://github.com/MeridianAlgo/TimeSeries-Prediction',
-    description: 'Advanced time series analysis and prediction models for financial market data.',
+    description: 'Advanced time series analysis and prediction models for financial market data and trading strategies.',
     category: 'Machine Learning',
     language: 'Python',
     features: ['Time Series Analysis', 'Market Prediction', 'ML Models']
@@ -128,7 +136,7 @@ const OpenSource = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">{PROJECTS.length}</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">10</div>
               <div className="text-slate-300 font-inter">Active Projects</div>
             </div>
             <div className="text-center">

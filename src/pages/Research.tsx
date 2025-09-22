@@ -119,6 +119,7 @@ const Research = () => {
                   <h3 className="text-xl font-semibold text-white mb-2 md:mb-0">{pub.title}</h3>
                   <div className="flex items-center space-x-4">
                     <span className="text-xs px-3 py-1 bg-orange-400/10 text-orange-400 rounded-full">{pub.category}</span>
+                    <span className="text-xs px-3 py-1 bg-blue-400/10 text-blue-400 rounded-full">In Progress of Publishing</span>
                     <span className="text-sm text-gray-400">{pub.date}</span>
                   </div>
                 </div>

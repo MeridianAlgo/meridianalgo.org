@@ -5,7 +5,7 @@ const About = () => {
   useEffect(() => {
     document.title = 'MeridianAlgo - About';
   }, []);
-  
+
   return (
     <div className="relative min-h-screen w-full bg-black pt-24">
 
@@ -24,7 +24,7 @@ const About = () => {
 
       {/* Divider */}
       <div className="w-full h-px bg-gray-800 my-12"></div>
-      
+
       {/* Approach Section */}
       <section className="py-24 relative overflow-hidden">
         {/* Subtle, modern background unique to About */}
@@ -49,7 +49,7 @@ const About = () => {
 
       {/* Gradient Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent my-12"></div>
-      
+
       {/* What Sets Us Apart Section */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
@@ -88,7 +88,7 @@ const About = () => {
 
       {/* Gradient Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent my-12"></div>
-      
+
       {/* Vision Section */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -191,6 +191,8 @@ const About = () => {
                   { name: 'Ethan Hsu', role: 'Content & Strategy', desc: 'Creates accessible finance content and tutorials.' },
                   { name: 'Amogh Natarajan', role: 'Content Engineering', desc: 'Translates complex topics into practical guides.' },
                   { name: 'Likhit Siva Reddy', role: 'Youth Literacy', desc: 'Builds curriculum and resources for Gen Z finance.' },
+                  { name: 'Michel Enin', role: 'Content & Education', desc: 'Contributes to research and educational content.' },
+                  { name: 'Daniel Dimov', role: 'Content & Education', desc: 'Works on content and education materials.' },
                 ].map((m) => (
                   <div key={m.name} className="group relative">
                     <div className="bg-black/60 p-8 rounded-2xl border border-gray-800/50 hover:border-orange-400/40 transition-all duration-300 hover:scale-[1.02] text-center">
@@ -218,8 +220,8 @@ const About = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                 {[
-                  { name: 'Ameen Baig', role: 'Fundraising', desc: 'Helps partnerships, fundraising, and outreach.' },
                   { name: 'Kaushal Pratury', role: 'Fundraising', desc: 'Drives community and donor relations.' },
+                  { name: 'Ishaan Manoor', role: 'Fundraising', desc: 'Supports partnerships and fundraising efforts.' },
                 ].map((m) => (
                   <div key={m.name} className="group relative">
                     <div className="bg-black/60 p-8 rounded-2xl border border-gray-800/50 hover:border-orange-400/40 transition-all duration-300 hover:scale-[1.02] text-center">
@@ -235,6 +237,40 @@ const About = () => {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Beta Testers */}
+            <div className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 backdrop-blur-sm border border-orange-400/30 rounded-3xl p-8">
+              <div className="flex items-center justify-center mb-8">
+                <div className="text-center">
+                  <span className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-4 inline-block bg-orange-400/10 px-4 py-2 rounded-full">Beta Testing</span>
+                  <h3 className="text-2xl font-display font-bold text-white">Public Beta Testers/Content Analysts</h3>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {[
+                  { name: 'Europe', count: '4', desc: 'Testing our platform across European markets.' },
+                  { name: 'Canada', count: '4', desc: 'Providing feedback in the Canadian market.' },
+                  { name: 'Asia', count: '2', desc: 'Analyzing content and providing insights.' },
+                ].map((m) => (
+                  <div key={m.name} className="group relative">
+                    <div className="bg-black/60 p-8 rounded-2xl border border-gray-800/50 hover:border-orange-400/40 transition-all duration-300 hover:scale-[1.02] text-center">
+                      <div className="relative mb-6">
+                        <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-orange-500/20 to-yellow-500/20 flex items-center justify-center border border-orange-400/30">
+                          <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">{m.count}</div>
+                        </div>
+                      </div>
+                      <h4 className="text-xl font-semibold text-white mb-2">{m.name}</h4>
+                      <p className="text-gray-300 text-sm leading-relaxed">{m.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Beta Testers Note */}
+            <div className="text-center text-gray-400 mt-12">
+         *In accordance with rules and regulations, we are not able to disclose the names of our beta testers and content analysts. These guidlines strictly follow the EU General Data Protection Regulation (GDPR), the Canadian Personal Information Protection and Electronic Documents Act (PIPEDA), and the ASEAN Personal Data Protection Act (PDPA) respectively. 
             </div>
           </div>
         </div>
