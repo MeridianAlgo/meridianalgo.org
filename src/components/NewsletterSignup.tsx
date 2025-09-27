@@ -44,7 +44,7 @@ const NewsletterSignup: React.FC = () => {
           </h3>
           
           <p className="text-gray-400 mb-6">
-            Get the latest insights on financial literacy and trading strategies delivered to your inbox every week.
+            Get the latest insights on financial literacy, community wealth building, and regional economic research delivered to your inbox every week.
           </p>
           
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">

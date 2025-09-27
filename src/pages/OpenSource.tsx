@@ -5,50 +5,50 @@ const PROJECTS = [
   {
     name: 'In-NodeJS',
     url: 'https://github.com/MeridianAlgo/In-NodeJS',
-    description: 'Advanced Node.js-based trading tools for algorithmic research, leveraging Alpaca\'s paper trading API for stocks and crypto.',
+    description: 'Interactive Node.js-based simulations for classroom discussions on investing fundamentals and community wealth building.',
     category: 'Resources',
     language: 'JavaScript',
-    features: ['Paper Trading', 'Stock & Crypto APIs', 'Real-time Data']
+    features: ['Financial Simulations', 'Teaching Resources', 'Community Workshops']
   },
   {
     name: 'In-Pine',
     url: 'https://github.com/MeridianAlgo/In-Pine',
-    description: 'Machine-learning-driven trading tools and indicators for TradingView, written in Pine Script.',
-    category: 'Machine Learning',
+    description: 'Educational Pine Script lessons that explain market movements and personal finance concepts through visual indicators.',
+    category: 'Education',
     language: 'Pine Script',
-    features: ['TradingView Integration', 'ML Indicators', 'Custom Strategies']
+    features: ['Interactive Lessons', 'Visual Indicators', 'Self-Guided Learning']
   },
   {
     name: 'Python Library',
     url: 'https://github.com/MeridianAlgo/Packages',
-    description: 'A comprehensive Python library for algorithmic trading and financial analysis. Also available on PyPI.',
+    description: 'A comprehensive Python library for financial literacy workshops, budgeting labs, and community data storytelling. Also available on PyPI.',
     category: 'Resources',
     language: 'Python',
-    features: ['PyPI Package', 'Financial Analysis', 'Backtesting']
+    features: ['PyPI Package', 'Budgeting Labs', 'Data Storytelling']
   },
   {
     name: 'JavaScript Packages',
     url: 'https://github.com/MeridianAlgo/Javascript-Packages',
-    description: 'Collection of JavaScript packages and utilities for algorithmic trading and financial analysis.',
+    description: 'Collection of JavaScript packages and utilities for building financial literacy dashboards and interactive lessons.',
     category: 'Resources',
     language: 'JavaScript',
-    features: ['NPM Packages', 'Trading Utilities', 'Financial Tools']
+    features: ['NPM Packages', 'Education Utilities', 'Financial Tools']
   },
   {
     name: 'Utilities',
     url: 'https://github.com/MeridianAlgo/Utils',
-    description: 'Utility scripts and tools for research and automation in algorithmic trading.',
+    description: 'Utility scripts and tools for managing financial education events, surveys, and community research.',
     category: 'Resources',
     language: 'Python',
-    features: ['Data Processing', 'Automation', 'Research Tools']
+    features: ['Data Processing', 'Community Surveys', 'Research Tools']
   },
   {
     name: 'BitFlow',
     url: 'https://github.com/MeridianAlgo/In-NodeJS/tree/main/BitFlow',
-    description: 'Advanced trading engine built with Node.js for high-performance algorithmic trading and real-time market data processing.',
-    category: 'Trading Engine',
+    description: 'Real-time data exploration engine built with Node.js to help classrooms analyze market trends and personal finance scenarios.',
+    category: 'Learning Platform',
     language: 'JavaScript',
-    features: ['Real-time Trading', 'Market Data', 'High Performance']
+    features: ['Real-time Insights', 'Market Education', 'Interactive Demos']
   },
   {
     name: 'Cryptvault',
@@ -61,34 +61,35 @@ const PROJECTS = [
   {
     name: 'Ara',
     url: 'https://github.com/MeridianAlgo/Ara',
-    description: 'Machine learning tools for education and volatility metrics analysis in trading strategies.',
-    category: 'Machine Learning',
+    description: 'Machine learning tools that support financial equity research and help students explore economic resilience metrics.',
+    category: 'Education',
     language: 'Python',
-    features: ['ML Education', 'Volatility Metrics', 'Strategy Analysis']
+    features: ['ML Education', 'Equity Metrics', 'Community Analysis']
   },
   {
-    name: 'Option Pricing Research',
-    url: 'https://github.com/MeridianAlgo/Option-Pricing-Research',
-    description: 'Comprehensive research and analysis tools for option pricing models and strategies in financial markets.',
-    category: 'Machine Learning',
+    name: 'Cryptvault',
+    url: 'https://github.com/MeridianAlgo/Cryptvault',
+    description: 'Charting resource using machine learning to explain savings and investment concepts across different community case studies.',
+    category: 'Education',
     language: 'Python',
-    features: ['Option Pricing Models', 'Market Analysis', 'Research Tools']
+    features: ['Charting Analysis', 'ML Optimization', 'Community Case Studies']
   },
   {
     name: 'TimeSeries Research',
     url: 'https://github.com/MeridianAlgo/TimeSeries-Prediction',
-    description: 'Advanced time series analysis and prediction models for financial market data and trading strategies.',
-    category: 'Machine Learning',
+    description: 'Advanced time series analysis tools used in our research to forecast Midwestern economic trends and household resilience.',
+    category: 'Research',
     language: 'Python',
-    features: ['Time Series Analysis', 'Market Prediction', 'ML Models']
+    features: ['Time Series Analysis', 'Economic Forecasting', 'ML Models']
   }
 ];
 
 const CATEGORIES = [
   { name: 'All', color: 'orange' },
-  { name: 'Trading Engine', color: 'orange' },
-  { name: 'Machine Learning', color: 'orange' },
-  { name: 'Resources', color: 'orange' }
+  { name: 'Resources', color: 'orange' },
+  { name: 'Education', color: 'orange' },
+  { name: 'Learning Platform', color: 'orange' },
+  { name: 'Machine Learning', color: 'orange' }
 ];
 
 const OpenSource = () => {
@@ -130,7 +131,7 @@ const OpenSource = () => {
             </h1>
           </div>
           <p className="text-xl md:text-2xl text-slate-200 mb-8 font-inter font-light max-w-4xl mx-auto" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}>
-            MeridianAlgo is built on the belief that transparency and collaboration drive innovation. Our comprehensive suite of trading tools and libraries are open source, empowering anyone to learn, build, and contribute to the future of algorithmic finance.
+            MeridianAlgo is built on the belief that transparency and collaboration drive community prosperity. Our open source lessons, simulations, and research help Midwestern learners build lasting financial confidence together.
           </p>
           
           {/* Stats */}

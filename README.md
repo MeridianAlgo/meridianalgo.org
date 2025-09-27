@@ -5,14 +5,14 @@
 [![GitHub license](https://img.shields.io/github/license/MeridianAlgo/Website.svg)](https://github.com/MeridianAlgo/Website/blob/main/LICENSE)
 [![GitHub tag](https://img.shields.io/github/tag/MeridianAlgo/Website.svg)](https://github.com/MeridianAlgo/Website/tags)
 
-> A modern, open-source platform dedicated to democratizing financial literacy and algorithmic trading tools through education, research, and accessible technology.
+> A modern, open-source platform dedicated to strengthening financial literacy across Midwestern communities through education, research, and accessible technology.
 
 ## 📋 Overview
 
-MeridianAlgo is a student-led initiative that bridges the gap between complex financial concepts and practical, accessible education. We provide open-source trading tools, educational resources, and research papers to empower individuals from all backgrounds to build wealth with confidence.
+MeridianAlgo is a student-led initiative that bridges the gap between complex financial concepts and practical, accessible education. We provide open-source learning tools, educational resources, and research papers to empower individuals from all backgrounds to build wealth with confidence.
 
 ### 🎯 Mission
-> "Democratize access to sophisticated trading tools and strategies through open-source algorithmic systems, empowering individuals from all backgrounds to build wealth with confidence."
+> "Expand financial literacy and wealth-building confidence through open-source education, community-driven research, and accessible technology."
 
 ## ✨ Features
 
@@ -139,21 +139,21 @@ Website-main/
 
 This website showcases **10 active GitHub repositories**:
 
-### Machine Learning
-- **Option Pricing Research** - Option pricing models and market analysis
-- **TimeSeries Research** - Time series analysis and prediction models
-- **Cryptvault** - ML-based charting optimization
-- **Ara** - Educational ML tools for volatility analysis
-- **In-Pine** - TradingView ML indicators
+### Community Programs & Tools
+- **In-NodeJS** - Interactive Node.js simulations for community financial literacy workshops.
+- **BitFlow** - Real-time data exploration engine that helps classrooms analyze markets and personal finance scenarios.
+- **JavaScript Packages** - Utilities for building financial literacy dashboards and interactive lessons.
+- **Utilities** - Scripts that support community surveys, events, and research coordination.
 
-### Trading Engines
-- **BitFlow** - High-performance trading engine
+### Education & Curriculum
+- **In-Pine** - Pine Script lessons that visualize market movements and personal finance concepts.
+- **Python Library** - Budgeting labs, classroom activities, and community data storytelling utilities.
+- **Ara** - Machine learning tools that support financial equity research and academic projects.
+- **Cryptvault** - ML-powered charting resources for comparing savings and investment case studies.
 
-### Resources & Libraries
-- **In-NodeJS** - Node.js trading tools
-- **Python Library** - Financial analysis library
-- **JavaScript Packages** - Trading utilities
-- **Utilities** - Research and automation tools
+### Research Collections
+- **Option Pricing Research** - Financial models used to teach risk management and pricing fundamentals.
+- **TimeSeries Research** - Time-series analysis for forecasting Midwestern economic trends and household resilience.
 
 ## 🤝 Contributing
 

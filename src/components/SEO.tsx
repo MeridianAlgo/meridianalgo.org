@@ -11,7 +11,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title = 'MeridianAlgo - Democratizing Financial Literacy',
   description = 'MeridianAlgo is an Illinois-based 501(c)(3) nonprofit research organization dedicated to closing the wealth gap through accessible financial education, easy-to-use investing tools, and community-focused research.',
-  keywords = "MeridianAlgo, algorithmic trading, financial literacy, nonprofit organization, 501c3 nonprofit, Illinois nonprofit, financial education, wealth gap solutions, investment tools, community research, quantitative finance, financial technology, fintech nonprofit, trading algorithms, financial inclusion, economic empowerment, wealth building, financial democratization, trading strategies, investment education, accessible finance, inclusive finance, social impact, educational resources, financial wellness",
+  keywords = "MeridianAlgo, Midwest financial literacy, nonprofit organization, 501c3 nonprofit, Illinois nonprofit, financial education, wealth gap solutions, investing education, community research, economic empowerment, financial inclusion, financial technology, fintech nonprofit, financial wellness, wealth building, financial democratization, community education, accessible finance, inclusive finance, social impact, educational resources, budgeting workshops",
   image = '/Profile Logo (1).png',
   url = 'https://meridianalgo.com'
 }) => {

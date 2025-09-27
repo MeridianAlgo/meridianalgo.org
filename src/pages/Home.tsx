@@ -6,8 +6,8 @@ const OPEN_SOURCE_PROJECTS = [
   {
     id: 1,
     title: "In-NodeJS",
-    description: "Advanced Node.js-based trading tools for algorithmic research, leveraging Alpaca's paper trading API for stocks and crypto.",
-    tags: ["JavaScript", "Trading", "API"],
+    description: "Interactive Node.js-based simulations for community financial literacy workshops across the Midwest.",
+    tags: ["JavaScript", "Education", "Community"],
     icon: <Code2 className="w-7 h-7 text-blue-400" />,
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/30",
@@ -17,8 +17,8 @@ const OPEN_SOURCE_PROJECTS = [
   {
     id: 2,
     title: "In-Pine",
-    description: "Machine-learning-driven trading tools and indicators for TradingView, written in Pine Script.",
-    tags: ["Pine Script", "TradingView", "ML"],
+    description: "Pine Script lessons that visualize market movements and personal finance concepts for educators and students.",
+    tags: ["Pine Script", "Classroom", "Visualization"],
     icon: <Code2 className="w-7 h-7 text-purple-400" />,
     bgColor: "bg-purple-500/10",
     borderColor: "border-purple-500/30",
@@ -28,8 +28,8 @@ const OPEN_SOURCE_PROJECTS = [
   {
     id: 3,
     title: "Python Library",
-    description: "A comprehensive Python library for algorithmic trading and financial analysis. Also available on PyPI.",
-    tags: ["Python", "PyPI", "Backtesting"],
+    description: "A comprehensive Python library for budgeting labs, classroom activities, and community data storytelling. Also available on PyPI.",
+    tags: ["Python", "PyPI", "Education"],
     icon: <Code2 className="w-7 h-7 text-green-400" />,
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/30",
@@ -59,7 +59,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'AI-Driven',
-    desc: 'Smart, adaptive algorithms that learn and evolve with the market.',
+    desc: 'Data-informed insights that translate complex markets into relatable lessons.',
     color: 'text-emerald-400'
   },
   {
@@ -70,7 +70,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Open Source',
-    desc: 'Transparent, community-driven code for everyone.',
+    desc: 'Transparent, community-driven curriculum for everyone.',
     color: 'text-blue-400'
   },
   {
@@ -91,7 +91,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Accuracy First',
-    desc: 'Precision and reliability are at the core of every strategy.',
+    desc: 'Precision and reliability are at the core of every lesson we deliver.',
     color: 'text-amber-400'
   },
   {
@@ -101,7 +101,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Lightning Fast',
-    desc: 'Our code is optimized for speed and performance.',
+    desc: 'Our digital resources are optimized for quick, accessible learning moments.',
     color: 'text-yellow-400'
   },
   {
@@ -113,7 +113,7 @@ const FEATURES = [
       </svg>
     ),
     title: 'Scalable',
-    desc: 'From individual investors to institutional portfolios.',
+    desc: 'From local classrooms to regional coalitions.',
     color: 'text-cyan-400'
   },
 ];
@@ -289,7 +289,7 @@ const Home = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-2">Open Source Code</h3>
-                        <p className="text-gray-400 text-sm">Explore our public repos and contribute to advanced trading tools.</p>
+                        <p className="text-gray-400 text-sm">Explore our public repos and contribute to open-source financial literacy resources.</p>
                       </div>
                     </div>
                   </Link>
@@ -333,7 +333,7 @@ const Home = () => {
               </h2>
               <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
               <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
-                Explore our growing collection of open-source projects designed to democratize algorithmic trading tools and education.
+                Explore our growing collection of open-source projects designed to strengthen financial literacy and community wealth in the Midwest.
               </p>
             </div>
             
@@ -415,7 +415,7 @@ const Home = () => {
               <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
             </div>
             <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-light mb-12">
-              Join traders, developers, and financial enthusiasts working together to democratize algorithmic trading tools and education.
+              Join educators, developers, and neighbors collaborating to expand financial confidence and education across Midwestern communities.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -426,7 +426,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">Collaborate</h3>
-                <p className="text-gray-300 text-sm mb-4">Work with like-minded individuals on open-source projects and trading strategies.</p>
+                <p className="text-gray-300 text-sm mb-4">Work with like-minded individuals on open-source projects and community finance education.</p>
               </div>
 
               <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02] animate-scale-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
@@ -436,7 +436,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">Learn & Grow</h3>
-                <p className="text-gray-300 text-sm mb-4">Access educational resources and learn from experienced traders and developers.</p>
+                <p className="text-gray-300 text-sm mb-4">Access educational resources and learn from experienced mentors and developers.</p>
               </div>
 
               <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/30 transition-all hover:scale-[1.02] animate-slide-in-right" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
@@ -446,7 +446,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">Contribute</h3>
-                <p className="text-gray-300 text-sm mb-4">Share your knowledge and contribute to the future of open-source trading tools.</p>
+                <p className="text-gray-300 text-sm mb-4">Share your knowledge and contribute to the future of open-source financial literacy resources.</p>
               </div>
             </div>
           </div>
@@ -465,7 +465,7 @@ const Home = () => {
               </h2>
               <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
               <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
-                Built with cutting-edge technologies to deliver powerful and reliable trading tools.
+                Built with cutting-edge technologies to deliver powerful and reliable financial education tools.
               </p>
             </div>
 
@@ -475,7 +475,7 @@ const Home = () => {
                   <Code2 className="w-7 h-7 text-orange-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">Node.js</h3>
-                <p className="text-gray-300 text-xs">High-performance JavaScript runtime for building scalable back-end services.</p>
+                <p className="text-gray-300 text-xs">High-performance JavaScript runtime for building scalable back-end services that power our education tools.</p>
               </div>
 
               <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-yellow-400/30 transition-all hover:scale-[1.02]">
@@ -485,7 +485,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">Pine Script</h3>
-                <p className="text-gray-300 text-xs">Powerful scripting language for developing custom indicators and strategies.</p>
+                <p className="text-gray-300 text-xs">Powerful scripting language for developing custom indicators that teach real-world finance concepts.</p>
               </div>
 
               <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-green-400/30 transition-all hover:scale-[1.02]">
@@ -506,7 +506,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">Java</h3>
-                <p className="text-gray-300 text-xs">Enterprise-grade language for robust, scalable trading applications.</p>
+                <p className="text-gray-300 text-xs">Enterprise-grade language for robust, scalable financial education applications.</p>
               </div>
 
               <div className="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 hover:border-purple-400/30 transition-all hover:scale-[1.02]">

@@ -5,47 +5,47 @@ const Research = () => {
     {
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
       title: "Market Analysis",
-      description: "Deep-dive research into market trends, volatility patterns, and economic indicators affecting trading strategies.",
+      description: "Deep-dive research into Midwestern economic trends, cost-of-living shifts, and indicators influencing household stability.",
       color: "blue"
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Algorithm Development",
-      description: "Research and development of cutting-edge trading algorithms using machine learning and statistical models.",
+      title: "Curriculum Design",
+      description: "Development of data-informed lesson plans, digital tools, and assessments for financial literacy programs.",
       color: "green"
     },
     {
       icon: <BookOpen className="w-8 h-8 text-purple-400" />,
       title: "Educational Research",
-      description: "Studies on effective financial education methods and democratizing access to trading knowledge.",
+      description: "Studies on effective financial education methods and expanding access to trustworthy money management knowledge.",
       color: "purple"
     },
     {
       icon: <Users className="w-8 h-8 text-orange-400" />,
       title: "Behavioral Finance",
-      description: "Understanding psychological factors that influence trading decisions and market movements.",
+      description: "Understanding the behavioral factors that shape saving, borrowing, and investing decisions in community contexts.",
       color: "orange"
     }
   ];
 
   const publications = [
     {
-      title: "Democratizing Algorithmic Trading: A Study on Open-Source Tools",
+      title: "Financial Resilience in the Midwest",
       date: "2024",
-      category: "Financial Technology",
-      description: "An analysis of how open-source trading tools can level the playing field for retail traders."
+      category: "Community Research",
+      description: "An analysis of how regional employment trends and financial education impact household resilience."
     },
     {
-      title: "Machine Learning Applications in Market Prediction",
+      title: "Designing Data-Driven Literacy Programs",
       date: "2024",
-      category: "Data Science",
-      description: "Exploring the effectiveness of various ML models in predicting market movements."
+      category: "Education",
+      description: "Exploring the effectiveness of interactive tools and analytics in improving financial literacy outcomes."
     },
     {
-      title: "The Psychology of Risk Management in Trading",
+      title: "Community Perspectives on Financial Confidence",
       date: "2023",
       category: "Behavioral Finance",
-      description: "Understanding how cognitive biases affect trading decisions and risk assessment."
+      description: "Understanding how confidence, trust, and cognitive biases affect household money management decisions."
     }
   ];
 

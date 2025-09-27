@@ -73,7 +73,7 @@ const About = () => {
                 <Zap className="w-6 h-6 text-orange-400" />
               </div>
               <h3 className="text-lg font-semibold text-orange-400 mb-4 text-center">Ethical Algorithms</h3>
-              <p className="text-gray-300 text-center text-sm">We champion fairness, interpretability, and responsible AI in trading.</p>
+              <p className="text-gray-300 text-center text-sm">We champion fairness, interpretability, and responsible AI in financial education and decision-making tools.</p>
             </div>
             <div className="bg-gray-900/80 p-8 rounded-2xl border border-gray-800 hover:border-orange-400/40 transition-colors">
               <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -128,9 +128,9 @@ const About = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { name: 'Ishaan Manoor', role: 'Founder & Lead Researcher', desc: 'Leads research and development across open-source and youth literacy.' },
+                  { name: 'Ishaan Manoor', role: 'Founder & Lead Researcher', desc: 'Sets organizational vision, aligns cross-team strategy, and cultivates community partnerships.' },
                   { name: 'Daniel Dimov', role: 'Research & Compliance', desc: 'Guides research review and ethical standards.' },
-                  { name: 'Dennis Talpa', role: 'SysAdmin & Quant Research', desc: 'Leads systems administration and contributes to model design and infrastructure.' },
+                  { name: 'Dennis Talpa', role: 'SysAdmin & Quant Research', desc: 'Maintains infrastructure and leads platform reliability for our open-source tools.' },
                 ].map((m) => (
                   <div key={m.name} className="group relative">
                     <div className="bg-black/60 p-8 rounded-2xl border border-gray-800/50 hover:border-orange-400/40 transition-all duration-300 hover:scale-[1.02] text-center">
@@ -158,9 +158,9 @@ const About = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { name: 'Ishaan Manoor', role: 'Research Lead', desc: 'Leads research and development across open-source and youth literacy.' },
+                  { name: 'Ishaan Manoor', role: 'Research Lead', desc: 'Designs analytical frameworks and mentors student researchers on data-driven literacy tools.' },
                   { name: 'Tanish Patel', role: 'Research Lead', desc: 'Guides research review and improves upon existing models.' },
-                  { name: 'Dennis Talpa', role: 'Quant Research', desc: 'Leads systems administration and contributes to model design and infrastructure.' },
+                  { name: 'Dennis Talpa', role: 'Quant Research Lead', desc: 'Oversees data pipelines and advanced modeling for community finance studies.' },
                 ].map((m) => (
                   <div key={m.name} className="group relative">
                     <div className="bg-black/60 p-8 rounded-2xl border border-gray-800/50 hover:border-orange-400/40 transition-all duration-300 hover:scale-[1.02] text-center">
@@ -191,7 +191,7 @@ const About = () => {
                   { name: 'Ethan Hsu', role: 'Content & Strategy', desc: 'Creates accessible finance content and tutorials.' },
                   { name: 'Amogh Natarajan', role: 'Content Engineering', desc: 'Translates complex topics into practical guides.' },
                   { name: 'Likhit Siva Reddy', role: 'Youth Literacy', desc: 'Builds curriculum and resources for Gen Z finance.' },
-                  { name: 'Michel Enin', role: 'Content & Education', desc: 'Contributes to research and educational content.' },
+                  { name: 'Michael Ennin', role: 'Content & Education', desc: 'Contributes to research and educational content.' },
                   { name: 'Daniel Dimov', role: 'Content & Education', desc: 'Works on content and education materials.' },
                 ].map((m) => (
                   <div key={m.name} className="group relative">

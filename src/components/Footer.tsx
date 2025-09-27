@@ -22,7 +22,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-gray-400 mb-8 max-w-md leading-relaxed text-base">
-              Democratizing financial literacy through open-source trading tools and educational resources. 
+              Democratizing financial literacy through open-source education, community programs, and research that empower Midwestern families.
               <span className="text-orange-400 font-medium">Building the future of accessible finance.</span>
             </p>
             <div className="flex space-x-3">

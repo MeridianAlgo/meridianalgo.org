@@ -162,19 +162,19 @@ const Contact = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                    <span>Contribute to open-source algorithms</span>
+                    <span>Co-create community financial literacy programs</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span>Join our trading community</span>
+                    <span>Host a workshop in your Midwestern community</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
-                    <span>Access educational resources</span>
+                    <span>Access classroom-ready educational resources</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
                     <div className="w-2 h-2 bg-orange-700 rounded-full"></div>
-                    <span>Partner with our research initiatives</span>
+                    <span>Partner with our regional research initiatives</span>
                   </div>
                 </div>
               </div>
@@ -237,7 +237,7 @@ const Contact = () => {
                     className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
                   >
                     <option value="">Select your interest</option>
-                    <option value="trading">Algorithmic Trading</option>
+                    <option value="financial-literacy">Financial Literacy Programs</option>
                     <option value="education">Educational Resources</option>
                     <option value="opensource">Open Source Contribution</option>
                     <option value="research">Research Collaboration</option>

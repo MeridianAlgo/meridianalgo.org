@@ -61,18 +61,18 @@ const Newsletters = () => {
           const defaultNewsletters = [
             {
               id: 'sample-1',
-              title: 'Market Analysis Q1 2025',
-              description: 'Comprehensive analysis of market trends and algorithmic trading opportunities for the first quarter.',
-              fileName: 'market-analysis-q1-2025.pdf',
-              fileUrl: '/newsletters/market-analysis-q1-2025.pdf',
+              title: 'Midwest Financial Wellness Q1 2025',
+              description: 'Comprehensive analysis of regional economic trends and their impact on household financial health.',
+              fileName: 'midwest-financial-wellness-q1-2025.pdf',
+              fileUrl: '/newsletters/midwest-financial-wellness-q1-2025.pdf',
               uploadDate: '2025-01-15'
             },
             {
               id: 'sample-2',
-              title: 'Trading Strategies Guide',
-              description: 'Essential guide to implementing automated trading strategies using MeridianAlgo tools.',
-              fileName: 'trading-strategies-guide.pdf',
-              fileUrl: '/newsletters/trading-strategies-guide.pdf',
+              title: 'Community Budgeting Toolkit',
+              description: 'Practical curriculum for facilitating budgeting and credit workshops with local partners.',
+              fileName: 'community-budgeting-toolkit.pdf',
+              fileUrl: '/newsletters/community-budgeting-toolkit.pdf',
               uploadDate: '2025-01-10'
             }
           ];
@@ -129,8 +129,8 @@ const Newsletters = () => {
               Newsletters
             </h1>
             <p className="text-xl md:text-2xl text-slate-200 max-w-4xl mx-auto leading-relaxed font-inter font-light">
-              Stay informed with our latest insights, market analysis, and algorithmic trading strategies. 
-              Access our comprehensive collection of newsletters and research publications.
+              Stay informed with our latest insights, regional economic research, and financial literacy strategies.
+              Access our comprehensive collection of newsletters and educational publications.
             </p>
           </div>
         </div>
