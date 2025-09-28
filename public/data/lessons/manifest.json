@@ -11,7 +11,7 @@
       "lessons": [
         {
           "id": "foundations_1",
-          "title": "Introduction to Money Management",
+          "title": "Intro to Money Management: How Money Flows",
           "type": "reading",
           "duration": "15 min",
           "points": 100,
@@ -19,7 +19,7 @@
         },
         {
           "id": "foundations_2", 
-          "title": "Understanding Income vs Expenses",
+          "title": "Income vs Expenses: Track Your Cashflow",
           "type": "reading",
           "duration": "10 min",
           "points": 75,
@@ -27,7 +27,7 @@
         },
         {
           "id": "foundations_3",
-          "title": "Creating Your First Budget",
+          "title": "Create Your First Budget (Step-by-Step)",
           "type": "exercise",
           "duration": "20 min", 
           "points": 150,
@@ -35,7 +35,7 @@
         },
         {
           "id": "foundations_4",
-          "title": "Emergency Fund Basics",
+          "title": "Emergency Fund Basics: How Much and Where",
           "type": "reading",
           "duration": "12 min",
           "points": 100,
@@ -43,7 +43,7 @@
         },
         {
           "id": "foundations_5",
-          "title": "Setting Financial Goals",
+          "title": "Set Actionable Financial Goals",
           "type": "exercise",
           "duration": "18 min",
           "points": 125,
@@ -51,7 +51,7 @@
         },
         {
           "id": "foundations_6",
-          "title": "Money Management Tools",
+          "title": "Money Tools: Apps, Automations, and Alerts",
           "type": "reading",
           "duration": "15 min",
           "points": 100,

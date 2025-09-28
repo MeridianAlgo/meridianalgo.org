@@ -4,7 +4,7 @@ import ContentService, { LessonContent, LessonSection } from '../services/conten
 import { 
   BookOpen, CheckCircle, ArrowLeft, ArrowRight, PlayCircle, 
   FileText, Brain, Target, Home, LogOut, Menu, ChevronLeft, 
-  BarChart, Trophy, Lightbulb, Star, Clock, Award
+  BarChart, Trophy, Lightbulb, Star, Clock, Award, Calculator
 } from 'lucide-react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
@@ -35,6 +35,14 @@ const LessonPage: React.FC = () => {
       if (lesson) {
         setLessonData(lesson);
         document.title = `MeridianAlgo - ${lesson.content.title}`;
+        // Persist last visited lesson per module for resume functionality
+        try {
+          if (moduleId && lessonId && typeof window !== 'undefined') {
+            localStorage.setItem(`meridianAlgo_lastLesson_${moduleId}`, lessonId);
+          }
+        } catch (e) {
+          // ignore storage failures
+        }
       }
       
       if (module) {
@@ -256,6 +264,13 @@ const LessonPage: React.FC = () => {
             >
               <Trophy className="w-5 h-5" />
               {sidebarOpen && <span className="ml-3">Achievements</span>}
+            </Link>
+            <Link
+              to="/tools"
+              className="flex items-center px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors"
+            >
+              <Calculator className="w-5 h-5" />
+              {sidebarOpen && <span className="ml-3">Financial Tools</span>}
             </Link>
           </div>
         </nav>

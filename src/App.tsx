@@ -27,6 +27,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const OpenSource = lazy(() => import('./pages/OpenSource'));
 const Research = lazy(() => import('./pages/Research'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const ToolsPage = lazy(() => import('./pages/ToolsPage'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -99,6 +100,13 @@ function App() {
               <Route path="/profile" element={
                 <ProtectedRoute>
                   <Profile />
+                </ProtectedRoute>
+              } />
+
+              {/* Financial tools & calculators */}
+              <Route path="/tools" element={
+                <ProtectedRoute>
+                  <ToolsPage />
                 </ProtectedRoute>
               } />
 

@@ -3,7 +3,7 @@ import {
   BookOpen, Clock, Award, Target, TrendingUp, 
   CheckCircle, Lock, PlayCircle, FileText,
   BarChart, Home, LogOut, Menu, ChevronLeft,
-  Brain, Zap, Trophy, Flame, ArrowRight, User
+  Brain, Zap, Trophy, Flame, ArrowRight, User, Calculator
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -36,6 +36,7 @@ const LearningCenter = () => {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
   const [modules, setModules] = useState<ModuleView[]>([]);
+  const [expandedModules, setExpandedModules] = useState<Record<string, boolean>>({});
   const currentStreak = user?.learningStreak || 0;
 
   useEffect(() => {
@@ -131,6 +132,25 @@ const LearningCenter = () => {
 
   // Modules with user completion state are kept directly in state now
   const modulesWithProgress = modules;
+
+  const getResumeLessonId = (moduleId: string, topics: TopicView[]): string | null => {
+    try {
+      if (typeof window !== 'undefined') {
+        const last = localStorage.getItem(`meridianAlgo_lastLesson_${moduleId}`);
+        if (last && topics.some(t => t.id === last)) return last;
+      }
+    } catch {}
+
+    // Fallback to first incomplete
+    const firstIncomplete = topics.find(t => !t.completed);
+    return firstIncomplete ? firstIncomplete.id : null;
+  };
+
+  const isQuizCompleted = (moduleId: string): boolean => {
+    // quiz ids in manifest are `${moduleId}_quiz`
+    const quizIdPrefix = `${moduleId}_quiz`;
+    return completedQuizzes?.some((q: string) => q.startsWith(quizIdPrefix));
+  };
 
   // Use unified progress data from AuthContext
   const overallProgress = progressData?.progressPercentage || 0;
@@ -242,6 +262,13 @@ const LearningCenter = () => {
               {sidebarOpen && <span className="ml-3">Achievements</span>}
             </Link>
             <Link
+              to="/tools"
+              className="flex items-center px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors"
+            >
+              <Calculator className="w-5 h-5" />
+              {sidebarOpen && <span className="ml-3">Financial Tools</span>}
+            </Link>
+            <Link
               to="/profile"
               className="flex items-center px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors"
             >
@@ -334,6 +361,7 @@ const LearningCenter = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -393,7 +421,7 @@ const LearningCenter = () => {
                     module.locked ? 'border-gray-700 opacity-60' : 'border-gray-700 hover:border-gray-600'
                   } transition-all duration-300 overflow-hidden`}
                 >
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-3">
                         {(() => { const c = getColorClasses(module.color); return (
@@ -431,27 +459,42 @@ const LearningCenter = () => {
                     </div>
 
                     {/* Topics Preview */}
-                    <div className="space-y-2 mb-4">
-                      {module.topics.slice(0, 3).map((topic) => (
-                        <div key={topic.id} className="flex items-center justify-between py-2">
-                          <div className="flex items-center space-x-2">
-                            {topic.completed ? (
-                              <CheckCircle className="w-4 h-4 text-green-500" />
-                            ) : (
-                              <div className="w-4 h-4 border-2 border-gray-600 rounded-full" />
-                            )}
-                            <span className="text-sm text-gray-300">{topic.title}</span>
+                    <div className="space-y-2 mb-4 overflow-auto pr-2 flex flex-col">
+                      <div className="flex-1 min-h-[8rem]">
+                        {(expandedModules[module.id] ? module.topics : module.topics.slice(0, 5)).map((topic) => (
+                          <div key={topic.id} className="flex items-center justify-between py-2">
+                            <Link to={`/lesson/${module.id}/${topic.id}`} className="flex items-center space-x-2 group">
+                              {topic.completed ? (
+                                <CheckCircle className="w-4 h-4 text-green-500" />
+                              ) : (
+                                <div className="w-4 h-4 border-2 border-gray-600 rounded-full" />
+                              )}
+                              <span className="text-sm text-gray-300 group-hover:text-white underline decoration-dotted underline-offset-4">
+                                {topic.title}
+                              </span>
+                            </Link>
+                            <div className="flex items-center space-x-2">
+                              {getTypeIcon(topic.type)}
+                              <span className="text-xs text-gray-400">{topic.duration}</span>
+                            </div>
                           </div>
-                          <div className="flex items-center space-x-2">
-                            {getTypeIcon(topic.type)}
-                            <span className="text-xs text-gray-400">{topic.duration}</span>
-                          </div>
-                        </div>
-                      ))}
-                      {module.topics.length > 3 && (
-                        <p className="text-xs text-gray-400 pl-6">
-                          +{module.topics.length - 3} more lessons
-                        </p>
+                        ))}
+                      </div>
+                      {module.topics.length > 5 && !expandedModules[module.id] && (
+                        <button
+                          onClick={() => setExpandedModules(prev => ({ ...prev, [module.id]: true }))}
+                          className="text-xs text-gray-300 hover:text-white underline decoration-dotted underline-offset-4 pl-6 text-left"
+                        >
+                          +{module.topics.length - 5} more lessons
+                        </button>
+                      )}
+                      {module.topics.length > 5 && expandedModules[module.id] && (
+                        <button
+                          onClick={() => setExpandedModules(prev => ({ ...prev, [module.id]: false }))}
+                          className="text-xs text-gray-300 hover:text-white underline decoration-dotted underline-offset-4 pl-6 text-left"
+                        >
+                          Show less
+                        </button>
                       )}
                     </div>
 
@@ -459,28 +502,38 @@ const LearningCenter = () => {
                     {module.locked ? (
                       <button
                         disabled
-                        className="w-full py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 bg-gray-700 text-gray-500 cursor-not-allowed"
+                        className="mt-auto w-full py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 bg-gray-700 text-gray-500 cursor-not-allowed"
                       >
                         <Lock className="w-4 h-4" />
                         <span>Locked</span>
                       </button>
                     ) : (
-                      <Link
-                        to={`/lesson/${module.id}/${module.topics[0].id}`}
-                        className="w-full py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white"
-                      >
-                        {module.progress > 0 ? (
-                          <>
-                            <span>Continue Learning</span>
-                            <ArrowRight className="w-4 h-4" />
-                          </>
-                        ) : (
-                          <>
-                            <span>Start Module</span>
-                            <ArrowRight className="w-4 h-4" />
-                          </>
-                        )}
-                      </Link>
+                      (() => {
+                        const resumeId = getResumeLessonId(module.id, module.topics);
+                        const allLessonsCompleted = module.topics.every(t => t.completed);
+                        const quizDone = isQuizCompleted(module.id);
+                        const href = allLessonsCompleted && !quizDone
+                          ? `/quiz/${module.id}`
+                          : `/lesson/${module.id}/${resumeId || module.topics[0].id}`;
+                        return (
+                          <Link
+                            to={href}
+                            className="mt-auto w-full py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white"
+                          >
+                            {module.progress > 0 ? (
+                              <>
+                                <span>Continue Learning</span>
+                                <ArrowRight className="w-4 h-4" />
+                              </>
+                            ) : (
+                              <>
+                                <span>Start Module</span>
+                                <ArrowRight className="w-4 h-4" />
+                              </>
+                            )}
+                          </Link>
+                        );
+                      })()
                     )}
                   </div>
                 </div>

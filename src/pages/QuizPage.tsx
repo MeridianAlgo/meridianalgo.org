@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import ContentService, { QuizContent, QuizQuestion } from '../services/contentService';
+import ContentService, { QuizContent } from '../services/contentService';
 import { 
   BookOpen, CheckCircle, ArrowLeft, ArrowRight, Brain, 
-  Home, LogOut, Menu, ChevronLeft, BarChart, Trophy, 
-  Clock, Award, AlertCircle, Star
+  Home, Menu, ChevronLeft, 
+  Clock, Award, AlertCircle, Calculator
 } from 'lucide-react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
@@ -91,14 +91,31 @@ const QuizPage: React.FC = () => {
     return Math.round((correct / quizData.content.questions.length) * 100);
   };
 
-  const handleSubmitQuiz = () => {
+  const handleSubmitQuiz = async () => {
     const finalScore = calculateScore();
     setScore(finalScore);
     setShowResults(true);
-    
+
     // Record quiz completion (kept separate from lessons)
     if (finalScore >= quizData.content.passingScore && completeQuiz) {
       completeQuiz(quizData.info.id, finalScore);
+
+      // Auto-mark the module's last lesson as complete so users don't need to go back
+      try {
+        if (moduleId && updateProgress) {
+          const cs = ContentService.getInstance();
+          const module = await cs.getModule(moduleId);
+          if (module && module.lessons.length > 0) {
+            const lastLessonId = module.lessons[module.lessons.length - 1].id;
+            const already = user?.completedConcepts?.includes(lastLessonId);
+            if (!already) {
+              updateProgress(lastLessonId);
+            }
+          }
+        }
+      } catch (e) {
+        console.warn('Auto mark-complete after quiz failed:', e);
+      }
     }
   };
 
@@ -192,6 +209,49 @@ const QuizPage: React.FC = () => {
                     </p>
                   </div>
                 )}
+
+                {/* Review Section */}
+                <div className="text-left bg-gray-800 rounded-2xl p-6 border border-gray-700 mt-8">
+                  <h2 className="text-xl font-bold text-white mb-4">Answer Review</h2>
+                  <div className="space-y-4">
+                    {quizData.content.questions.map((q, idx) => {
+                      const userAns = answers[q.id];
+                      const correct = userAns === q.correct;
+                      return (
+                        <div key={q.id} className={`p-4 rounded-xl border ${correct ? 'border-green-500/30 bg-green-600/10' : 'border-red-500/30 bg-red-600/10'}`}>
+                          <div className="flex items-start justify-between">
+                            <div>
+                              <p className="text-sm text-gray-300 mb-2">Question {idx + 1}</p>
+                              <p className="text-white font-semibold mb-3">{q.question}</p>
+                            </div>
+                            <div className={`text-xs px-2 py-1 rounded-full ${correct ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
+                              {correct ? 'Correct' : 'Incorrect'}
+                            </div>
+                          </div>
+                          {q.type === 'multiple-choice' && q.options && (
+                            <div className="mt-2 space-y-1 text-sm">
+                              <p className="text-gray-300">Your answer: <span className={correct ? 'text-green-300' : 'text-red-300'}>{typeof userAns === 'number' ? q.options[userAns] : '—'}</span></p>
+                              {!correct && (
+                                <p className="text-gray-300">Correct answer: <span className="text-green-300">{typeof q.correct === 'number' ? q.options[q.correct] : ''}</span></p>
+                              )}
+                            </div>
+                          )}
+                          {q.type === 'true-false' && (
+                            <div className="mt-2 space-y-1 text-sm">
+                              <p className="text-gray-300">Your answer: <span className={correct ? 'text-green-300' : 'text-red-300'}>{String(userAns)}</span></p>
+                              {!correct && (
+                                <p className="text-gray-300">Correct answer: <span className="text-green-300">{String(q.correct)}</span></p>
+                              )}
+                            </div>
+                          )}
+                          {q.explanation && (
+                            <p className="mt-3 text-gray-200">Explanation: <span className="text-gray-300">{q.explanation}</span></p>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
 
                 <div className="flex items-center justify-center space-x-4">
                   {!passed && (
@@ -296,6 +356,10 @@ const QuizPage: React.FC = () => {
             <Link to="/learning" className="flex items-center px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors">
               <BookOpen className="w-5 h-5" />
               {sidebarOpen && <span className="ml-3">Learning Center</span>}
+            </Link>
+            <Link to="/tools" className="flex items-center px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-lg transition-colors">
+              <Calculator className="w-5 h-5" />
+              {sidebarOpen && <span className="ml-3">Financial Tools</span>}
             </Link>
           </div>
         </nav>
