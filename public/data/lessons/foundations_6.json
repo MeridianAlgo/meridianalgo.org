@@ -1,0 +1,59 @@
+{
+  "title": "Money Management Tools",
+  "type": "reading",
+  "duration": "15 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Tools That Make Managing Money Easier",
+      "subtitle": "Apps, methods, and systems that help you stay on track"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Popular budgeting apps and how to choose one",
+        "Spreadsheet vs app-based tracking",
+        "Automations that save time",
+        "Account aggregation and alerts"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Categories of Tools",
+      "content": "The best tool is the one you'll use consistently. Explore apps for budgeting, savings automation, investment tracking, and bill reminders."
+    },
+    {
+      "type": "keypoints",
+      "title": "Tool Selection Criteria",
+      "points": [
+        { "title": "Simplicity", "description": "Choose a tool with a clean interface you enjoy using." },
+        { "title": "Automation", "description": "Look for auto-categorization, savings rules, and recurring transfers." },
+        { "title": "Security", "description": "Use tools with strong encryption and two-factor authentication." }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Start Small",
+      "content": "Track spending in one category this week (e.g., dining out). Expand gradually.",
+      "color": "blue"
+    },
+    {
+      "type": "actionsteps",
+      "title": "Get Set Up",
+      "steps": [
+        "Pick one tool (app or spreadsheet)",
+        "Connect accounts or create categories",
+        "Set one automation (e.g., $25 weekly transfer)",
+        "Schedule a 15-minute weekly review"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Pro Tip",
+      "content": "If you prefer spreadsheets, start with a simple template and add complexity only when needed.",
+      "icon": "lightbulb"
+    }
+  ]
+}

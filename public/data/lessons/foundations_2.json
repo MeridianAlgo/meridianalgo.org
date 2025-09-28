@@ -1,0 +1,82 @@
+{
+  "title": "Understanding Income vs Expenses",
+  "type": "reading",
+  "duration": "10 min",
+  "points": 75,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Income vs Expenses: The Foundation of Financial Health",
+      "subtitle": "Master the relationship between money in and money out"
+    },
+    {
+      "type": "content",
+      "title": "Why This Matters",
+      "content": "Understanding the relationship between your income and expenses is crucial for building wealth and achieving financial stability. This simple concept forms the foundation of all personal finance decisions."
+    },
+    {
+      "type": "keypoints",
+      "title": "Types of Income",
+      "points": [
+        {
+          "title": "Active Income",
+          "description": "Money earned from work - salary, wages, tips, freelance income. This requires your time and effort to generate."
+        },
+        {
+          "title": "Passive Income", 
+          "description": "Money earned with minimal ongoing effort - rental income, dividends, royalties. The goal is to build this over time."
+        },
+        {
+          "title": "Portfolio Income",
+          "description": "Money from investments - capital gains, interest, dividends. This comes from your money working for you."
+        }
+      ]
+    },
+    {
+      "type": "keypoints",
+      "title": "Types of Expenses",
+      "points": [
+        {
+          "title": "Fixed Expenses",
+          "description": "Same amount each month - rent, insurance, loan payments. These are predictable and harder to change quickly."
+        },
+        {
+          "title": "Variable Expenses",
+          "description": "Change each month - groceries, utilities, gas. These fluctuate but are still necessary."
+        },
+        {
+          "title": "Discretionary Expenses",
+          "description": "Optional spending - dining out, entertainment, hobbies. These are the easiest to adjust when needed."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "The Golden Rule of Personal Finance",
+      "content": "Always spend less than you earn. The difference between your income and expenses is what you can save and invest for your future. This surplus is the foundation of wealth building.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "The Income-Expense Gap",
+      "content": "The gap between your income and expenses determines your financial trajectory. A positive gap (surplus) allows you to save and invest. A negative gap (deficit) leads to debt and financial stress. Your goal is to widen this gap over time by increasing income and optimizing expenses."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Your Action Steps",
+      "steps": [
+        "List all your income sources for the past month",
+        "Categorize your expenses into fixed, variable, and discretionary",
+        "Calculate your income-expense gap",
+        "Identify one expense you can reduce this month",
+        "Set a target savings rate (start with 10% if you're new to this)"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Pro Tip",
+      "content": "Aim to save at least 20% of your income. If that seems impossible now, start with 1% and increase it by 1% each month. The habit is more important than the amount when you're starting out.",
+      "icon": "lightbulb"
+    }
+  ]
+}

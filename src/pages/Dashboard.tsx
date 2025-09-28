@@ -1,29 +1,25 @@
 import React, { useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { BookOpen, Award, TrendingUp, Calendar, Target, Star, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
   const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = 'MeridianAlgo - Learning Dashboard';
   }, []);
 
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/login', { state: { from: { pathname: '/dashboard' } } });
+    }
+  }, [isAuthenticated, navigate]);
+
   if (!isAuthenticated || !user) {
-    return (
-      <div className="min-h-screen bg-black text-white pt-24 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Please sign in to access your dashboard</h1>
-          <Link 
-            to="/financial-literacy" 
-            className="text-orange-400 hover:text-orange-300 transition-colors"
-          >
-            Go to Learning Page
-          </Link>
-        </div>
-      </div>
-    );
+    return null; // Will redirect to login
   }
 
   const totalConcepts = 15; // Total concepts across all sections
@@ -193,7 +189,7 @@ const Dashboard: React.FC = () => {
               </div>
 
               <Link 
-                to="/financial-literacy"
+                to="/learning"
                 className="mt-6 w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center"
               >
                 Continue Learning
@@ -241,7 +237,7 @@ const Dashboard: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-6">Quick Actions</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link 
-                to="/financial-literacy"
+                to="/learning"
                 className="bg-black/40 hover:bg-black/60 border border-gray-700 hover:border-orange-400/50 rounded-xl p-6 transition-all group"
               >
                 <BookOpen className="w-8 h-8 text-orange-400 mb-3 group-hover:scale-110 transition-transform" />

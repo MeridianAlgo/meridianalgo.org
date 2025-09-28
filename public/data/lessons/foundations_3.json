@@ -1,0 +1,69 @@
+{
+  "title": "Creating Your First Budget",
+  "type": "exercise",
+  "duration": "20 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Creating Your First Budget",
+      "subtitle": "Take control of your finances with a personalized budget plan"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Different budgeting methods and strategies",
+        "How to track income and categorize expenses",
+        "Setting up a realistic budget that works",
+        "Tools and apps for budget management"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Budgeting Matters",
+      "content": "A budget is your financial roadmap. It helps you understand where your money goes, ensures you can cover essential expenses, and helps you save for future goals. Without a budget, it's easy to overspend and wonder where all your money went at the end of the month."
+    },
+    {
+      "type": "highlight",
+      "title": "The 50/30/20 Rule",
+      "content": "A popular budgeting method that divides your after-tax income into three categories: 50% for needs (rent, utilities, groceries), 30% for wants (entertainment, dining out), and 20% for savings and debt repayment",
+      "color": "orange"
+    },
+    {
+      "type": "actionsteps",
+      "title": "Create Your Budget",
+      "steps": [
+        "Calculate your monthly income after taxes",
+        "List all fixed expenses (rent, insurance, loans)",
+        "Track variable expenses for one month",
+        "Categorize spending into needs, wants, and savings",
+        "Adjust and balance to ensure income exceeds expenses"
+      ]
+    },
+    {
+      "type": "keypoints",
+      "title": "Budgeting Methods",
+      "points": [
+        {
+          "title": "Zero-Based Budgeting",
+          "description": "Every dollar of income is assigned a purpose. Income minus expenses equals zero."
+        },
+        {
+          "title": "Envelope System",
+          "description": "Cash is divided into envelopes for different spending categories. When an envelope is empty, spending stops."
+        },
+        {
+          "title": "Pay Yourself First",
+          "description": "Savings and investments are treated as the first 'bill' to pay each month."
+        }
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Pro Tip",
+      "content": "Start with a simple spreadsheet or budgeting app. Track everything for one month without judgment to understand your current spending patterns. Then make adjustments based on your goals.",
+      "icon": "lightbulb"
+    }
+  ]
+}

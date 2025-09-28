@@ -1,0 +1,14 @@
+{
+  "title": "Automating Your Savings",
+  "type": "exercise",
+  "duration": "15 min",
+  "points": 125,
+  "sections": [
+    { "type": "hero", "title": "Make Saving Happen on Autopilot", "subtitle": "Build momentum with systems, not willpower" },
+    { "type": "overview", "title": "What You'll Do", "items": ["Set up automatic transfers", "Create savings rules for purchases", "Schedule paycheck-first savings", "Reduce friction to save more"] },
+    { "type": "content", "title": "Pay Yourself First", "content": "Automating savings right after payday ensures you save before spending. Treat savings like a must-pay bill." },
+    { "type": "actionsteps", "title": "Automation Setup", "steps": ["Create a weekly or bi-weekly transfer to savings", "Round-up purchases to save spare change", "Auto-transfer to goal-specific sub-accounts", "Enable alerts when you skip a transfer"] },
+    { "type": "highlight", "title": "Start Today", "content": "Even $10 per week builds momentum.", "color": "orange" },
+    { "type": "protip", "title": "Pro Tip", "content": "Align transfers with payday to minimize overdraft risk.", "icon": "lightbulb" }
+  ]
+}

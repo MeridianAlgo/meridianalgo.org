@@ -1,0 +1,68 @@
+{
+  "title": "Financial Foundations Quiz",
+  "type": "quiz",
+  "duration": "10 min",
+  "points": 200,
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What is the 50/30/20 budgeting rule?",
+      "options": [
+        "50% savings, 30% needs, 20% wants",
+        "50% needs, 30% wants, 20% savings/debt",
+        "50% wants, 30% savings, 20% needs",
+        "50% debt, 30% needs, 20% wants"
+      ],
+      "correct": 1,
+      "explanation": "The 50/30/20 rule allocates 50% to needs (rent, groceries), 30% to wants (entertainment), and 20% to savings and debt repayment."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "How many months of expenses should you have in an emergency fund?",
+      "options": [
+        "1-2 months",
+        "3-6 months", 
+        "12 months",
+        "24 months"
+      ],
+      "correct": 1,
+      "explanation": "Financial experts recommend 3-6 months of expenses in an emergency fund to cover unexpected situations like job loss or medical emergencies."
+    },
+    {
+      "id": 3,
+      "type": "true-false",
+      "question": "The foundation of wealth building is earning more money.",
+      "correct": false,
+      "explanation": "While earning more helps, the foundation of wealth building is spending less than you earn, regardless of income level."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Which is considered a 'need' in budgeting?",
+      "options": [
+        "Netflix subscription",
+        "Dining out",
+        "Rent payment",
+        "New clothes"
+      ],
+      "correct": 2,
+      "explanation": "Rent is a basic necessity for shelter. Netflix, dining out, and new clothes are typically categorized as 'wants' unless absolutely essential."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "What's the most important factor in building wealth?",
+      "options": [
+        "Having a high income",
+        "Investing in stocks",
+        "Consistency over time",
+        "Taking big risks"
+      ],
+      "correct": 2,
+      "explanation": "Consistency over time, through regular saving and investing, is more important than any single factor in building long-term wealth."
+    }
+  ]
+}

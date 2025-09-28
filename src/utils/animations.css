@@ -92,6 +92,10 @@
   animation: fadeInUp 0.8s ease-out;
 }
 
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
 .animate-fadeInDown {
   animation: fadeInDown 0.8s ease-out;
 }

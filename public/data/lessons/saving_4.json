@@ -1,0 +1,14 @@
+{
+  "title": "Saving for Major Goals",
+  "type": "exercise",
+  "duration": "20 min",
+  "points": 150,
+  "sections": [
+    { "type": "hero", "title": "Plan and Fund Big Goals", "subtitle": "Trips, down payments, education — make them real" },
+    { "type": "overview", "title": "What You'll Do", "items": ["Estimate goal costs", "Set target dates", "Build contribution schedules", "Track progress visually"] },
+    { "type": "content", "title": "Timeline + Amount = Plan", "content": "Turn big goals into monthly amounts. Break totals into smaller, predictable contributions." },
+    { "type": "actionsteps", "title": "Goal Planner", "steps": ["List 2–3 major goals with costs", "Pick target dates", "Divide cost by months remaining", "Automate goal-specific transfers"] },
+    { "type": "highlight", "title": "Proportion Rule", "content": "Fund long-term goals at least a little each month to maintain momentum.", "color": "orange" },
+    { "type": "protip", "title": "Pro Tip", "content": "Use separate sub-accounts for each big goal to avoid mixing funds.", "icon": "lightbulb" }
+  ]
+}

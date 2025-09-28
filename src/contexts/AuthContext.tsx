@@ -1,4 +1,15 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import ProgressService, { ProgressData } from '../services/progressService';
+import { 
+  onAuthChange, 
+  signInWithEmail, 
+  signUpWithEmail, 
+  signInWithGoogle, 
+  signOutUser,
+  loadUserProgressFromFirestore,
+  saveUserProgressToFirestore 
+} from '../config/firebase';
+import { User as FirebaseUser } from 'firebase/auth';
 
 export interface User {
   id: string;
@@ -10,17 +21,23 @@ export interface User {
   certificates: string[];
   learningStreak: number;
   lastLoginDate: string;
+  totalPoints: number;
+  streakMessage?: string;
 }
 
 interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<boolean>;
+  loginWithGoogle: () => Promise<boolean>;
   register: (email: string, password: string, name: string) => Promise<boolean>;
   logout: () => void;
+  isAuthenticated: boolean;
   updateProgress: (conceptId: string) => void;
   completeQuiz: (quizId: string, score: number) => void;
   awardCertificate: (certificateId: string) => void;
-  isAuthenticated: boolean;
+  progressData: ProgressData | null;
+  refreshProgress: () => Promise<void>;
+  loading?: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -39,151 +56,127 @@ interface AuthProviderProps {
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [firebaseUser, setFirebaseUser] = useState<FirebaseUser | null>(null);
+  const [progressData, setProgressData] = useState<ProgressData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const progressService = ProgressService.getInstance();
 
-  // Load user from localStorage on mount
+  // Listen to Firebase auth state changes
   useEffect(() => {
-    const savedUser = localStorage.getItem('meridianAlgo_user');
-    if (savedUser) {
-      const userData = JSON.parse(savedUser);
-      
-      // Cross-reference with users database to get latest data
-      const existingUsers = JSON.parse(localStorage.getItem('meridianAlgo_users') || '{}');
-      const userKey = userData.email.toLowerCase();
-      
-      if (existingUsers[userKey]) {
-        // Use data from users database as it's the source of truth
-        const dbUserData = existingUsers[userKey];
-        const mergedUser = {
-          id: dbUserData.id,
-          email: dbUserData.email,
-          name: dbUserData.name,
-          joinDate: dbUserData.joinDate,
-          completedConcepts: dbUserData.completedConcepts || [],
-          completedQuizzes: dbUserData.completedQuizzes || [],
-          certificates: dbUserData.certificates || [],
-          learningStreak: dbUserData.learningStreak || 1,
-          lastLoginDate: dbUserData.lastLoginDate || new Date().toISOString()
-        };
+    console.log('🔥 AuthContext: Setting up Firebase auth listener...');
+    
+    const unsubscribe = onAuthChange(async (fbUser) => {
+      if (fbUser) {
+        console.log('🔥 AuthContext: Firebase user authenticated:', fbUser.email);
+        setFirebaseUser(fbUser);
         
-        setUser(mergedUser);
-        localStorage.setItem('meridianAlgo_user', JSON.stringify(mergedUser));
+        // Load user data from Firestore cloud database
+        const userData = await loadUserProgressFromFirestore(fbUser);
+        
+        if (userData) {
+          setUser(userData);
+          console.log('🔥 AuthContext: User data loaded from Firestore for:', userData.email);
+        } else {
+          console.log('❌ AuthContext: Failed to load user data');
+        }
       } else {
-        // Fallback to saved user data
-        setUser(userData);
+        console.log('🔥 AuthContext: No Firebase user');
+        setFirebaseUser(null);
+        setUser(null);
       }
-    }
+      setLoading(false);
+    });
+    
+    return () => unsubscribe();
   }, []);
 
-  // Save user to localStorage and users database whenever user state changes
+  // Refresh progress data whenever user changes
   useEffect(() => {
     if (user) {
-      localStorage.setItem('meridianAlgo_user', JSON.stringify(user));
-      
-      // Also update the users database
-      const existingUsers = JSON.parse(localStorage.getItem('meridianAlgo_users') || '{}');
-      const userKey = user.email.toLowerCase();
-      if (existingUsers[userKey]) {
-        existingUsers[userKey] = {
-          ...existingUsers[userKey],
-          ...user
-        };
-        localStorage.setItem('meridianAlgo_users', JSON.stringify(existingUsers));
-      }
+      refreshProgress();
     }
   }, [user]);
 
-  const generateUserId = () => {
-    return 'user_' + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+  const refreshProgress = async () => {
+    if (!user) return;
+    
+    try {
+      const progress = await progressService.calculateProgress(
+        user.completedConcepts,
+        user.completedQuizzes
+      );
+      setProgressData(progress);
+      
+      // Update user points if changed
+      const updatedUser = {
+        ...user,
+        totalPoints: progress.totalPoints
+      };
+      
+      if (updatedUser.totalPoints !== user.totalPoints) {
+        setUser(updatedUser);
+      }
+    } catch (error) {
+      console.error('Error refreshing progress:', error);
+    }
   };
 
-  const login = async (email: string, password: string): Promise<boolean> => {
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Check if user exists in localStorage
-    const existingUsers = JSON.parse(localStorage.getItem('meridianAlgo_users') || '{}');
-    const userKey = email.toLowerCase();
-    
-    if (existingUsers[userKey] && existingUsers[userKey].password === password) {
-      const userData = existingUsers[userKey];
-      
-      // Calculate learning streak
-      const today = new Date().toDateString();
-      const lastLogin = userData.lastLoginDate ? new Date(userData.lastLoginDate).toDateString() : null;
-      let newStreak = userData.learningStreak || 1;
-      
-      if (lastLogin && today !== lastLogin) {
-        const yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1);
-        const wasYesterday = lastLogin === yesterday.toDateString();
-        newStreak = wasYesterday ? (userData.learningStreak || 0) + 1 : 1;
-      }
-      
-      const loginUser: User = {
-        id: userData.id,
-        email: userData.email,
-        name: userData.name,
-        joinDate: userData.joinDate,
-        completedConcepts: userData.completedConcepts || [],
-        completedQuizzes: userData.completedQuizzes || [],
-        certificates: userData.certificates || [],
-        learningStreak: newStreak,
-        lastLoginDate: new Date().toISOString()
-      };
-      
-      // Update the users database with new login info
-      existingUsers[userKey] = {
-        ...existingUsers[userKey],
-        ...loginUser
-      };
-      localStorage.setItem('meridianAlgo_users', JSON.stringify(existingUsers));
-      
-      setUser(loginUser);
-      return true;
+  // Save user progress to Firestore whenever user state changes
+  useEffect(() => {
+    if (user && firebaseUser) {
+      console.log('🔥 AuthContext: Saving user progress to Firestore for:', user.email);
+      saveUserProgressToFirestore(firebaseUser, user);
     }
+  }, [user, firebaseUser]);
+
+  const login = async (email: string, password: string): Promise<boolean> => {
+    console.log('AuthContext: Login attempt for:', email);
     
-    return false;
+    try {
+      await signInWithEmail(email, password);
+      console.log('AuthContext: Firebase login successful for:', email);
+      return true;
+    } catch (error: any) {
+      console.error('AuthContext: Login error:', error.message);
+      return false;
+    }
+  };
+
+  const loginWithGoogle = async (): Promise<boolean> => {
+    console.log('AuthContext: Google login attempt');
+    
+    try {
+      await signInWithGoogle();
+      console.log('AuthContext: Google login successful');
+      return true;
+    } catch (error: any) {
+      console.error('AuthContext: Google login error:', error.message);
+      return false;
+    }
   };
 
   const register = async (email: string, password: string, name: string): Promise<boolean> => {
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    console.log('AuthContext: Register attempt for:', email);
     
-    // Check if user already exists
-    const existingUsers = JSON.parse(localStorage.getItem('meridianAlgo_users') || '{}');
-    const userKey = email.toLowerCase();
-    
-    if (existingUsers[userKey]) {
-      return false; // User already exists
+    try {
+      await signUpWithEmail(email, password, name);
+      console.log('AuthContext: Firebase registration successful for:', email);
+      return true;
+    } catch (error: any) {
+      console.error('AuthContext: Registration error:', error.message);
+      return false;
     }
-    
-    // Create new user
-    const newUser: User = {
-      id: generateUserId(),
-      email: email.toLowerCase(),
-      name,
-      joinDate: new Date().toISOString(),
-      completedConcepts: [],
-      completedQuizzes: [],
-      certificates: [],
-      learningStreak: 1,
-      lastLoginDate: new Date().toISOString()
-    };
-    
-    // Save to users database
-    existingUsers[userKey] = {
-      ...newUser,
-      password // Store password for demo purposes (in real app, this would be hashed)
-    };
-    localStorage.setItem('meridianAlgo_users', JSON.stringify(existingUsers));
-    
-    setUser(newUser);
-    return true;
   };
 
-  const logout = () => {
-    setUser(null);
-    localStorage.removeItem('meridianAlgo_user');
+  const logout = async () => {
+    console.log('AuthContext: Logging out user');
+    try {
+      await signOutUser();
+      setUser(null);
+      setFirebaseUser(null);
+    } catch (error) {
+      console.error('AuthContext: Logout error:', error);
+    }
   };
 
   const updateProgress = (conceptId: string) => {
@@ -194,23 +187,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       ? user.completedConcepts.filter(id => id !== conceptId)
       : [...user.completedConcepts, conceptId];
     
+    // Calculate points for this lesson
+    const lessonPoints = progressService.getPointsForLesson(conceptId);
+    const pointsChange = isCompleted ? -lessonPoints : lessonPoints;
+    
     const updatedUser = {
       ...user,
-      completedConcepts: updatedCompletedConcepts
+      completedConcepts: updatedCompletedConcepts,
+      totalPoints: Math.max(0, user.totalPoints + pointsChange)
     };
-    
-    // Immediately update both localStorage and users database
-    localStorage.setItem('meridianAlgo_user', JSON.stringify(updatedUser));
-    
-    const existingUsers = JSON.parse(localStorage.getItem('meridianAlgo_users') || '{}');
-    const userKey = user.email.toLowerCase();
-    if (existingUsers[userKey]) {
-      existingUsers[userKey] = {
-        ...existingUsers[userKey],
-        ...updatedUser
-      };
-      localStorage.setItem('meridianAlgo_users', JSON.stringify(existingUsers));
-    }
     
     setUser(updatedUser);
   };
@@ -224,19 +209,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       completedQuizzes: [...user.completedQuizzes.filter(q => !q.startsWith(quizId)), quizResult]
     };
     
-    // Immediately update both localStorage and users database
-    localStorage.setItem('meridianAlgo_user', JSON.stringify(updatedUser));
-    
-    const existingUsers = JSON.parse(localStorage.getItem('meridianAlgo_users') || '{}');
-    const userKey = user.email.toLowerCase();
-    if (existingUsers[userKey]) {
-      existingUsers[userKey] = {
-        ...existingUsers[userKey],
-        ...updatedUser
-      };
-      localStorage.setItem('meridianAlgo_users', JSON.stringify(existingUsers));
-    }
-    
     setUser(updatedUser);
   };
 
@@ -248,36 +220,27 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       certificates: [...user.certificates, certificateId]
     };
     
-    // Immediately update both localStorage and users database
-    localStorage.setItem('meridianAlgo_user', JSON.stringify(updatedUser));
-    
-    const existingUsers = JSON.parse(localStorage.getItem('meridianAlgo_users') || '{}');
-    const userKey = user.email.toLowerCase();
-    if (existingUsers[userKey]) {
-      existingUsers[userKey] = {
-        ...existingUsers[userKey],
-        ...updatedUser
-      };
-      localStorage.setItem('meridianAlgo_users', JSON.stringify(existingUsers));
-    }
-    
     setUser(updatedUser);
   };
 
   const value: AuthContextType = {
     user,
     login,
+    loginWithGoogle,
     register,
     logout,
+    isAuthenticated: !!user && !!firebaseUser,
     updateProgress,
     completeQuiz,
     awardCertificate,
-    isAuthenticated: !!user
+    progressData,
+    refreshProgress,
+    loading
   };
 
   return (
     <AuthContext.Provider value={value}>
-      {children}
+      {!loading && children}
     </AuthContext.Provider>
   );
 };
