@@ -1,0 +1,100 @@
+{
+  "title": "Psychology of Saving",
+  "type": "reading", 
+  "duration": "18 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "The Psychology Behind Successful Saving",
+      "subtitle": "Understanding your mind is the key to saving success"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Discover",
+      "items": [
+        "Why our brains make saving difficult",
+        "Common psychological barriers to saving",
+        "Proven strategies to overcome these barriers",
+        "How to make saving feel automatic and effortless"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Saving Paradox",
+      "content": "Saving money isn't just about math—it's about psychology. Even when we know we should save, our brains often work against us. Understanding these mental patterns is the first step to overcoming them and building lasting wealth."
+    },
+    {
+      "type": "keypoints",
+      "title": "Common Psychological Barriers",
+      "points": [
+        {
+          "title": "Instant Gratification",
+          "description": "Our brains are wired to prefer immediate rewards over future benefits. We want things now, not later, even when waiting would be better for us."
+        },
+        {
+          "title": "Present Bias",
+          "description": "We overvalue immediate rewards and undervalue future benefits. $100 today feels more valuable than $120 in a year, even though the math says otherwise."
+        },
+        {
+          "title": "Mental Accounting",
+          "description": "We treat money differently based on its source. Tax refunds feel like 'free money' to spend, while salary feels more precious to save."
+        },
+        {
+          "title": "Loss Aversion",
+          "description": "We hate losing money more than we like gaining it. Putting money into savings can feel like a loss, even though it's actually a gain."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "The Key Insight",
+      "content": "Your brain sees saving as giving up something today for an uncertain future benefit. The trick is to make saving feel automatic and painless, so your brain doesn't resist it.",
+      "color": "blue"
+    },
+    {
+      "type": "keypoints", 
+      "title": "Strategies to Overcome These Barriers",
+      "points": [
+        {
+          "title": "Automate Your Savings",
+          "description": "Set up automatic transfers so you don't have to think about it. When saving happens automatically, your brain can't resist it."
+        },
+        {
+          "title": "Pay Yourself First",
+          "description": "Save before you spend on anything else. Treat your savings like a non-negotiable bill that must be paid."
+        },
+        {
+          "title": "Use Visual Reminders",
+          "description": "Keep pictures of your goals where you can see them. Visual cues help your brain remember why you're saving."
+        },
+        {
+          "title": "Start Small",
+          "description": "Begin with amounts that don't feel painful. Success builds on success, and small wins create momentum."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Power of Compound Interest",
+      "content": "Albert Einstein allegedly called compound interest 'the eighth wonder of the world.' When you save early and consistently, your money doesn't just grow—it grows exponentially. Time is your greatest asset in building wealth."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Your Challenge",
+      "steps": [
+        "Set up one automatic savings transfer this week, even if it's just $25",
+        "Choose a specific savings goal and find a picture to represent it",
+        "Put that picture somewhere you'll see it daily",
+        "Calculate how much you'll have in 10 years if you save that amount monthly",
+        "Celebrate this first step—you've just started building wealth!"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Psychology Hack",
+      "content": "Name your savings accounts based on your goals: 'Emergency Fund,' 'Vacation Fund,' 'New Car Fund.' This makes saving feel more concrete and motivating than just 'Savings Account #2.'",
+      "icon": "lightbulb"
+    }
+  ]
+}

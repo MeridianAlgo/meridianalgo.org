@@ -1,0 +1,18 @@
+{
+  "title": "High-Yield Savings Accounts",
+  "type": "reading",
+  "duration": "12 min",
+  "points": 75,
+  "sections": [
+    { "type": "hero", "title": "Earn More on Your Cash", "subtitle": "Use high-yield accounts to maximize interest" },
+    { "type": "overview", "title": "What You'll Learn", "items": ["What HYSA are", "How rates and APY work", "When to use them", "How to choose a good account"] },
+    { "type": "content", "title": "What Is a HYSA?", "content": "A high-yield savings account (HYSA) offers a significantly higher interest rate than traditional savings. Great for emergency funds and short-term goals." },
+    { "type": "keypoints", "title": "Choosing a HYSA", "points": [
+      { "title": "No Monthly Fees", "description": "Avoid accounts with maintenance fees." },
+      { "title": "High APY", "description": "Compare rates from reputable banks and credit unions." },
+      { "title": "Easy Transfers", "description": "Ensure fast ACH transfers to and from checking." }
+    ] },
+    { "type": "highlight", "title": "Remember", "content": "Rates change. Focus on overall reliability, not just today's top APY.", "color": "blue" },
+    { "type": "protip", "title": "Pro Tip", "content": "Keep everyday spending separate from your HYSA to reduce temptation.", "icon": "lightbulb" }
+  ]
+}

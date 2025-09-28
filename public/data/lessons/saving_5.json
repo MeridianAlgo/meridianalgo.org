@@ -1,0 +1,18 @@
+{
+  "title": "Understanding Compound Interest",
+  "type": "reading",
+  "duration": "16 min",
+  "points": 100,
+  "sections": [
+    { "type": "hero", "title": "Make Time Work for You", "subtitle": "How compound interest accelerates savings growth" },
+    { "type": "overview", "title": "What You'll Learn", "items": ["Compound vs simple interest", "Growth curve intuition", "Compounding frequency", "How to benefit early"] },
+    { "type": "content", "title": "Compounding Basics", "content": "Compound interest means interest earns interest. The earlier you start, the more time magnifies your results." },
+    { "type": "keypoints", "title": "Keys to Growth", "points": [
+      { "title": "Start Early", "description": "Even small amounts grow meaningfully over time." },
+      { "title": "Stay Consistent", "description": "Regular contributions beat sporadic large ones." },
+      { "title": "Avoid Interruptions", "description": "Withdrawals hurt compounding; keep your savings intact." }
+    ] },
+    { "type": "highlight", "title": "Example", "content": "Save $100/month at 4% APY for 10 years ≈ $14,700 vs $12,000 contributed.", "color": "green" },
+    { "type": "protip", "title": "Pro Tip", "content": "Raise your savings by 1–2% every six months to accelerate growth.", "icon": "lightbulb" }
+  ]
+}
