@@ -57,6 +57,23 @@
           "points": 100,
           "contentFile": "foundations_6.json"
         }
+        ,
+        {
+          "id": "foundations_7",
+          "title": "Building Better Spending Habits",
+          "type": "reading",
+          "duration": "14 min",
+          "points": 100,
+          "contentFile": "foundations_7.json"
+        },
+        {
+          "id": "foundations_8",
+          "title": "Monthly Money Review",
+          "type": "exercise",
+          "duration": "20 min",
+          "points": 150,
+          "contentFile": "foundations_8.json"
+        }
       ],
       "quiz": {
         "id": "foundations_quiz",

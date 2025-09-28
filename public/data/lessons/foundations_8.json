@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Monthly Money Review",
+    "subtitle": "A 20-minute ritual to stay in control"
+  },
+  "overview": {
+    "objectives": [
+      "Close the loop on last month",
+      "Adjust categories with real data",
+      "Prep next month in minutes"
+    ]
+  },
+  "content": [
+    {"type": "content", "text": "Consistency beats intensity. A short monthly review keeps your plan aligned with reality and prevents drift."},
+    {"type": "keypoints", "items": [
+      {"title": "3 Numbers", "description": "Savings rate, debt paid, emergency fund balance"},
+      {"title": "Top 3 Purchases", "description": "Decide if they were worth it and why"},
+      {"title": "One Tweak", "description": "Adjust exactly one category for next month"}
+    ]},
+    {"type": "actionsteps", "items": [
+      "Export last month’s transactions",
+      "Tag outliers and subscriptions",
+      "Move leftover cash to emergency fund",
+      "Schedule next review on calendar"
+    ]},
+    {"type": "highlight", "theme": "orange", "title": "Template Tip", "text": "Save a notes template with the 3 numbers, top purchases, and one tweak sections ready."}
+  ]
+}

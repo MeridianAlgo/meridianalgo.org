@@ -274,7 +274,7 @@ const FinancialLiteracy = () => {
   ];
 
   const totalConcepts = sections.reduce((total, section) => total + section.concepts.length, 0);
-  const completedCount = completedConcepts.size;
+  const completedCount = completedConceptsSet.size;
   const progressPercentage = totalConcepts > 0 ? (completedCount / totalConcepts) * 100 : 0;
 
   return (
@@ -291,7 +291,7 @@ const FinancialLiteracy = () => {
               <BookOpen className="w-10 h-10 text-orange-400" />
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
-              Financial <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Literacy</span> Learning
+              Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Finance</span>
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
@@ -345,7 +345,7 @@ const FinancialLiteracy = () => {
                     <div className="flex items-center space-x-2">
                       <span className="text-sm text-gray-400">
                         {section.concepts.filter(concept => 
-                          completedConcepts.has(`${section.id}-${concept.title}`)
+                          completedConceptsSet.has(`${section.id}-${concept.title}`)
                         ).length}/{section.concepts.length}
                       </span>
                       {expandedSection === section.id ? (
@@ -362,7 +362,7 @@ const FinancialLiteracy = () => {
                     <div className="space-y-6">
                       {section.concepts.map((concept, conceptIndex) => {
                         const conceptId = `${section.id}-${concept.title}`;
-                        const isCompleted = completedConcepts.has(conceptId);
+                        const isCompleted = completedConceptsSet.has(conceptId);
                         
                         return (
                           <div key={conceptIndex} className="bg-gray-900/50 rounded-xl p-6 border border-gray-700/50">
@@ -404,8 +404,10 @@ const FinancialLiteracy = () => {
                                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                                       <span className="text-gray-300 text-sm">{item}</span>
                                     </li>
+                                  ))}
+                                </ul>
+                              </div>
                             </div>
-
                             {concept.globalTip && (
                               <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
                                 <div className="flex items-start space-x-2">
@@ -420,7 +422,7 @@ const FinancialLiteracy = () => {
                           </div>
                         );
                       })}
-{{ ... }}
+                    </div>
                   </div>
                 )}
               </div>

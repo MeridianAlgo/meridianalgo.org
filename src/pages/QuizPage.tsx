@@ -9,10 +9,10 @@ import {
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const QuizPage: React.FC = () => {
-  const { user, isAuthenticated, updateProgress } = useAuth();
+  const { user, isAuthenticated, updateProgress, completeQuiz } = useAuth();
   const navigate = useNavigate();
   const { moduleId } = useParams();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
   const [quizData, setQuizData] = useState<{ info: any; content: QuizContent } | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -96,13 +96,14 @@ const QuizPage: React.FC = () => {
     setScore(finalScore);
     setShowResults(true);
     
-    // Award points if passed
-    if (finalScore >= quizData.content.passingScore && updateProgress) {
-      updateProgress(quizData.info.id);
+    // Record quiz completion (kept separate from lessons)
+    if (finalScore >= quizData.content.passingScore && completeQuiz) {
+      completeQuiz(quizData.info.id, finalScore);
     }
   };
 
-  const isCompleted = user.completedConcepts.includes(quizData?.info.id || '');
+  const quizId = quizData?.info.id || '';
+  const isCompleted = user.completedQuizzes?.some?.((q: string) => q.startsWith(quizId)) || false;
   const currentQ = quizData.content.questions[currentQuestion];
 
   if (showResults) {
@@ -215,6 +216,47 @@ const QuizPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // If quiz already completed, block retake
+  if (isCompleted && !showResults) {
+    return (
+      <div className="min-h-screen bg-gray-900 flex">
+        <div className={`${sidebarOpen ? 'w-64' : 'w-20'} bg-gray-800 border-r border-gray-700 transition-all duration-300 flex flex-col fixed h-full z-10`}>
+          <div className="p-4 border-b border-gray-700">
+            <div className="flex items-center justify-between">
+              <Link to="/learning" className={`flex items-center ${!sidebarOpen && 'justify-center'}`}>
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                {sidebarOpen && (
+                  <span className="ml-3 text-xl font-bold text-white">Quiz</span>
+                )}
+              </Link>
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="p-1.5 hover:bg-gray-700 rounded-lg transition-colors text-gray-300 hover:text-white"
+              >
+                {sidebarOpen ? <ChevronLeft className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className={`flex-1 overflow-y-auto ${sidebarOpen ? 'ml-64' : 'ml-20'} transition-all duration-300`}>
+          <div className="px-8 py-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <h1 className="text-3xl font-bold text-white mb-2">Quiz Completed</h1>
+              <p className="text-gray-300 mb-6">You've already completed the {quizData.content.title}. Retakes are disabled.</p>
+              <Link to="/learning" className="inline-flex items-center space-x-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-xl transition-all">
+                <span>Back to Learning</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>

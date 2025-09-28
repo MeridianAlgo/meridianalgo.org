@@ -34,7 +34,7 @@ interface ModuleView {
 const LearningCenter = () => {
   const { user, isAuthenticated, logout, progressData } = useAuth();
   const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
   const [modules, setModules] = useState<ModuleView[]>([]);
   const currentStreak = user?.learningStreak || 0;
 
@@ -120,6 +120,9 @@ const LearningCenter = () => {
           color: m.color,
         };
       });
+      // sort by difficulty: Beginner < Intermediate < Advanced (unknown last)
+      const order: Record<string, number> = { 'Beginner': 0, 'Intermediate': 1, 'Advanced': 2 };
+      built.sort((a, b) => (order[a.difficulty] ?? 99) - (order[b.difficulty] ?? 99));
       setModules(built);
     };
     load();

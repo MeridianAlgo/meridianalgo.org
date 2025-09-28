@@ -228,7 +228,7 @@ const Home = () => {
           </div>
           <div className="animate-fade-in-up flex flex-col sm:flex-row gap-6 justify-center items-center" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             <Link 
-              to="/newsletters" 
+              to="/financial-literacy" 
               className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25 group"
             >
               <span className="group-hover:animate-pulse">Get Started</span>

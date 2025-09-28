@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import ContentService from '../services/contentService';
 import { 
   BookOpen, Award, TrendingUp, Calendar, Target, Star, Users, Home, 
   LogOut, Menu, ChevronLeft, BarChart, Trophy, Flame, User
@@ -7,9 +8,10 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 
 const NewDashboard: React.FC = () => {
-  const { user, isAuthenticated, progressData } = useAuth();
+  const { user, isAuthenticated, progressData, logout } = useAuth();
   const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
+  const [moduleSummaries, setModuleSummaries] = useState<{ key: string; name: string; total: number; completed: number }[]>([]);
 
   useEffect(() => {
     document.title = 'MeridianAlgo - Dashboard';
@@ -21,6 +23,22 @@ const NewDashboard: React.FC = () => {
       navigate('/login', { state: { from: { pathname: '/dashboard' } } });
     }
   }, [isAuthenticated, navigate]);
+
+  // Build module totals and completed counts (excluding quizzes)
+  useEffect(() => {
+    const load = async () => {
+      const cs = ContentService.getInstance();
+      const mods = await cs.getModules();
+      const summaries = mods.map(m => {
+        const total = m.lessons.length;
+        const completed = (user?.completedConcepts ?? []).filter(c => c.startsWith(m.id + '_') && !c.includes('_quiz')).length;
+        return { key: m.id, name: m.title, total, completed };
+      });
+      setModuleSummaries(summaries);
+    };
+    if (isAuthenticated && user) load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, user]);
 
   if (!isAuthenticated || !user) {
     return null; // Will redirect to login
@@ -174,7 +192,8 @@ const NewDashboard: React.FC = () => {
           </div>
           {sidebarOpen && (
             <button
-              onClick={() => {
+              onClick={async () => {
+                await logout();
                 navigate('/');
               }}
               className="mt-4 w-full flex items-center justify-center px-3 py-2 text-red-400 hover:bg-red-900/20 rounded-lg transition-colors"
@@ -305,14 +324,7 @@ const NewDashboard: React.FC = () => {
               </div>
 
               <div className="space-y-4">
-                {[
-                  { name: 'Financial Foundations', completed: user.completedConcepts.filter(c => c.startsWith('foundations')).length, total: 6 },
-                  { name: 'Smart Saving Strategies', completed: user.completedConcepts.filter(c => c.startsWith('saving')).length, total: 5 },
-                  { name: 'Credit & Debt Management', completed: user.completedConcepts.filter(c => c.startsWith('credit')).length, total: 5 },
-                  { name: 'Investment Basics', completed: user.completedConcepts.filter(c => c.startsWith('investing')).length, total: 5 },
-                  { name: 'Retirement Planning', completed: user.completedConcepts.filter(c => c.startsWith('retirement')).length, total: 5 },
-                  { name: 'Tax Planning', completed: user.completedConcepts.filter(c => c.startsWith('taxes')).length, total: 4 }
-                ].map((section, index) => {
+                {moduleSummaries.map((section, index) => {
                   const sectionProgress = section.total > 0 ? (section.completed / section.total) * 100 : 0;
                   return (
                     <div key={index}>
@@ -324,13 +336,12 @@ const NewDashboard: React.FC = () => {
                         <div 
                           className="bg-gradient-to-r from-orange-400 to-yellow-400 h-2 rounded-full transition-all duration-300"
                           style={{ width: `${sectionProgress}%` }}
-                        ></div>
+                        />
                       </div>
                     </div>
                   );
                 })}
               </div>
-
               <Link 
                 to="/learning"
                 className="mt-6 w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center"

@@ -8,9 +8,9 @@ import {
 import { Link, useNavigate } from 'react-router-dom';
 
 const Achievements: React.FC = () => {
-  const { user, isAuthenticated } = useAuth();
+  const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
 
   useEffect(() => {
     document.title = 'MeridianAlgo - Achievements';
@@ -363,7 +363,8 @@ const Achievements: React.FC = () => {
           </div>
           {sidebarOpen && (
             <button
-              onClick={() => {
+              onClick={async () => {
+                await logout();
                 navigate('/');
               }}
               className="mt-4 w-full flex items-center justify-center px-3 py-2 text-red-400 hover:bg-red-900/20 rounded-lg transition-colors"

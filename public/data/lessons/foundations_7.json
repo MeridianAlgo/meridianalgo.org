@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "Building Better Spending Habits",
+    "subtitle": "Simple systems to make good choices automatic"
+  },
+  "overview": {
+    "objectives": [
+      "Spot your top spending leaks",
+      "Create friction for impulse buys",
+      "Set micro-rules that add up"
+    ]
+  },
+  "content": [
+    {
+      "type": "content",
+      "text": "Habits beat willpower. Small guardrails placed near spending triggers reduce friction and save money without feeling deprived."
+    },
+    {
+      "type": "highlight",
+      "theme": "orange",
+      "title": "Two-Minute Rule",
+      "text": "If a purchase takes less than two minutes of thought, add a 24-hour cooling-off step."
+    },
+    {
+      "type": "keypoints",
+      "items": [
+        {"title": "Default Settings", "description": "Turn off one-click checkout and save-only cards to create pause."},
+        {"title": "Spending Triggers", "description": "Note time, mood, and apps that lead to impulse buys."},
+        {"title": "Budget Anchors", "description": "Name 2-3 priorities (debt, emergency fund) to compare each purchase against."}
+      ]
+    },
+    {
+      "type": "actionsteps",
+      "items": [
+        "Disable one-click on Amazon and app stores",
+        "Unfollow 10 shopping accounts",
+        "Create a 24-hour list note on your phone"
+      ]
+    },
+    {
+      "type": "protip",
+      "icon": "lightbulb",
+      "text": "Keep a shared wishlist; review weekly instead of buying instantly."
+    }
+  ]
+}

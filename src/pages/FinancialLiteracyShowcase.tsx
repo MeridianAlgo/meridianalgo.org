@@ -143,7 +143,7 @@ const FinancialLiteracyShowcase = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">
-              Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Financial Literacy</span>
+              Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Finance</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Build essential financial skills through our comprehensive curriculum designed by experts. 
