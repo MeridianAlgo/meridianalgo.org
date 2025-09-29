@@ -32,11 +32,12 @@ interface ModuleView {
 }
 
 const LearningCenter = () => {
-  const { user, isAuthenticated, logout, progressData } = useAuth();
+  const { user, isAuthenticated, logout, progressData, unlockModule } = useAuth();
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
   const [modules, setModules] = useState<ModuleView[]>([]);
   const [expandedModules, setExpandedModules] = useState<Record<string, boolean>>({});
+  const [unlockMessages, setUnlockMessages] = useState<Record<string, string>>({});
   const currentStreak = user?.learningStreak || 0;
 
   useEffect(() => {
@@ -108,27 +109,96 @@ const LearningCenter = () => {
           completed: isTopicCompleted(l.id),
           points: l.points,
         }));
-        return {
+
+        const moduleProgressPercent = calculateModuleProgress(topics);
+
+        const builtModule: ModuleView = {
           id: m.id,
           title: m.title,
           description: m.description,
           duration: m.duration,
           difficulty: m.difficulty,
           topics,
-          progress: calculateModuleProgress(topics),
-          locked: false, // Could lock based on prerequisites
+          progress: moduleProgressPercent,
+          locked: false,
           icon: getModuleIcon(m.icon),
           color: m.color,
         };
+
+        return builtModule;
       });
       // sort by difficulty: Beginner < Intermediate < Advanced (unknown last)
       const order: Record<string, number> = { 'Beginner': 0, 'Intermediate': 1, 'Advanced': 2 };
       built.sort((a, b) => (order[a.difficulty] ?? 99) - (order[b.difficulty] ?? 99));
-      setModules(built);
+      const lockedModules = applyModuleLocks(built);
+      setModules(lockedModules);
     };
     load();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAuthenticated, user?.completedConcepts]);
+  }, [isAuthenticated, user?.completedConcepts, user?.unlockedModules]);
+
+  const applyModuleLocks = (orderedModules: ModuleView[]): ModuleView[] => {
+    let beginnerComplete = true;
+    let intermediateComplete = true;
+    const unlockedSet = new Set(user?.unlockedModules || []);
+
+    const updated = orderedModules.map((module) => {
+      let locked = false;
+
+      if (module.difficulty === 'Intermediate' && !beginnerComplete) {
+        locked = true;
+      }
+
+      if (module.difficulty === 'Advanced' && (!beginnerComplete || !intermediateComplete)) {
+        locked = true;
+      }
+
+      if (module.difficulty === 'Beginner' && module.progress < 100) {
+        beginnerComplete = false;
+      }
+
+      if (module.difficulty === 'Intermediate' && module.progress < 100) {
+        intermediateComplete = false;
+      }
+
+      return {
+        ...module,
+        locked: locked && !unlockedSet.has(module.id)
+      };
+    });
+
+    return updated;
+  };
+
+  const refreshModuleLocks = () => {
+    setModules(prev => {
+      const cloned = prev.map(m => ({ ...m }));
+      return applyModuleLocks(cloned);
+    });
+  };
+
+  const getUnlockCost = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Intermediate':
+        return 600;
+      case 'Advanced':
+        return 900;
+      default:
+        return 0;
+    }
+  };
+
+  const handleUnlock = (moduleId: string, difficulty: string) => {
+    const cost = getUnlockCost(difficulty);
+    if (!cost) return;
+    const success = unlockModule(moduleId, cost);
+    if (success) {
+      refreshModuleLocks();
+      setUnlockMessages(prev => ({ ...prev, [moduleId]: `Module unlocked! ${cost} points spent.` }));
+    } else {
+      setUnlockMessages(prev => ({ ...prev, [moduleId]: `Not enough points. You need ${cost} points to unlock.` }));
+    }
+  };
 
   // Modules with user completion state are kept directly in state now
   const modulesWithProgress = modules;
@@ -405,13 +475,26 @@ const LearningCenter = () => {
 
                     {/* Action Button */}
                     {module.locked ? (
-                      <button
-                        disabled
-                        className="mt-auto w-full py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 bg-gray-700 text-gray-500 cursor-not-allowed"
-                      >
-                        <Lock className="w-4 h-4" />
-                        <span>Locked</span>
-                      </button>
+                      <div className="mt-auto space-y-3">
+                        {unlockMessages[module.id] && (
+                          <p className="text-xs text-center text-gray-300">{unlockMessages[module.id]}</p>
+                        )}
+                        <button
+                          onClick={() => handleUnlock(module.id, module.difficulty)}
+                          className={`w-full py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
+                            totalPoints >= getUnlockCost(module.difficulty)
+                              ? 'bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white'
+                              : 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                          }`}
+                          disabled={totalPoints < getUnlockCost(module.difficulty)}
+                        >
+                          <Zap className="w-4 h-4" />
+                          <span>Unlock for {getUnlockCost(module.difficulty)} pts</span>
+                        </button>
+                        <p className="text-xs text-center text-gray-400">
+                          Complete earlier modules or spend points to unlock access.
+                        </p>
+                      </div>
                     ) : (
                       (() => {
                         const resumeId = getResumeLessonId(module.id, module.topics);

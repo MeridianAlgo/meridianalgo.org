@@ -23,6 +23,9 @@ export interface User {
   lastLoginDate: string;
   totalPoints: number;
   streakMessage?: string;
+  unlockedModules?: string[];
+  redeemedPoints?: number;
+  photoURL?: string | null;
 }
 
 interface AuthContextType {
@@ -35,6 +38,7 @@ interface AuthContextType {
   updateProgress: (conceptId: string) => void;
   completeQuiz: (quizId: string, score: number) => void;
   awardCertificate: (certificateId: string) => void;
+  unlockModule: (moduleId: string, cost: number) => boolean;
   progressData: ProgressData | null;
   refreshProgress: () => Promise<void>;
   loading?: boolean;
@@ -108,9 +112,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       setProgressData(progress);
       
       // Update user points if changed
+      const earnedPoints = progress.earnedPoints;
+      const redeemedPoints = user.redeemedPoints || 0;
+      const netPoints = Math.max(0, earnedPoints - redeemedPoints);
       const updatedUser = {
         ...user,
-        totalPoints: progress.totalPoints
+        totalPoints: netPoints
       };
       
       if (updatedUser.totalPoints !== user.totalPoints) {
@@ -190,13 +197,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     // Calculate points for this lesson
     const lessonPoints = progressService.getPointsForLesson(conceptId);
     const pointsChange = isCompleted ? -lessonPoints : lessonPoints;
-    
     const updatedUser = {
       ...user,
       completedConcepts: updatedCompletedConcepts,
       totalPoints: Math.max(0, user.totalPoints + pointsChange)
     };
-    
+
     setUser(updatedUser);
   };
 
@@ -208,7 +214,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       ...user,
       completedQuizzes: [...user.completedQuizzes.filter(q => !q.startsWith(quizId)), quizResult]
     };
-    
+
     setUser(updatedUser);
   };
 
@@ -219,8 +225,32 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       ...user,
       certificates: [...user.certificates, certificateId]
     };
-    
+
     setUser(updatedUser);
+  };
+
+  const unlockModule = (moduleId: string, cost: number): boolean => {
+    if (!user) return false;
+    const alreadyUnlocked = user.unlockedModules?.includes(moduleId);
+    if (alreadyUnlocked) return true;
+    if (user.totalPoints < cost) {
+      return false;
+    }
+
+    const unlockedModules = user.unlockedModules ? [...user.unlockedModules] : [];
+    if (!unlockedModules.includes(moduleId)) {
+      unlockedModules.push(moduleId);
+    }
+
+    const updatedUser = {
+      ...user,
+      totalPoints: Math.max(0, user.totalPoints - cost),
+      redeemedPoints: (user.redeemedPoints || 0) + cost,
+      unlockedModules
+    };
+
+    setUser(updatedUser);
+    return true;
   };
 
   const value: AuthContextType = {
@@ -233,6 +263,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     updateProgress,
     completeQuiz,
     awardCertificate,
+    unlockModule,
     progressData,
     refreshProgress,
     loading

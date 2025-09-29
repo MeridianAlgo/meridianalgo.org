@@ -1,10 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { 
-  getAuth, 
-  GoogleAuthProvider, 
-  signInWithPopup, 
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -14,14 +13,12 @@ import {
   browserLocalPersistence,
   User as FirebaseUser
 } from "firebase/auth";
-import { 
-  getFirestore, 
-  doc, 
-  getDoc, 
-  setDoc, 
-  updateDoc,
-  serverTimestamp,
-  Timestamp
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  serverTimestamp
 } from "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -37,8 +34,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
 
@@ -62,7 +57,7 @@ export const saveUserProgressToFirestore = async (user: FirebaseUser, progressDa
       // User info
       email: user.email,
       displayName: user.displayName,
-      photoURL: user.photoURL,
+      photoURL: progressData.photoURL ?? user.photoURL ?? null,
       
       // Progress data
       completedConcepts: progressData.completedConcepts || [],
@@ -70,6 +65,8 @@ export const saveUserProgressToFirestore = async (user: FirebaseUser, progressDa
       certificates: progressData.certificates || [],
       totalPoints: progressData.totalPoints || 0,
       learningStreak: progressData.learningStreak || 1,
+      unlockedModules: progressData.unlockedModules || [],
+      redeemedPoints: progressData.redeemedPoints || 0,
       joinDate: progressData.joinDate || new Date().toISOString(),
       
       // Timestamps
@@ -107,7 +104,10 @@ export const loadUserProgressFromFirestore = async (user: FirebaseUser) => {
         certificates: data.certificates || [],
         learningStreak: data.learningStreak || 1,
         lastLoginDate: new Date().toISOString(),
-        totalPoints: data.totalPoints || 0
+        totalPoints: data.totalPoints || 0,
+        unlockedModules: data.unlockedModules || [],
+        redeemedPoints: data.redeemedPoints || 0,
+        photoURL: data.photoURL || user.photoURL || null
       };
     } else {
       // First time user - create new document
@@ -121,7 +121,10 @@ export const loadUserProgressFromFirestore = async (user: FirebaseUser) => {
         certificates: [],
         learningStreak: 1,
         lastLoginDate: new Date().toISOString(),
-        totalPoints: 0
+        totalPoints: 0,
+        unlockedModules: [],
+        redeemedPoints: 0,
+        photoURL: user.photoURL || null
       };
       
       await saveUserProgressToFirestore(user, newUserData);

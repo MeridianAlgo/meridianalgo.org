@@ -17,7 +17,7 @@ type SidebarProps = {
   sidebarOpen: boolean;
   setSidebarOpen: (open: boolean) => void;
   activePage: SidebarPage;
-  user?: { name?: string; totalPoints?: number } | null;
+  user?: { name?: string; totalPoints?: number; photoURL?: string | null } | null;
   onLogout: () => void;
 };
 
@@ -127,6 +127,28 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
 
       {/* Account */}
       <div className="p-4 border-t border-gray-800/70">
+        {_user && (
+          <div className={`flex items-center ${sidebarOpen ? 'justify-between' : 'justify-center'} gap-3 mb-4`}>
+            {(_user.photoURL) ? (
+              <img
+                src={_user.photoURL}
+                alt={_user.name || 'User avatar'}
+                className="w-10 h-10 rounded-xl object-cover border border-gray-700"
+                referrerPolicy="no-referrer"
+              />
+            ) : (
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white grid place-items-center font-semibold">
+                {(_user.name?.charAt(0) || '?').toUpperCase()}
+              </div>
+            )}
+            {sidebarOpen && (
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-white truncate">{_user.name || 'Learner'}</p>
+                <p className="text-xs text-gray-400">{_user.totalPoints ?? 0} pts</p>
+              </div>
+            )}
+          </div>
+        )}
         <button
           onClick={onLogout}
           className={`w-full flex items-center justify-center gap-2 px-3 py-2 text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded-lg transition-colors ${sidebarOpen ? '' : 'px-0'}`}

@@ -1,0 +1,83 @@
+{
+  "title": "Online Banking Security",
+  "type": "reading",
+  "duration": "24 min",
+  "points": 145,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Lock Down Your Digital Wallet",
+      "subtitle": "Adopt bank-grade security habits so hackers, scammers, and data leaks can’t touch your cash"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "How cybercriminals target consumer banking accounts",
+        "Critical security controls to enable across web, mobile, and third-party apps",
+        "Warning signs of phishing, SIM swapping, and account takeover attempts",
+        "A quarterly security routine that keeps your defenses sharp"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Threat Landscape Snapshot",
+      "content": "Credential stuffing, phishing kits, and malware make consumer accounts attractive targets. Attackers rely on reused passwords, lax notification settings, and unmonitored credit reports. By layering strong authentication, monitoring, and prudent device hygiene, you neutralize the majority of risks."
+    },
+    {
+      "type": "keypoints",
+      "title": "Must-Enable Controls",
+      "points": [
+        {
+          "title": "Unique Passwords + Manager",
+          "description": "Store randomly generated passwords in a trusted manager. Never reuse banking credentials on other sites."
+        },
+        {
+          "title": "Multi-Factor Authentication",
+          "description": "Prefer app-based authenticators or hardware keys over SMS codes. Enable MFA on the bank, email, and password manager."
+        },
+        {
+          "title": "Account Alerts",
+          "description": "Turn on push/email alerts for logins, large transactions, profile changes, and new payees so you can respond instantly."
+        },
+        {
+          "title": "Device Hygiene",
+          "description": "Keep OS and banking apps updated, lock screens with biometrics, and avoid public Wi-Fi or use a reputable VPN."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "90-Second Rule",
+      "content": "The faster you report suspicious activity, the higher the odds the bank can reverse fraudulent transfers.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Recognizing Social Engineering",
+      "content": "Scammers spoof bank numbers, mimic logos, and create urgency. Legitimate banks never ask for one-time codes or passwords over phone, text, or email. Verify by hanging up and calling the number on the back of your card."
+    },
+    {
+      "type": "content",
+      "title": "Third-Party App Connections",
+      "content": "Budgeting apps and fintech tools often request aggregator access. Use OAuth-based connections (Plaid, MX) when possible, review connected apps quarterly, and revoke any you no longer use."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Security Hardening Sprint",
+      "steps": [
+        "Update passwords for all banking, credit card, and financial aggregator accounts using a password manager",
+        "Enable app-based MFA on your bank, email, and mobile carrier accounts",
+        "Turn on instant transaction and profile change alerts in your banking app",
+        "Review connected third-party apps and revoke access for any you no longer use",
+        "Enroll in credit monitoring or set up free bureau alerts/freeze to block fraudulent new accounts"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Layer Your Notification Channels",
+      "content": "Configure both push and email alerts—if one channel fails, the other still keeps you informed.",
+      "icon": "shield"
+    }
+  ]
+}

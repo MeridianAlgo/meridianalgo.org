@@ -1,0 +1,83 @@
+{
+  "title": "Types of Insurance You Need",
+  "type": "reading",
+  "duration": "23 min",
+  "points": 140,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Build Your Safety Net",
+      "subtitle": "Understand the essential insurance coverages that protect your health, income, and assets"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Why insurance is risk transfer and how it fits into your financial plan",
+        "The core policies every household should evaluate first",
+        "How to match coverage levels to your real-world exposure",
+        "Red flags that signal you are underinsured or overpaying"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Insurance Is Controlled Risk",
+      "content": "Insurance exists to shield you from financial shocks that would otherwise derail your goals. By paying a premium, you transfer catastrophic risk to an insurer with deeper pockets. The key is to insure against events that would be devastating—not the ones you can comfortably cash-flow."
+    },
+    {
+      "type": "keypoints",
+      "title": "Core Coverage Categories",
+      "points": [
+        {
+          "title": "Health Insurance",
+          "description": "Medical debt is a leading cause of bankruptcy. Even high-deductible plans cap your worst-case costs and grant access to in-network pricing."
+        },
+        {
+          "title": "Disability Insurance",
+          "description": "Your income is your biggest asset. Long-term disability coverage replaces a portion of your paycheck if illness or injury prevents you from working."
+        },
+        {
+          "title": "Life Insurance",
+          "description": "Term life protects dependents from the loss of your income. Match coverage to outstanding debts, future college costs, and household living expenses."
+        },
+        {
+          "title": "Liability Insurance",
+          "description": "Auto and homeowners policies include liability limits, but an umbrella policy adds $1–5 million in extra protection for lawsuits and major accidents."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Rule of Thumb",
+      "content": "If replacing something would set you back more than six months of expenses, you likely need insurance for it.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Spotting Coverage Gaps",
+      "content": "Review employer benefits, spouse coverage, and personal policies together. Look for overlapping protection (you may be double-paying) and areas with zero coverage. Self-employed professionals often overlook disability insurance; renters frequently skip renters insurance assuming the landlord covers their belongings—spoiler alert: they do not."
+    },
+    {
+      "type": "content",
+      "title": "Right-Sizing Your Policies",
+      "content": "Each policy has levers—deductible, coinsurance, maximum benefits—that affect both premium cost and out-of-pocket exposure. Raise deductibles when you have an emergency fund to self-insure minor claims. Boost liability limits if you have assets or future income worth protecting. Compare term lengths and riders on life insurance to match your family's dependency timeline."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Coverage Audit Sprint",
+      "steps": [
+        "List current policies with coverage limits, deductibles, and monthly premiums",
+        "Identify who or what each policy protects (your income, car, home, dependents)",
+        "Note any areas without coverage that would hurt if a loss occurred",
+        "Highlight policies with overlapping protection and evaluate if you can consolidate",
+        "Schedule a call with an independent agent to benchmark your current premiums"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Independent Agents Win",
+      "content": "Independent brokers can quote multiple carriers at once, helping you balance cost with coverage strength instead of pushing a single company's products.",
+      "icon": "lightbulb"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Banking Apps and Tools",
+  "type": "exercise",
+  "duration": "29 min",
+  "points": 170,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Build Your Banking Tech Stack",
+      "subtitle": "Curate a toolkit of apps, automations, and dashboards that make money management effortless"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Do",
+      "items": [
+        "Map the core functions you need (budgeting, savings rules, bill pay, investing on-ramps)",
+        "Evaluate top-tier banking apps and APIs based on security, automation, and integrations",
+        "Design a weekly workflow using your chosen apps, including alerts and review cadences",
+        "Implement automations that connect checking, savings, and investing without manual effort"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Tools Matter",
+      "content": "Banking apps have evolved into financial command centers. The right combination can automate cash flow, categorize spending in real time, and push contributions into savings and investing. The wrong tools create friction and missed opportunities. Evaluate technology with the same rigor as picking a bank."
+    },
+    {
+      "type": "keypoints",
+      "title": "Categories to Cover",
+      "points": [
+        {
+          "title": "Primary Banking App",
+          "description": "Handles day-to-day transactions, instant notifications, and bill pay."
+        },
+        {
+          "title": "Automation Companion",
+          "description": "Apps like Qapital, Digit, or bank-native rules that sweep money into goal buckets."
+        },
+        {
+          "title": "Budget + Analytics",
+          "description": "YNAB, Monarch, or Copilot connect to accounts and visualize cash flow trends."
+        },
+        {
+          "title": "Debit/Credit Optimizers",
+          "description": "Card-specific apps that categorize rewards and alert you when a better payment method exists."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Unified Login Strategy",
+      "content": "Use a password manager and app-based MFA for every banking-related login. Security is non-negotiable when expanding your toolset.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "App Evaluation Framework",
+      "content": "Score tools on security posture, automation depth, data portability, pricing, and customer support. Favor apps with export features so you can migrate if the service declines. Read recent release notes to confirm active development."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Tech Stack Sprint",
+      "steps": [
+        "List the money tasks you perform weekly (pay bills, track spending, move savings)",
+        "Audit your current apps and note gaps or overlapping functionality",
+        "Research 2–3 new tools in each category using the evaluation framework",
+        "Select your suite, connect accounts via secure APIs, and configure alerts + automations",
+        "Document a weekly 20-minute workflow—what you review, which apps you check, and actions you take"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Building Automations",
+      "content": "Set rules that move leftover checking balances into savings every Friday, trigger investment transfers when paychecks hit, and notify you when category spending exceeds targets. Many banks and fintech apps support IFTTT-style recipes—stack them for momentum."
+    },
+    {
+      "type": "protip",
+      "title": "Quarterly Tool Audit",
+      "content": "Every 90 days, review your app stack. Remove tools you no longer use and update permissions so dormant apps don’t hold account access.",
+      "icon": "lightbulb"
+    }
+  ]
+}

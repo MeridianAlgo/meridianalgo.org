@@ -96,48 +96,48 @@
           "id": "saving_1",
           "title": "Psychology of Saving",
           "type": "reading",
-          "duration": "18 min",
-          "points": 100,
+          "duration": "22 min",
+          "points": 125,
           "contentFile": "saving_1.json"
         },
         {
           "id": "saving_2",
           "title": "Automating Your Savings",
           "type": "exercise", 
-          "duration": "15 min",
-          "points": 125,
+          "duration": "25 min",
+          "points": 150,
           "contentFile": "saving_2.json"
         },
         {
           "id": "saving_3",
           "title": "High-Yield Savings Accounts",
           "type": "reading",
-          "duration": "12 min",
-          "points": 75,
+          "duration": "24 min",
+          "points": 140,
           "contentFile": "saving_3.json"
         },
         {
           "id": "saving_4",
           "title": "Saving for Major Goals",
           "type": "exercise",
-          "duration": "20 min",
-          "points": 150,
+          "duration": "30 min",
+          "points": 185,
           "contentFile": "saving_4.json"
         },
         {
           "id": "saving_5",
           "title": "Understanding Compound Interest",
           "type": "reading",
-          "duration": "16 min",
-          "points": 100,
+          "duration": "26 min",
+          "points": 150,
           "contentFile": "saving_5.json"
         }
       ],
       "quiz": {
         "id": "saving_quiz",
-        "title": "Smart Saving Quiz",
-        "duration": "8 min",
-        "points": 175,
+        "title": "Smart Saving Strategies Quiz",
+        "duration": "10 min",
+        "points": 200,
         "contentFile": "saving_quiz.json"
       }
     },
@@ -378,40 +378,40 @@
           "id": "insurance_1",
           "title": "Types of Insurance You Need",
           "type": "reading",
-          "duration": "15 min",
-          "points": 100,
+          "duration": "23 min",
+          "points": 140,
           "contentFile": "insurance_1.json"
         },
         {
           "id": "insurance_2",
           "title": "Health Insurance Basics",
           "type": "reading",
-          "duration": "20 min",
-          "points": 125,
+          "duration": "27 min",
+          "points": 160,
           "contentFile": "insurance_2.json"
         },
         {
           "id": "insurance_3",
-          "title": "Auto and Home Insurance",
+          "title": "Auto and Home Insurance Deep Dive",
           "type": "exercise",
-          "duration": "18 min",
-          "points": 125,
+          "duration": "32 min",
+          "points": 175,
           "contentFile": "insurance_3.json"
         },
         {
           "id": "insurance_4",
           "title": "Life Insurance Planning",
           "type": "reading",
-          "duration": "22 min",
-          "points": 150,
+          "duration": "24 min",
+          "points": 165,
           "contentFile": "insurance_4.json"
         }
       ],
       "quiz": {
         "id": "insurance_quiz",
-        "title": "Insurance Essentials Quiz",
-        "duration": "8 min",
-        "points": 175,
+        "title": "Insurance Essentials Mastery Quiz",
+        "duration": "12 min",
+        "points": 220,
         "contentFile": "insurance_quiz.json"
       }
     },
@@ -428,40 +428,40 @@
           "id": "banking_1",
           "title": "Choosing the Right Bank Account",
           "type": "reading",
-          "duration": "12 min",
-          "points": 75,
+          "duration": "21 min",
+          "points": 130,
           "contentFile": "banking_1.json"
         },
         {
           "id": "banking_2",
           "title": "Understanding Bank Fees",
           "type": "exercise",
-          "duration": "15 min",
-          "points": 100,
+          "duration": "28 min",
+          "points": 160,
           "contentFile": "banking_2.json"
         },
         {
           "id": "banking_3",
           "title": "Online Banking Security",
           "type": "reading",
-          "duration": "10 min",
-          "points": 75,
+          "duration": "24 min",
+          "points": 145,
           "contentFile": "banking_3.json"
         },
         {
           "id": "banking_4",
           "title": "Banking Apps and Tools",
           "type": "exercise",
-          "duration": "18 min",
-          "points": 125,
+          "duration": "29 min",
+          "points": 170,
           "contentFile": "banking_4.json"
         }
       ],
       "quiz": {
         "id": "banking_quiz",
-        "title": "Smart Banking Quiz",
-        "duration": "6 min",
-        "points": 150,
+        "title": "Smart Banking Mastery Quiz",
+        "duration": "9 min",
+        "points": 180,
         "contentFile": "banking_quiz.json"
       }
     },
