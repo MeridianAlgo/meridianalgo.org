@@ -1,0 +1,69 @@
+{
+  "title": "Building Credit History",
+  "type": "reading",
+  "duration": "15 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Build a Strong Credit History",
+      "subtitle": "Show lenders you can be trusted with long-term credit",
+      "image": "/images/lessons/build-credit-history.jpg"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Why credit history length influences your score",
+        "How to establish credit when you're starting from scratch",
+        "Responsible ways to add new accounts without hurting your score",
+        "How to maintain positive activity month after month"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Power of Time",
+      "content": "Credit scoring models look at how long your accounts have been open, the average age of your accounts, and how long it has been since you used them. Closing older accounts can shorten your average age, so think before you cancel long-standing cards."
+    },
+    {
+      "type": "highlight",
+      "title": "Authorized User Boost",
+      "content": "If a trusted family member has a long, positive credit history, becoming an authorized user on their account can help you build history quickly. Make sure the issuer reports authorized user activity to the bureaus and that the account stays in good standing.",
+      "color": "green"
+    },
+    {
+      "type": "content",
+      "title": "Starting from Zero",
+      "content": "New to credit? Apply for a secured card or a credit-builder loan offered by credit unions and fintech apps. Make small purchases and pay them off in full each month. On-time payments will populate your report and start the clock on your history."
+    },
+    {
+      "type": "keypoints",
+      "title": "Smart Account Management",
+      "points": [
+        {
+          "title": "Keep Old Accounts Active",
+          "description": "Use them for small recurring charges and pay them off to keep them reporting."
+        },
+        {
+          "title": "Season New Accounts",
+          "description": "Avoid applying for multiple cards in a short window. Space applications 6-12 months apart."
+        },
+        {
+          "title": "Diversify Over Time",
+          "description": "Mix credit types — card, installment loan, auto loan — when it aligns with your goals."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Maintenance Habits",
+      "content": "Set payment reminders, automate minimums, and review statements monthly. Keep utilization low, dispute errors promptly, and build a small emergency fund to avoid missed payments during unexpected expenses."
+    },
+    {
+      "type": "protip",
+      "title": "Pro Tip",
+      "content": "When you graduate from a secured card, keep it open if there is no annual fee. The long history continues to help your score even if you rarely use it.",
+      "icon": "lightbulb"
+    }
+  ]
+}

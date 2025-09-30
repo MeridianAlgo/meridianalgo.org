@@ -1,0 +1,47 @@
+{
+  "title": "Real Estate Market Cycles",
+  "type": "reading",
+  "duration": "23 min",
+  "points": 100,
+  "instructions": "Understand how real estate markets cycle and how to time your investments.",
+  "sections": [
+    {
+      "type": "reading",
+      "title": "The Real Estate Cycle",
+      "content": "Real estate markets move through predictable cycles: recovery, expansion, hyper-supply, and recession..."
+    },
+    {
+      "type": "phases",
+      "title": "Four Phases of Real Estate Cycles",
+      "items": [
+        {
+          "phase": "Recovery",
+          "description": "Prices bottom out, foreclosure rates peak, smart investors buy"
+        },
+        {
+          "phase": "Expansion", 
+          "description": "Prices rise, construction increases, optimism grows"
+        },
+        {
+          "phase": "Hyper-supply",
+          "description": "Too much inventory, prices plateau, rental vacancies rise"
+        },
+        {
+          "phase": "Recession",
+          "description": "Prices decline, overbuilding leads to foreclosures, cycle repeats"
+        }
+      ]
+    },
+    {
+      "type": "indicators",
+      "title": "Market Timing Indicators",
+      "content": "• Price-to-rent ratios above 20 suggest overvaluation\n• Months of housing supply over 6 months indicates buyer's market\n• Rising interest rates typically cool markets\n• Employment growth drives housing demand"
+    }
+  ],
+  "key_takeaways": [
+    "Real estate markets are cyclical, not linear",
+    "Understanding cycles helps with timing and strategy",
+    "Economic indicators help predict market direction",
+    "Patience and research beat emotional decisions"
+  ]
+}

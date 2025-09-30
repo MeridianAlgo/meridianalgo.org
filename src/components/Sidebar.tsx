@@ -50,6 +50,20 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
   const headerConfig = HEADER_VARIANTS[activePage] ?? HEADER_VARIANTS.home;
   const hoverTimer = useRef<number | null>(null);
 
+  const headerLinkClasses = sidebarOpen
+    ? 'flex items-center justify-center w-12 h-12 pl-3 pr-2'
+    : 'flex items-center justify-center w-12 h-12 pl-3 pr-2';
+
+  const headerIconSize = 'w-12 h-12';
+
+  const headerContainerClasses = sidebarOpen
+    ? 'p-5 border-b border-gray-800/70'
+    : 'px-3 py-5 border-b border-gray-800/70';
+
+  const footerContainerClasses = sidebarOpen
+    ? 'p-4 border-t border-gray-800/70'
+    : 'px-3 py-4 border-t border-gray-800/70';
+
   const supportsHover = () => (typeof window !== 'undefined' ? window.matchMedia('(hover: hover)').matches : false);
 
   const clearTimer = () => {
@@ -85,19 +99,19 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
       onBlurCapture={scheduleClose}
     >
       {/* Header */}
-      <div className="p-5 border-b border-gray-800/70">
-        <div className="flex items-center justify-between gap-3">
+      <div className={headerContainerClasses}>
+        <div className="flex items-center gap-3">
           <Link
             to="/"
-            className={`flex items-center gap-3 ${sidebarOpen ? 'px-2' : 'justify-center w-full'}`}
+            className={headerLinkClasses}
           >
-            <div className={`w-11 h-11 rounded-2xl bg-gradient-to-br ${headerConfig.gradient} text-white grid place-items-center shadow-lg shadow-black/20`}>
+            <div className={`${headerIconSize} rounded-xl bg-gradient-to-br ${headerConfig.gradient} text-white grid place-items-center shadow-lg shadow-black/20 flex-shrink-0`}>
               <headerConfig.Icon className="w-5 h-5" />
             </div>
-            {sidebarOpen && (
-              <span className="text-2xl font-semibold text-white">{headerConfig.label}</span>
-            )}
           </Link>
+          {sidebarOpen && (
+            <span className="text-2xl font-semibold text-white whitespace-nowrap">{headerConfig.label}</span>
+          )}
         </div>
       </div>
 
@@ -107,7 +121,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
           const isActive = activePage === id;
           const itemDimensions = sidebarOpen
             ? 'w-full h-12 gap-3 px-3'
-            : 'justify-center w-12 h-12';
+            : 'justify-start w-12 h-12 pl-3 pr-2';
           return (
             <Link
               key={id}
@@ -118,7 +132,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
                   ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/25'
                   : 'text-slate-300 hover:text-white hover:bg-gray-800/70'}`}
             >
-              <Icon className={`w-5 h-5 transition-transform duration-200 ${isActive ? 'text-white scale-105' : 'text-orange-400 group-hover:text-orange-300 group-hover:scale-105'}`} />
+              <Icon className={`w-5 h-5 transition-transform duration-200 flex-shrink-0 ${isActive ? 'text-white scale-105' : 'text-orange-400 group-hover:text-orange-300 group-hover:scale-105'}`} />
               {sidebarOpen && <span className="text-sm font-medium tracking-wide">{label}</span>}
             </Link>
           );
@@ -126,9 +140,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
       </nav>
 
       {/* Account */}
-      <div className="p-4 border-t border-gray-800/70">
+      <div className={footerContainerClasses}>
         {_user && (
-          <div className={`flex items-center ${sidebarOpen ? 'justify-between' : 'justify-center'} gap-3 mb-4`}>
+          <div className={`flex items-center ${sidebarOpen ? 'justify-between' : 'justify-start'} gap-3 mb-4`}>
             {(_user.photoURL) ? (
               <img
                 src={_user.photoURL}
@@ -151,9 +165,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
         )}
         <button
           onClick={onLogout}
-          className={`w-full flex items-center justify-center gap-2 px-3 py-2 text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded-lg transition-colors ${sidebarOpen ? '' : 'px-0'}`}
+          className="w-full flex items-center justify-start gap-2 px-3 py-2 text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded-lg transition-colors"
         >
-          <LogOut className="w-4 h-4" />
+          <LogOut className="w-4 h-4 flex-shrink-0" />
           {sidebarOpen && <span className="text-sm font-medium">Sign Out</span>}
         </button>
       </div>

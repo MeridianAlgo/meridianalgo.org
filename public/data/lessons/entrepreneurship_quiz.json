@@ -1,0 +1,127 @@
+{
+  "title": "Entrepreneurship Mastery Quiz",
+  "type": "quiz",
+  "duration": "12 min",
+  "points": 150,
+  "passingScore": 75,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What is the primary goal of the problem/solution fit interview sprint?",
+      "options": [
+        "Decide on a company logo",
+        "Validate that target customers experience a painful problem your concept can solve",
+        "Select bookkeeping software",
+        "Choose a commercial lease"
+      ],
+      "correct": 1,
+      "explanation": "Interviews confirm the problem is urgent and that the proposed solution resonates before investing heavily."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "In the lean business model canvas, which block covers how you will reach customers?",
+      "options": [
+        "Key resources",
+        "Channels",
+        "Cost structure",
+        "Key partners"
+      ],
+      "correct": 1,
+      "explanation": "Channels describe the paths you use to acquire, deliver to, and support customers."
+    },
+    {
+      "id": 3,
+      "type": "multiple-choice",
+      "question": "Which financial metric reveals how quickly you consume available cash each month?",
+      "options": [
+        "Gross margin",
+        "Burn rate",
+        "Customer lifetime value",
+        "Net promoter score"
+      ],
+      "correct": 1,
+      "explanation": "Burn rate tracks monthly cash outflow and informs how much runway you have left."
+    },
+    {
+      "id": 4,
+      "type": "true-false",
+      "question": "Bootstrapping relies on customer revenue and personal savings instead of outside equity.",
+      "correct": true,
+      "explanation": "Bootstrapped founders self-fund operations, retaining full ownership and control."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Which lightweight experiment best validates pricing assumptions before launch?",
+      "options": [
+        "Ordering office furniture",
+        "Running a pre-sale landing page with checkout",
+        "Designing business cards",
+        "Updating social media bios"
+      ],
+      "correct": 1,
+      "explanation": "Collecting deposits or signups at a proposed price confirms willingness to pay."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "Which unit economics metric compares customer lifetime value to the cost of acquiring that customer?",
+      "options": [
+        "CAC payback period",
+        "Break-even volume",
+        "Contribution margin",
+        "Net revenue retention"
+      ],
+      "correct": 0,
+      "explanation": "CAC payback shows how long it takes gross profit to recover acquisition spending."
+    },
+    {
+      "id": 7,
+      "type": "true-false",
+      "question": "A minimum viable marketing plan (MVMP) focuses spend on the two or three channels with the strongest signal.",
+      "correct": true,
+      "explanation": "The MVMP doubles down on the highest-performing channels instead of spreading efforts thin."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Which legal structure offers pass-through taxation and basic liability protection for multiple founders?",
+      "options": [
+        "Sole proprietorship",
+        "Limited liability company (LLC)",
+        "C corporation",
+        "Public benefit corporation"
+      ],
+      "correct": 1,
+      "explanation": "An LLC shields personal assets while keeping tax reporting simple for small teams."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "When preparing an investor update, which trio provides the clearest snapshot of momentum?",
+      "options": [
+        "Team birthdays, software tools, and snacks",
+        "Monthly recurring revenue, pipeline, and key experiments",
+        "Office layout, paid ads, and invoices",
+        "Vacation schedule, PR mentions, and swag"
+      ],
+      "correct": 1,
+      "explanation": "Investors want to see revenue traction, upcoming opportunities, and what you are testing next."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Which habit from the entrepreneurship module keeps execution aligned with quarterly goals?",
+      "options": [
+        "Reviewing KPIs in a weekly operating cadence",
+        "Cycling through new ideas every day",
+        "Ignoring metrics until year-end",
+        "Delegating all planning to an outside consultant"
+      ],
+      "correct": 0,
+      "explanation": "A weekly rhythm meeting reviews metrics, commitments, and blockers so the team stays accountable."
+    }
+  ]
+}

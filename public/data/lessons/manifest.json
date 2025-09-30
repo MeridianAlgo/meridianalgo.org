@@ -14,7 +14,7 @@
           "title": "Intro to Money Management: How Money Flows",
           "type": "reading",
           "duration": "15 min",
-          "points": 100,
+          "points": 50,
           "contentFile": "foundations_1.json"
         },
         {
@@ -22,7 +22,7 @@
           "title": "Income vs Expenses: Track Your Cashflow",
           "type": "reading",
           "duration": "10 min",
-          "points": 75,
+          "points": 50,
           "contentFile": "foundations_2.json"
         },
         {
@@ -30,7 +30,7 @@
           "title": "Create Your First Budget (Step-by-Step)",
           "type": "exercise",
           "duration": "20 min", 
-          "points": 150,
+          "points": 50,
           "contentFile": "foundations_3.json"
         },
         {
@@ -38,7 +38,7 @@
           "title": "Emergency Fund Basics: How Much and Where",
           "type": "reading",
           "duration": "12 min",
-          "points": 100,
+          "points": 50,
           "contentFile": "foundations_4.json"
         },
         {
@@ -46,7 +46,7 @@
           "title": "Set Actionable Financial Goals",
           "type": "exercise",
           "duration": "18 min",
-          "points": 125,
+          "points": 50,
           "contentFile": "foundations_5.json"
         },
         {
@@ -54,7 +54,7 @@
           "title": "Money Tools: Apps, Automations, and Alerts",
           "type": "reading",
           "duration": "15 min",
-          "points": 100,
+          "points": 50,
           "contentFile": "foundations_6.json"
         }
         ,
@@ -63,7 +63,7 @@
           "title": "Building Better Spending Habits",
           "type": "reading",
           "duration": "14 min",
-          "points": 100,
+          "points": 50,
           "contentFile": "foundations_7.json"
         },
         {
@@ -71,7 +71,7 @@
           "title": "Monthly Money Review",
           "type": "exercise",
           "duration": "20 min",
-          "points": 150,
+          "points": 50,
           "contentFile": "foundations_8.json"
         }
       ],
@@ -79,7 +79,7 @@
         "id": "foundations_quiz",
         "title": "Financial Foundations Quiz",
         "duration": "10 min",
-        "points": 200,
+        "points": 100,
         "contentFile": "foundations_quiz.json"
       }
     },
@@ -97,7 +97,7 @@
           "title": "Psychology of Saving",
           "type": "reading",
           "duration": "22 min",
-          "points": 125,
+          "points": 50,
           "contentFile": "saving_1.json"
         },
         {
@@ -105,7 +105,7 @@
           "title": "Automating Your Savings",
           "type": "exercise", 
           "duration": "25 min",
-          "points": 150,
+          "points": 50,
           "contentFile": "saving_2.json"
         },
         {
@@ -113,7 +113,7 @@
           "title": "High-Yield Savings Accounts",
           "type": "reading",
           "duration": "24 min",
-          "points": 140,
+          "points": 50,
           "contentFile": "saving_3.json"
         },
         {
@@ -121,7 +121,7 @@
           "title": "Saving for Major Goals",
           "type": "exercise",
           "duration": "30 min",
-          "points": 185,
+          "points": 50,
           "contentFile": "saving_4.json"
         },
         {
@@ -129,7 +129,7 @@
           "title": "Understanding Compound Interest",
           "type": "reading",
           "duration": "26 min",
-          "points": 150,
+          "points": 50,
           "contentFile": "saving_5.json"
         }
       ],
@@ -137,7 +137,7 @@
         "id": "saving_quiz",
         "title": "Smart Saving Strategies Quiz",
         "duration": "10 min",
-        "points": 200,
+        "points": 100,
         "contentFile": "saving_quiz.json"
       }
     },
@@ -155,7 +155,7 @@
           "title": "Understanding Credit Scores",
           "type": "reading",
           "duration": "20 min",
-          "points": 125,
+          "points": 100,
           "contentFile": "credit_1.json"
         },
         {
@@ -163,7 +163,7 @@
           "title": "Reading Your Credit Report",
           "type": "exercise",
           "duration": "25 min",
-          "points": 150,
+          "points": 100,
           "contentFile": "credit_2.json"
         },
         {
@@ -179,7 +179,7 @@
           "title": "Debt Payoff Strategies",
           "type": "exercise",
           "duration": "22 min",
-          "points": 175,
+          "points": 100,
           "contentFile": "credit_4.json"
         },
         {
@@ -195,7 +195,7 @@
         "id": "credit_quiz",
         "title": "Credit & Debt Quiz",
         "duration": "12 min",
-        "points": 200,
+        "points": 150,
         "contentFile": "credit_quiz.json"
       }
     },
@@ -213,7 +213,7 @@
           "title": "Investment Basics",
           "type": "reading",
           "duration": "25 min",
-          "points": 125,
+          "points": 100,
           "contentFile": "investing_1.json"
         },
         {
@@ -221,7 +221,7 @@
           "title": "Stocks vs Bonds vs Funds",
           "type": "reading",
           "duration": "30 min",
-          "points": 150,
+          "points": 100,
           "contentFile": "investing_2.json"
         },
         {
@@ -229,7 +229,7 @@
           "title": "Risk Assessment",
           "type": "exercise",
           "duration": "20 min",
-          "points": 125,
+          "points": 100,
           "contentFile": "investing_3.json"
         },
         {
@@ -237,7 +237,7 @@
           "title": "Building a Portfolio",
           "type": "exercise",
           "duration": "35 min",
-          "points": 200,
+          "points": 100,
           "contentFile": "investing_4.json"
         },
         {
@@ -253,7 +253,7 @@
         "id": "investing_quiz",
         "title": "Investment Fundamentals Quiz",
         "duration": "15 min",
-        "points": 250,
+        "points": 150,
         "contentFile": "investing_quiz.json"
       }
     },
@@ -271,7 +271,7 @@
           "title": "401(k) and IRA Basics",
           "type": "reading",
           "duration": "22 min",
-          "points": 125,
+          "points": 150,
           "contentFile": "retirement_1.json"
         },
         {
@@ -279,7 +279,7 @@
           "title": "Calculating Retirement Needs",
           "type": "exercise",
           "duration": "30 min",
-          "points": 175,
+          "points": 150,
           "contentFile": "retirement_2.json"
         },
         {
@@ -287,7 +287,7 @@
           "title": "Social Security Planning",
           "type": "reading",
           "duration": "20 min",
-          "points": 125,
+          "points": 150,
           "contentFile": "retirement_3.json"
         },
         {
@@ -303,7 +303,7 @@
           "title": "Retirement Withdrawal Strategies",
           "type": "exercise",
           "duration": "28 min",
-          "points": 175,
+          "points": 150,
           "contentFile": "retirement_5.json"
         }
       ],
@@ -311,7 +311,7 @@
         "id": "retirement_quiz",
         "title": "Retirement Planning Quiz",
         "duration": "12 min",
-        "points": 225,
+        "points": 200,
         "contentFile": "retirement_quiz.json"
       }
     },
@@ -329,7 +329,7 @@
           "title": "Understanding Tax Brackets",
           "type": "reading",
           "duration": "18 min",
-          "points": 100,
+          "points": 150,
           "contentFile": "taxes_1.json"
         },
         {
@@ -345,16 +345,16 @@
           "title": "Tax-Advantaged Accounts",
           "type": "reading",
           "duration": "20 min",
-          "points": 125,
+          "points": 150,
           "contentFile": "taxes_3.json"
         },
         {
-          "id": "taxes_4",
-          "title": "Tax Planning Strategies",
+          "id": "taxes_5",
+          "title": "Tax Filing and Record Keeping",
           "type": "exercise",
-          "duration": "22 min",
+          "duration": "25 min",
           "points": 150,
-          "contentFile": "taxes_4.json"
+          "contentFile": "taxes_5.json"
         }
       ],
       "quiz": {
@@ -379,7 +379,7 @@
           "title": "Types of Insurance You Need",
           "type": "reading",
           "duration": "23 min",
-          "points": 140,
+          "points": 50,
           "contentFile": "insurance_1.json"
         },
         {
@@ -387,7 +387,7 @@
           "title": "Health Insurance Basics",
           "type": "reading",
           "duration": "27 min",
-          "points": 160,
+          "points": 50,
           "contentFile": "insurance_2.json"
         },
         {
@@ -395,23 +395,23 @@
           "title": "Auto and Home Insurance Deep Dive",
           "type": "exercise",
           "duration": "32 min",
-          "points": 175,
+          "points": 50,
           "contentFile": "insurance_3.json"
         },
         {
-          "id": "insurance_4",
-          "title": "Life Insurance Planning",
+          "id": "insurance_5",
+          "title": "Insurance Claims and Disputes",
           "type": "reading",
-          "duration": "24 min",
-          "points": 165,
-          "contentFile": "insurance_4.json"
+          "duration": "20 min",
+          "points": 50,
+          "contentFile": "insurance_5.json"
         }
       ],
       "quiz": {
         "id": "insurance_quiz",
         "title": "Insurance Essentials Mastery Quiz",
         "duration": "12 min",
-        "points": 220,
+        "points": 100,
         "contentFile": "insurance_quiz.json"
       }
     },
@@ -429,7 +429,7 @@
           "title": "Choosing the Right Bank Account",
           "type": "reading",
           "duration": "21 min",
-          "points": 130,
+          "points": 50,
           "contentFile": "banking_1.json"
         },
         {
@@ -437,7 +437,7 @@
           "title": "Understanding Bank Fees",
           "type": "exercise",
           "duration": "28 min",
-          "points": 160,
+          "points": 50,
           "contentFile": "banking_2.json"
         },
         {
@@ -445,23 +445,23 @@
           "title": "Online Banking Security",
           "type": "reading",
           "duration": "24 min",
-          "points": 145,
+          "points": 50,
           "contentFile": "banking_3.json"
         },
         {
-          "id": "banking_4",
-          "title": "Banking Apps and Tools",
+          "id": "banking_5",
+          "title": "Banking for Financial Goals",
           "type": "exercise",
-          "duration": "29 min",
-          "points": 170,
-          "contentFile": "banking_4.json"
+          "duration": "26 min",
+          "points": 50,
+          "contentFile": "banking_5.json"
         }
       ],
       "quiz": {
         "id": "banking_quiz",
         "title": "Smart Banking Mastery Quiz",
         "duration": "9 min",
-        "points": 180,
+        "points": 100,
         "contentFile": "banking_quiz.json"
       }
     },
@@ -479,7 +479,7 @@
           "title": "Business Idea Validation",
           "type": "exercise",
           "duration": "25 min",
-          "points": 150,
+          "points": 100,
           "contentFile": "entrepreneurship_1.json"
         },
         {
@@ -487,7 +487,7 @@
           "title": "Creating a Business Plan",
           "type": "exercise",
           "duration": "30 min",
-          "points": 175,
+          "points": 100,
           "contentFile": "entrepreneurship_2.json"
         },
         {
@@ -495,7 +495,7 @@
           "title": "Funding Your Business",
           "type": "reading",
           "duration": "20 min",
-          "points": 125,
+          "points": 100,
           "contentFile": "entrepreneurship_3.json"
         },
         {
@@ -503,7 +503,7 @@
           "title": "Marketing on a Budget",
           "type": "exercise",
           "duration": "22 min",
-          "points": 150,
+          "points": 100,
           "contentFile": "entrepreneurship_4.json"
         },
         {
@@ -511,7 +511,7 @@
           "title": "Legal Structure and Taxes",
           "type": "reading",
           "duration": "18 min",
-          "points": 125,
+          "points": 100,
           "contentFile": "entrepreneurship_5.json"
         }
       ],
@@ -519,7 +519,7 @@
         "id": "entrepreneurship_quiz",
         "title": "Entrepreneurship Quiz",
         "duration": "12 min",
-        "points": 200,
+        "points": 150,
         "contentFile": "entrepreneurship_quiz.json"
       }
     },
@@ -537,7 +537,7 @@
           "title": "Real Estate Investment Basics",
           "type": "reading",
           "duration": "20 min",
-          "points": 125,
+          "points": 100,
           "contentFile": "real_estate_1.json"
         },
         {
@@ -545,7 +545,7 @@
           "title": "Analyzing Investment Properties",
           "type": "exercise",
           "duration": "28 min",
-          "points": 175,
+          "points": 100,
           "contentFile": "real_estate_2.json"
         },
         {
@@ -553,24 +553,388 @@
           "title": "Financing Investment Properties",
           "type": "reading",
           "duration": "22 min",
-          "points": 150,
+          "points": 100,
           "contentFile": "real_estate_3.json"
         },
         {
-          "id": "real_estate_4",
-          "title": "Property Management Basics",
-          "type": "exercise",
-          "duration": "25 min",
-          "points": 150,
-          "contentFile": "real_estate_4.json"
+          "id": "real_estate_5",
+          "title": "Real Estate Market Cycles",
+          "type": "reading",
+          "duration": "23 min",
+          "points": 100,
+          "contentFile": "real_estate_5.json"
         }
       ],
       "quiz": {
         "id": "real_estate_quiz",
         "title": "Real Estate Investing Quiz",
         "duration": "10 min",
-        "points": 200,
+        "points": 150,
         "contentFile": "real_estate_quiz.json"
+      }
+    },
+    {
+      "id": "personal_finance",
+      "title": "Personal Finance Basics",
+      "description": "Master the fundamentals of managing your personal finances",
+      "duration": "3 weeks",
+      "difficulty": "Beginner",
+      "icon": "Wallet",
+      "color": "orange",
+      "lessons": [
+        {
+          "id": "personal_finance_1",
+          "title": "Understanding Your Financial Situation",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 50,
+          "contentFile": "personal_finance_1.json"
+        },
+        {
+          "id": "personal_finance_2",
+          "title": "Setting Up Your Financial Accounts",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 50,
+          "contentFile": "personal_finance_2.json"
+        },
+        {
+          "id": "personal_finance_3",
+          "title": "Building an Emergency Fund",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 50,
+          "contentFile": "personal_finance_3.json"
+        },
+        {
+          "id": "personal_finance_4",
+          "title": "Managing Daily Expenses",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 50,
+          "contentFile": "personal_finance_4.json"
+        },
+        {
+          "id": "personal_finance_5",
+          "title": "Introduction to Investing",
+          "type": "reading",
+          "duration": "24 min",
+          "points": 50,
+          "contentFile": "personal_finance_5.json"
+        },
+        {
+          "id": "personal_finance_6",
+          "title": "Financial Goal Setting",
+          "type": "exercise",
+          "duration": "28 min",
+          "points": 50,
+          "contentFile": "personal_finance_6.json"
+        }
+      ],
+      "quiz": {
+        "id": "personal_finance_quiz",
+        "title": "Personal Finance Basics Quiz",
+        "duration": "10 min",
+        "points": 100,
+        "contentFile": "personal_finance_quiz.json"
+      }
+    },
+    {
+      "id": "budgeting",
+      "title": "Advanced Budgeting",
+      "description": "Take your budgeting skills to the next level with advanced techniques",
+      "duration": "4 weeks",
+      "difficulty": "Beginner",
+      "icon": "Calculator",
+      "color": "orange",
+      "lessons": [
+        {
+          "id": "budgeting_1",
+          "title": "Zero-Based Budgeting",
+          "type": "exercise",
+          "duration": "26 min",
+          "points": 50,
+          "contentFile": "budgeting_1.json"
+        },
+        {
+          "id": "budgeting_2",
+          "title": "Tracking Variable Expenses",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 50,
+          "contentFile": "budgeting_2.json"
+        },
+        {
+          "id": "budgeting_3",
+          "title": "Seasonal and Irregular Expenses",
+          "type": "exercise",
+          "duration": "24 min",
+          "points": 50,
+          "contentFile": "budgeting_3.json"
+        },
+        {
+          "id": "budgeting_4",
+          "title": "Budget Review and Adjustment",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 50,
+          "contentFile": "budgeting_4.json"
+        },
+        {
+          "id": "budgeting_5",
+          "title": "Budgeting for Life Changes",
+          "type": "exercise",
+          "duration": "30 min",
+          "points": 50,
+          "contentFile": "budgeting_5.json"
+        }
+      ],
+      "quiz": {
+        "id": "budgeting_quiz",
+        "title": "Advanced Budgeting Quiz",
+        "duration": "12 min",
+        "points": 100,
+        "contentFile": "budgeting_quiz.json"
+      }
+    },
+    {
+      "id": "financial_psychology",
+      "title": "Financial Psychology",
+      "description": "Understand the psychological aspects of money management",
+      "duration": "3 weeks",
+      "difficulty": "Beginner",
+      "icon": "Brain",
+      "color": "orange",
+      "lessons": [
+        {
+          "id": "financial_psychology_1",
+          "title": "Money Mindset and Beliefs",
+          "type": "reading",
+          "duration": "25 min",
+          "points": 50,
+          "contentFile": "financial_psychology_1.json"
+        },
+        {
+          "id": "financial_psychology_2",
+          "title": "Overcoming Financial Stress",
+          "type": "exercise",
+          "duration": "28 min",
+          "points": 50,
+          "contentFile": "financial_psychology_2.json"
+        },
+        {
+          "id": "financial_psychology_3",
+          "title": "Behavioral Biases in Finance",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 50,
+          "contentFile": "financial_psychology_3.json"
+        },
+        {
+          "id": "financial_psychology_4",
+          "title": "Building Healthy Money Habits",
+          "type": "exercise",
+          "duration": "26 min",
+          "points": 50,
+          "contentFile": "financial_psychology_4.json"
+        },
+        {
+          "id": "financial_psychology_5",
+          "title": "Financial Decision Making",
+          "type": "reading",
+          "duration": "24 min",
+          "points": 50,
+          "contentFile": "financial_psychology_5.json"
+        }
+      ],
+      "quiz": {
+        "id": "financial_psychology_quiz",
+        "title": "Financial Psychology Quiz",
+        "duration": "10 min",
+        "points": 100,
+        "contentFile": "financial_psychology_quiz.json"
+      }
+    },
+    {
+      "id": "advanced_investing",
+      "title": "Advanced Investing Strategies",
+      "description": "Take your investment knowledge to the next level",
+      "duration": "6 weeks",
+      "difficulty": "Intermediate",
+      "icon": "TrendingUp",
+      "color": "orange",
+      "lessons": [
+        {
+          "id": "advanced_investing_1",
+          "title": "Portfolio Diversification Strategies",
+          "type": "reading",
+          "duration": "28 min",
+          "points": 100,
+          "contentFile": "advanced_investing_1.json"
+        },
+        {
+          "id": "advanced_investing_2",
+          "title": "Asset Allocation Models",
+          "type": "exercise",
+          "duration": "32 min",
+          "points": 100,
+          "contentFile": "advanced_investing_2.json"
+        },
+        {
+          "id": "advanced_investing_3",
+          "title": "Options and Derivatives Basics",
+          "type": "reading",
+          "duration": "30 min",
+          "points": 100,
+          "contentFile": "advanced_investing_3.json"
+        },
+        {
+          "id": "advanced_investing_4",
+          "title": "Tax-Efficient Investing",
+          "type": "exercise",
+          "duration": "26 min",
+          "points": 100,
+          "contentFile": "advanced_investing_4.json"
+        },
+        {
+          "id": "advanced_investing_5",
+          "title": "Alternative Investments",
+          "type": "reading",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "advanced_investing_5.json"
+        },
+        {
+          "id": "advanced_investing_6",
+          "title": "Investment Performance Analysis",
+          "type": "exercise",
+          "duration": "35 min",
+          "points": 100,
+          "contentFile": "advanced_investing_6.json"
+        }
+      ],
+      "quiz": {
+        "id": "advanced_investing_quiz",
+        "title": "Advanced Investing Strategies Quiz",
+        "duration": "15 min",
+        "points": 150,
+        "contentFile": "advanced_investing_quiz.json"
+      }
+    },
+    {
+      "id": "estate_planning",
+      "title": "Estate Planning Essentials",
+      "description": "Plan for the future and protect your assets",
+      "duration": "4 weeks",
+      "difficulty": "Intermediate",
+      "icon": "ShieldCheck",
+      "color": "orange",
+      "lessons": [
+        {
+          "id": "estate_planning_1",
+          "title": "Wills and Trusts Basics",
+          "type": "reading",
+          "duration": "24 min",
+          "points": 100,
+          "contentFile": "estate_planning_1.json"
+        },
+        {
+          "id": "estate_planning_2",
+          "title": "Estate Tax Planning",
+          "type": "exercise",
+          "duration": "28 min",
+          "points": 100,
+          "contentFile": "estate_planning_2.json"
+        },
+        {
+          "id": "estate_planning_3",
+          "title": "Power of Attorney and Healthcare Directives",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "estate_planning_3.json"
+        },
+        {
+          "id": "estate_planning_4",
+          "title": "Beneficiary Designations",
+          "type": "exercise",
+          "duration": "26 min",
+          "points": 100,
+          "contentFile": "estate_planning_4.json"
+        },
+        {
+          "id": "estate_planning_5",
+          "title": "Estate Planning for Business Owners",
+          "type": "reading",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "estate_planning_5.json"
+        }
+      ],
+      "quiz": {
+        "id": "estate_planning_quiz",
+        "title": "Estate Planning Essentials Quiz",
+        "duration": "12 min",
+        "points": 150,
+        "contentFile": "estate_planning_quiz.json"
+      }
+    },
+    {
+      "id": "financial_planning",
+      "title": "Comprehensive Financial Planning",
+      "description": "Create a holistic financial plan for your future",
+      "duration": "5 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Target",
+      "color": "orange",
+      "lessons": [
+        {
+          "id": "financial_planning_1",
+          "title": "Creating Your Financial Plan",
+          "type": "exercise",
+          "duration": "32 min",
+          "points": 100,
+          "contentFile": "financial_planning_1.json"
+        },
+        {
+          "id": "financial_planning_2",
+          "title": "Risk Management and Insurance Planning",
+          "type": "reading",
+          "duration": "26 min",
+          "points": 100,
+          "contentFile": "financial_planning_2.json"
+        },
+        {
+          "id": "financial_planning_3",
+          "title": "Investment Planning and Asset Allocation",
+          "type": "exercise",
+          "duration": "30 min",
+          "points": 100,
+          "contentFile": "financial_planning_3.json"
+        },
+        {
+          "id": "financial_planning_4",
+          "title": "Tax Planning Integration",
+          "type": "reading",
+          "duration": "24 min",
+          "points": 100,
+          "contentFile": "financial_planning_4.json"
+        },
+        {
+          "id": "financial_planning_5",
+          "title": "Retirement Planning and Income Strategies",
+          "type": "exercise",
+          "duration": "35 min",
+          "points": 100,
+          "contentFile": "financial_planning_5.json"
+        }
+      ],
+      "quiz": {
+        "id": "financial_planning_quiz",
+        "title": "Comprehensive Financial Planning Quiz",
+        "duration": "14 min",
+        "points": 150,
+        "contentFile": "financial_planning_quiz.json"
       }
     }
   ]

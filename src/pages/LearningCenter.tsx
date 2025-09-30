@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react';
 import { 
   BookOpen, Clock, Award, Target, TrendingUp, 
   CheckCircle, Lock, PlayCircle, FileText, BarChart,
-  Brain, Zap, Trophy, Flame, ArrowRight
+  Brain, Zap, Trophy, Flame, ArrowRight, ArrowUp, Filter
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import ContentService, { Module as ManifestModule, LessonInfo } from '../services/contentService';
 import Sidebar from '../components/Sidebar';
-
 interface TopicView {
   id: string;
   title: string;
@@ -38,6 +37,10 @@ const LearningCenter = () => {
   const [modules, setModules] = useState<ModuleView[]>([]);
   const [expandedModules, setExpandedModules] = useState<Record<string, boolean>>({});
   const [unlockMessages, setUnlockMessages] = useState<Record<string, string>>({});
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [difficultyFilter, setDifficultyFilter] = useState<string>('all');
+  const [completionFilter, setCompletionFilter] = useState<string>('all');
+  const [formatFilter, setFormatFilter] = useState<string>('all');
   const currentStreak = user?.learningStreak || 0;
 
   useEffect(() => {
@@ -49,6 +52,18 @@ const LearningCenter = () => {
       navigate('/login', { state: { from: { pathname: '/learning' } } });
     }
   }, [isAuthenticated, navigate]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Get user's completed concepts/quizzes for progress tracking
   const completedConcepts = user?.completedConcepts || [];
@@ -180,9 +195,9 @@ const LearningCenter = () => {
   const getUnlockCost = (difficulty: string) => {
     switch (difficulty) {
       case 'Intermediate':
-        return 600;
+        return 800;
       case 'Advanced':
-        return 900;
+        return 1200;
       default:
         return 0;
     }
@@ -202,6 +217,19 @@ const LearningCenter = () => {
 
   // Modules with user completion state are kept directly in state now
   const modulesWithProgress = modules;
+
+  const filteredModules = modulesWithProgress.filter((module) => {
+    const difficultyMatch =
+      difficultyFilter === 'all' || module.difficulty?.toLowerCase() === difficultyFilter;
+    const completionMatch =
+      completionFilter === 'all' ||
+      (completionFilter === 'completed' && module.progress === 100) ||
+      (completionFilter === 'in-progress' && module.progress > 0 && module.progress < 100) ||
+      (completionFilter === 'not-started' && module.progress === 0);
+    const formatMatch =
+      formatFilter === 'all' || module.topics.some((topic) => topic.type === formatFilter);
+    return difficultyMatch && completionMatch && formatMatch;
+  });
 
   const getResumeLessonId = (moduleId: string, topics: TopicView[]): string | null => {
     try {
@@ -341,6 +369,55 @@ const LearningCenter = () => {
           </div>
         </div>
 
+        {/* Filters */}
+        <div className="px-8 pt-6">
+          <div className="bg-gray-800 border border-gray-700 rounded-xl p-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div>
+              <h2 className="text-lg font-semibold text-white">Customize your learning</h2>
+              <p className="text-sm text-gray-400">Filter modules by difficulty, progress, or lesson format.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <div className="flex items-center space-x-2">
+                <Filter className="w-4 h-4 text-orange-400" />
+                <select
+                  value={difficultyFilter}
+                  onChange={(e) => setDifficultyFilter(e.target.value)}
+                  className="bg-gray-900 border border-gray-700 text-gray-200 text-sm rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                >
+                  <option value="all">All difficulties</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced">Advanced</option>
+                </select>
+              </div>
+              <div>
+                <select
+                  value={completionFilter}
+                  onChange={(e) => setCompletionFilter(e.target.value)}
+                  className="bg-gray-900 border border-gray-700 text-gray-200 text-sm rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                >
+                  <option value="all">All progress states</option>
+                  <option value="completed">Completed</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="not-started">Not Started</option>
+                </select>
+              </div>
+              <div>
+                <select
+                  value={formatFilter}
+                  onChange={(e) => setFormatFilter(e.target.value)}
+                  className="bg-gray-900 border border-gray-700 text-gray-200 text-sm rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                >
+                  <option value="all">All formats</option>
+                  <option value="reading">Reading Guides</option>
+                  <option value="video">Video Lessons</option>
+                  <option value="exercise">Interactive Exercises</option>
+                  <option value="quiz">Knowledge Checks</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Stats Cards */}
         <div className="px-8 py-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
@@ -389,7 +466,7 @@ const LearningCenter = () => {
           <div>
             <h2 className="text-2xl font-bold text-white mb-6">Your Learning Path</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {modulesWithProgress.map((module) => (
+              {filteredModules.map((module) => (
                 <div
                   key={module.id}
                   className={`bg-gray-800 rounded-xl border ${
@@ -542,6 +619,16 @@ const LearningCenter = () => {
               View Learning Path
             </Link>
           </div>
+          {/* Back to Top Button */}
+          {showBackToTop && (
+            <button
+              onClick={scrollToTop}
+              className="fixed bottom-8 right-8 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+              aria-label="Back to top"
+            >
+              <ArrowUp className="w-5 h-5" />
+            </button>
+          )}
         </div>
       </div>
     </div>

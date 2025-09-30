@@ -1,0 +1,46 @@
+{
+  "title": "Tax Filing and Record Keeping",
+  "type": "exercise",
+  "duration": "25 min",
+  "points": 150,
+  "instructions": "Complete this exercise to learn proper tax filing and record keeping practices.",
+  "sections": [
+    {
+      "type": "reading",
+      "title": "Tax Filing Best Practices",
+      "content": "Proper tax filing and record keeping can save you time, money, and stress. Here's what you need to know..."
+    },
+    {
+      "type": "checklist",
+      "title": "Essential Tax Documents to Keep",
+      "items": [
+        "W-2 forms from employers",
+        "1099 forms for freelance/contract work",
+        "Investment income statements (1099-DIV, 1099-INT)",
+        "Mortgage interest statements (1098)",
+        "Property tax statements",
+        "Charitable contribution receipts",
+        "Medical expense receipts",
+        "Business expense receipts (if self-employed)",
+        "Educational expense forms (1098-T)",
+        "Retirement contribution statements"
+      ]
+    },
+    {
+      "type": "tips",
+      "title": "Record Keeping Tips",
+      "content": "• Keep digital copies organized by tax year and category\n• Use consistent file naming conventions\n• Back up records in multiple locations\n• Keep records for at least 3 years (7 years for business records)"
+    },
+    {
+      "type": "exercise",
+      "title": "Create Your Tax Document Checklist",
+      "instructions": "List all the tax documents you expect to receive this year and create a filing system for them."
+    }
+  ],
+  "key_takeaways": [
+    "Proper record keeping prevents audit problems and supports your deductions",
+    "Digital organization saves time and reduces paper clutter",
+    "Keep records for the recommended time periods",
+    "Consistent filing systems make tax time less stressful"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "title": "Advanced Budgeting Quiz",
+  "type": "quiz",
+  "duration": "12 min",
+  "points": 100,
+  "passingScore": 75,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What is the core principle of zero-based budgeting?",
+      "options": [
+        "Every dollar has a job",
+        "Save everything you can",
+        "Only track essential expenses",
+        "Budget based on last month's spending"
+      ],
+      "correct": 0,
+      "explanation": "Zero-based budgeting assigns every dollar of income a specific purpose, whether it's spending, saving, or investing."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Which expense category typically varies most month to month?",
+      "options": [
+        "Rent/mortgage",
+        "Groceries",
+        "Variable expenses like dining out",
+        "Insurance premiums"
+      ],
+      "correct": 2,
+      "explanation": "Variable expenses like entertainment, dining out, and miscellaneous spending tend to fluctuate most."
+    },
+    {
+      "id": 3,
+      "type": "true-false",
+      "question": "You should budget the same amount for irregular expenses every month.",
+      "correct": false,
+      "explanation": "For irregular expenses, divide annual costs by 12 and save that amount monthly in a separate account."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "What is the sinking fund method?",
+      "options": [
+        "Saving for emergencies only",
+        "Setting aside money monthly for known future expenses",
+        "Investing all extra money",
+        "Only saving for retirement"
+      ],
+      "correct": 1,
+      "explanation": "Sinking funds help you save gradually for known expenses like vacations, car repairs, or holiday gifts."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "How often should you review and adjust your budget?",
+      "options": [
+        "Once a year",
+        "Only when income changes",
+        "Monthly",
+        "Only when you overspend"
+      ],
+      "correct": 2,
+      "explanation": "Monthly reviews help you stay on track, adjust for changing circumstances, and improve your budgeting skills."
+    },
+    {
+      "id": 6,
+      "type": "true-false",
+      "question": "Life insurance premiums should be included in your monthly budget.",
+      "correct": true,
+      "explanation": "All regular expenses, including insurance premiums, should be accounted for in your monthly budget."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "What should you do if you consistently overspend in a budget category?",
+      "options": [
+        "Ignore it",
+        "Eliminate that category entirely",
+        "Review why you're overspending and adjust",
+        "Move money from savings to cover it"
+      ],
+      "correct": 2,
+      "explanation": "Understanding why you're overspending helps you make informed adjustments to your budget or spending habits."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Which budgeting method works best for people with irregular income?",
+      "options": [
+        "Strict monthly categories",
+        "Percentage-based allocation",
+        "Base budgeting on lowest monthly income",
+        "Weekly budgeting cycles"
+      ],
+      "correct": 2,
+      "explanation": "Budgeting based on your lowest expected monthly income provides a safety net for fluctuating earnings."
+    },
+    {
+      "id": 9,
+      "type": "true-false",
+      "question": "You should include savings goals as line items in your budget.",
+      "correct": true,
+      "explanation": "Treating savings goals like bills ensures you prioritize building wealth and reaching financial targets."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "What is the most effective way to handle unexpected expenses in your budget?",
+      "options": [
+        "Use credit cards",
+        "Dip into emergency fund",
+        "Cut other budget categories",
+        "Have a miscellaneous category"
+      ],
+      "correct": 3,
+      "explanation": "A miscellaneous or buffer category helps absorb small unexpected expenses without derailing your entire budget."
+    }
+  ]
+}
