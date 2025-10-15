@@ -1,0 +1,72 @@
+{
+  "title": "Portfolio Diversification Strategies",
+  "type": "reading",
+  "duration": "28 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Beyond Basic Diversification",
+      "subtitle": "Advanced techniques to reduce risk and enhance returns across asset classes"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Modern portfolio theory and efficient frontiers",
+        "Correlation and covariance in asset allocation",
+        "Geographic and sector diversification strategies",
+        "Rebalancing techniques and timing considerations"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Modern Portfolio Theory Basics",
+      "content": "Modern Portfolio Theory (MPT) shows that combining assets with low correlation can reduce overall portfolio risk while maintaining expected returns. The efficient frontier represents the optimal risk-return combinations. Diversification works best when assets don't move in perfect sync—aim for correlations below 0.7 for meaningful risk reduction."
+    },
+    {
+      "type": "keypoints",
+      "title": "Diversification Dimensions",
+      "points": [
+        {
+          "title": "Asset Class Diversification",
+          "description": "Spread investments across stocks, bonds, real estate, commodities, and alternatives to capture different return drivers."
+        },
+        {
+          "title": "Geographic Diversification",
+          "description": "Invest internationally to benefit from global growth and reduce country-specific risks like political instability or currency fluctuations."
+        },
+        {
+          "title": "Sector and Industry Diversification",
+          "description": "Avoid over-concentration in single sectors; use equal-weight or cap-weighted approaches to maintain balance."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Correlation Matters More Than Number of Holdings",
+      "content": "Owning 50 highly correlated stocks isn't diversified. Focus on low-correlation assets like combining U.S. stocks with international bonds or adding alternatives like gold or real estate.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Rebalancing Strategies",
+      "content": "Rebalancing involves selling winners and buying losers to return to target allocations. Calendar rebalancing (quarterly/annually) is simple but may miss opportunities. Threshold rebalancing (when allocations drift 5-10% from targets) is more efficient but requires monitoring. Set rules and automate where possible to avoid emotional decisions."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Apply Diversification This Month",
+      "steps": [
+        "Calculate current portfolio correlations using free online tools or brokerage reports",
+        "Identify over-concentrations (e.g., >20% in one stock/sector) and plan reductions",
+        "Add one new asset class (e.g., international bonds) to improve diversification",
+        "Set up automatic rebalancing alerts in your brokerage account"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Diversification Isn't Risk Elimination",
+      "content": "It reduces unsystematic risk but can't eliminate market risk. Combine with appropriate asset allocation based on your risk tolerance and time horizon."
+    }
+  ]
+}

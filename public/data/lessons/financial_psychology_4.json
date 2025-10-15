@@ -1,0 +1,72 @@
+{
+  "title": "Building Healthy Money Habits",
+  "type": "exercise",
+  "duration": "26 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Creating Positive Financial Behaviors",
+      "subtitle": "Developing habits that lead to long-term financial success"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "The psychology behind habit formation",
+        "Specific money habits that improve financial outcomes",
+        "Techniques for breaking bad financial habits",
+        "Creating systems for habit maintenance"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Science of Habit Formation",
+      "content": "Habits are automatic behaviors triggered by cues and rewarded by outcomes. Financial habits like automatic saving or regular expense tracking become easier over time. The key is starting small and being consistent rather than trying to change everything at once."
+    },
+    {
+      "type": "keypoints",
+      "title": "Essential Money Habits",
+      "points": [
+        {
+          "title": "Daily Tracking",
+          "description": "Review expenses daily to maintain awareness of spending patterns."
+        },
+        {
+          "title": "Automatic Saving",
+          "description": "Set up automatic transfers to savings and investment accounts."
+        },
+        {
+          "title": "Regular Reviews",
+          "description": "Weekly or monthly financial check-ins to stay on track with goals."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Start Small for Big Changes",
+      "content": "Don't try to overhaul your entire financial life at once. Focus on one or two key habits and build from there. Small, consistent actions compound over time.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Breaking Bad Financial Habits",
+      "content": "Identify triggers for bad habits and replace them with positive alternatives. For impulse spending, implement a 24-hour waiting period. Track progress and be patient - old habits die hard but can be replaced with better ones."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Build Better Money Habits",
+      "steps": [
+        "Identify one bad financial habit you want to change",
+        "Choose a specific, positive habit to replace it",
+        "Set up reminders and accountability systems",
+        "Track your progress for 30 days and adjust as needed"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Habit Stacking",
+      "content": "Link new financial habits to existing routines. For example, review your budget while having your morning coffee or save money every time you get paid."
+    }
+  ]
+}

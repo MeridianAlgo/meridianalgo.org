@@ -1,0 +1,105 @@
+{
+  "id": "03_tax_strategies",
+  "title": "Tax Strategies for Business",
+  "content": {
+    "hero": {
+      "title": "Smart Tax Strategies for Small Business",
+      "subtitle": "Minimize taxes legally while staying compliant",
+      "image": "/images/lessons/business-taxes.jpg"
+    },
+    "introduction": "Taxes are often a small business's largest expense after payroll and cost of goods sold. Understanding business tax deductions, estimated tax payments, and strategic tax planning can save thousands of dollars annually. The key is being proactive, keeping good records, and working with a qualified tax professional.",
+    "keyPoints": [
+      "Self-employed individuals pay both employee and employer portions of Social Security and Medicare (15.3%)",
+      "Quarterly estimated tax payments are required if you expect to owe $1,000+ in taxes",
+      "The home office deduction can save thousands if you qualify",
+      "Retirement contributions reduce taxable income while building your future",
+      "Proper documentation is essential—if you don't have receipts, you can't deduct it"
+    ],
+    "sections": [
+      {
+        "title": "Understanding Self-Employment Tax",
+        "content": "Self-employment tax is the self-employed person's version of Social Security and Medicare taxes. Employees pay 7.65% and employers pay 7.65% (15.3% total). When you're self-employed, you pay both portions—15.3% on net self-employment income up to $160,200 (2023), plus 2.9% Medicare tax on all income above that, plus an additional 0.9% Medicare tax on income over $200,000 (single) or $250,000 (married). This is in addition to regular income tax. The good news: you can deduct half of your self-employment tax when calculating income tax, and you pay self-employment tax only on net profit (revenue minus expenses), not gross revenue. S-Corporation election can reduce self-employment tax by allowing you to split income between salary (subject to payroll taxes) and distributions (not subject to self-employment tax)."
+      },
+      {
+        "title": "Quarterly Estimated Tax Payments",
+        "content": "Unlike employees who have taxes withheld from paychecks, self-employed individuals must make quarterly estimated tax payments. You're required to pay if you expect to owe $1,000+ in taxes for the year. Payments are due April 15, June 15, September 15, and January 15 of the following year. Calculate estimated taxes based on your expected annual income, deductions, and credits. A safe harbor rule: if you pay 100% of last year's tax liability (110% if income over $150,000) in quarterly payments, you won't face underpayment penalties even if you owe more. Many business owners set aside 25-30% of each payment received in a separate savings account for taxes. Underpayment penalties are about 8% annually, so don't skip quarterly payments. Use IRS Form 1040-ES to calculate and pay, or pay online at IRS.gov/payments."
+      },
+      {
+        "title": "Essential Business Tax Deductions",
+        "content": "Deductible business expenses reduce your taxable income. Common deductions: home office (if you have a dedicated space used exclusively for business), vehicle expenses (standard mileage rate of 65.5 cents/mile for 2023, or actual expenses), business meals (50% deductible), travel expenses (100% deductible if primarily for business), office supplies and equipment, software and subscriptions, professional services (legal, accounting, consulting), advertising and marketing, business insurance, business loan interest, education and training related to your business, and retirement plan contributions. The Section 179 deduction allows immediate expensing of equipment purchases up to $1,160,000 (2023) rather than depreciating over years. The Qualified Business Income (QBI) deduction allows many small business owners to deduct up to 20% of qualified business income. Keep detailed records and receipts for everything."
+      },
+      {
+        "title": "Home Office Deduction",
+        "content": "If you use part of your home exclusively and regularly for business, you can deduct home office expenses. Two methods: Simplified method—$5 per square foot up to 300 square feet (maximum $1,500 deduction), or Regular method—deduct actual expenses proportional to your home office percentage. For regular method, calculate the percentage of your home used for business (office square footage ÷ total home square footage), then deduct that percentage of: mortgage interest or rent, property taxes, utilities, insurance, repairs, and depreciation. Example: 200 sq ft office in 2,000 sq ft home = 10%. If annual home expenses are $30,000, deduct $3,000. Requirements: the space must be used exclusively for business (no dual-purpose rooms) and regularly (not occasional use), and it must be your principal place of business or where you meet clients. Home office deduction also allows deducting mileage from home to business meetings."
+      },
+      {
+        "title": "Retirement Contributions as Tax Strategy",
+        "content": "Retirement plan contributions reduce current taxable income while building your future. Options for self-employed: Solo 401(k) allows contributions up to $66,000 (2023) as both employee and employer—$22,500 employee deferral plus up to 25% of compensation as employer contribution. SEP IRA allows contributions up to 25% of net self-employment income, maximum $66,000 (2023). SIMPLE IRA allows $15,500 employee deferral (2023) plus required employer contribution. Traditional IRA allows $6,500 ($7,500 if 50+) but may not be deductible if you have a workplace retirement plan. Roth options are available but don't reduce current taxes. Strategy: maximize retirement contributions in high-income years to reduce taxes, then potentially convert to Roth in lower-income years. Contributions are due by tax filing deadline (including extensions)."
+      },
+      {
+        "title": "Record Keeping and Documentation",
+        "content": "The IRS requires documentation for all deductions. Without receipts and records, you can't prove expenses if audited. Best practices: use accounting software that connects to bank accounts and credit cards, save all receipts (digital is fine—use apps like Expensify or Shoeboxed), document business purpose for expenses (especially meals and travel), keep mileage logs for vehicle deductions (date, destination, business purpose, miles), maintain separate business and personal accounts, and keep records for at least 7 years. For large purchases, keep invoices and proof of payment. For home office, keep documentation of square footage and exclusive business use. For meals and entertainment, note who you met with and business discussed. Good records make tax preparation easier and cheaper, provide audit protection, and help you understand business profitability."
+      }
+    ],
+    "callouts": [
+      {
+        "type": "tip",
+        "title": "Set Aside Tax Money Immediately",
+        "content": "When you receive payment, immediately transfer 25-30% to a separate savings account for taxes. This ensures you have money for quarterly payments and year-end taxes. Treat this as a non-negotiable expense, not optional savings."
+      },
+      {
+        "type": "warning",
+        "title": "Don't Skip Quarterly Payments",
+        "content": "Waiting until April to pay all your taxes results in underpayment penalties of about 8% annually. Make quarterly estimated payments even if approximate. It's better to overpay slightly and get a refund than underpay and face penalties."
+      },
+      {
+        "type": "example",
+        "title": "Real-World Scenario",
+        "content": "Jennifer's consulting business nets $100,000. She pays $15,300 in self-employment tax. She deducts: $3,000 home office, $5,000 vehicle expenses, $2,000 software/subscriptions, $3,000 professional development, and contributes $20,000 to a Solo 401(k). Her taxable income drops to $75,000, saving about $8,000 in income taxes plus building retirement savings."
+      }
+    ],
+    "practicalSteps": [
+      {
+        "step": 1,
+        "title": "Set Up Tax Savings Account",
+        "description": "Open a separate business savings account specifically for tax savings. Calculate your estimated tax rate (typically 25-35% for self-employed). Set up automatic transfers of that percentage from each payment received."
+      },
+      {
+        "step": 2,
+        "title": "Calculate and Pay Quarterly Estimates",
+        "description": "Use IRS Form 1040-ES or tax software to calculate quarterly estimated taxes. Set calendar reminders for April 15, June 15, September 15, and January 15. Pay online at IRS.gov/payments or mail checks."
+      },
+      {
+        "step": 3,
+        "title": "Track All Deductible Expenses",
+        "description": "Use accounting software to categorize all business expenses. Save digital copies of all receipts. For vehicle use, maintain a mileage log. For meals, note business purpose and attendees."
+      },
+      {
+        "step": 4,
+        "title": "Document Home Office",
+        "description": "If you have a dedicated home office, measure the square footage and calculate the percentage of your home. Take photos showing exclusive business use. Track all home-related expenses for the year."
+      },
+      {
+        "step": 5,
+        "title": "Maximize Retirement Contributions",
+        "description": "Research retirement plan options (Solo 401(k), SEP IRA, SIMPLE IRA). Open an account and set up contributions. Aim to maximize contributions in profitable years to reduce taxes while building retirement savings."
+      },
+      {
+        "step": 6,
+        "title": "Work with a Tax Professional",
+        "description": "Hire a CPA or enrolled agent who specializes in small business taxes. Meet quarterly to review estimated payments and year-end for tax planning. The cost is tax-deductible and typically saves more than it costs."
+      }
+    ],
+    "quiz": {
+      "question": "What is the self-employment tax rate on net business income?",
+      "options": [
+        "7.65%",
+        "15.3%",
+        "25%",
+        "It varies by income level"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Self-employment tax is 15.3% on net self-employment income (12.4% Social Security + 2.9% Medicare), covering both the employee and employer portions that W-2 employees split with their employers. This is in addition to regular income tax. The Social Security portion applies only to income up to $160,200 (2023)."
+    }
+  }
+}

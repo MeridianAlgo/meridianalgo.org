@@ -1,0 +1,104 @@
+{
+  "title": "Credit Recovery Strategies",
+  "type": "reading",
+  "duration": "18 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Credit Recovery Strategies",
+      "subtitle": "Rebuilding your credit after financial abuse",
+      "color": "green",
+      "icon": "TrendingUp"
+    },
+    {
+      "type": "content",
+      "title": "Understanding the Impact",
+      "content": "Financial abuse often leaves survivors with damaged credit, unauthorized debts, and a complicated financial history. The good news is that credit can be repaired, and there are legal protections available to help you recover."
+    },
+    {
+      "type": "steps",
+      "title": "First Steps to Credit Recovery",
+      "steps": [
+        "Get your free credit reports from all three bureaus (Equifax, Experian, TransUnion) at AnnualCreditReport.com",
+        "Review reports carefully for unauthorized accounts, fraudulent charges, or identity theft",
+        "Document everything - take screenshots, print reports, save all correspondence",
+        "File a police report if you discover identity theft or fraud",
+        "Place a fraud alert or credit freeze on your credit reports",
+        "Contact creditors to dispute unauthorized accounts or charges"
+      ]
+    },
+    {
+      "type": "key-points",
+      "title": "Disputing Fraudulent Accounts",
+      "points": [
+        {
+          "title": "Identity Theft Report",
+          "description": "File a report with the FTC at IdentityTheft.gov. This creates an official record and provides a recovery plan."
+        },
+        {
+          "title": "Dispute Letters",
+          "description": "Send certified letters to credit bureaus disputing fraudulent accounts. Include police reports and identity theft affidavits."
+        },
+        {
+          "title": "Creditor Contact",
+          "description": "Contact creditors directly to close fraudulent accounts and request removal from your credit report."
+        },
+        {
+          "title": "Documentation",
+          "description": "Keep copies of all correspondence, certified mail receipts, and responses from bureaus and creditors."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Legal Protections",
+      "content": "The Fair Credit Reporting Act (FCRA) provides protections for victims of identity theft and fraud. You have the right to dispute inaccurate information, and credit bureaus must investigate within 30 days. If abuse involved coercion or fraud, you may not be legally responsible for those debts."
+    },
+    {
+      "type": "callout",
+      "title": "Consider Legal Help",
+      "content": "Many domestic violence organizations offer free legal assistance. An attorney can help you navigate debt responsibility, divorce proceedings, and credit disputes. Don't try to handle everything alone.",
+      "color": "blue",
+      "icon": "Scale"
+    },
+    {
+      "type": "steps",
+      "title": "Rebuilding Your Credit",
+      "steps": [
+        "Open a secured credit card in your name only (requires a deposit, builds credit)",
+        "Become an authorized user on a trusted friend or family member's account",
+        "Pay all bills on time - set up automatic payments if possible",
+        "Keep credit utilization below 30% of available credit",
+        "Don't close old accounts (length of credit history matters)",
+        "Monitor your credit regularly using free tools like Credit Karma or Credit Sesame"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Timeline for Recovery",
+      "content": "Credit recovery takes time, but progress happens faster than you might think. Negative items can be disputed immediately. Most negative marks fall off after 7 years. With consistent positive behavior, you can see significant improvement in 12-24 months."
+    },
+    {
+      "type": "resources",
+      "title": "Credit Recovery Resources",
+      "links": [
+        {
+          "label": "IdentityTheft.gov",
+          "description": "FTC's official identity theft recovery site",
+          "url": "https://www.identitytheft.gov"
+        },
+        {
+          "label": "AnnualCreditReport.com",
+          "description": "Free credit reports from all three bureaus",
+          "url": "https://www.annualcreditreport.com"
+        },
+        {
+          "label": "Consumer Financial Protection Bureau",
+          "description": "Sample dispute letters and consumer rights information",
+          "url": "https://www.consumerfinance.gov"
+        }
+      ]
+    }
+  ]
+}

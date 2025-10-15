@@ -1,0 +1,128 @@
+{
+  "id": "college-planning-quiz",
+  "title": "College Planning Quiz",
+  "description": "Test your knowledge of 529 plans, student loans, financial aid, and alternative funding strategies for college.",
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is the primary tax advantage of a 529 college savings plan?",
+      "options": [
+        "Contributions are federally tax-deductible",
+        "Earnings grow tax-free and withdrawals for qualified expenses are tax-free",
+        "You can withdraw money anytime for any purpose tax-free",
+        "The account earns guaranteed returns"
+      ],
+      "correctAnswer": 1,
+      "explanation": "529 plans offer tax-free growth and tax-free withdrawals when used for qualified education expenses. While some states offer tax deductions for contributions, there is no federal deduction. The tax-free compounding over 18+ years is the primary benefit."
+    },
+    {
+      "id": "q2",
+      "question": "What happens to unused 529 plan funds if the beneficiary doesn't attend college?",
+      "options": [
+        "The funds are forfeited to the state",
+        "You can change the beneficiary to another family member without penalty",
+        "You must pay a 50% penalty on all withdrawals",
+        "The account is automatically closed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "529 plans offer flexibility—you can change the beneficiary to another qualifying family member without penalty. You can also withdraw funds for non-education purposes (paying income tax and a 10% penalty on earnings), or starting in 2024, roll up to $35,000 to a Roth IRA for the beneficiary under certain conditions."
+    },
+    {
+      "id": "q3",
+      "question": "What is the key difference between subsidized and unsubsidized federal student loans?",
+      "options": [
+        "Subsidized loans have lower interest rates",
+        "The government pays interest on subsidized loans while you're in school",
+        "Subsidized loans never need to be repaid",
+        "Unsubsidized loans are only available to graduate students"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For subsidized federal loans, the government pays the interest while you're enrolled at least half-time, during grace periods, and during deferment. For unsubsidized loans, interest accrues from disbursement, and you're responsible for all interest charges."
+    },
+    {
+      "id": "q4",
+      "question": "What is a good rule of thumb for total student loan borrowing?",
+      "options": [
+        "Borrow as much as you need regardless of future salary",
+        "Don't borrow more than your expected first-year salary",
+        "Never borrow more than $10,000 total",
+        "Borrow twice your expected annual salary"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A common guideline is to keep total student debt below your expected first-year salary. This typically results in manageable monthly payments of 10-15% of income. Borrowing significantly more can lead to financial stress and difficulty making payments."
+    },
+    {
+      "id": "q5",
+      "question": "When does the FAFSA open for the following academic year?",
+      "options": [
+        "January 1",
+        "July 1",
+        "October 1",
+        "December 1"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The FAFSA opens October 1 each year for the following academic year. It's important to file as early as possible because some aid is awarded on a first-come, first-served basis. The FAFSA uses tax information from two years prior, allowing early filing."
+    },
+    {
+      "id": "q6",
+      "question": "How are student assets assessed differently than parent assets for financial aid?",
+      "options": [
+        "Student assets are assessed at 5.64%, parent assets at 20%",
+        "Student assets are assessed at 20%, parent assets at 5.64%",
+        "Both are assessed equally",
+        "Student assets aren't counted"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Student assets are assessed at 20% for financial aid calculations, while parent assets are assessed at only 5.64%. This means money in a student's name has a much larger impact on aid eligibility, which is why it's often better to keep savings in parent-owned accounts or 529 plans."
+    },
+    {
+      "id": "q7",
+      "question": "How much can starting at community college save compared to four years at a university?",
+      "options": [
+        "$5,000-$10,000",
+        "$15,000-$25,000",
+        "$40,000-$80,000",
+        "$100,000+"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Starting at community college for two years and transferring to a four-year university can save $40,000-$80,000 or more compared to attending a university for all four years. Community college tuition is typically $3,000-$5,000 per year versus $10,000-$50,000+ at universities."
+    },
+    {
+      "id": "q8",
+      "question": "What is the maximum tax-free educational assistance employers can provide annually under Section 127?",
+      "options": [
+        "$2,500",
+        "$5,250",
+        "$10,000",
+        "Unlimited"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Under Section 127 of the tax code, employers can provide up to $5,250 per year in tax-free educational assistance. Many employers offer this benefit, and some provide more (though amounts over $5,250 are taxable as income)."
+    },
+    {
+      "id": "q9",
+      "question": "What does the Post-9/11 GI Bill cover for veterans?",
+      "options": [
+        "Only tuition, no other expenses",
+        "Full in-state tuition, housing allowance, and books stipend",
+        "A one-time $10,000 payment",
+        "Only community college tuition"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Post-9/11 GI Bill provides comprehensive benefits including full in-state tuition at public universities, a monthly housing allowance, and a books and supplies stipend for up to 36 months of education—worth over $100,000 in many cases."
+    },
+    {
+      "id": "q10",
+      "question": "Which strategy can help you graduate college faster and save money?",
+      "options": [
+        "Taking fewer classes per semester",
+        "Avoiding summer courses",
+        "Earning AP or CLEP credits before or during college",
+        "Changing majors frequently"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Earning college credits through AP exams ($95 each), CLEP exams ($89 each), or dual enrollment can significantly reduce time to degree. Passing 8 AP exams could save an entire year of college, saving $10,000-$30,000+ in tuition, fees, and living expenses."
+    }
+  ]
+}

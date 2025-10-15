@@ -1,0 +1,77 @@
+{
+  "title": "Financial Decision Making",
+  "type": "reading",
+  "duration": "24 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Decide With Confidence",
+      "subtitle": "Blend intuition and analysis to choose the best financial path"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Master",
+      "items": [
+        "A step-by-step decision framework",
+        "Balancing numbers with personal values",
+        "Recognizing decision fatigue",
+        "Creating rules to reduce regret"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Decisions Define Your Financial Life",
+      "content": "Every savings deposit, investment choice, and purchase is a decision with ripple effects. Clear decision-making reduces anxiety and accelerates progress toward goals."
+    },
+    {
+      "type": "keypoints",
+      "title": "Decision Framework",
+      "points": [
+        {
+          "title": "Clarify the Choice",
+          "description": "State the decision in one sentence, including the stakes and timeline."
+        },
+        {
+          "title": "Gather Data",
+          "description": "Collect relevant numbers, expert perspectives, and personal impact details."
+        },
+        {
+          "title": "Evaluate Options",
+          "description": "Compare pros, cons, risks, and alignment with values for each route."
+        },
+        {
+          "title": "Commit & Review",
+          "description": "Choose, execute, and set a date to evaluate results and learn."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Values First",
+      "content": "If a decision conflicts with your core values, the financial return won't feel like success.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Guard Against Decision Fatigue",
+      "content": "Too many choices in a short time lead to poor judgment. Batch routine money tasks on a schedule, and leave high-stakes decisions for when you are rested. Create default rules—like automatic transfers or spending limits—to avoid constant deliberation."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Decision Drill",
+      "steps": [
+        "Identify a current financial decision you feel stuck on.",
+        "Use the framework to map the decision in writing—choice, data, options, commitment.",
+        "Note how each option aligns with your top three personal values.",
+        "Set an implementation date and a follow-up review period to capture lessons."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Pre-Defining Rules",
+      "content": "Create policies like 'Any purchase over $500 gets a 48-hour cooling-off period' to protect future you from in-the-moment decisions.",
+      "icon": "settings"
+    }
+  ]
+}

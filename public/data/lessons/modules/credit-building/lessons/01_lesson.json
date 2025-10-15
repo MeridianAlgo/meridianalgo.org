@@ -1,0 +1,69 @@
+{
+  "title": "Understanding Credit Scores",
+  "type": "reading",
+  "duration": "18 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Understanding Credit Scores",
+      "subtitle": "Master the fundamentals of credit scoring and why it matters",
+      "color": "blue",
+      "icon": "TrendingUp"
+    },
+    {
+      "type": "content",
+      "title": "What is a Credit Score?",
+      "content": "Your credit score is a three-digit number (typically 300-850) that represents your creditworthiness. Lenders use this score to decide whether to approve you for credit cards, loans, mortgages, and even rental applications. A higher score means better interest rates and more financial opportunities."
+    },
+    {
+      "type": "key-points",
+      "title": "The Five Factors That Determine Your Score",
+      "points": [
+        {
+          "title": "Payment History (35%)",
+          "description": "Your track record of paying bills on time. Even one late payment can significantly impact your score. This is the most important factor."
+        },
+        {
+          "title": "Credit Utilization (30%)",
+          "description": "The percentage of available credit you're using. Keep this below 30% for optimal scores. Using $300 of a $1,000 limit = 30% utilization."
+        },
+        {
+          "title": "Length of Credit History (15%)",
+          "description": "How long you've had credit accounts. Older accounts help your score. Don't close your oldest credit card!"
+        },
+        {
+          "title": "Credit Mix (10%)",
+          "description": "Having different types of credit (credit cards, auto loans, mortgages) shows you can manage various accounts responsibly."
+        },
+        {
+          "title": "New Credit (10%)",
+          "description": "Recent credit inquiries and new accounts. Too many applications in a short time can hurt your score."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Credit Score Ranges",
+      "content": "Understanding where you stand:\\n\\n• 800-850: Exceptional - Best rates and terms\\n• 740-799: Very Good - Above average, great rates\\n• 670-739: Good - Near or slightly above average\\n• 580-669: Fair - Below average, higher rates\\n• 300-579: Poor - Difficult to get approved"
+    },
+    {
+      "type": "callout",
+      "title": "Free Credit Reports",
+      "content": "You're entitled to one free credit report from each bureau (Equifax, Experian, TransUnion) every year at AnnualCreditReport.com. Check them regularly for errors!",
+      "color": "green",
+      "icon": "FileText"
+    },
+    {
+      "type": "steps",
+      "title": "How to Check Your Credit Score",
+      "steps": [
+        "Visit AnnualCreditReport.com for free reports from all three bureaus",
+        "Use free services like Credit Karma or Credit Sesame for regular monitoring",
+        "Check if your credit card offers free score tracking (many do)",
+        "Review your reports for errors and dispute any inaccuracies",
+        "Set calendar reminders to check every 4 months (rotating bureaus)"
+      ]
+    }
+  ]
+}

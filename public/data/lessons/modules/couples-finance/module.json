@@ -1,0 +1,51 @@
+{
+  "id": "couples-finance",
+  "title": "Couples and Money",
+  "description": "Navigate finances as a couple",
+  "duration": "2 weeks",
+  "difficulty": "Beginner",
+  "icon": "Heart",
+  "color": "red",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "couples-finance_1",
+      "title": "Money Conversations",
+      "type": "reading",
+      "duration": "16 min",
+      "points": 100,
+      "contentFile": "modules/couples-finance/lessons/01_lesson.json"
+    },
+    {
+      "id": "couples-finance_2",
+      "title": "Joint vs Separate Accounts",
+      "type": "reading",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "modules/couples-finance/lessons/02_lesson.json"
+    },
+    {
+      "id": "couples-finance_3",
+      "title": "Creating a Couples Budget",
+      "type": "exercise",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "modules/couples-finance/lessons/03_lesson.json"
+    },
+    {
+      "id": "couples-finance_4",
+      "title": "Financial Goals as a Team",
+      "type": "reading",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/couples-finance/lessons/04_lesson.json"
+    }
+  ],
+  "quiz": {
+    "id": "couples-finance_quiz",
+    "title": "Couples and Money Quiz",
+    "duration": "10 min",
+    "points": 150,
+    "contentFile": "modules/couples-finance/quiz.json"
+  }
+}

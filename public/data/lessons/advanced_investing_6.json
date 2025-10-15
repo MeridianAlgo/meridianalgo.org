@@ -1,0 +1,72 @@
+{
+  "title": "Investment Performance Analysis",
+  "type": "exercise",
+  "duration": "35 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Measuring Investment Success",
+      "subtitle": "Tools and techniques for evaluating your portfolio performance"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Key performance metrics and benchmarks",
+        "Risk-adjusted return measures",
+        "How to calculate personal rates of return",
+        "Using performance analysis for improvement"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Essential Performance Metrics",
+      "content": "Track total return (income + capital appreciation), time-weighted return (eliminates timing effects), and money-weighted return (includes your contribution timing). Compare against appropriate benchmarks like the S&P 500 for stocks or Barclays Aggregate for bonds."
+    },
+    {
+      "type": "keypoints",
+      "title": "Performance Measurement Tools",
+      "points": [
+        {
+          "title": "Total Return",
+          "description": "Income (dividends/interest) plus price appreciation, expressed as a percentage."
+        },
+        {
+          "title": "Benchmark Comparison",
+          "description": "Compare your returns to relevant market indices to assess relative performance."
+        },
+        {
+          "title": "Risk-Adjusted Returns",
+          "description": "Sharpe ratio and Sortino ratio measure return per unit of risk taken."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Consistency Over Time",
+      "content": "Focus on long-term performance rather than short-term results. Investment success is measured in years and decades, not months or quarters.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Personal Performance Tracking",
+      "content": "Use investment tracking tools or spreadsheets to monitor your portfolio's performance. Track contributions and withdrawals separately from investment returns. Calculate your personal rate of return to understand how your timing affects results."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Analyze Your Portfolio Performance",
+      "steps": [
+        "Set up a system to track your investment returns and contributions",
+        "Compare your performance to appropriate benchmarks quarterly",
+        "Calculate your risk-adjusted returns using online calculators",
+        "Use performance analysis to identify areas for improvement"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Don't Chase Past Performance",
+      "content": "Past performance doesn't guarantee future results. Use performance analysis to learn about your investment behavior and process, not to chase hot investments."
+    }
+  ]
+}

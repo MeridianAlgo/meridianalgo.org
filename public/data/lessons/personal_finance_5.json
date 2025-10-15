@@ -1,0 +1,72 @@
+{
+  "title": "Introduction to Investing",
+  "type": "reading",
+  "duration": "24 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Your First Steps in Investing",
+      "subtitle": "Understanding the basics of putting your money to work"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Why investing is important for long-term financial goals",
+        "The relationship between risk and return",
+        "Basic investment options for beginners",
+        "How to get started with a small amount of money"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Investing Matters",
+      "content": "Investing allows your money to grow faster than inflation and savings accounts. Over time, compound growth can turn small, regular investments into significant wealth. The key is starting early and being consistent, even if you can only invest small amounts initially."
+    },
+    {
+      "type": "keypoints",
+      "title": "Investment Fundamentals",
+      "points": [
+        {
+          "title": "Risk and Return",
+          "description": "Higher potential returns come with higher risk - stocks may lose money short-term but historically outperform bonds long-term."
+        },
+        {
+          "title": "Diversification",
+          "description": "Don't put all your eggs in one basket - spread investments across different assets to manage risk."
+        },
+        {
+          "title": "Time Horizon",
+          "description": "Longer time horizons allow you to take more risk and benefit from compound growth."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Start Small, Think Long-Term",
+      "content": "You don't need a lot of money to start investing. Many platforms allow you to begin with $50 or less. Focus on building good habits rather than trying to get rich quick.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Beginner-Friendly Investment Options",
+      "content": "For beginners, low-cost index funds and target-date funds are ideal. These provide instant diversification and professional management. Avoid individual stocks until you understand the risks and have diversified across multiple holdings."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Start Your Investment Journey",
+      "steps": [
+        "Open a brokerage account with a user-friendly platform",
+        "Start with a target-date fund based on your expected retirement date",
+        "Set up automatic monthly contributions",
+        "Learn one new investing concept each month"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Ignore Market Noise",
+      "content": "Tune out daily market fluctuations and financial media hype. Focus on your long-term plan and avoid making emotional decisions based on short-term market movements."
+    }
+  ]
+}

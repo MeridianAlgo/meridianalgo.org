@@ -1,0 +1,51 @@
+{
+  "id": "options-trading",
+  "title": "Options Trading Basics",
+  "description": "Introduction to options and derivatives",
+  "duration": "2 weeks",
+  "difficulty": "Advanced",
+  "icon": "Zap",
+  "color": "red",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "options-trading_1",
+      "title": "What are Options?",
+      "type": "reading",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/options-trading/lessons/01_lesson.json"
+    },
+    {
+      "id": "options-trading_2",
+      "title": "Calls and Puts Explained",
+      "type": "reading",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "modules/options-trading/lessons/02_lesson.json"
+    },
+    {
+      "id": "options-trading_3",
+      "title": "Basic Options Strategies",
+      "type": "exercise",
+      "duration": "25 min",
+      "points": 100,
+      "contentFile": "modules/options-trading/lessons/03_lesson.json"
+    },
+    {
+      "id": "options-trading_4",
+      "title": "Options Risk Management",
+      "type": "reading",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "modules/options-trading/lessons/04_lesson.json"
+    }
+  ],
+  "quiz": {
+    "id": "options-trading_quiz",
+    "title": "Options Trading Basics Quiz",
+    "duration": "10 min",
+    "points": 150,
+    "contentFile": "modules/options-trading/quiz.json"
+  }
+}

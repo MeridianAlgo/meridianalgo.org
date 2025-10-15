@@ -1,0 +1,72 @@
+{
+  "title": "Deductions and Credits",
+  "type": "exercise",
+  "duration": "25 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Reducing Your Tax Bill Legally",
+      "subtitle": "Understanding deductions, credits, and tax-saving strategies"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "The difference between tax deductions and credits",
+        "Common deductions and how to maximize them",
+        "Tax credits that can significantly reduce your tax liability",
+        "Strategies for timing deductions and credits"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Deductions vs. Credits",
+      "content": "Tax deductions reduce your taxable income, while tax credits reduce your tax liability dollar-for-dollar. Credits are generally more valuable than deductions. For example, a $1,000 credit saves you $1,000 in taxes, while a $1,000 deduction only saves you $1,000 times your marginal tax rate."
+    },
+    {
+      "type": "keypoints",
+      "title": "Common Tax Deductions",
+      "points": [
+        {
+          "title": "Standard Deduction",
+          "description": "A fixed amount you can deduct without itemizing ($13,850 for single filers in 2023)."
+        },
+        {
+          "title": "Itemized Deductions",
+          "description": "Medical expenses, state taxes, mortgage interest, charitable contributions - only if they exceed the standard deduction."
+        },
+        {
+          "title": "Above-the-Line Deductions",
+          "description": "Retirement contributions, student loan interest, HSA contributions - deducted before calculating AGI."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Bunching Strategy",
+      "content": "Combine multiple years of charitable contributions or medical expenses into one year to exceed the standard deduction threshold and maximize itemized deductions.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Valuable Tax Credits",
+      "content": "Tax credits can dramatically reduce your tax bill. Common credits include the Child Tax Credit, Earned Income Tax Credit, education credits, and energy-efficient home improvement credits. These are especially valuable for lower and middle-income taxpayers."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Maximize Your Tax Savings",
+      "steps": [
+        "Track deductible expenses throughout the year using an app or spreadsheet",
+        "Maximize retirement contributions to reduce taxable income",
+        "Consider bunching charitable contributions every other year",
+        "Review eligibility for tax credits based on your family and financial situation"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Keep Good Records",
+      "content": "Maintain organized records of all deductible expenses and contributions throughout the year. This makes tax preparation easier and helps you identify all potential deductions."
+    }
+  ]
+}

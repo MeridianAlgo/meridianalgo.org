@@ -1,0 +1,54 @@
+{
+  "id": "college-planning",
+  "title": "College Planning",
+  "description": "Navigate college savings, financial aid, student loans, and alternative funding strategies.",
+  "category": "Life Planning",
+  "difficulty": "Intermediate",
+  "estimatedTime": "50 minutes",
+  "prerequisites": ["budgeting-basics", "savings-strategies"],
+  "points": 150,
+  "icon": "graduation-cap",
+  "color": "indigo",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "college_planning_1",
+      "title": "529 Plans and College Savings",
+      "type": "reading",
+      "duration": "13 min",
+      "points": 100,
+      "contentFile": "lessons/01_529_plans.json"
+    },
+    {
+      "id": "college_planning_2",
+      "title": "Understanding Student Loans",
+      "type": "reading",
+      "duration": "12 min",
+      "points": 100,
+      "contentFile": "lessons/02_student_loans.json"
+    },
+    {
+      "id": "college_planning_3",
+      "title": "Financial Aid and FAFSA",
+      "type": "reading",
+      "duration": "13 min",
+      "points": 100,
+      "contentFile": "lessons/03_financial_aid.json"
+    },
+    {
+      "id": "college_planning_4",
+      "title": "Alternative Funding Strategies",
+      "type": "reading",
+      "duration": "12 min",
+      "points": 100,
+      "contentFile": "lessons/04_alternative_funding.json"
+    }
+  ],
+  "quiz": {
+    "id": "college_planning_quiz",
+    "title": "College Planning Mastery Quiz",
+    "duration": "12 min",
+    "points": 150,
+    "contentFile": "quiz.json"
+  }
+}

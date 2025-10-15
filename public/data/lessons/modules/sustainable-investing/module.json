@@ -1,0 +1,53 @@
+{
+  "id": "sustainable-investing",
+  "title": "Sustainable Investing",
+  "description": "Learn about ESG investing, impact investing, and sustainable finance",
+  "duration": "4 weeks",
+  "difficulty": "Intermediate",
+  "icon": "Leaf",
+  "color": "green",
+  "status": "coming-soon",
+  "prerequisites": ["investing"],
+  "unlockCost": 800,
+  "lessons": [
+    {
+      "id": "sustainable_investing_1",
+      "title": "ESG Investing Principles",
+      "type": "reading",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "lessons/01_esg_principles.json"
+    },
+    {
+      "id": "sustainable_investing_2",
+      "title": "Impact Investing Strategies",
+      "type": "reading",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "lessons/02_impact_investing.json"
+    },
+    {
+      "id": "sustainable_investing_3",
+      "title": "Green Bonds and Sustainable Funds",
+      "type": "exercise",
+      "duration": "25 min",
+      "points": 100,
+      "contentFile": "lessons/03_green_bonds.json"
+    },
+    {
+      "id": "sustainable_investing_4",
+      "title": "Cryptocurrency and Blockchain Basics",
+      "type": "reading",
+      "duration": "28 min",
+      "points": 100,
+      "contentFile": "lessons/04_crypto_basics.json"
+    }
+  ],
+  "quiz": {
+    "id": "sustainable_investing_quiz",
+    "title": "Sustainable Investing Quiz",
+    "duration": "12 min",
+    "points": 150,
+    "contentFile": "quiz.json"
+  }
+}

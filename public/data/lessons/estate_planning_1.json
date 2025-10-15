@@ -1,0 +1,72 @@
+{
+  "title": "Wills and Trusts Basics",
+  "type": "reading",
+  "duration": "24 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Planning for What Happens After",
+      "subtitle": "Essential documents to protect your family and assets"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "The difference between wills and trusts",
+        "When you need each type of document",
+        "How to choose executors and trustees",
+        "Common estate planning mistakes to avoid"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Wills vs. Trusts: What's the Difference?",
+      "content": "A will is a legal document that outlines how you want your assets distributed after death and names guardians for minor children. It only takes effect after death and goes through probate court. A trust is a legal entity that holds assets during your lifetime and can continue after death, often avoiding probate and providing more control over asset distribution."
+    },
+    {
+      "type": "keypoints",
+      "title": "When to Use Each",
+      "points": [
+        {
+          "title": "Simple Wills",
+          "description": "Best for straightforward estates under state exemption limits with no complex family situations or tax concerns."
+        },
+        {
+          "title": "Revocable Living Trusts",
+          "description": "Ideal for privacy, avoiding probate, managing assets during incapacity, and providing for beneficiaries with special needs."
+        },
+        {
+          "title": "Irrevocable Trusts",
+          "description": "Used for tax planning, asset protection, or when you want to remove assets from your estate permanently."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Probate Can Be Expensive and Public",
+      "content": "Probate is the court process of validating a will and distributing assets. It can take 6-18 months, cost 3-7% of estate value, and make your will public record. Trusts help avoid this process.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Choosing Executors and Trustees",
+      "content": "An executor administers your will after death, while a trustee manages trust assets. Choose responsible, organized people who are younger than you and live nearby. Consider naming alternates and discuss your wishes with them in advance. Corporate trustees (banks) provide expertise but charge fees."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Get Started on Your Estate Plan",
+      "steps": [
+        "Inventory your assets and debts to understand what needs to be included",
+        "Decide if a will, trust, or both is appropriate for your situation",
+        "Choose and discuss with potential executors/trustees",
+        "Consult an estate planning attorney to draft documents"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Review Annually",
+      "content": "Life changes like marriage, divorce, births, deaths, or significant asset changes require estate plan updates. Set a calendar reminder to review your documents annually."
+    }
+  ]
+}

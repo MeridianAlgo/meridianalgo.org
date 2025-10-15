@@ -82,6 +82,17 @@ npm install
 npm run dev
 ```
 
+## Financial News Hub
+
+MeridianAlgo now includes a curated financial news experience designed for learners who want real-time market awareness.
+
+- **Dynamic Filtering**: Filter headlines by category, sentiment, and importance to focus on what matters most.
+- **Smart Sorting**: Sort by latest, oldest, impact, or sentiment strength to tailor the news feed.
+- **Searchable Feed**: Quickly find stories by keywords, company names, or sources.
+- **Curated Summaries**: Hand-picked summaries with quick links to trusted publications.
+
+All data for the news section lives in `src/data/financialNews.ts`, making it easy to extend or connect to a live API later.
+
 4. **Open your browser**
 Navigate to `http://localhost:5173`
 
@@ -120,11 +131,17 @@ Website-main/
 │   ├── legal/              # Privacy policy and terms
 │   └── assets/             # Images and static files
 ├── meridianalgo-docs/      # Documentation site (Docusaurus)
-├── package.json
-├── vite.config.ts
-├── tailwind.config.js
-└── README.md
-```
+├── requirements.txt        # Python dependencies
+   # In another terminal, start frontend
+   npm run dev
+   ```
+
+### Usage
+- Access financial tools via `/tools` or click "Financial Tools" in the dashboard
+- Use interactive calculators for budgeting, savings, and investments
+- Get educational information with appropriate disclaimers
+
+> **Note**: The tools provide educational information only, not personalized financial advice. Users are always reminded to consult qualified financial professionals.
 
 ## 🔧 Available Scripts
 

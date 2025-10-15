@@ -1,0 +1,30 @@
+{
+  "title": "401(k) and IRA Basics: Build a Future You Trust",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 150,
+  "sections": [
+    { "type": "hero", "title": "Your Retirement Engine", "subtitle": "Tax advantages, employer match, and the power of auto-investing" },
+    { "type": "overview", "title": "What You'll Learn", "items": [
+      "How tax-deferred and Roth accounts change your outcome",
+      "Why the employer match is the highest-return dollars in personal finance",
+      "Which order to fund accounts when money is tight",
+      "How to set a target-date or simple index mix and let it run"
+    ]},
+    { "type": "content", "title": "Account Types, Plainly", "content": "Traditional 401(k)/IRA contributions lower taxable income today; withdrawals are taxed later. Roth 401(k)/IRA contributions are made after tax; qualified withdrawals are tax-free. If your income is lower today than it will be in the future, Roth often shines. If your current tax rate is high, traditional can create breathing room." },
+    { "type": "keypoints", "title": "Funding Order (Typical)", "points": [
+      { "title": "Emergency Buffer First", "description": "Aim for 1–3 months of essentials before aggressive retirement funding." },
+      { "title": "Capture the Match", "description": "Contribute at least enough in your 401(k) to get the full employer match. It's a guaranteed return." },
+      { "title": "Roth IRA or 401(k)", "description": "Use Roth while in lower tax brackets; switch to traditional as your tax rate rises." },
+      { "title": "Max What You Can Automate", "description": "Increase contributions 1%–2% each year or with each raise. Automation beats willpower." }
+    ]},
+    { "type": "highlight", "title": "Glide With a Target-Date Fund", "content": "If you don't want to pick funds, a low-cost target-date index fund automatically adjusts stock/bond mix as you approach retirement.", "color": "orange" },
+    { "type": "actionsteps", "title": "Actions for This Month", "steps": [
+      "Log in to your plan and raise contributions by 1% (it’s painless).",
+      "If available, enroll in automatic annual increases.",
+      "Verify your fund expense ratios are under 0.20%. If not, switch to lower-cost index options.",
+      "Set or update beneficiaries for each retirement account."
+    ]},
+    { "type": "protip", "title": "Windfalls With a Purpose", "content": "Tax refunds and bonuses are easy to spend. Decide now that 50% of any windfall goes to retirement until you hit your target savings rate." }
+  ]
+}

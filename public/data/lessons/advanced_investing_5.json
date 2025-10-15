@@ -1,0 +1,72 @@
+{
+  "title": "Alternative Investments",
+  "type": "reading",
+  "duration": "25 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Beyond Stocks and Bonds",
+      "subtitle": "Exploring alternative asset classes for portfolio diversification"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Types of alternative investments",
+        "Risk and return characteristics of alternatives",
+        "When alternatives make sense in a portfolio",
+        "Due diligence for alternative investments"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "What Are Alternative Investments?",
+      "content": "Alternative investments include assets beyond traditional stocks, bonds, and cash. Common alternatives include real estate, commodities, private equity, hedge funds, and cryptocurrencies. They often have low correlation with traditional markets and can provide diversification benefits."
+    },
+    {
+      "type": "keypoints",
+      "title": "Alternative Investment Types",
+      "points": [
+        {
+          "title": "Real Estate",
+          "description": "Direct ownership, REITs, or real estate crowdfunding - provides income and inflation protection."
+        },
+        {
+          "title": "Commodities",
+          "description": "Physical goods like gold, oil, or agricultural products - hedge against inflation."
+        },
+        {
+          "title": "Private Equity",
+          "description": "Investing in private companies - potentially higher returns but illiquid and high minimums."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Alternatives Are Not for Everyone",
+      "content": "Most individual investors should limit alternatives to 5-10% of their portfolio. They often have higher fees, less liquidity, and more complexity than traditional investments.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Evaluating Alternative Investments",
+      "content": "Consider liquidity, fees, minimum investments, and your ability to understand and monitor the investment. Many alternatives require accredited investor status. Start small and understand the risks before allocating significant capital."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Consider Alternatives Thoughtfully",
+      "steps": [
+        "Assess whether alternatives fit your risk tolerance and investment goals",
+        "Research specific alternative investments and their historical performance",
+        "Start with liquid, low-cost alternatives like commodity ETFs or REITs",
+        "Monitor alternative investments closely and be prepared for illiquidity"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "REITs for Real Estate Exposure",
+      "content": "Real Estate Investment Trusts (REITs) provide liquid, diversified real estate exposure without the hassles of direct property ownership."
+    }
+  ]
+}

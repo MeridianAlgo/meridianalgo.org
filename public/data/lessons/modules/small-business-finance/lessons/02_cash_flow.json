@@ -1,0 +1,105 @@
+{
+  "id": "02_cash_flow",
+  "title": "Cash Flow Management",
+  "content": {
+    "hero": {
+      "title": "Mastering Business Cash Flow",
+      "subtitle": "Keep your business financially healthy with smart cash management",
+      "image": "/images/lessons/cash-flow.jpg"
+    },
+    "introduction": "Cash flow—the movement of money in and out of your business—is the lifeblood of any company. More businesses fail from cash flow problems than from lack of profitability. You can be profitable on paper but fail if you can't pay bills when due. Understanding and managing cash flow is essential for survival and growth.",
+    "keyPoints": [
+      "Cash flow is different from profit—you can be profitable but cash-poor",
+      "The cash conversion cycle measures how long cash is tied up in operations",
+      "Invoice promptly and follow up on late payments to improve cash flow",
+      "Maintain a cash reserve of 3-6 months of operating expenses",
+      "Cash flow forecasting helps you anticipate and prepare for shortfalls"
+    ],
+    "sections": [
+      {
+        "title": "Understanding Cash Flow vs. Profit",
+        "content": "Profit is revenue minus expenses on your income statement—an accounting concept. Cash flow is actual money moving in and out of your bank account—a liquidity concept. You can be profitable but have negative cash flow if: customers haven't paid invoices yet (accounts receivable), you've paid for inventory or supplies upfront, you've made large equipment purchases, or you're paying off debt. Conversely, you can have positive cash flow but be unprofitable if: you're collecting old receivables, you've received customer deposits for future work, or you've taken on new debt. Both matter, but cash flow determines whether you can make payroll, pay rent, and keep the lights on. Monitor both your income statement (profitability) and cash flow statement (liquidity) regularly."
+      },
+      {
+        "title": "The Cash Conversion Cycle",
+        "content": "The cash conversion cycle measures how long your cash is tied up in operations before you get it back. It has three components: Days Inventory Outstanding (DIO)—how long inventory sits before selling, Days Sales Outstanding (DSO)—how long it takes customers to pay, and Days Payable Outstanding (DPO)—how long you take to pay suppliers. Formula: DIO + DSO - DPO = Cash Conversion Cycle. A shorter cycle is better—it means cash returns to you faster. For example: if you hold inventory 30 days, customers pay in 45 days, and you pay suppliers in 30 days, your cycle is 45 days (30+45-30). Strategies to shorten it: reduce inventory levels, collect receivables faster, negotiate longer payment terms with suppliers (without damaging relationships), or require deposits or faster payment terms from customers."
+      },
+      {
+        "title": "Managing Accounts Receivable",
+        "content": "Accounts receivable (money customers owe you) is a major cash flow challenge for many businesses. Best practices: invoice immediately upon delivery—don't wait, offer multiple payment methods (credit cards, ACH, online payment), set clear payment terms (Net 15 or Net 30, not Net 60), send payment reminders before and after due dates, charge late fees (stated in your terms), and follow up persistently on overdue accounts. Consider: offering small discounts for early payment (2% discount if paid within 10 days), requiring deposits for large projects, using invoice factoring (selling invoices to a third party for immediate cash at a discount) if needed, or requiring upfront payment for new customers. Track your DSO (Days Sales Outstanding) monthly—if it's increasing, tighten your collection processes."
+      },
+      {
+        "title": "Managing Accounts Payable",
+        "content": "Accounts payable (money you owe suppliers) is a cash flow tool when managed strategically. Pay bills on time to maintain good relationships and credit, but don't pay early unless there's a discount. Take full advantage of payment terms—if terms are Net 30, pay on day 30, not day 5. This keeps cash in your account longer. Negotiate favorable terms with suppliers: longer payment windows (Net 45 or Net 60), volume discounts, or early payment discounts if you have excess cash. Prioritize payments: payroll and taxes first (non-negotiable), then critical suppliers, then others. If cash is tight, communicate with vendors before missing payments—many will work with you on payment plans rather than cutting you off. Track your DPO (Days Payable Outstanding) to ensure you're using available terms without damaging relationships."
+      },
+      {
+        "title": "Cash Flow Forecasting",
+        "content": "A cash flow forecast projects future cash inflows and outflows, typically for the next 13 weeks (rolling 13-week forecast). Start with your current cash balance, add expected cash inflows (customer payments, loan proceeds, owner contributions), subtract expected cash outflows (payroll, rent, suppliers, loan payments, taxes), and calculate your projected ending balance for each week. This shows when you might face shortfalls, allowing you to: delay non-essential expenses, accelerate collections, arrange a line of credit before you need it, or adjust pricing or sales strategies. Update your forecast weekly with actual results. Many businesses are surprised by seasonal patterns, tax payments, or large expenses they forgot to plan for. Forecasting prevents surprises and gives you time to act."
+      },
+      {
+        "title": "Building and Maintaining Cash Reserves",
+        "content": "Every business needs cash reserves for emergencies, opportunities, and peace of mind. Target 3-6 months of operating expenses in a business savings account. Calculate monthly operating expenses (rent, payroll, utilities, insurance, supplies—everything except one-time costs) and multiply by 3-6. If monthly expenses are $20,000, aim for $60,000-$120,000 in reserves. Build reserves by: setting aside a percentage of revenue automatically (10-20%), saving windfalls (large payments, tax refunds), and cutting unnecessary expenses. Use reserves for: covering shortfalls during slow periods, taking advantage of bulk purchase discounts, investing in growth opportunities, and handling emergencies without debt. Don't use reserves for normal operations—that's a sign of deeper problems. Keep reserves in a high-yield business savings account, separate from your operating account."
+      }
+    ],
+    "callouts": [
+      {
+        "type": "tip",
+        "title": "Invoice Immediately",
+        "content": "Send invoices the same day you complete work or deliver products. Every day you delay is a day you're not getting paid. Set up invoice templates and automate where possible. The faster you invoice, the faster you get paid."
+      },
+      {
+        "type": "warning",
+        "title": "Don't Confuse Profit with Cash",
+        "content": "A profitable month doesn't mean you have cash to spend. If you made $50,000 in sales but customers haven't paid yet, you have $0 in cash. Always check your actual bank balance and cash flow forecast before making spending decisions, not just your profit and loss statement."
+      },
+      {
+        "type": "example",
+        "title": "Real-World Scenario",
+        "content": "Mike's construction business is profitable but struggles with cash flow. He implements: requiring 50% deposits on projects, invoicing immediately upon completion, following up on invoices weekly, and negotiating Net 45 terms with suppliers. His cash conversion cycle drops from 60 days to 30 days, dramatically improving cash availability."
+      }
+    ],
+    "practicalSteps": [
+      {
+        "step": 1,
+        "title": "Calculate Your Cash Conversion Cycle",
+        "description": "Determine your average days inventory outstanding, days sales outstanding, and days payable outstanding. Calculate your cash conversion cycle. Identify which component needs the most improvement."
+      },
+      {
+        "step": 2,
+        "title": "Tighten Receivables Collection",
+        "description": "Set up systems to invoice immediately, send automatic payment reminders, and follow up on overdue accounts. Consider requiring deposits or shorter payment terms for new customers. Track DSO monthly."
+      },
+      {
+        "step": 3,
+        "title": "Optimize Payables Timing",
+        "description": "Review all vendor payment terms and ensure you're taking full advantage without paying early. Negotiate longer terms where possible. Set up a bill payment schedule to pay on the due date, not before."
+      },
+      {
+        "step": 4,
+        "title": "Create a Cash Flow Forecast",
+        "description": "Build a 13-week rolling cash flow forecast in a spreadsheet or accounting software. Include all expected inflows and outflows. Update weekly with actual results and adjust projections."
+      },
+      {
+        "step": 5,
+        "title": "Build Your Cash Reserve",
+        "description": "Calculate 3-6 months of operating expenses. Set up automatic transfers to a business savings account to build reserves. Start with 5-10% of revenue if you're starting from zero."
+      },
+      {
+        "step": 6,
+        "title": "Review Cash Flow Weekly",
+        "description": "Schedule a weekly 15-minute cash flow review. Check actual vs. forecasted cash, update your forecast, identify any upcoming shortfalls, and take action if needed. Make this a non-negotiable habit."
+      }
+    ],
+    "quiz": {
+      "question": "What is the cash conversion cycle?",
+      "options": [
+        "The time it takes to convert inventory to profit",
+        "The time between when you pay for inventory/expenses and when you receive cash from customers",
+        "The time it takes to pay all your bills",
+        "The time between making a sale and recording it in your books"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The cash conversion cycle measures how long your cash is tied up in operations—from when you pay for inventory or expenses until you receive cash from customers. It's calculated as Days Inventory Outstanding + Days Sales Outstanding - Days Payable Outstanding. A shorter cycle means cash returns to you faster."
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "title": "Year-Round Tax Planning",
+  "type": "reading",
+  "duration": "21 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Make Tax Planning a Twelve-Month Habit",
+      "subtitle": "Shift from reactive filing to proactive decisions that shrink taxes and boost cash flow"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Quarterly checkpoints for W-2 earners and business owners",
+        "How to plan asset sales, charitable giving, and retirement moves with tax windows in mind",
+        "Estimating safe-harbor payments and avoiding penalties",
+        "Tools for coordinating accountants, payroll providers, and wealth advisors"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Quarterly Rhythm",
+      "content": "Set a recurring calendar reminder every quarter to review paystub withholdings, side-hustle profits, and investment gains. Adjust withholding or estimated payments when income changes. Business owners should align bookkeeping closes with these checkpoints to catch write-offs early."
+    },
+    {
+      "type": "keypoints",
+      "title": "Strategic Moves",
+      "points": [
+        {
+          "title": "Harvest Losses",
+          "description": "Sell underperforming investments to offset capital gains, keeping wash-sale rules in mind."
+        },
+        {
+          "title": "Bunch Deductions",
+          "description": "Group charitable gifts and medical expenses into a single tax year so itemized deductions exceed the standard deduction."
+        },
+        {
+          "title": "Time Income",
+          "description": "Shift freelance invoices or year-end bonuses across the calendar when you expect bracket changes."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Safe Harbor Rules",
+      "content": "To avoid underpayment penalties, pay 100% of last year's tax (110% if AGI > $150k) or 90% of the current year's projected tax.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Collaboration Tools",
+      "content": "Maintain a shared folder with your CPA containing quarterly financial statements, payroll reports, and tax projections. Use secure e-signature and document portals to streamline approvals and keep an audit trail."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Tax Planning Sprint",
+      "steps": [
+        "Create a quarterly calendar invite titled 'Tax Check-In' and attach your latest pay stubs and P&L reports.",
+        "Set up estimated tax payments in EFTPS or through your state's revenue portal.",
+        "List upcoming life events (weddings, home purchases, education expenses) and note potential tax impacts.",
+        "Schedule a mid-year review with your tax professional to adjust strategy before year-end.",
+        "Document charitable giving and large deductions in a running spreadsheet with receipt links."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Automate Reminders",
+      "content": "Use task management tools to nudge you 10 days before each quarterly estimated tax deadline (April 15, June 15, September 15, January 15).",
+      "icon": "calendar"
+    }
+  ]
+}

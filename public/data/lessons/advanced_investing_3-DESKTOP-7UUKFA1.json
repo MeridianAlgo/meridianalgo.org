@@ -1,0 +1,82 @@
+{
+  "title": "Options and Derivatives Basics",
+  "type": "reading",
+  "duration": "30 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Demystify Options and Derivatives",
+      "subtitle": "Learn how these instruments work, why investors use them, and the risks involved"
+    },
+    {
+      "type": "overview",
+      "title": "Lesson Objectives",
+      "items": [
+        "Understand the structure of options contracts",
+        "Differentiate between calls, puts, and key terms",
+        "Explore common derivative strategies",
+        "Recognize the risks and safeguards for individual investors"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "What Are Derivatives?",
+      "content": "Derivatives derive their value from an underlying asset like stocks, commodities, or indexes. Options are the most accessible derivative for individual investors. They provide the right, but not obligation, to buy or sell an asset at a set price before a specific date."
+    },
+    {
+      "type": "keypoints",
+      "title": "Option Basics",
+      "points": [
+        {
+          "title": "Call Option",
+          "description": "Grants the right to buy an asset at the strike price before expiration." 
+        },
+        {
+          "title": "Put Option",
+          "description": "Grants the right to sell an asset at the strike price before expiration." 
+        },
+        {
+          "title": "Premium",
+          "description": "The price paid for the option contract—risk is limited to the premium."
+        },
+        {
+          "title": "Intrinsic vs. Time Value",
+          "description": "Intrinsic value reflects in-the-money amount; time value reflects potential before expiration."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Options Are Leverage",
+      "content": "Small price movements in the underlying asset can cause large percentage changes in option value—manage risk carefully.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Common Strategies",
+      "content": "Covered calls generate income on stocks you own, protective puts hedge against downside risk, and spreads combine options to refine risk/return profiles. Complex strategies require margin approval and strict risk management."
+    },
+    {
+      "type": "content",
+      "title": "Risk Considerations",
+      "content": "Options can expire worthless, wiping out the premium. Selling (writing) options introduces theoretically unlimited risk. Understand brokerage requirements, set stop-loss rules, and never allocate more than a small percentage of your portfolio to speculative derivatives."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Readiness Checklist",
+      "steps": [
+        "Review your brokerage's options approval levels and requirements.",
+        "Practice pricing calls and puts using an options calculator to see how premiums respond to volatility and time decay.",
+        "Design a mock covered call or protective put strategy using a stock you follow—document strike, premium, and break-even.",
+        "Set personal rules (max position size, stop-loss triggers) before trading real options."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Paper Trade First",
+      "content": "Test option strategies in a simulator before committing real capital to understand behavior under market stress.",
+      "icon": "shield"
+    }
+  ]
+}

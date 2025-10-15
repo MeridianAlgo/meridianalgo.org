@@ -1,0 +1,78 @@
+{
+  "title": "Alternative Investments",
+  "type": "reading",
+  "duration": "25 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Explore Beyond Traditional Assets",
+      "subtitle": "Evaluate private equity, real estate, commodities, and more to diversify your portfolio"
+    },
+    {
+      "type": "overview",
+      "title": "Key Learning Points",
+      "items": [
+        "Define what qualifies as an alternative investment",
+        "Weigh benefits and risks of major categories",
+        "Understand liquidity, fees, and due diligence requirements",
+        "Decide when alternatives fit your personal strategy"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Consider Alternatives?",
+      "content": "Alternatives can provide diversification, inflation protection, and potential for higher returns. They often have lower correlation with public markets, reducing portfolio volatility when used appropriately."
+    },
+    {
+      "type": "keypoints",
+      "title": "Major Alternative Categories",
+      "points": [
+        {
+          "title": "Private Equity & Venture Capital",
+          "description": "Investments in private companies, offering high growth potential with long lock-up periods." 
+        },
+        {
+          "title": "Real Assets",
+          "description": "Real estate, infrastructure, and commodities provide tangible exposure often tied to inflation." 
+        },
+        {
+          "title": "Hedge Funds",
+          "description": "Pooled strategies using leverage, derivatives, or long/short positions to seek absolute returns." 
+        },
+        {
+          "title": "Collectibles & Digital Assets",
+          "description": "Art, wine, crypto, and other niche assets—highly speculative and require specialized knowledge." 
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Due Diligence Required",
+      "content": "Alternatives demand deeper research, often higher minimums, and careful attention to liquidity constraints.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Risks & Considerations",
+      "content": "Higher fees, limited transparency, and regulatory differences make alternatives unsuitable for many investors. Ensure you understand valuation methods, exit strategies, and tax implications before investing."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Alternatives Evaluation Checklist",
+      "steps": [
+        "Confirm your core portfolio (public stocks/bonds) is aligned with long-term goals before adding alternatives.",
+        "Define your allocation limit—typically 5–15% of net investable assets for experienced investors.",
+        "Research at least two alternative investment opportunities and list expected returns, fees, liquidity terms, and minimum investment.",
+        "Assess how each option interacts with your existing holdings (correlation, diversification benefits).",
+        "Consult with a fiduciary advisor or conduct a comprehensive due diligence review before committing capital."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Start with Access Vehicles",
+      "content": "Consider publicly traded REITs, commodity ETFs, or interval funds to gain exposure with better liquidity.",
+      "icon": "globe"
+    }
+  ]
+}

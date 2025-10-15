@@ -1,0 +1,116 @@
+{
+  "title": "Building Financial Independence",
+  "type": "exercise",
+  "duration": "20 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Building Financial Independence",
+      "subtitle": "Creating a foundation for long-term financial security",
+      "color": "orange",
+      "icon": "Target"
+    },
+    {
+      "type": "content",
+      "title": "What is Financial Independence?",
+      "content": "Financial independence means having control over your own money, making your own financial decisions, and having the resources to support yourself. It's not about being wealthy - it's about having autonomy, security, and the ability to make choices that are right for you."
+    },
+    {
+      "type": "key-points",
+      "title": "Building Blocks of Financial Independence",
+      "points": [
+        {
+          "title": "Your Own Bank Account",
+          "description": "Open an account in your name only at a different bank than your abuser uses. Consider a bank with no physical branches near you for added privacy."
+        },
+        {
+          "title": "Income Source",
+          "description": "Secure employment, even part-time. If working isn't possible, explore disability benefits, child support, or assistance programs."
+        },
+        {
+          "title": "Emergency Fund",
+          "description": "Start small - even $20 per paycheck adds up. Keep this money separate and secret if you're still in an unsafe situation."
+        },
+        {
+          "title": "Financial Knowledge",
+          "description": "Learn about budgeting, credit, banking, and your rights. Knowledge is power and protection."
+        },
+        {
+          "title": "Support Network",
+          "description": "Connect with domestic violence advocates, financial counselors, and trusted friends who can provide guidance."
+        },
+        {
+          "title": "Legal Documentation",
+          "description": "Secure your own ID, Social Security card, birth certificate, and important documents. Keep copies in a safe place."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Creating Your Financial Safety Plan",
+      "steps": [
+        "Open a P.O. Box or use a trusted friend's address for financial mail",
+        "Set up online banking with paperless statements",
+        "Use a password manager with a strong, unique password",
+        "Enable two-factor authentication on all financial accounts",
+        "Keep emergency cash hidden in a safe place",
+        "Have copies of important documents stored securely outside your home",
+        "Know the location of domestic violence shelters and resources in your area",
+        "Create a code word with trusted friends/family to signal you need help"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Employment and Income",
+      "content": "Having your own income is crucial for independence. If your abuser has sabotaged your employment, document this for legal proceedings. Look for remote work opportunities, flexible schedules, or jobs with on-site childcare. Many domestic violence organizations offer job training and placement assistance."
+    },
+    {
+      "type": "callout",
+      "title": "Safety First",
+      "content": "If you're still in an abusive situation, prioritize safety over financial moves. Work with a domestic violence advocate to create a plan that protects both your safety and your financial future. Never let your abuser know about hidden accounts or escape plans.",
+      "color": "red",
+      "icon": "Shield"
+    },
+    {
+      "type": "steps",
+      "title": "Long-Term Independence Goals",
+      "steps": [
+        "Build 3-6 months of expenses in an emergency fund",
+        "Establish credit in your own name",
+        "Create and stick to a budget that reflects your values",
+        "Learn about investing and retirement planning",
+        "Consider additional education or job training",
+        "Work toward stable housing in your own name",
+        "Build a support network of trusted advisors",
+        "Teach your children about healthy financial relationships"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Government Assistance Programs",
+      "content": "Don't hesitate to use available resources. SNAP (food stamps), TANF (cash assistance), Medicaid, housing assistance, and childcare subsidies exist to help people in your situation. These programs can provide crucial support while you build independence."
+    },
+    {
+      "type": "resources",
+      "title": "Financial Independence Resources",
+      "links": [
+        {
+          "label": "Benefits.gov",
+          "description": "Find government assistance programs you may qualify for",
+          "url": "https://www.benefits.gov"
+        },
+        {
+          "label": "Dress for Success",
+          "description": "Professional attire and career support for women",
+          "url": "https://dressforsuccess.org"
+        },
+        {
+          "label": "MyMoney.gov",
+          "description": "Federal government's financial education website",
+          "url": "https://www.mymoney.gov"
+        }
+      ]
+    }
+  ]
+}

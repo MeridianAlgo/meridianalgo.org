@@ -1,0 +1,52 @@
+{
+  "id": "financial-abuse-awareness",
+  "title": "Financial Abuse Awareness",
+  "description": "Recognize and recover from financial abuse, build independence",
+  "duration": "2 weeks",
+  "difficulty": "Beginner",
+  "icon": "Shield",
+  "color": "red",
+  "status": "active",
+  "prerequisites": [],
+  "lessons": [
+    {
+      "id": "financial_abuse_1",
+      "title": "Recognizing Financial Abuse",
+      "type": "reading",
+      "duration": "15 min",
+      "points": 100,
+      "contentFile": "modules/financial-abuse-awareness/lessons/01_recognizing.json"
+    },
+    {
+      "id": "financial_abuse_2",
+      "title": "Credit Recovery Strategies",
+      "type": "reading",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "modules/financial-abuse-awareness/lessons/02_credit_recovery.json"
+    },
+    {
+      "id": "financial_abuse_3",
+      "title": "Building Financial Independence",
+      "type": "exercise",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/financial-abuse-awareness/lessons/03_independence.json"
+    },
+    {
+      "id": "financial_abuse_4",
+      "title": "Resources and Support",
+      "type": "reading",
+      "duration": "12 min",
+      "points": 100,
+      "contentFile": "modules/financial-abuse-awareness/lessons/04_resources.json"
+    }
+  ],
+  "quiz": {
+    "id": "financial_abuse_quiz",
+    "title": "Financial Abuse Awareness Quiz",
+    "duration": "10 min",
+    "points": 150,
+    "contentFile": "modules/financial-abuse-awareness/quiz.json"
+  }
+}

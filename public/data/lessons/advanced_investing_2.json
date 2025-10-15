@@ -1,0 +1,72 @@
+{
+  "title": "Asset Allocation Models",
+  "type": "exercise",
+  "duration": "32 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Strategic Asset Allocation",
+      "subtitle": "Build a portfolio framework that matches your goals and risk tolerance"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Traditional vs. alternative asset allocation models",
+        "How to determine your risk profile and appropriate allocation",
+        "Implementing tactical vs. strategic allocation strategies",
+        "Monitoring and adjusting your allocation over time"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Traditional Asset Allocation Models",
+      "content": "Traditional models focus on stocks, bonds, and cash with allocations based on age, risk tolerance, and investment horizon. The '100 minus age' rule suggests stock allocation, but this is overly simplistic. More sophisticated approaches use mean-variance optimization or risk parity to balance expected returns and volatility."
+    },
+    {
+      "type": "keypoints",
+      "title": "Popular Allocation Strategies",
+      "points": [
+        {
+          "title": "60/40 Portfolio",
+          "description": "60% stocks, 40% bonds - historically provided good returns with moderate risk, but may need adjustment for current low bond yields."
+        },
+        {
+          "title": "Risk Parity",
+          "description": "Allocates based on risk contribution rather than dollar amounts, often using leverage to equalize risk across asset classes."
+        },
+        {
+          "title": "All-Weather Portfolio",
+          "description": "Designed by Ray Dalio, allocates across growth, inflation, deflation, and recession environments for consistency."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Your Risk Profile Drives Allocation",
+      "content": "Conservative investors might use 30/70 stocks/bonds, while aggressive investors could go 90/10. Consider both your ability to take risk (financial situation) and willingness to take risk (emotional tolerance).",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Tactical vs. Strategic Allocation",
+      "content": "Strategic allocation sets long-term targets and rebalances periodically. Tactical allocation makes short-term shifts based on market conditions, valuations, or economic indicators. Tactical approaches can add value but require skill and may increase costs and taxes. Most individual investors benefit more from strategic allocation with occasional tactical tilts."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Build Your Allocation Model",
+      "steps": [
+        "Complete a risk tolerance questionnaire to determine your profile",
+        "Choose a base allocation model (e.g., 60/40) and adjust based on your specific situation",
+        "Select specific funds or ETFs that match your target allocations",
+        "Set up a rebalancing schedule and stick to it regardless of market conditions"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Start Simple, Add Complexity Gradually",
+      "content": "Begin with a basic two-fund portfolio (total stock market + total bond market) and add complexity only as you gain experience and confidence."
+    }
+  ]
+}

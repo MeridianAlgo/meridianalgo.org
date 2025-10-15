@@ -1,0 +1,72 @@
+{
+  "title": "Social Security Planning",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Maximizing Your Social Security Benefits",
+      "subtitle": "When and how to claim for optimal lifetime income"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "How Social Security benefits are calculated",
+        "The impact of claiming age on benefit amounts",
+        "Spousal and survivor benefits",
+        "Strategies for coordinating with other retirement income"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "How Benefits Are Calculated",
+      "content": "Your Social Security benefit is based on your highest 35 years of earnings, adjusted for inflation. The full retirement age (FRA) is currently 66-67 depending on your birth year. You can claim as early as age 62 (with reduced benefits) or delay until age 70 (with increased benefits)."
+    },
+    {
+      "type": "keypoints",
+      "title": "Claiming Age Impact",
+      "points": [
+        {
+          "title": "Early Claiming (Age 62)",
+          "description": "Reduces benefits by up to 30% but provides income earlier in retirement."
+        },
+        {
+          "title": "Full Retirement Age (66-67)",
+          "description": "Receives 100% of calculated benefit amount."
+        },
+        {
+          "title": "Delayed Claiming (Age 70)",
+          "description": "Increases benefits by 8% per year beyond FRA, maxing out at age 70."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Delaying Often Pays Off",
+      "content": "For most people, delaying Social Security until age 70 provides the highest lifetime benefit, especially if you expect to live into your 80s or beyond.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Spousal and Survivor Benefits",
+      "content": "Spouses can claim based on their own work record or up to 50% of their spouse's benefit. Survivor benefits can be up to 100% of the deceased spouse's benefit. Coordinating claiming strategies between spouses can significantly increase household benefits."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Plan Your Social Security Strategy",
+      "steps": [
+        "Create a my Social Security account to view your benefit estimates",
+        "Consider your health, family longevity, and other income sources when choosing claiming age",
+        "If married, evaluate spousal benefit options and coordinate with your spouse",
+        "Factor Social Security into your overall retirement income plan"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Break-Even Analysis",
+      "content": "Calculate the break-even age where delaying benefits becomes more beneficial than claiming early. For most people, this occurs around age 78-82."
+    }
+  ]
+}

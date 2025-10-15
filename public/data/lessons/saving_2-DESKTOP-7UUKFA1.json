@@ -1,0 +1,88 @@
+{
+  "title": "Automating Your Savings",
+  "type": "exercise",
+  "duration": "25 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Make Saving Happen on Autopilot",
+      "subtitle": "Design systems that move money toward your goals without daily effort"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Do",
+      "items": [
+        "Audit your cash flow timing so automations never bounce",
+        "Set layered transfers that sweep money into goal-specific vaults",
+        "Create micro-automation rules for rounding up purchases and side income",
+        "Install guardrails and alerts that adapt when your income shifts"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Automation Beats Willpower",
+      "content": "Every time you rely on willpower to save, you invite decision fatigue. Automation flips the script by moving money before you can spend it. Your job becomes designing the rules once and letting them run. The more you automate, the fewer emotional decisions you have to make." 
+    },
+    {
+      "type": "keypoints",
+      "title": "Automation Design Principles",
+      "points": [
+        {
+          "title": "Align With Pay Cycle",
+          "description": "Schedule transfers for the morning after payday so cash is redirected before it blends into daily spending." 
+        },
+        {
+          "title": "Use Multiple Buckets",
+          "description": "Goal-specific sub-accounts make progress visible. When you can see the vacation fund grow, you are less tempted to raid it." 
+        },
+        {
+          "title": "Trigger-Based Rules",
+          "description": "Automatic round-ups, percentage-based side hustle transfers, and windfall skims move money without your intervention." 
+        },
+        {
+          "title": "Adaptive Guardrails",
+          "description": "Alerts when balances dip or transfers fail help you correct course before you miss a saving streak." 
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Step 1: Map Your Cash Flow Rhythm",
+      "content": "Write down payday dates, bill due dates, and discretionary spending surges. The space between payday and major bills is the prime window for automation. If rent clears two days after payday, run your savings sweep the morning after the deposit so the money moves before you can reassign it." 
+    },
+    {
+      "type": "content",
+      "title": "Step 2: Layer Your Transfers",
+      "content": "Start with a base transfer into your emergency fund. Add additional automations aimed at short-term goals (travel, tech upgrades) and long-term goals (investing, down payment). Assign a percentage of income to each layer so the system grows with you." 
+    },
+    {
+      "type": "actionsteps",
+      "title": "Your Automation Sprint",
+      "steps": [
+        "List every income source with its deposit timing",
+        "Schedule an automatic transfer of at least 10% of take-home pay to emergency savings",
+        "Create one new sub-account for a near-term goal and automate a weekly contribution",
+        "Enable round-up savings on spending accounts to capture daily micro-savings",
+        "Set a monthly calendar check-in to adjust percentages or pause rules during income dips"
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Adaptive Automation",
+      "content": "Life changes—your automations should, too. Quarterly reviews let you increase transfer amounts when income rises and throttle back temporarily when cash is tight without abandoning progress.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Troubleshooting Cash Flow Crunches",
+      "content": "If a transfer causes overdrafts, split it into two smaller rules or shift the date closer to payday. Pair automations with low-balance alerts so you can transfer funds manually when unexpected expenses hit." 
+    },
+    {
+      "type": "protip",
+      "title": "Automation Stack Upgrade",
+      "content": "Use automation-friendly apps or your bank's API integrations to stack creative rules. For example, every time you order takeout, transfer $5 to your travel fund. Savings that mirror your habits feel intuitive and fun.",
+      "icon": "lightbulb"
+    }
+  ]
+}

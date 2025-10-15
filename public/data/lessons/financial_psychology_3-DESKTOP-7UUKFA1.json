@@ -1,0 +1,85 @@
+{
+  "title": "Behavioral Biases in Finance",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Spot the Mental Shortcuts",
+      "subtitle": "Learn to recognize and neutralize the biases that distort financial choices"
+    },
+    {
+      "type": "overview",
+      "title": "Key Takeaways",
+      "items": [
+        "Understand the science behind behavioral biases",
+        "Identify the six most common money-related biases",
+        "Apply counter-strategies before making decisions",
+        "Build systems that keep emotions from steering the wheel"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Bias Is Normal",
+      "content": "Human brains rely on shortcuts to process complex information quickly. In investing and money management those shortcuts can lead to predictable errors. Knowing the pattern lets you catch it before it causes damage."
+    },
+    {
+      "type": "keypoints",
+      "title": "Bias Breakdown",
+      "points": [
+        {
+          "title": "Confirmation Bias",
+          "description": "Seeking data that matches the decision you've already made while ignoring contradiction."
+        },
+        {
+          "title": "Anchoring",
+          "description": "Letting the first number you hear—like a stock's past high—set unrealistic expectations."
+        },
+        {
+          "title": "Herd Mentality",
+          "description": "Copying what friends or the market is doing because it feels safer than standing apart."
+        },
+        {
+          "title": "Loss Aversion",
+          "description": "Feeling losses about twice as strongly as gains, which can lead to panic selling."
+        },
+        {
+          "title": "Overconfidence",
+          "description": "Believing you can outsmart the market, causing excessive risk-taking."
+        },
+        {
+          "title": "Present Bias",
+          "description": "Prioritizing short-term pleasure even when it undermines long-term goals."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Pause Point",
+      "content": "When emotions spike, slow down. Waiting 24 hours on major money decisions reduces bias-driven mistakes.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Defense Strategies",
+      "content": "Create checklists for big financial moves, invite a neutral third party to review decisions, and set rules (like a rebalancing schedule) that reduce the impact of emotional swings."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Anti-Bias Toolkit",
+      "steps": [
+        "Pick one recent financial decision and identify any bias that influenced it.",
+        "Design a short checklist that you will use before repeating that type of decision.",
+        "Set up a decision journal—log reasoning, feelings, and outcomes to reveal patterns over time.",
+        "Choose an accountability partner who can play devil's advocate on large purchases or investments."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Use Pre-Commitment",
+      "content": "Automate contributions and diversify using broad index funds to minimize the number of decisions bias can affect.",
+      "icon": "compass"
+    }
+  ]
+}

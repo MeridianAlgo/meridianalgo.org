@@ -1,0 +1,51 @@
+{
+  "id": "international-investing",
+  "title": "International Investing",
+  "description": "Diversify globally with international investments",
+  "duration": "2 weeks",
+  "difficulty": "Intermediate",
+  "icon": "Globe",
+  "color": "blue",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "international-investing_1",
+      "title": "Why Invest Internationally?",
+      "type": "reading",
+      "duration": "16 min",
+      "points": 100,
+      "contentFile": "modules/international-investing/lessons/01_lesson.json"
+    },
+    {
+      "id": "international-investing_2",
+      "title": "International Investment Vehicles",
+      "type": "reading",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/international-investing/lessons/02_lesson.json"
+    },
+    {
+      "id": "international-investing_3",
+      "title": "Currency Risk Management",
+      "type": "exercise",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "modules/international-investing/lessons/03_lesson.json"
+    },
+    {
+      "id": "international-investing_4",
+      "title": "Emerging Markets",
+      "type": "reading",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "modules/international-investing/lessons/04_lesson.json"
+    }
+  ],
+  "quiz": {
+    "id": "international-investing_quiz",
+    "title": "International Investing Quiz",
+    "duration": "10 min",
+    "points": 150,
+    "contentFile": "modules/international-investing/quiz.json"
+  }
+}

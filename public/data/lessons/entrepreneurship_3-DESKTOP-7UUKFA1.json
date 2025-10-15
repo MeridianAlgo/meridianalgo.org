@@ -1,0 +1,69 @@
+{
+  "title": "Funding Your Business",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Match the Right Capital to Your Stage",
+      "subtitle": "Compare bootstrapping, loans, and equity so you can fuel growth without losing control"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Funding ladder from pre-seed to growth",
+        "How to calculate runway and capital efficiency",
+        "When to use debt, revenue-based finance, or equity",
+        "Investor readiness checklist for your next pitch"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Start With Internal Capital",
+      "content": "Bootstrapping through savings, customer pre-orders, and revenue reinvestment keeps ownership intact. Track burn rate weekly and delay outside funding until you prove repeatable demand."
+    },
+    {
+      "type": "keypoints",
+      "title": "Funding Options",
+      "points": [
+        {
+          "title": "Debt Financing",
+          "description": "Best for stable cash flow and asset-heavy businesses. Protect your credit score and collateral requirements."
+        },
+        {
+          "title": "Equity",
+          "description": "Angel and VC money accelerates growth but dilutes ownership—come prepared with traction and a scalable model."
+        },
+        {
+          "title": "Non-Dilutive",
+          "description": "Revenue-based financing, grants, and competitions offer capital without ownership loss but require clear payback triggers."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Know Your Runway",
+      "content": "Runway = current cash ÷ monthly burn. Aim for at least 12 months before raising so you negotiate from strength.",
+      "color": "orange"
+    },
+    {
+      "type": "actionsteps",
+      "title": "Capital Planning Checklist",
+      "steps": [
+        "Calculate your burn rate and runway for the next 12 months.",
+        "List three funding sources that align with your stage and risk tolerance.",
+        "Prepare a one-page investor brief including traction, margins, and use of funds.",
+        "Identify required legal documents (cap table, financial statements, IP assignments).",
+        "Schedule outreach to at least five potential funding partners and document responses."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Stack Your Capital",
+      "content": "Mix smaller capital sources—grants, founder loans, strategic partners—to diversify risk and extend runway before major rounds.",
+      "icon": "layers"
+    }
+  ]
+}

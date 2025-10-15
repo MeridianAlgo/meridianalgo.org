@@ -1,0 +1,69 @@
+{
+  "title": "Tax Planning Integration",
+  "type": "reading",
+  "duration": "24 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Reduce Taxes Year After Year",
+      "subtitle": "Coordinate investments, income, and deductions to keep more of what you earn"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "How to layer tax-deferred, tax-free, and taxable accounts",
+        "Withdrawal sequencing strategies in retirement",
+        "Harvesting losses and gains without derailing goals",
+        "Coordinating charitable giving with tax brackets"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Think in Buckets",
+      "content": "Divide assets into taxable, tax-deferred, and tax-free buckets. Optimizing contribution and withdrawal order across these buckets can save thousands over a lifetime."
+    },
+    {
+      "type": "keypoints",
+      "title": "Integration Moves",
+      "points": [
+        {
+          "title": "Roth Conversions",
+          "description": "Convert pre-tax assets during low-income years to lock in lower rates and reduce future RMDs."
+        },
+        {
+          "title": "Tax-Loss Harvesting",
+          "description": "Offset gains by realizing losses in taxable accounts while maintaining market exposure."
+        },
+        {
+          "title": "Charitable Clumping",
+          "description": "Bunch multiple years of donations into one year to exceed itemization thresholds."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Mind Wash-Sale Rules",
+      "content": "When harvesting losses, avoid buying substantially identical securities 30 days before or after the sale.",
+      "color": "orange"
+    },
+    {
+      "type": "actionsteps",
+      "title": "Tax Coordination Checklist",
+      "steps": [
+        "List accounts by tax treatment and note contribution/withdrawal limits.",
+        "Identify years with lower income to plan Roth conversions or capital gain realizations.",
+        "Schedule semiannual portfolio reviews to harvest losses and rebalance.",
+        "Map charitable goals and decide whether donor-advised funds or appreciated stock gifts fit best.",
+        "Consult a tax professional annually to align tactics with changing laws."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Track Effective Rate",
+      "content": "Monitor your effective tax rate alongside marginal brackets—declining effective rates signal optimization progress.",
+      "icon": "activity"
+    }
+  ]
+}

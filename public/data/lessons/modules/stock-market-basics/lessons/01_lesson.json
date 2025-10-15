@@ -1,0 +1,71 @@
+{
+  "title": "How the Stock Market Works",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "How the Stock Market Works",
+      "subtitle": "Demystifying the stock market for beginners",
+      "color": "green",
+      "icon": "TrendingUp"
+    },
+    {
+      "type": "content",
+      "title": "What is the Stock Market?",
+      "content": "The stock market is where investors buy and sell shares of publicly traded companies. When you buy a stock, you're purchasing a small piece of ownership in that company. If the company does well, your shares increase in value. If it struggles, they may decrease."
+    },
+    {
+      "type": "key-points",
+      "title": "Key Stock Market Concepts",
+      "points": [
+        {
+          "title": "Stocks (Equities)",
+          "description": "Shares of ownership in a company. When you own Apple stock, you literally own a tiny piece of Apple Inc. You can profit from price increases and dividends."
+        },
+        {
+          "title": "Stock Exchanges",
+          "description": "Marketplaces where stocks are bought and sold. The NYSE and NASDAQ are the two largest in the US. Think of them as organized marketplaces for trading."
+        },
+        {
+          "title": "Market Orders vs Limit Orders",
+          "description": "Market orders buy/sell immediately at current price. Limit orders only execute at your specified price or better. Limit orders give you more control."
+        },
+        {
+          "title": "Bull vs Bear Markets",
+          "description": "Bull markets are rising (optimistic). Bear markets are falling (pessimistic). Bulls charge forward, bears swipe down - that's how to remember!"
+        },
+        {
+          "title": "Dividends",
+          "description": "Regular cash payments some companies make to shareholders. It's like getting paid just for owning the stock. Not all companies pay dividends."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "How Stock Prices Move",
+      "content": "Stock prices are determined by supply and demand. When more people want to buy a stock than sell it, the price goes up. When more want to sell than buy, it goes down. Prices reflect investor expectations about a company's future performance, not just current results."
+    },
+    {
+      "type": "steps",
+      "title": "How to Start Investing in Stocks",
+      "steps": [
+        "Open a brokerage account (Fidelity, Schwab, Vanguard, or Robinhood)",
+        "Fund your account with money you won't need for 5+ years",
+        "Research companies or index funds you want to invest in",
+        "Start small - buy 1-2 shares to learn the process",
+        "Set up automatic investments to build your portfolio over time",
+        "Review your investments quarterly, but don't obsess daily",
+        "Stay invested for the long term - time in market beats timing the market"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Start with Index Funds",
+      "content": "New investors should consider index funds (like S&P 500 funds) before individual stocks. They provide instant diversification across hundreds of companies, reducing risk while you learn.",
+      "color": "blue",
+      "icon": "Shield"
+    }
+  ]
+}

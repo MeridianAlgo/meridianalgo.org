@@ -1,0 +1,127 @@
+{
+  "title": "Smart Banking Mastery Quiz",
+  "type": "quiz",
+  "duration": "9 min",
+  "points": 100,
+  "passingScore": 75,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Which factor most determines whether a checking account stays fee-free?",
+      "options": [
+        "How often you use mobile deposit",
+        "Meeting balance or direct-deposit requirements",
+        "Downloading the bank's budgeting app",
+        "Holding a mortgage with the same bank"
+      ],
+      "correct": 1,
+      "explanation": "Most fee waivers depend on direct deposits or minimum balance thresholds. Automating them keeps the account free."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "After auditing statements you find $96 in ATM fees. What optimization aligns with the lesson guidance?",
+      "options": [
+        "Withdraw twice as much each trip",
+        "Switch to a bank that reimburses out-of-network ATM fees",
+        "Disable mobile payment apps",
+        "Open a savings account with the same bank"
+      ],
+      "correct": 1,
+      "explanation": "Choosing an institution that reimburses or waives ATM fees removes the recurring charge."
+    },
+    {
+      "id": 3,
+      "type": "true-false",
+      "question": "SIM swapping can give attackers control of your SMS-based authentication codes.",
+      "correct": true,
+      "explanation": "Porting your phone number lets attackers intercept texted codes, which is why app-based MFA is recommended."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "Which security action should you take immediately after connecting a new budgeting app?",
+      "options": [
+        "Disable all banking alerts",
+        "Share your login with the app's support team",
+        "Verify the app uses secure aggregator connections and review permissions quarterly",
+        "Turn off multi-factor authentication to avoid lockouts"
+      ],
+      "correct": 2,
+      "explanation": "Check that the app uses OAuth/aggregator links, then audit permissions regularly to maintain security."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "When evaluating banks with the decision matrix, which pair of categories should receive the highest weight if you travel frequently?",
+      "options": [
+        "APY and wire fees",
+        "ATM network access and foreign transaction costs",
+        "Paper statement availability and cashier's checks",
+        "Mortgage loan promotions and safe deposit boxes"
+      ],
+      "correct": 1,
+      "explanation": "Frequent travelers benefit most from wide ATM access and low foreign fees."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "What is the recommended first step in the fee audit sprint?",
+      "options": [
+        "Call the bank to complain",
+        "Download 12 months of statements and log every fee",
+        "Close the account immediately",
+        "Negotiate overdraft protection"
+      ],
+      "correct": 1,
+      "explanation": "You need a complete fee inventory to determine which charges are avoidable or negotiable."
+    },
+    {
+      "id": 7,
+      "type": "true-false",
+      "question": "A quarterly tool audit helps you remove dormant apps that still have access to your accounts.",
+      "correct": true,
+      "explanation": "Regular audits keep your banking tech stack lean and secure."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "Which automation best supports a two-institution strategy (local + online bank)?",
+      "options": [
+        "Routing all paychecks into the local branch and manually moving leftovers",
+        "Scheduling an automatic weekly transfer from local checking to the high-yield savings account",
+        "Disabling ACH transfers between institutions",
+        "Keeping both accounts at the same bank"
+      ],
+      "correct": 1,
+      "explanation": "Automatic sweeps ensure surplus funds migrate to high-yield savings without manual work."
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "What is the purpose of documenting a weekly 20-minute banking workflow?",
+      "options": [
+        "To replace alerts with manual reviews",
+        "To ensure you consistently review balances, automations, and anomalies",
+        "To convince the bank to waive fees",
+        "To eliminate multi-factor authentication requirements"
+      ],
+      "correct": 1,
+      "explanation": "A structured routine keeps your system running smoothly and highlights issues quickly."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "Which notification pairing provides the most redundancy against account takeover?",
+      "options": [
+        "Push alerts and printed statements",
+        "Email alerts and quarterly account summaries",
+        "Push + email alerts for logins and transactions",
+        "SMS alerts only"
+      ],
+      "correct": 2,
+      "explanation": "Using both push and email channels ensures you see critical activity even if one channel fails."
+    }
+  ]
+}

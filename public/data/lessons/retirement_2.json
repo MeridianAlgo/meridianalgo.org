@@ -1,0 +1,72 @@
+{
+  "title": "Calculating Retirement Needs",
+  "type": "exercise",
+  "duration": "30 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "How Much Do You Need to Retire?",
+      "subtitle": "Estimating your retirement income requirements and savings goals"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "How to estimate your retirement expenses",
+        "The 4% rule and other withdrawal strategies",
+        "Calculating your retirement savings target",
+        "Factors that affect your retirement number"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Estimating Retirement Expenses",
+      "content": "Start by tracking your current expenses and categorizing them as essential (housing, food, healthcare) vs. discretionary (travel, entertainment). Many retirees find their expenses are 70-90% of their pre-retirement income. Consider increased healthcare costs and reduced commuting/transportation expenses in retirement."
+    },
+    {
+      "type": "keypoints",
+      "title": "Retirement Expense Categories",
+      "points": [
+        {
+          "title": "Essential Expenses",
+          "description": "Housing, food, utilities, insurance, and healthcare - these typically continue or increase in retirement."
+        },
+        {
+          "title": "Discretionary Expenses",
+          "description": "Travel, hobbies, dining out - these may decrease as you have more time but potentially less income."
+        },
+        {
+          "title": "One-Time Expenses",
+          "description": "Home modifications, vehicle purchases, or major travel - plan for these separately."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "The 4% Rule",
+      "content": "The 4% rule suggests you can safely withdraw 4% of your portfolio in the first year of retirement, then adjust for inflation annually. This assumes a 30-year retirement and provides a 95% success rate historically.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Calculating Your Number",
+      "content": "Use retirement calculators that factor in your current age, desired retirement age, current savings, expected Social Security, and investment returns. A common rule of thumb is to save 10-15% of your income annually. Adjust based on your specific situation and risk tolerance."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Calculate Your Retirement Needs",
+      "steps": [
+        "Estimate your annual retirement expenses (70-90% of current income)",
+        "Use the 4% rule to determine your required portfolio size",
+        "Factor in Social Security benefits and other income sources",
+        "Create a savings plan to reach your target by your desired retirement age"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Plan for Healthcare Costs",
+      "content": "Healthcare is often the biggest expense in retirement. Consider long-term care insurance and factor in potential nursing home costs when calculating your retirement needs."
+    }
+  ]
+}

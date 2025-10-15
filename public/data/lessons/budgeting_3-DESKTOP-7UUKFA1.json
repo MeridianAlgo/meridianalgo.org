@@ -1,0 +1,74 @@
+{
+  "title": "Seasonal and Irregular Expenses",
+  "type": "exercise",
+  "duration": "24 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Prepare for the Non-Monthly Costs",
+      "subtitle": "Build sinking funds so holidays, travel, and repairs never catch you off guard"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Cover",
+      "items": [
+        "List the big but infrequent expenses in your life",
+        "Calculate monthly savings targets for each event",
+        "Set up sinking funds in your budgeting tool",
+        "Create automated reminders so contributions happen on schedule"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Irregular Costs Derail Plans",
+      "content": "Budgets often fail because they ignore expenses that show up quarterly or once a year. Car maintenance, insurance premiums, holiday gifts, and annual subscriptions are predictable—just not monthly. Sinking funds spread the cost across the year, keeping cash flow smooth."
+    },
+    {
+      "type": "keypoints",
+      "title": "Sinking Fund Essentials",
+      "points": [
+        {
+          "title": "Name the Fund",
+          "description": "Give each fund a specific purpose—'Car Maintenance', 'Summer Travel', 'Tech Upgrades'."
+        },
+        {
+          "title": "Total the Cost",
+          "description": "Estimate the annual amount based on past spending or realistic research."
+        },
+        {
+          "title": "Divide by Months",
+          "description": "Break the cost into monthly contributions and treat them like fixed expenses."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Automation Wins",
+      "content": "Schedule transfers into each sinking fund so you never rely on memory.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Where to Store Sinking Funds",
+      "content": "Use labeled sub-accounts, dedicated savings buckets, or category balances within your budgeting software. Keeping funds separated prevents accidental spending and lets you see progress for each goal."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Sinking Fund Builder",
+      "steps": [
+        "List at least six non-monthly expenses you expect in the next 12 months.",
+        "Estimate the total cost for each and note the due month.",
+        "Divide each total by the number of months remaining until payment.",
+        "Add the monthly contribution to your budget under a dedicated category or account.",
+        "Set calendar or app reminders 30 days before each expense to double-check the fund balance."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Round Up",
+      "content": "Add a small buffer (5–10%) to each fund. Extra cash rolls into next year's contribution or covers surprise increases.",
+      "icon": "calendar"
+    }
+  ]
+}

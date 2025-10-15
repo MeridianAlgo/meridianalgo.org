@@ -1,0 +1,121 @@
+{
+  "title": "Financial Abuse Awareness Quiz",
+  "type": "quiz",
+  "duration": "10 min",
+  "points": 150,
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "Which of the following is an example of financial abuse?",
+      "options": [
+        "Partners discussing major purchases together before buying",
+        "One partner controlling all bank accounts and refusing access to the other",
+        "Couples maintaining separate accounts for personal spending",
+        "Partners creating a joint budget and reviewing it monthly"
+      ],
+      "correct": 1,
+      "explanation": "Financial abuse involves one person controlling another's access to money and financial resources. Controlling all accounts and refusing access is a clear sign of financial abuse, while the other options represent healthy financial relationships."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "What percentage of domestic violence cases involve financial abuse?",
+      "options": [
+        "25%",
+        "50%",
+        "75%",
+        "99%"
+      ],
+      "correct": 3,
+      "explanation": "Research shows that financial abuse is present in 99% of domestic violence cases. It's one of the most common tactics used by abusers to maintain power and control."
+    },
+    {
+      "id": 3,
+      "type": "true-false",
+      "question": "True or False: If someone coerced you into opening credit cards or taking out loans, you are still legally responsible for those debts.",
+      "correct": false,
+      "explanation": "False. If debts were incurred through coercion, fraud, or identity theft, you may not be legally responsible. You have the right to dispute these debts and may have legal protections available. Consult with a legal aid attorney who understands financial abuse."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "What is the first step you should take if you discover fraudulent accounts on your credit report?",
+      "options": [
+        "Ignore them and hope they go away",
+        "Pay off the fraudulent debts immediately",
+        "Get your credit reports, document everything, and file a police report",
+        "Close all your bank accounts"
+      ],
+      "correct": 2,
+      "explanation": "The correct first steps are to get your credit reports from all three bureaus, document all fraudulent activity, and file a police report. This creates an official record and starts the dispute process. Don't pay fraudulent debts as this can be seen as accepting responsibility."
+    },
+    {
+      "id": 5,
+      "type": "multiple-choice",
+      "question": "Which organization provides 24/7 confidential support for domestic violence survivors?",
+      "options": [
+        "National Domestic Violence Hotline (1-800-799-7233)",
+        "Local police department",
+        "Credit card companies",
+        "Social media support groups"
+      ],
+      "correct": 0,
+      "explanation": "The National Domestic Violence Hotline (1-800-799-7233) provides 24/7 confidential support, safety planning, and referrals to local resources. While police can help in emergencies, the hotline offers specialized support for domestic violence situations."
+    },
+    {
+      "id": 6,
+      "type": "true-false",
+      "question": "True or False: You should open a new bank account at the same bank your abuser uses.",
+      "correct": false,
+      "explanation": "False. For safety and privacy, open accounts at a different bank than your abuser uses. Consider a bank with no physical branches near you for added security. This helps prevent your abuser from accessing information about your accounts."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "What is a secured credit card and why is it useful for credit recovery?",
+      "options": [
+        "A card that requires no credit check and has no fees",
+        "A card that requires a cash deposit and helps build credit history",
+        "A card that can only be used at specific stores",
+        "A card that automatically pays off your balance each month"
+      ],
+      "correct": 1,
+      "explanation": "A secured credit card requires a cash deposit (usually $200-500) that becomes your credit limit. It reports to credit bureaus just like a regular credit card, helping you build or rebuild credit history. It's an excellent tool for credit recovery after financial abuse."
+    },
+    {
+      "id": 8,
+      "type": "multiple-choice",
+      "question": "How long do most negative items stay on your credit report?",
+      "options": [
+        "1 year",
+        "3 years",
+        "7 years",
+        "Forever"
+      ],
+      "correct": 2,
+      "explanation": "Most negative items fall off your credit report after 7 years. However, you can dispute inaccurate or fraudulent items immediately. With consistent positive behavior, you can see significant credit improvement in 12-24 months even before negative items are removed."
+    },
+    {
+      "id": 9,
+      "type": "true-false",
+      "question": "True or False: Financial independence means you must be wealthy and never need help from anyone.",
+      "correct": false,
+      "explanation": "False. Financial independence is about having control over your own money and making your own financial decisions. It's not about wealth or never needing help. Using government assistance, accepting support from friends, or working with financial counselors are all part of building independence."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "What should be included in a financial safety plan?",
+      "options": [
+        "Only a secret bank account",
+        "Just emergency cash hidden at home",
+        "A comprehensive plan including secret accounts, emergency cash, important documents, and trusted contacts",
+        "Nothing - safety plans aren't necessary"
+      ],
+      "correct": 2,
+      "explanation": "A comprehensive financial safety plan should include: a secret bank account, emergency cash, copies of important documents stored safely, a P.O. Box or safe address, trusted contacts, knowledge of local resources, and a code word to signal you need help. Safety planning is crucial for leaving an abusive situation."
+    }
+  ]
+}

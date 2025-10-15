@@ -28,6 +28,7 @@ const OpenSource = lazy(() => import('./pages/OpenSource'));
 const Research = lazy(() => import('./pages/Research'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ToolsPage = lazy(() => import('./pages/ToolsPage'));
+const AdminPortal = lazy(() => import('./pages/AdminPortal'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -107,6 +108,13 @@ function App() {
               <Route path="/tools" element={
                 <ProtectedRoute>
                   <ToolsPage />
+                </ProtectedRoute>
+              } />
+
+              {/* Admin Portal */}
+              <Route path="/admin" element={
+                <ProtectedRoute>
+                  <AdminPortal />
                 </ProtectedRoute>
               } />
 

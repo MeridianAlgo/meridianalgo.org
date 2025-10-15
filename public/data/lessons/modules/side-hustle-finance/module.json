@@ -1,0 +1,51 @@
+{
+  "id": "side-hustle-finance",
+  "title": "Side Hustle Financial Management",
+  "description": "Manage finances for your side business",
+  "duration": "2 weeks",
+  "difficulty": "Beginner",
+  "icon": "Briefcase",
+  "color": "orange",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "side-hustle-finance_1",
+      "title": "Starting a Side Hustle",
+      "type": "reading",
+      "duration": "15 min",
+      "points": 100,
+      "contentFile": "modules/side-hustle-finance/lessons/01_lesson.json"
+    },
+    {
+      "id": "side-hustle-finance_2",
+      "title": "Tracking Side Income",
+      "type": "exercise",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/side-hustle-finance/lessons/02_lesson.json"
+    },
+    {
+      "id": "side-hustle-finance_3",
+      "title": "Side Hustle Tax Basics",
+      "type": "reading",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "modules/side-hustle-finance/lessons/03_lesson.json"
+    },
+    {
+      "id": "side-hustle-finance_4",
+      "title": "Scaling Your Side Business",
+      "type": "reading",
+      "duration": "16 min",
+      "points": 100,
+      "contentFile": "modules/side-hustle-finance/lessons/04_lesson.json"
+    }
+  ],
+  "quiz": {
+    "id": "side-hustle-finance_quiz",
+    "title": "Side Hustle Financial Management Quiz",
+    "duration": "10 min",
+    "points": 150,
+    "contentFile": "modules/side-hustle-finance/quiz.json"
+  }
+}

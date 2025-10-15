@@ -1,0 +1,72 @@
+{
+  "title": "Managing Daily Expenses",
+  "type": "exercise",
+  "duration": "25 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Controlling Your Daily Spending",
+      "subtitle": "Practical strategies for managing everyday expenses"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Tracking and categorizing daily expenses",
+        "Identifying spending leaks and unnecessary costs",
+        "Implementing the 50/30/20 budget framework",
+        "Tools and techniques for expense management"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The 50/30/20 Budget Rule",
+      "content": "This simple framework divides your after-tax income into three categories: 50% for needs (housing, food, transportation, utilities), 30% for wants (entertainment, dining out, hobbies), and 20% for savings and debt repayment. It's a flexible starting point that works for most income levels."
+    },
+    {
+      "type": "keypoints",
+      "title": "Budget Categories",
+      "points": [
+        {
+          "title": "Needs (50%)",
+          "description": "Essential expenses that are difficult to reduce - housing, food, transportation, utilities."
+        },
+        {
+          "title": "Wants (30%)",
+          "description": "Discretionary spending - entertainment, dining out, subscriptions, hobbies."
+        },
+        {
+          "title": "Savings/Debt (20%)",
+          "description": "Emergency fund, retirement savings, debt repayment, and other financial goals."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Track Before You Budget",
+      "content": "You can't manage what you don't measure. Track your expenses for at least 30 days before creating a budget to understand your actual spending patterns.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Identifying Spending Leaks",
+      "content": "Common spending leaks include unused subscriptions, daily coffee runs, impulse purchases, and convenience fees. Review your bank and credit card statements regularly to identify these leaks and eliminate them."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Improve Your Spending Habits",
+      "steps": [
+        "Track all expenses for 30 days using an app or spreadsheet",
+        "Categorize expenses and compare to 50/30/20 guidelines",
+        "Identify and eliminate one spending leak this week",
+        "Set specific spending limits for discretionary categories"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Use Cash for Problem Categories",
+      "content": "For spending categories you struggle to control, use cash instead of cards. The physical act of handing over money makes spending more conscious and reduces impulse purchases."
+    }
+  ]
+}

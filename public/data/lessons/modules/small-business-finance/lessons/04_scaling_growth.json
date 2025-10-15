@@ -1,0 +1,105 @@
+{
+  "id": "04_scaling_growth",
+  "title": "Scaling and Growth Finance",
+  "content": {
+    "hero": {
+      "title": "Financing Business Growth and Scaling",
+      "subtitle": "Fund expansion while maintaining financial health",
+      "image": "/images/lessons/business-growth.jpg"
+    },
+    "introduction": "Growing a business requires capital—for inventory, equipment, hiring, marketing, and more. Understanding your financing options, when to use them, and how to scale sustainably prevents growth from becoming a financial crisis. Smart growth balances ambition with financial prudence.",
+    "keyPoints": [
+      "Bootstrap (self-fund) as long as possible to maintain control and avoid debt",
+      "Business lines of credit provide flexible working capital for short-term needs",
+      "SBA loans offer favorable terms for equipment, real estate, and expansion",
+      "Equity financing (investors) means giving up ownership but provides growth capital",
+      "Sustainable growth rate ensures you don't grow faster than your finances can support"
+    ],
+    "sections": [
+      {
+        "title": "Bootstrapping and Organic Growth",
+        "content": "Bootstrapping means funding growth from business profits rather than external capital. Advantages: you maintain 100% ownership and control, no debt payments or interest, forces financial discipline and efficiency, and proves business viability before seeking outside capital. Strategies: reinvest profits rather than taking large distributions, start small and scale gradually, focus on profitable customers and products, minimize fixed costs (rent, salaries) in favor of variable costs, negotiate favorable payment terms with suppliers and customers, and use sweat equity (your time and effort) instead of hiring. Many successful businesses bootstrap to $1M+ in revenue before seeking outside capital. Bootstrapping isn't always possible for capital-intensive businesses (manufacturing, retail with inventory) but works well for service businesses, software, and consulting."
+      },
+      {
+        "title": "Business Lines of Credit and Term Loans",
+        "content": "A business line of credit works like a credit card—you're approved for a maximum amount, draw what you need, pay interest only on what you use, and repay to access funds again. Typical amounts: $10,000-$500,000. Interest rates: 7-25% depending on creditworthiness. Best for: managing cash flow gaps, seasonal inventory purchases, and short-term working capital needs. Term loans provide a lump sum repaid over a fixed period (1-10 years) with regular payments. Amounts: $25,000-$5M+. Rates: 6-30%. Best for: equipment purchases, expansion, real estate, or large one-time investments. To qualify, you typically need: 2+ years in business, strong credit (personal and business), consistent revenue, and collateral for larger amounts. Shop around—banks, credit unions, and online lenders have different requirements and rates. SBA loans (discussed next) often offer better terms than conventional loans."
+      },
+      {
+        "title": "SBA Loans and Government Programs",
+        "content": "Small Business Administration (SBA) loans are partially guaranteed by the government, allowing lenders to offer better terms. SBA 7(a) loans: up to $5M for working capital, equipment, real estate, or business acquisition. Terms up to 25 years for real estate, 10 years for equipment. Rates typically prime + 2.25-4.75%. SBA 504 loans: up to $5.5M for real estate or equipment purchases. Fixed rates, 20-25 year terms. SBA Microloans: up to $50,000 for startups and small businesses. SBA Express: up to $500,000 with faster approval. Requirements: for-profit business, operating in the U.S., owner investment (typically 10-20% down), good credit, and demonstrated ability to repay. Application process is lengthy (30-90 days) and requires extensive documentation, but terms are favorable. Work with an SBA-approved lender who can guide you through the process."
+      },
+      {
+        "title": "Equity Financing and Investors",
+        "content": "Equity financing means selling ownership stakes in your business for capital. Types: Angel investors (wealthy individuals investing $25,000-$500,000 in early-stage companies), Venture Capital (firms investing $1M-$50M+ in high-growth potential companies), and Private Equity (firms buying established businesses or majority stakes). Advantages: no debt or monthly payments, investors bring expertise and connections, and large capital for rapid growth. Disadvantages: you give up ownership and control, investors expect high returns (often 10x), you're accountable to others, and exit pressure (investors want to cash out eventually). Equity makes sense for: high-growth potential businesses, capital-intensive industries, businesses needing expertise/connections, or when debt isn't available. Not suitable for: lifestyle businesses, businesses with modest growth potential, or owners wanting full control. Typical equity given up: 10-30% for angel rounds, 20-40% for VC rounds."
+      },
+      {
+        "title": "Alternative Financing Options",
+        "content": "Invoice factoring: sell your accounts receivable to a factoring company for immediate cash (typically 70-90% of invoice value). They collect from customers and keep a fee (2-5%). Good for businesses with long payment terms and cash flow needs. Merchant cash advances: receive a lump sum in exchange for a percentage of future credit card sales. Expensive (effective APR often 40-200%) but fast and easy to qualify. Use only as last resort. Equipment financing: lender purchases equipment and leases it to you, or provides a loan secured by the equipment. Easier to qualify than unsecured loans. Crowdfunding: raise small amounts from many people via platforms like Kickstarter (rewards-based) or StartEngine (equity crowdfunding). Good for consumer products with compelling stories. Revenue-based financing: receive capital in exchange for a percentage of monthly revenue until a cap is reached. No equity given up, payments flex with revenue."
+      },
+      {
+        "title": "Sustainable Growth Rate",
+        "content": "Sustainable growth rate is the maximum rate you can grow without external financing, based on your profitability and asset efficiency. Formula: ROE × Retention Rate, where ROE is Return on Equity (net income ÷ equity) and Retention Rate is the percentage of profits reinvested (1 - dividend payout ratio). Example: if ROE is 20% and you reinvest 80% of profits, sustainable growth rate is 16% (0.20 × 0.80). Growing faster than this requires external capital (debt or equity). Growing slower means you're not maximizing potential or you're distributing too much profit. To increase sustainable growth rate: improve profitability (increase margins, reduce costs), increase asset efficiency (faster inventory turnover, better receivables collection), or retain more profits (take smaller distributions). Understanding this prevents overextending financially during growth."
+      }
+    ],
+    "callouts": [
+      {
+        "type": "tip",
+        "title": "Bootstrap as Long as Possible",
+        "content": "Every dollar of outside capital (debt or equity) has a cost—interest payments or ownership dilution. Bootstrap as long as you can to maintain control and prove your business model. Seek outside capital only when it will accelerate growth beyond what you can achieve organically."
+      },
+      {
+        "type": "warning",
+        "title": "Beware of Merchant Cash Advances",
+        "content": "Merchant cash advances are extremely expensive, often with effective APRs of 40-200%. They're marketed as 'not a loan' to avoid lending regulations. Use only as an absolute last resort for emergency situations. Explore all other options first—even credit cards are usually cheaper."
+      },
+      {
+        "type": "example",
+        "title": "Real-World Scenario",
+        "content": "Carlos's e-commerce business needs $100,000 for inventory to fulfill a large order. He considers: a business line of credit at 12% APR (costs $12,000/year if fully drawn), invoice factoring at 3% (costs $3,000 for this transaction), or an angel investor offering $100,000 for 20% equity. He chooses the line of credit, uses it for 3 months (cost: $3,000), then repays from sales proceeds."
+      }
+    ],
+    "practicalSteps": [
+      {
+        "step": 1,
+        "title": "Calculate Your Capital Needs",
+        "description": "Create a detailed growth plan with projected costs: inventory, equipment, hiring, marketing, facilities. Determine how much capital you need and when. Be realistic and add a 20% buffer for unexpected costs."
+      },
+      {
+        "step": 2,
+        "title": "Evaluate Financing Options",
+        "description": "List all available options: bootstrapping, business line of credit, term loan, SBA loan, investors, alternative financing. Compare costs, terms, requirements, and impact on ownership and control."
+      },
+      {
+        "step": 3,
+        "title": "Strengthen Your Financial Position",
+        "description": "Before seeking financing, improve your credit scores (personal and business), build cash reserves, clean up your financial statements, and document consistent revenue. Lenders and investors want to see financial health."
+      },
+      {
+        "step": 4,
+        "title": "Prepare Your Application",
+        "description": "Gather required documents: business plan, financial statements (3 years if available), tax returns, bank statements, accounts receivable/payable aging, and personal financial statement. Create a compelling pitch for why you need capital and how you'll use it."
+      },
+      {
+        "step": 5,
+        "title": "Apply and Negotiate",
+        "description": "Apply to multiple lenders or investors to compare offers. Don't accept the first offer—negotiate rates, terms, and covenants. Read all agreements carefully. Consult an attorney for equity deals or large loans."
+      },
+      {
+        "step": 6,
+        "title": "Use Capital Strategically",
+        "description": "Deploy capital according to your plan. Track ROI on growth investments. Don't use growth capital for operating expenses—that's a red flag. Monitor your sustainable growth rate to ensure you're not overextending."
+      }
+    ],
+    "quiz": {
+      "question": "What is the main advantage of an SBA loan over a conventional business loan?",
+      "options": [
+        "SBA loans don't need to be repaid",
+        "SBA loans have no eligibility requirements",
+        "SBA loans typically offer better terms and lower rates due to government guarantee",
+        "SBA loans are approved instantly"
+      ],
+      "correctAnswer": 2,
+      "explanation": "SBA loans are partially guaranteed by the Small Business Administration, which reduces lender risk and allows them to offer better terms—lower interest rates, longer repayment periods, and lower down payments than conventional loans. However, they require extensive documentation and have a longer approval process."
+    }
+  }
+}

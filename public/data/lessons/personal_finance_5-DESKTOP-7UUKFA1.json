@@ -1,0 +1,93 @@
+{
+  "title": "Introduction to Investing",
+  "type": "reading",
+  "duration": "24 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Start Growing Your Money",
+      "subtitle": "Understand the building blocks of investing so you can take your first confident steps"
+    },
+    {
+      "type": "overview",
+      "title": "In This Lesson",
+      "items": [
+        "Learn what investing actually does for your money",
+        "Compare common asset classes and their risk",
+        "See how diversification protects your progress",
+        "Create a starter investing checklist"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Invest?",
+      "content": "Investing harnesses compound growth so your money works while you sleep. Cash savings protect you from emergencies but lose buying power to inflation. Putting a portion of long-term money into diversified investments helps you reach goals faster and combat rising costs."
+    },
+    {
+      "type": "keypoints",
+      "title": "Core Principles",
+      "points": [
+        {
+          "title": "Time in Market",
+          "description": "The earlier you start, the more compounding multiplies returns." 
+        },
+        {
+          "title": "Risk and Reward",
+          "description": "Higher potential returns usually come with higher volatility—balance matters." 
+        },
+        {
+          "title": "Diversification",
+          "description": "Owning different types of investments spreads risk so one loss does not derail your plan." 
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Compounding Snapshot",
+      "content": "Investing $250 per month at a 7% annual return for 10 years grows to roughly $43,000. Waiting just three years to start cuts the total by more than $6,000.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Investment Vehicles 101",
+      "content": "Stocks represent ownership in a company and can deliver high growth but fluctuate daily. Bonds are loans to governments or corporations—less volatile, with lower returns. Funds (mutual funds and ETFs) bundle many investments together, offering built-in diversification with minimal effort."
+    },
+    {
+      "type": "keypoints",
+      "title": "Account Types",
+      "points": [
+        {
+          "title": "Tax-Advantaged Accounts",
+          "description": "401(k)s, IRAs, and HSAs offer tax benefits and should be prioritized when available."
+        },
+        {
+          "title": "Taxable Brokerage",
+          "description": "Flexible access to money without withdrawal penalties—ideal after maxing tax-advantaged options." 
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Building a Starter Plan",
+      "content": "Clarify the goal you are investing toward and how many years you have. Decide how much income you can consistently invest, automate contributions, and select diversified funds that match your risk tolerance. Review annually rather than reacting to daily market noise."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Kickoff Checklist",
+      "steps": [
+        "List your top two long-term goals that require investing (for example, retirement, home down payment).",
+        "Estimate the timeline for each goal to decide how aggressive your portfolio should be.",
+        "Research at least two broad-market index funds and note their risk/return profiles.",
+        "Decide how much you can automate monthly and set up scheduled transfers.",
+        "Write a one-sentence investing policy (e.g., 'I invest monthly and only rebalance twice a year')."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Stay Educated",
+      "content": "Bookmark a trusted source like investor.gov or the Bogleheads wiki so you can fact-check hype before acting.",
+      "icon": "book-open"
+    }
+  ]
+}

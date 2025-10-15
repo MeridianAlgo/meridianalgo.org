@@ -1,0 +1,72 @@
+{
+  "title": "Retirement Planning and Income Strategies",
+  "type": "exercise",
+  "duration": "35 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Sustainable Retirement Income",
+      "subtitle": "Creating reliable income streams for your retirement years"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Sources of retirement income",
+        "Withdrawal strategies for sustainability",
+        "Managing sequence of returns risk",
+        "Adjusting plans for changing circumstances"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Retirement Income Sources",
+      "content": "Typical retirement income comes from Social Security, pensions (if available), retirement account withdrawals, investment income, and potentially part-time work or rental income. Understanding these sources and how they interact is crucial for financial security in retirement."
+    },
+    {
+      "type": "keypoints",
+      "title": "Income Planning Strategies",
+      "points": [
+        {
+          "title": "Guaranteed Income",
+          "description": "Social Security, pensions, and annuities provide predictable income regardless of market conditions."
+        },
+        {
+          "title": "Investment Income",
+          "description": "Dividends, interest, and systematic withdrawals from investment portfolios."
+        },
+        {
+          "title": "Flexible Income",
+          "description": "Part-time work, rental income, or business income that can be adjusted based on needs."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Sequence of Returns Risk",
+      "content": "Poor investment returns early in retirement can significantly impact your portfolio's longevity. Having guaranteed income sources helps mitigate this risk.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Withdrawal Strategies",
+      "content": "The 4% rule provides a starting point for sustainable withdrawals. Consider dynamic strategies that adjust based on market performance and your age. Tax-efficient withdrawal sequencing can also improve outcomes."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Plan Your Retirement Income",
+      "steps": [
+        "Identify all potential sources of retirement income",
+        "Calculate your expected annual retirement expenses",
+        "Develop a withdrawal strategy for your investment portfolio",
+        "Consider purchasing an annuity for guaranteed income if needed"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Stress Test Your Plan",
+      "content": "Use retirement calculators that simulate different market scenarios to test how your plan performs in various economic conditions."
+    }
+  ]
+}

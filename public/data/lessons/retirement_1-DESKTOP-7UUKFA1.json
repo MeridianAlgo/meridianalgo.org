@@ -1,0 +1,136 @@
+{
+  "title": "401(k) and IRA Basics",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Kickstart Your Retirement Accounts",
+      "subtitle": "Learn how 401(k)s and IRAs grow your savings and the rules that power their tax advantages"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Key differences between 401(k)s and IRAs",
+        "Contribution limits and employer match strategies",
+        "Tax benefits of traditional vs Roth contributions",
+        "Best practices for managing investments inside retirement accounts"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Retirement Accounts at a Glance",
+      "content": "A 401(k) is an employer-sponsored plan that allows pre-tax or Roth contributions through payroll deductions. Individual Retirement Accounts (IRAs) are personal accounts you can open at a financial institution. Both accounts help your money grow tax-advantaged, but they follow different contribution rules and offer different investment menus." 
+    },
+    {
+      "type": "keypoints",
+      "title": "Account Highlights",
+      "points": [
+        {
+          "title": "Contribution Limits",
+          "description": "For 2025, employees can contribute up to $23,000 to a 401(k) plus a $7,500 catch-up if age 50+. IRAs allow $7,000 with a $1,000 catch-up." 
+        },
+        {
+          "title": "Employer Match",
+          "description": "Many employers match 3%-6% of pay. Contribute at least enough to capture the full match—it is an immediate 100% return." 
+        },
+        {
+          "title": "Investment Menu",
+          "description": "401(k)s typically offer curated mutual funds. IRAs often provide a wider range of ETFs and stocks for more customization." 
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Traditional vs Roth",
+      "content": "Traditional contributions reduce taxable income now but are taxed when withdrawn. Roth contributions are made with after-tax dollars yet deliver tax-free withdrawals in retirement.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Decision Checklist",
+      "content": "Use a 401(k) up to the match first, then fund an IRA for investment flexibility. If you expect higher taxes later, consider Roth options. Verify plan fees and adjust investment selections once per year to stay aligned with your risk tolerance." 
+    },
+    {
+      "type": "actionsteps",
+      "title": "Optimize Your Accounts",
+      "steps": [
+        "Log into your 401(k) portal and confirm your contribution rate hits the full employer match.",
+        "Open or review an IRA at your preferred brokerage and evaluate contribution room for this year.",
+        "Compare traditional versus Roth contributions using your current and expected retirement tax brackets.",
+        "List the investment funds available in each account and categorize them as core (broad market) or specialty." 
+      ]
+    },
+    {
+      "type": "resources",
+      "title": "Retirement Account Essentials",
+      "subtitle": "Use official sources to verify the latest limits, match policies, and rollover rules.",
+      "links": [
+        {
+          "label": "IRS Contribution Limits",
+          "description": "Annual 401(k), IRA, and catch-up limits straight from the IRS.",
+          "url": "https://www.irs.gov/retirement-plans/cost-of-living-adjustment-cola-information"
+        },
+        {
+          "label": "Department of Labor 401(k) Fee Guide",
+          "description": "Understand plan fee disclosures so you can challenge high-cost investment options.",
+          "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/fact-sheets/disclosure-of-plan-fees-and-expenses.pdf"
+        },
+        {
+          "label": "FINRA IRA Comparison",
+          "description": "Side-by-side view of Traditional vs Roth IRA rules and eligibility.",
+          "url": "https://www.finra.org/investors/learn-to-invest/types-investments/retirement/iras"
+        }
+      ],
+      "layout": "grid"
+    },
+    {
+      "type": "calculator",
+      "title": "Contribution Gap Planner",
+      "calculator": {
+        "id": "retirement_contribution_gap",
+        "description": "See how much additional monthly savings bridges the gap between your current contribution rate and your retirement target.",
+        "resultLabel": "Monthly Increase Needed",
+        "inputs": [
+          {
+            "id": "annualIncome",
+            "label": "Annual salary",
+            "suffix": "USD",
+            "placeholder": "85000",
+            "min": 0,
+            "step": 1000
+          },
+          {
+            "id": "currentContributionPercent",
+            "label": "Current contribution %",
+            "suffix": "%",
+            "placeholder": "6",
+            "min": 0,
+            "max": 30,
+            "step": 0.5
+          },
+          {
+            "id": "desiredContributionPercent",
+            "label": "Target contribution %",
+            "suffix": "%",
+            "placeholder": "12",
+            "min": 0,
+            "max": 30,
+            "step": 0.5
+          }
+        ],
+        "formulaNote": "Assumes contributions are taken as a flat percentage of gross pay before employer match.",
+        "highlight": "Automate escalations now so raises instantly boost your retirement savings.",
+        "ctaLabel": "Update payroll elections with this new number"
+      }
+    },
+    {
+      "type": "protip",
+      "title": "Automate Increases",
+      "content": "Enable auto-escalation to add 1% to your contribution rate each year until you reach your target savings level.",
+      "icon": "lightbulb"
+    }
+  ]
+}

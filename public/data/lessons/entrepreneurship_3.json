@@ -1,0 +1,72 @@
+{
+  "title": "Funding Your Business",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Financing Your Venture",
+      "subtitle": "Exploring funding options and choosing the right path for your business"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Self-funding and bootstrapping strategies",
+        "Debt financing options for small businesses",
+        "Equity financing and investor relationships",
+        "Government grants and alternative funding sources"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Self-Funding and Bootstrapping",
+      "content": "Bootstrapping means starting and growing your business using personal savings, revenue from initial sales, or minimal external funding. This approach maintains full control but requires careful cash flow management. Many successful businesses, including Dell and GitHub, started as bootstrapped ventures."
+    },
+    {
+      "type": "keypoints",
+      "title": "Funding Options",
+      "points": [
+        {
+          "title": "Personal Savings and Credit",
+          "description": "Use personal funds or credit cards, but be cautious about personal financial risk."
+        },
+        {
+          "title": "Business Loans",
+          "description": "Traditional bank loans, SBA loans, or online lenders provide debt financing with fixed repayment terms."
+        },
+        {
+          "title": "Equity Investment",
+          "description": "Sell ownership stakes to angel investors, venture capitalists, or through crowdfunding platforms."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Choose Funding Based on Your Stage",
+      "content": "Early-stage businesses typically bootstrap or seek friends/family funding. Growth-stage businesses may attract angel or venture capital investment.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Alternative Funding Sources",
+      "content": "Consider government grants for specific industries, crowdfunding for product-based businesses, or business incubators/accelerators that provide funding and mentorship. Each option has different requirements and expectations for returns or control."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Plan Your Funding Strategy",
+      "steps": [
+        "Calculate your startup and first-year operating costs realistically",
+        "Determine how much funding you need and by when",
+        "Research funding options that match your business type and stage",
+        "Prepare necessary documents like business plans and financial projections"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Focus on Revenue First",
+      "content": "The best funding is customer revenue. Focus on generating sales early rather than seeking external funding, as this validates your business model and gives you leverage in funding discussions."
+    }
+  ]
+}

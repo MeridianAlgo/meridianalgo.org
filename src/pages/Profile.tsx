@@ -106,9 +106,18 @@ const Profile = () => {
           <div className="bg-gray-800 rounded-xl border border-gray-700 p-8 mb-8">
             <div className="flex items-start justify-between mb-6">
               <div className="flex items-center space-x-4">
-                <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center">
-                  <User className="w-10 h-10 text-orange-400" />
-                </div>
+                {user.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt={user.name}
+                    className="w-20 h-20 rounded-full object-cover border-2 border-orange-500/50"
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center">
+                    <User className="w-10 h-10 text-orange-400" />
+                  </div>
+                )}
                 <div>
                   <h2 className="text-2xl font-bold text-white">{user.name}</h2>
                   <p className="text-gray-400">{user.email}</p>

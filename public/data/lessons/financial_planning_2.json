@@ -1,0 +1,72 @@
+{
+  "title": "Risk Management and Insurance Planning",
+  "type": "reading",
+  "duration": "26 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Protecting What You've Built",
+      "subtitle": "Insurance strategies to safeguard your financial future"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Types of insurance and when you need them",
+        "How to determine appropriate coverage amounts",
+        "Insurance shopping strategies and cost-saving tips",
+        "Integrating insurance into your overall financial plan"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Essential Insurance Types",
+      "content": "Core insurance needs include health, auto, homeowners/renters, life, and disability insurance. Each serves a different purpose: health covers medical costs, auto protects against vehicle damage, homeowners protects your property, life replaces income for dependents, and disability replaces income if you can't work."
+    },
+    {
+      "type": "keypoints",
+      "title": "Insurance Fundamentals",
+      "points": [
+        {
+          "title": "Risk Assessment",
+          "description": "Evaluate potential financial losses from death, disability, illness, property damage, or liability claims."
+        },
+        {
+          "title": "Coverage Amounts",
+          "description": "Life insurance should replace 10-15x annual income; disability should cover 60-80% of income for 2-5 years."
+        },
+        {
+          "title": "Deductibles and Premiums",
+          "description": "Higher deductibles lower premiums but increase out-of-pocket costs for claims."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Insurance is Risk Transfer",
+      "content": "Insurance transfers financial risk from you to the insurance company. Don't self-insure against catastrophic losses that could derail your financial plan.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Shopping for Insurance",
+      "content": "Compare quotes from multiple providers, understand policy details and exclusions, and consider working with an independent insurance agent. Look for financially strong companies and read reviews of their claims process. Bundle policies where possible for discounts."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Review Your Insurance Coverage",
+      "steps": [
+        "List all current insurance policies and their coverage amounts",
+        "Identify gaps in coverage based on your current life situation",
+        "Get quotes from 2-3 providers for any needed coverage",
+        "Update beneficiaries and ensure policies align with your overall financial plan"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Annual Insurance Review",
+      "content": "Set a calendar reminder to review all insurance policies annually. Life changes like marriage, home purchase, or having children often require coverage adjustments."
+    }
+  ]
+}

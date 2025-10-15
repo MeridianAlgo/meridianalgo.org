@@ -1,0 +1,74 @@
+{
+  "title": "Budget Review and Adjustment",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Keep Your Budget Alive",
+      "subtitle": "Turn monthly reviews into a rhythm that keeps your plan realistic"
+    },
+    {
+      "type": "overview",
+      "title": "You'll Learn",
+      "items": [
+        "How to evaluate budget performance without judgment",
+        "Which metrics reveal when to adjust categories",
+        "How to rebalance funds across priorities",
+        "Ways to celebrate wins and stay motivated"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Review with Curiosity",
+      "content": "Numbers tell the story of your values in action. A budget review is about understanding the story, not blaming yourself. Approach each line item with curiosity: What worked? What can improve?"
+    },
+    {
+      "type": "keypoints",
+      "title": "Monthly Metrics",
+      "points": [
+        {
+          "title": "Variance",
+          "description": "Compare planned vs. actual spending for each category to spot trends."
+        },
+        {
+          "title": "Cash Flow",
+          "description": "Check if income minus expenses still supports your goals."
+        },
+        {
+          "title": "Progress",
+          "description": "Review savings and debt payoff contributions to ensure targets are met."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Micro Adjustments",
+      "content": "Shifting $25–$50 between categories keeps momentum without overhauling the entire plan.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "When to Adjust",
+      "content": "Adjust categories when actual spending repeatedly exceeds the plan, life circumstances change, or new goals emerge. Reallocate from lower-priority areas to high-impact goals."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Review Routine",
+      "steps": [
+        "Schedule a recurring 30-minute monthly review on your calendar.",
+        "Export or view the past month's transactions and categorize variances.",
+        "Identify two categories to adjust up or down for next month.",
+        "Record at least one win (goal contribution, lower expense) to reinforce progress.",
+        "Set one focus area for the coming month (e.g., reduce dining by 10%)."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Future-Focused",
+      "content": "End each review by confirming next month's top goal so daily decisions align with your adjustments.",
+      "icon": "target"
+    }
+  ]
+}

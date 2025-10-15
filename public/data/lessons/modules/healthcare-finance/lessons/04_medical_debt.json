@@ -1,0 +1,105 @@
+{
+  "id": "04_medical_debt",
+  "title": "Managing Medical Debt",
+  "content": {
+    "hero": {
+      "title": "Managing and Reducing Medical Debt",
+      "subtitle": "Strategies to negotiate, reduce, and eliminate healthcare bills",
+      "image": "/images/lessons/medical-debt.jpg"
+    },
+    "introduction": "Medical debt is the leading cause of personal bankruptcy in the United States, affecting millions of Americans regardless of insurance status. Even with insurance, unexpected medical emergencies or chronic conditions can result in overwhelming bills. The good news is that medical debt is often negotiable, and there are numerous strategies to reduce or eliminate it. Understanding your rights and options can save you thousands of dollars.",
+    "keyPoints": [
+      "Medical debt under $500 no longer appears on credit reports as of 2023",
+      "Hospital bills are often negotiable—many providers offer discounts for prompt payment or financial hardship",
+      "You can request itemized bills to identify errors and overcharges",
+      "Nonprofit hospitals are required to offer financial assistance programs",
+      "Medical debt doesn't accrue interest unless you put it on a credit card"
+    ],
+    "sections": [
+      {
+        "title": "Understanding Your Medical Bills",
+        "content": "Medical billing is notoriously complex and error-prone. Studies show that up to 80% of medical bills contain errors. Always request an itemized bill that lists every charge, procedure code, and medication. Review it carefully for duplicate charges, services you didn't receive, or incorrect quantities. Compare charges against your insurance Explanation of Benefits (EOB) to ensure the provider billed correctly. Don't assume the bill is accurate just because it comes from a hospital. Common errors include being charged for a private room when you had a shared room, duplicate charges for the same procedure, or being billed for services that should have been covered by insurance."
+      },
+      {
+        "title": "Negotiating Medical Bills",
+        "content": "Medical bills are often negotiable, especially if you're uninsured or underinsured. Start by calling the billing department and explaining your financial situation. Ask if they offer: prompt payment discounts (often 10-30% off for paying within 30 days), financial hardship programs, charity care, or payment plans. If you're uninsured, ask for the insurance rate rather than the 'chargemaster' rate—hospitals often charge uninsured patients 2-3 times what they charge insurance companies. Be polite but persistent. If the first person says no, ask to speak with a supervisor or financial counselor. Get any agreements in writing before making payment."
+      },
+      {
+        "title": "Hospital Financial Assistance Programs",
+        "content": "Nonprofit hospitals (about 60% of U.S. hospitals) are required by law to offer financial assistance programs, also called charity care. These programs can reduce or eliminate your bill based on your income, typically using Federal Poverty Level guidelines. Many hospitals offer free care to patients earning up to 200% of the poverty level and discounted care up to 400%. You must apply for these programs—they won't automatically apply them. Request a financial assistance application from the billing department. You'll need to provide proof of income (pay stubs, tax returns) and possibly bank statements. Apply before the bill goes to collections."
+      },
+      {
+        "title": "Dealing with Medical Collections",
+        "content": "If your medical debt goes to collections, you still have options. As of 2023, medical debt under $500 doesn't appear on credit reports, and paid medical collections are removed immediately. Medical debt in collections can often be settled for 25-50% of the original amount—collection agencies buy debt for pennies on the dollar. Before paying, request debt validation to ensure the debt is legitimate and the amount is correct. Negotiate a 'pay for delete' agreement where they remove the collection from your credit report in exchange for payment. Get everything in writing before paying. Never give collectors access to your bank account—pay by check or money order."
+      },
+      {
+        "title": "Payment Plans and Financing Options",
+        "content": "If you can't pay your medical bill in full, set up a payment plan directly with the provider. Hospital payment plans typically don't charge interest, unlike credit cards. Propose a monthly payment you can afford—even $25-50/month. Providers usually accept reasonable payment plans rather than sending bills to collections. Avoid medical credit cards like CareCredit if possible—they often have deferred interest that applies retroactively if not paid in full by the promotional period end. If you must use credit, a 0% APR credit card is better. Some providers work with medical billing advocates or patient advocates who can help negotiate on your behalf."
+      },
+      {
+        "title": "Preventing Future Medical Debt",
+        "content": "Prevention is the best strategy. Before any non-emergency procedure, get a cost estimate and verify your insurance coverage. Ask if there are lower-cost alternatives or generic medications. Use in-network providers whenever possible—out-of-network costs can be 2-3 times higher. For prescriptions, use GoodRx or similar apps to compare prices across pharmacies. Consider a Health Savings Account (HSA) to save pre-tax dollars for medical expenses. Build an emergency fund specifically for medical costs. Review medical bills promptly and dispute errors immediately. If you're uninsured, look into Medicaid eligibility or marketplace plans—even catastrophic coverage is better than none."
+      }
+    ],
+    "callouts": [
+      {
+        "type": "tip",
+        "title": "Request Itemized Bills",
+        "content": "Always request an itemized bill before paying. Simply asking for itemization can sometimes result in reduced charges, as providers know you're scrutinizing the bill. Review every line item and question anything unclear or that seems excessive."
+      },
+      {
+        "type": "warning",
+        "title": "Don't Put Medical Debt on Credit Cards",
+        "content": "Medical debt typically doesn't accrue interest and is more negotiable than credit card debt. Once you put it on a credit card, you lose negotiating power and start paying high interest rates. Explore all other options first, including payment plans and financial assistance."
+      },
+      {
+        "type": "example",
+        "title": "Real-World Scenario",
+        "content": "After an emergency room visit, Tom received a $12,000 bill. He requested an itemized bill and found $2,000 in duplicate charges. He applied for the hospital's financial assistance program and qualified for a 60% discount based on his income. His final bill: $4,000, which he paid over 12 months interest-free."
+      }
+    ],
+    "practicalSteps": [
+      {
+        "step": 1,
+        "title": "Request and Review Itemized Bills",
+        "description": "Contact the billing department and request a fully itemized bill with procedure codes. Review every charge carefully and compare it to your insurance EOB."
+      },
+      {
+        "step": 2,
+        "title": "Identify and Dispute Errors",
+        "description": "Look for duplicate charges, services not received, incorrect quantities, or charges that should have been covered by insurance. Call the billing department to dispute any errors."
+      },
+      {
+        "step": 3,
+        "title": "Apply for Financial Assistance",
+        "description": "If you're struggling to pay, immediately apply for the hospital's financial assistance or charity care program. Gather required documentation like pay stubs and tax returns."
+      },
+      {
+        "step": 4,
+        "title": "Negotiate the Bill",
+        "description": "Call the billing department and explain your situation. Ask for prompt payment discounts, hardship reductions, or the insurance rate if you're uninsured. Be polite but persistent."
+      },
+      {
+        "step": 5,
+        "title": "Set Up a Payment Plan",
+        "description": "If you can't pay in full, propose a monthly payment plan you can afford. Most providers accept reasonable plans. Get the agreement in writing before making payments."
+      },
+      {
+        "step": 6,
+        "title": "Monitor Your Credit Report",
+        "description": "Check your credit report to ensure medical debt is reported accurately. Dispute any errors. Remember that medical debt under $500 shouldn't appear, and paid collections should be removed."
+      }
+    ],
+    "quiz": {
+      "question": "What is the best first step when you receive a large medical bill you can't afford?",
+      "options": [
+        "Put it on a credit card to avoid collections",
+        "Ignore it and hope it goes away",
+        "Request an itemized bill and apply for financial assistance",
+        "Immediately agree to any payment plan offered"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The best first step is to request an itemized bill to check for errors and apply for financial assistance programs. Many hospitals offer significant discounts or free care based on income. This should be done before considering payment plans or other options, and definitely before putting debt on a credit card."
+    }
+  }
+}

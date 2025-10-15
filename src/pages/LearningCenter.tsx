@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { 
   BookOpen, Clock, Award, Target, TrendingUp, 
   CheckCircle, Lock, PlayCircle, FileText, BarChart,
-  Brain, Zap, Trophy, Flame, ArrowRight, ArrowUp, Filter
+  Brain, Zap, Trophy, Flame, ArrowRight, ArrowUp, Filter,
+  PiggyBank, CreditCard, Shield, Building, Lightbulb,
+  Home as HomeIcon, Wallet, Calculator, ShieldCheck
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -87,6 +89,15 @@ const LearningCenter = () => {
       case 'BarChart': return <BarChart className="w-5 h-5" />;
       case 'Trophy': return <Trophy className="w-5 h-5" />;
       case 'FileText': return <FileText className="w-5 h-5" />;
+      case 'PiggyBank': return <PiggyBank className="w-5 h-5" />;
+      case 'CreditCard': return <CreditCard className="w-5 h-5" />;
+      case 'Shield': return <Shield className="w-5 h-5" />;
+      case 'Building': return <Building className="w-5 h-5" />;
+      case 'Lightbulb': return <Lightbulb className="w-5 h-5" />;
+      case 'Home': return <HomeIcon className="w-5 h-5" />;
+      case 'Wallet': return <Wallet className="w-5 h-5" />;
+      case 'Calculator': return <Calculator className="w-5 h-5" />;
+      case 'ShieldCheck': return <ShieldCheck className="w-5 h-5" />;
       default: return <BookOpen className="w-5 h-5" />;
     }
   };
@@ -515,20 +526,37 @@ const LearningCenter = () => {
                       <div className="flex-1 min-h-[8rem]">
                         {(expandedModules[module.id] ? module.topics : module.topics.slice(0, 5)).map((topic) => (
                           <div key={topic.id} className="flex items-center justify-between py-2">
-                            <Link to={`/lesson/${module.id}/${topic.id}`} className="flex items-center space-x-2 group">
-                              {topic.completed ? (
-                                <CheckCircle className="w-4 h-4 text-green-500" />
-                              ) : (
-                                <div className="w-4 h-4 border-2 border-gray-600 rounded-full" />
-                              )}
-                              <span className="text-sm text-gray-300 group-hover:text-white underline decoration-dotted underline-offset-4">
-                                {topic.title}
-                              </span>
-                            </Link>
-                            <div className="flex items-center space-x-2">
-                              {getTypeIcon(topic.type)}
-                              <span className="text-xs text-gray-400">{topic.duration}</span>
-                            </div>
+                            {module.locked ? (
+                              <>
+                                <div className="flex items-center space-x-2 flex-1">
+                                  <Lock className="w-4 h-4 text-gray-600" />
+                                  <span className="text-sm text-gray-500">
+                                    {topic.title}
+                                  </span>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                  {getTypeIcon(topic.type)}
+                                  <span className="text-xs text-gray-500">{topic.duration}</span>
+                                </div>
+                              </>
+                            ) : (
+                              <>
+                                <Link to={`/lesson/${module.id}/${topic.id}`} className="flex items-center space-x-2 group flex-1">
+                                  {topic.completed ? (
+                                    <CheckCircle className="w-4 h-4 text-green-500" />
+                                  ) : (
+                                    <div className="w-4 h-4 border-2 border-gray-600 rounded-full" />
+                                  )}
+                                  <span className="text-sm text-gray-300 group-hover:text-white underline decoration-dotted underline-offset-4">
+                                    {topic.title}
+                                  </span>
+                                </Link>
+                                <div className="flex items-center space-x-2">
+                                  {getTypeIcon(topic.type)}
+                                  <span className="text-xs text-gray-400">{topic.duration}</span>
+                                </div>
+                              </>
+                            )}
                           </div>
                         ))}
                       </div>

@@ -1,0 +1,72 @@
+{
+  "title": "Marketing on a Budget",
+  "type": "exercise",
+  "duration": "22 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Getting Customers Without Breaking the Bank",
+      "subtitle": "Low-cost, high-impact marketing strategies for new businesses"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Low-cost marketing channels and tactics",
+        "Content marketing and social media strategies",
+        "Building partnerships and referral networks",
+        "Measuring marketing ROI on a budget"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Low-Cost Marketing Fundamentals",
+      "content": "Effective marketing doesn't require a large budget. Focus on understanding your target customers, creating valuable content, and building genuine relationships. The most successful marketing often comes from providing real value rather than traditional advertising."
+    },
+    {
+      "type": "keypoints",
+      "title": "Budget Marketing Strategies",
+      "points": [
+        {
+          "title": "Content Marketing",
+          "description": "Create valuable content (blog posts, videos, guides) that attracts and educates potential customers."
+        },
+        {
+          "title": "Social Media Marketing",
+          "description": "Build a following on platforms where your customers spend time, focusing on engagement over followers."
+        },
+        {
+          "title": "Referral Programs",
+          "description": "Encourage satisfied customers to refer others through incentives and great service."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Focus on Your Niche",
+      "content": "Rather than trying to appeal to everyone, focus on serving a specific niche well. This allows for more targeted, cost-effective marketing.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Building Marketing Systems",
+      "content": "Create repeatable marketing processes that don't rely on constant creativity. Set up automated email sequences, content calendars, and customer feedback systems. Track what works and double down on successful tactics."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Implement Budget Marketing",
+      "steps": [
+        "Identify your target customer's preferred communication channels",
+        "Create one piece of valuable content (blog post, video, or guide)",
+        "Set up profiles on 2-3 relevant social media platforms",
+        "Ask satisfied customers for testimonials and referrals"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Track Everything",
+      "content": "Even with a small budget, track your marketing efforts. Use free tools like Google Analytics, social media insights, and simple spreadsheets to measure what's working."
+    }
+  ]
+}

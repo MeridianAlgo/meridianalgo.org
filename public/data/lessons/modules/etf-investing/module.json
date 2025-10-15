@@ -1,0 +1,51 @@
+{
+  "id": "etf-investing",
+  "title": "ETF Investing Strategies",
+  "description": "Master exchange-traded fund investments",
+  "duration": "2 weeks",
+  "difficulty": "Beginner",
+  "icon": "BarChart",
+  "color": "purple",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "etf-investing_1",
+      "title": "What are ETFs?",
+      "type": "reading",
+      "duration": "15 min",
+      "points": 100,
+      "contentFile": "modules/etf-investing/lessons/01_lesson.json"
+    },
+    {
+      "id": "etf-investing_2",
+      "title": "ETFs vs Mutual Funds",
+      "type": "reading",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "modules/etf-investing/lessons/02_lesson.json"
+    },
+    {
+      "id": "etf-investing_3",
+      "title": "Choosing the Right ETFs",
+      "type": "exercise",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/etf-investing/lessons/03_lesson.json"
+    },
+    {
+      "id": "etf-investing_4",
+      "title": "ETF Portfolio Construction",
+      "type": "reading",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "modules/etf-investing/lessons/04_lesson.json"
+    }
+  ],
+  "quiz": {
+    "id": "etf-investing_quiz",
+    "title": "ETF Investing Strategies Quiz",
+    "duration": "10 min",
+    "points": 150,
+    "contentFile": "modules/etf-investing/quiz.json"
+  }
+}

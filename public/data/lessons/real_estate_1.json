@@ -1,0 +1,58 @@
+{
+  "title": "Real Estate Investment Basics",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "From Property to Portfolio",
+      "subtitle": "Cash flow, appreciation, and leverage without the buzzwords"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "How rentals generate returns (cash flow + principal paydown + appreciation)",
+        "Why leverage magnifies both gains and losses",
+        "Key metrics: cap rate, cash‑on‑cash, and DSCR",
+        "Simple screening process for a first deal"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Three Return Engines",
+      "content": "Rental property returns come from (1) cash flow after expenses, (2) tenants paying down your mortgage (equity build), and (3) potential appreciation. Smart investors underwrite on conservative rents and no appreciation, so the deal works on day one."
+    },
+    {
+      "type": "keypoints",
+      "title": "Quick Metrics",
+      "points": [
+        { "title": "Cap Rate", "description": "Net operating income / purchase price. Good for comparing similar properties in the same market." },
+        { "title": "Cash‑on‑Cash", "description": "Annual pre‑tax cash flow / cash invested. Reflects the return on your actual dollars in the deal." },
+        { "title": "DSCR", "description": "Debt service coverage ratio = NOI / annual debt service. Lenders prefer DSCR > 1.20 for safety." }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Leverage Cuts Both Ways",
+      "content": "A small rent drop can wipe out cash flow if debt is high. Keep cash reserves and stress‑test with higher vacancies and repair costs.",
+      "color": "orange"
+    },
+    {
+      "type": "actionsteps",
+      "title": "Your First Deal Checklist",
+      "steps": [
+        "Pick a target neighborhood and analyze 10 recent rentals for rent and expense ranges.",
+        "Build a simple underwriting sheet (rent, taxes, insurance, maintenance, vacancy, management, mortgage).",
+        "Define your walk‑away numbers (minimum cash‑on‑cash, DSCR).",
+        "Talk to one lender and one property manager to sanity‑check your assumptions."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Buy Boring",
+      "content": "Predictable areas with stable tenants beat flashy zip codes with fragile math. Boring often compounds better."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Beneficiary Designations",
+  "type": "exercise",
+  "duration": "26 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Keep Accounts Aligned With Your Estate Plan",
+      "subtitle": "Audit beneficiaries across accounts to avoid conflicts and delays"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Complete",
+      "items": [
+        "Account inventory with primary and contingent beneficiaries",
+        "Naming conventions for minors, charities, and trusts",
+        "Trigger list of events requiring updates",
+        "Communication plan for heirs and fiduciaries"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Beneficiaries Override Wills",
+      "content": "Many assets—retirement accounts, life insurance, payable-on-death bank accounts—transfer based on beneficiary forms, not your will. Inconsistencies create disputes and unintended outcomes, so update designations whenever your estate plan changes."
+    },
+    {
+      "type": "keypoints",
+      "title": "Designation Guidelines",
+      "points": [
+        {
+          "title": "Primary vs. Contingent",
+          "description": "Name backups in case the primary beneficiary predeceases you or declines the inheritance."
+        },
+        {
+          "title": "Per Stirpes vs. Per Capita",
+          "description": "Clarify how a beneficiary's share should pass to descendants if they are no longer living."
+        },
+        {
+          "title": "Trusts as Beneficiaries",
+          "description": "Using a trust can add control for minor children or heirs who need structured distributions."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Avoid Orphan Accounts",
+      "content": "Every account should list both primary and contingent beneficiaries. Missing designations force assets into probate.",
+      "color": "orange"
+    },
+    {
+      "type": "actionsteps",
+      "title": "Beneficiary Audit Sprint",
+      "steps": [
+        "List all accounts (401(k), IRA, brokerage, insurance, HSAs, bank) and note current designations.",
+        "Verify legal names, Social Security numbers, and percentages for each beneficiary.",
+        "Submit updated forms where needed—many providers offer electronic updates via secure portals.",
+        "Record confirmation emails or letters for your estate file.",
+        "Notify beneficiaries and fiduciaries about the updates, noting where documents are stored."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Calendar Annual Reviews",
+      "content": "Set a recurring reminder every January to review designations alongside your insurance coverage and net worth statement.",
+      "icon": "calendar"
+    }
+  ]
+}

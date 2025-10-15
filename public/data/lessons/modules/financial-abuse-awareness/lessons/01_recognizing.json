@@ -1,0 +1,101 @@
+{
+  "title": "Recognizing Financial Abuse",
+  "type": "reading",
+  "duration": "15 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Recognizing Financial Abuse",
+      "subtitle": "Understanding the warning signs and taking the first step toward safety",
+      "color": "red",
+      "icon": "AlertTriangle"
+    },
+    {
+      "type": "content-warning",
+      "title": "Content Warning",
+      "content": "This lesson discusses financial abuse, which may be triggering for some readers. If you need immediate help, please contact the National Domestic Violence Hotline at 1-800-799-7233 or visit thehotline.org.",
+      "color": "red"
+    },
+    {
+      "type": "content",
+      "title": "What is Financial Abuse?",
+      "content": "Financial abuse is a form of domestic abuse where one person controls another's ability to acquire, use, or maintain financial resources. It's about power and control, and it can happen to anyone regardless of income level, education, or background."
+    },
+    {
+      "type": "key-points",
+      "title": "Common Warning Signs",
+      "points": [
+        {
+          "title": "Control Over Money",
+          "description": "Partner controls all bank accounts, credit cards, or cash. You have no access to financial information or must ask permission to spend money."
+        },
+        {
+          "title": "Sabotaging Employment",
+          "description": "Partner prevents you from working, causes you to lose jobs, or interferes with work opportunities."
+        },
+        {
+          "title": "Debt Coercion",
+          "description": "Partner forces you to take out loans, open credit cards in your name, or co-sign for debts you don't understand."
+        },
+        {
+          "title": "Withholding Basic Needs",
+          "description": "Partner refuses to provide money for necessities like food, medicine, or childcare despite having resources."
+        },
+        {
+          "title": "Hiding Financial Information",
+          "description": "Partner keeps financial secrets, hides assets, or refuses to share information about household finances."
+        },
+        {
+          "title": "Economic Exploitation",
+          "description": "Partner steals money, forges signatures, or uses your identity without permission."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Financial Abuse Matters",
+      "content": "Financial abuse is present in 99% of domestic violence cases. It's often the main reason survivors stay in or return to abusive relationships. Without access to money, it's extremely difficult to leave, find housing, or start over. Recognizing financial abuse is the first step toward regaining control."
+    },
+    {
+      "type": "steps",
+      "title": "If You Recognize These Signs",
+      "steps": [
+        "Know that it's not your fault. Financial abuse is a deliberate tactic of control.",
+        "Document everything you can safely - take photos of documents, save emails, keep records.",
+        "Reach out to a trusted friend, family member, or domestic violence advocate.",
+        "Contact the National Domestic Violence Hotline (1-800-799-7233) for confidential support.",
+        "Create a safety plan that includes financial considerations.",
+        "Consider consulting with a domestic violence advocate before taking legal action."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "You Are Not Alone",
+      "content": "Millions of people experience financial abuse. There are resources, advocates, and support systems ready to help you. Recovery is possible, and you deserve financial safety and independence.",
+      "color": "blue",
+      "icon": "Heart"
+    },
+    {
+      "type": "resources",
+      "title": "Immediate Help Resources",
+      "links": [
+        {
+          "label": "National Domestic Violence Hotline",
+          "description": "24/7 confidential support - Call 1-800-799-7233 or text START to 88788",
+          "url": "https://www.thehotline.org"
+        },
+        {
+          "label": "National Network to End Domestic Violence",
+          "description": "Find local resources and safety planning tools",
+          "url": "https://nnedv.org"
+        },
+        {
+          "label": "Allstate Foundation Purple Purse",
+          "description": "Financial abuse resources and education",
+          "url": "https://purplepurse.com"
+        }
+      ]
+    }
+  ]
+}

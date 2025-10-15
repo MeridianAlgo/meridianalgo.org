@@ -55,7 +55,7 @@ const ToolsPage: React.FC = () => {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate('/login', { state: { from: { pathname: '/financial-tools' } } });
+      navigate('/login', { state: { from: { pathname: '/tools' } } });
     }
   }, [isAuthenticated, navigate]);
 
@@ -106,6 +106,43 @@ const ToolsPage: React.FC = () => {
       coveragePercent: Math.min(1, coverage)
     };
   }, [monthlyExpenses, coverageMonths, emergencySavings]);
+
+  // Net Worth Snapshot
+  const [assets, setAssets] = useState({
+    cash: '15000',
+    investments: '25000',
+    retirement: '40000',
+    homeEquity: '80000',
+    other: '3000'
+  });
+  const [liabilitiesState, setLiabilitiesState] = useState({
+    creditCards: '1500',
+    studentLoans: '12000',
+    autoLoans: '8000',
+    mortgage: '120000',
+    other: '2000'
+  });
+  const netWorth = useMemo(() => {
+    const a = {
+      cash: Math.max(parseNumericInput(assets.cash) || 0, 0),
+      investments: Math.max(parseNumericInput(assets.investments) || 0, 0),
+      retirement: Math.max(parseNumericInput(assets.retirement) || 0, 0),
+      homeEquity: Math.max(parseNumericInput(assets.homeEquity) || 0, 0),
+      other: Math.max(parseNumericInput(assets.other) || 0, 0)
+    };
+    const l = {
+      creditCards: Math.max(parseNumericInput(liabilitiesState.creditCards) || 0, 0),
+      studentLoans: Math.max(parseNumericInput(liabilitiesState.studentLoans) || 0, 0),
+      autoLoans: Math.max(parseNumericInput(liabilitiesState.autoLoans) || 0, 0),
+      mortgage: Math.max(parseNumericInput(liabilitiesState.mortgage) || 0, 0),
+      other: Math.max(parseNumericInput(liabilitiesState.other) || 0, 0)
+    };
+    const assetTotal = a.cash + a.investments + a.retirement + a.homeEquity + a.other;
+    const liabilityTotal = l.creditCards + l.studentLoans + l.autoLoans + l.mortgage + l.other;
+    const net = assetTotal - liabilityTotal;
+    const dta = assetTotal > 0 ? (liabilityTotal / assetTotal) * 100 : 0;
+    return { assetTotal, liabilityTotal, net, dta };
+  }, [assets, liabilitiesState]);
 
   // Savings Goal
   const [goal, setGoal] = useState<string>('10000');
@@ -175,6 +212,22 @@ const ToolsPage: React.FC = () => {
       totalContributions
     };
   }, [investInitial, investMonthly, investYears, investReturn]);
+
+  // Inflation Impact
+  const [inflationPrice, setInflationPrice] = useState<string>('30000');
+  const [inflationYears, setInflationYears] = useState<string>('3');
+  const [inflationRate, setInflationRate] = useState<string>('3.0');
+  const [inflationSavings, setInflationSavings] = useState<string>('5000');
+  const inflationPlan = useMemo(() => {
+    const price = Math.max(parseNumericInput(inflationPrice) || 0, 0);
+    const years = Math.max(parseNumericInput(inflationYears) || 0, 0);
+    const rate = Math.max(parseNumericInput(inflationRate) || 0, 0);
+    const current = Math.max(parseNumericInput(inflationSavings) || 0, 0);
+    const futurePrice = price * Math.pow(1 + rate / 100, years);
+    const months = Math.round(years * 12);
+    const monthlyNeeded = months > 0 ? Math.max(0, (futurePrice - current) / months) : 0;
+    return { futurePrice, monthlyNeeded, months };
+  }, [inflationPrice, inflationYears, inflationRate, inflationSavings]);
 
   // Debt Payoff (Snowball)
   const [balance, setBalance] = useState<string>('5000');
@@ -351,22 +404,54 @@ const ToolsPage: React.FC = () => {
     const income = Math.max(parseNumericInput(annualIncomeTax) || 0, 0);
     const deductions = Math.max(parseNumericInput(taxDeductions) || 0, 0);
     const taxableIncome = Math.max(0, income - deductions);
-    
-    // Simple tax calculation for 2024 (approximate)
+
+    type Bracket = { upTo: number; rate: number };
+    const bracketsByStatus: Record<string, Bracket[]> = {
+      single: [
+        { upTo: 11000, rate: 0.10 },
+        { upTo: 44725, rate: 0.12 },
+        { upTo: 95375, rate: 0.22 },
+        { upTo: 182100, rate: 0.24 },
+        { upTo: 231250, rate: 0.32 },
+        { upTo: 578125, rate: 0.35 },
+        { upTo: Infinity, rate: 0.37 },
+      ],
+      married_joint: [
+        { upTo: 22000, rate: 0.10 },
+        { upTo: 89450, rate: 0.12 },
+        { upTo: 190750, rate: 0.22 },
+        { upTo: 364200, rate: 0.24 },
+        { upTo: 462500, rate: 0.32 },
+        { upTo: 693750, rate: 0.35 },
+        { upTo: Infinity, rate: 0.37 },
+      ],
+      head_household: [
+        { upTo: 15700, rate: 0.10 },
+        { upTo: 59850, rate: 0.12 },
+        { upTo: 95350, rate: 0.22 },
+        { upTo: 182100, rate: 0.24 },
+        { upTo: 231250, rate: 0.32 },
+        { upTo: 578100, rate: 0.35 },
+        { upTo: Infinity, rate: 0.37 },
+      ],
+    };
+
+    const brackets = bracketsByStatus[taxFilingStatus] || bracketsByStatus.single;
+    let remaining = taxableIncome;
+    let lastCap = 0;
     let tax = 0;
-    if (taxableIncome <= 11000) {
-      tax = taxableIncome * 0.10;
-    } else if (taxableIncome <= 44725) {
-      tax = 1100 + (taxableIncome - 11000) * 0.12;
-    } else if (taxableIncome <= 95375) {
-      tax = 5147 + (taxableIncome - 44725) * 0.22;
-    } else {
-      tax = 17105 + (taxableIncome - 95375) * 0.24;
+    for (const b of brackets) {
+      if (remaining <= 0) break;
+      const span = Math.min(remaining, b.upTo - lastCap);
+      if (span > 0) {
+        tax += span * b.rate;
+        remaining -= span;
+        lastCap = b.upTo;
+      }
     }
-    
+
     const effectiveRate = taxableIncome > 0 ? (tax / taxableIncome) * 100 : 0;
     const afterTaxIncome = income - tax;
-    
     return { tax, effectiveRate, taxableIncome, afterTaxIncome };
   }, [annualIncomeTax, taxFilingStatus, taxDeductions]);
 
@@ -538,6 +623,64 @@ const ToolsPage: React.FC = () => {
                 </div>
               </Card>
 
+              <Card
+                title="Net Worth Snapshot"
+                icon={<Calculator className="w-5 h-5" />}
+                description="Tally assets and liabilities to see your net worth and debt-to-asset ratio."
+              >
+                <div className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <p className="text-sm text-gray-300 mb-2">Assets</p>
+                      <div className="space-y-2">
+                        <label className="block text-xs text-gray-400">Cash & Savings</label>
+                        <input type="number" value={assets.cash} onChange={e => setAssets(v => ({ ...v, cash: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Investments</label>
+                        <input type="number" value={assets.investments} onChange={e => setAssets(v => ({ ...v, investments: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Retirement Accounts</label>
+                        <input type="number" value={assets.retirement} onChange={e => setAssets(v => ({ ...v, retirement: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Home Equity</label>
+                        <input type="number" value={assets.homeEquity} onChange={e => setAssets(v => ({ ...v, homeEquity: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Other Assets</label>
+                        <input type="number" value={assets.other} onChange={e => setAssets(v => ({ ...v, other: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300 mb-2">Liabilities</p>
+                      <div className="space-y-2">
+                        <label className="block text-xs text-gray-400">Credit Cards</label>
+                        <input type="number" value={liabilitiesState.creditCards} onChange={e => setLiabilitiesState(v => ({ ...v, creditCards: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Student Loans</label>
+                        <input type="number" value={liabilitiesState.studentLoans} onChange={e => setLiabilitiesState(v => ({ ...v, studentLoans: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Auto Loans</label>
+                        <input type="number" value={liabilitiesState.autoLoans} onChange={e => setLiabilitiesState(v => ({ ...v, autoLoans: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Mortgage</label>
+                        <input type="number" value={liabilitiesState.mortgage} onChange={e => setLiabilitiesState(v => ({ ...v, mortgage: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                        <label className="block text-xs text-gray-400">Other Debts</label>
+                        <input type="number" value={liabilitiesState.other} onChange={e => setLiabilitiesState(v => ({ ...v, other: e.target.value }))} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+                    <div className="bg-gray-900 rounded-lg p-3 border border-gray-700">
+                      <p className="text-xs text-gray-400">Total Assets</p>
+                      <p className="text-white font-semibold">{formatCurrency(Math.round(netWorth.assetTotal))}</p>
+                    </div>
+                    <div className="bg-gray-900 rounded-lg p-3 border border-gray-700">
+                      <p className="text-xs text-gray-400">Total Liabilities</p>
+                      <p className="text-white font-semibold">{formatCurrency(Math.round(netWorth.liabilityTotal))}</p>
+                    </div>
+                    <div className="bg-gray-900 rounded-lg p-3 border border-gray-700">
+                      <p className="text-xs text-gray-400">Net Worth</p>
+                      <p className={`font-semibold ${netWorth.net >= 0 ? 'text-white' : 'text-red-300'}`}>{formatCurrency(Math.round(netWorth.net))}</p>
+                    </div>
+                    <div className="bg-gray-900 rounded-lg p-3 border border-gray-700">
+                      <p className="text-xs text-gray-400">Debt / Asset</p>
+                      <p className="text-white font-semibold">{Number.isFinite(netWorth.dta) ? netWorth.dta.toFixed(1) : '0'}%</p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
               <Card
                 title="Emergency Fund Cushion"
                 icon={<Activity className="w-5 h-5" />}

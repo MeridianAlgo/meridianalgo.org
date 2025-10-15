@@ -88,7 +88,14 @@ const Dashboard: React.FC = () => {
     }
   ];
 
-  const earnedAchievements = achievements.filter(a => a.earned);
+  const earnedAchievements = achievements
+    .filter(a => a.earned)
+    .sort((a, b) => {
+      if (a.date && b.date) return new Date(a.date).getTime() - new Date(b.date).getTime();
+      if (a.date) return -1;
+      if (b.date) return 1;
+      return 0;
+    });
 
   return (
     <div className="min-h-screen bg-black text-white pt-24">
@@ -161,7 +168,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="max-h-64 overflow-y-auto space-y-4 pr-2 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800">
                 {[
                   { name: 'Budgeting & Money Management', completed: user.completedConcepts.filter(c => c.startsWith('budgeting')).length, total: 2 },
                   { name: 'Saving & Goal Setting', completed: user.completedConcepts.filter(c => c.startsWith('saving')).length, total: 2 },
@@ -196,38 +203,41 @@ const Dashboard: React.FC = () => {
               </Link>
             </div>
 
-            {/* Achievements Section */}
+            {/* Achievements Section - Only Completed */}
             <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Achievements</h2>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-white">Achievements</h2>
+                <Link to="/achievements" className="text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors">
+                  View All
+                </Link>
+              </div>
               
-              <div className="space-y-4">
-                {achievements.map((achievement) => (
-                  <div 
-                    key={achievement.id}
-                    className={`flex items-center space-x-4 p-4 rounded-xl border transition-all ${
-                      achievement.earned 
-                        ? 'bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-400/30' 
-                        : 'bg-gray-800/30 border-gray-700/50'
-                    }`}
-                  >
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      achievement.earned 
-                        ? 'bg-yellow-400/20 text-yellow-400' 
-                        : 'bg-gray-700/50 text-gray-500'
-                    }`}>
-                      {achievement.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className={`font-semibold ${achievement.earned ? 'text-white' : 'text-gray-400'}`}>
-                        {achievement.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm">{achievement.description}</p>
-                    </div>
-                    {achievement.earned && (
+              <div className="max-h-[400px] overflow-y-auto space-y-4 pr-2 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-800">
+                {earnedAchievements.length > 0 ? (
+                  earnedAchievements.map((achievement) => (
+                    <div 
+                      key={achievement.id}
+                      className="flex items-center space-x-4 p-4 rounded-xl border bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-400/30 transition-all hover:scale-[1.02]"
+                    >
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-yellow-400/20 text-yellow-400">
+                        {achievement.icon}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-white">
+                          {achievement.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm">{achievement.description}</p>
+                      </div>
                       <Award className="w-5 h-5 text-yellow-400" />
-                    )}
+                    </div>
+                  ))
+                ) : (
+                  <div className="text-center py-8">
+                    <Award className="w-12 h-12 text-gray-600 mx-auto mb-3" />
+                    <p className="text-gray-400">No achievements yet</p>
+                    <p className="text-gray-500 text-sm mt-1">Start learning to earn badges!</p>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>

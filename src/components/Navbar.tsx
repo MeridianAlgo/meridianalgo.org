@@ -9,14 +9,12 @@ interface NavLink {
   to: string;
   external?: boolean;
 }
-
 const NAV_LINKS: NavLink[] = [
   { name: 'Partnerships', to: '/partnerships' },
   { name: 'Contact', to: '/contact' },
 ];
 
 const LEARN_LINKS: NavLink[] = [
-  { name: 'Financial Tools', to: '/tools' },
   { name: 'Financial Literacy', to: '/financial-literacy' },
   { name: 'Open Source', to: '/opensource' },
   { name: 'Newsletters', to: '/newsletters' },
@@ -24,7 +22,6 @@ const LEARN_LINKS: NavLink[] = [
 ];
 
 const AUTHENTICATED_LEARN_LINKS: NavLink[] = [
-  { name: 'Financial Tools', to: '/tools' },
   { name: 'Financial Literacy', to: '/financial-literacy' },
   { name: 'Open Source', to: '/opensource' },
   { name: 'Newsletters', to: '/newsletters' },

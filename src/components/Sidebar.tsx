@@ -142,34 +142,38 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, activePage, user: _user, onLogou
       {/* Account */}
       <div className={footerContainerClasses}>
         {_user && (
-          <div className={`flex items-center ${sidebarOpen ? 'justify-between' : 'justify-start'} gap-3 mb-4`}>
-            {(_user.photoURL) ? (
-              <img
-                src={_user.photoURL}
-                alt={_user.name || 'User avatar'}
-                className="w-10 h-10 rounded-xl object-cover border border-gray-700"
-                referrerPolicy="no-referrer"
-              />
-            ) : (
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white grid place-items-center font-semibold">
-                {(_user.name?.charAt(0) || '?').toUpperCase()}
-              </div>
-            )}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="flex-shrink-0">
+              {(_user.photoURL) ? (
+                <img
+                  src={_user.photoURL}
+                  alt={_user.name || 'User avatar'}
+                  className="w-10 h-10 rounded-xl object-cover border border-gray-700"
+                  referrerPolicy="no-referrer"
+                />
+              ) : (
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white grid place-items-center font-semibold">
+                  {(_user.name?.charAt(0) || '?').toUpperCase()}
+                </div>
+              )}
+            </div>
             {sidebarOpen && (
-              <div className="flex-1 min-w-0">
+              <div className="flex-1 min-w-0 overflow-hidden">
                 <p className="text-sm font-semibold text-white truncate">{_user.name || 'Learner'}</p>
                 <p className="text-xs text-gray-400">{_user.totalPoints ?? 0} pts</p>
               </div>
             )}
           </div>
         )}
-        <button
-          onClick={onLogout}
-          className="w-full flex items-center justify-start gap-2 px-3 py-2 text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded-lg transition-colors"
-        >
-          <LogOut className="w-4 h-4 flex-shrink-0" />
-          {sidebarOpen && <span className="text-sm font-medium">Sign Out</span>}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={onLogout}
+            className={`flex items-center gap-2 px-3 py-2 text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded-lg transition-colors ${sidebarOpen ? 'w-full justify-start' : 'w-auto justify-center'}`}
+          >
+            <LogOut className="w-4 h-4 flex-shrink-0" />
+            {sidebarOpen && <span className="text-sm font-medium">Sign Out</span>}
+          </button>
+        </div>
       </div>
     </aside>
   );

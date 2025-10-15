@@ -1,0 +1,72 @@
+{
+  "title": "Seasonal and Irregular Expenses",
+  "type": "exercise",
+  "duration": "24 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Planning for the Unexpected",
+      "subtitle": "Managing expenses that don't fit neat monthly categories"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Identifying seasonal and irregular expenses",
+        "Creating sinking funds for predictable irregular costs",
+        "Planning for annual or semi-annual expenses",
+        "Adjusting your budget for life changes"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Common Irregular Expenses",
+      "content": "Irregular expenses include insurance premiums, property taxes, holiday gifts, vacations, car registration, medical deductibles, and home maintenance. These can cause cash flow problems if not planned for in advance."
+    },
+    {
+      "type": "keypoints",
+      "title": "Irregular Expense Categories",
+      "points": [
+        {
+          "title": "Annual Expenses",
+          "description": "Insurance, property taxes, subscriptions, memberships - occur once per year."
+        },
+        {
+          "title": "Semi-Annual Expenses",
+          "description": "Car insurance, dentist visits, some utility bills - occur twice per year."
+        },
+        {
+          "title": "Quarterly Expenses",
+          "description": "Some insurance payments, estimated taxes - occur four times per year."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "The Sinking Fund Solution",
+      "content": "For each irregular expense, divide the total cost by the number of months until it's due. Save that amount monthly in a separate account to avoid cash flow surprises.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Creating Your Irregular Expense Plan",
+      "content": "List all irregular expenses and their typical costs. Calculate how much to save monthly for each. Set up separate savings accounts or use budgeting app categories to track progress toward these goals."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Plan for Irregular Expenses",
+      "steps": [
+        "List all irregular expenses and their approximate annual costs",
+        "Calculate monthly savings needed for each irregular expense",
+        "Set up sinking fund accounts or categories in your budget",
+        "Review and adjust your sinking fund amounts quarterly"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Build in Flexibility",
+      "content": "Life circumstances change, so build some flexibility into your sinking fund calculations. Review and adjust your savings amounts as needed."
+    }
+  ]
+}

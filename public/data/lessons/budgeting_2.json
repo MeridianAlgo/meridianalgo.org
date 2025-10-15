@@ -1,0 +1,72 @@
+{
+  "title": "Tracking Variable Expenses",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Mastering Irregular Spending",
+      "subtitle": "Techniques for managing expenses that don't occur monthly"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Identifying variable vs. fixed expenses",
+        "Creating sinking funds for irregular expenses",
+        "Tracking and predicting variable costs",
+        "Adjusting your budget for seasonal variations"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Variable vs. Fixed Expenses",
+      "content": "Fixed expenses occur regularly and are predictable (rent, car payment). Variable expenses fluctuate and are harder to predict (groceries, entertainment, utilities). Understanding this distinction helps you budget more effectively and avoid cash flow surprises."
+    },
+    {
+      "type": "keypoints",
+      "title": "Managing Variable Expenses",
+      "points": [
+        {
+          "title": "Track Everything",
+          "description": "Record all expenses for 2-3 months to identify patterns in variable spending."
+        },
+        {
+          "title": "Create Averages",
+          "description": "Calculate average monthly spending for variable categories to inform your budget."
+        },
+        {
+          "title": "Build Buffers",
+          "description": "Add 10-20% buffers to variable expense categories to account for fluctuations."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Sinking Funds for Irregular Expenses",
+      "content": "For expenses that occur less frequently (insurance, holidays, car maintenance), divide the annual cost by 12 and save that amount monthly in a separate account.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Seasonal Expense Planning",
+      "content": "Some expenses vary by season (higher utility bills in summer/winter, back-to-school costs). Review your spending patterns across the year and adjust your monthly budget accordingly. Use past years' data to predict future seasonal variations."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Improve Variable Expense Management",
+      "steps": [
+        "Review 3 months of expenses and categorize as fixed or variable",
+        "Calculate average monthly spending for each variable category",
+        "Set up sinking funds for irregular expenses",
+        "Add buffers to variable expense categories in your budget"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Use Technology for Tracking",
+      "content": "Expense tracking apps can automatically categorize transactions and help you identify spending patterns you might otherwise miss."
+    }
+  ]
+}

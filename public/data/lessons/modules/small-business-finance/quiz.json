@@ -1,0 +1,128 @@
+{
+  "id": "small-business-finance-quiz",
+  "title": "Small Business Finance Quiz",
+  "description": "Test your knowledge of business banking, cash flow management, tax strategies, and growth financing.",
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is the main advantage of electing S-Corporation status for a profitable small business?",
+      "options": [
+        "You don't have to pay any taxes",
+        "You can save on self-employment taxes by splitting income between salary and distributions",
+        "You get unlimited liability protection",
+        "You can avoid all paperwork requirements"
+      ],
+      "correctAnswer": 1,
+      "explanation": "S-Corporation election allows you to pay yourself a reasonable salary (subject to payroll taxes) and take remaining profits as distributions (not subject to self-employment tax). This can save thousands annually in self-employment taxes for profitable businesses, typically worthwhile once net income exceeds $60,000."
+    },
+    {
+      "id": "q2",
+      "question": "Why is it critical to separate business and personal finances?",
+      "options": [
+        "It makes bookkeeping slightly easier",
+        "It's required by the IRS for all businesses",
+        "It protects liability protection for LLCs/corporations and is essential for taxes and bookkeeping",
+        "It's only necessary if you have employees"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Mixing business and personal finances pierces the corporate veil (eliminating liability protection for LLCs and corporations), makes bookkeeping and taxes extremely difficult, and looks unprofessional to lenders and investors. Always maintain separate accounts and use them exclusively for their intended purpose."
+    },
+    {
+      "id": "q3",
+      "question": "What is the cash conversion cycle?",
+      "options": [
+        "The time it takes to convert inventory to profit",
+        "The time between when you pay for inventory/expenses and when you receive cash from customers",
+        "The time it takes to pay all your bills",
+        "The annual revenue of your business"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The cash conversion cycle measures how long your cash is tied up in operations—from when you pay for inventory or expenses until you receive cash from customers. It's calculated as Days Inventory Outstanding + Days Sales Outstanding - Days Payable Outstanding. A shorter cycle means better cash flow."
+    },
+    {
+      "id": "q4",
+      "question": "How much should a business aim to keep in cash reserves?",
+      "options": [
+        "One month of operating expenses",
+        "3-6 months of operating expenses",
+        "One year of operating expenses",
+        "Cash reserves aren't necessary"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Businesses should maintain 3-6 months of operating expenses in cash reserves for emergencies, slow periods, and opportunities. This provides a financial cushion and peace of mind. Calculate monthly operating expenses and multiply by 3-6 to determine your target reserve amount."
+    },
+    {
+      "id": "q5",
+      "question": "What is the self-employment tax rate on net business income?",
+      "options": [
+        "7.65%",
+        "15.3%",
+        "25%",
+        "It varies by state"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Self-employment tax is 15.3% on net self-employment income (12.4% Social Security + 2.9% Medicare), covering both the employee and employer portions. This is in addition to regular income tax. The Social Security portion applies only to income up to $160,200 (2023)."
+    },
+    {
+      "id": "q6",
+      "question": "When are quarterly estimated tax payments due?",
+      "options": [
+        "January 1, April 1, July 1, October 1",
+        "April 15, June 15, September 15, January 15",
+        "March 31, June 30, September 30, December 31",
+        "The 15th of every third month"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Quarterly estimated tax payments are due April 15, June 15, September 15, and January 15 of the following year. Self-employed individuals must make these payments if they expect to owe $1,000+ in taxes. Missing payments results in underpayment penalties."
+    },
+    {
+      "id": "q7",
+      "question": "What is the maximum home office deduction using the simplified method?",
+      "options": [
+        "$500",
+        "$1,000",
+        "$1,500",
+        "$2,500"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The simplified home office deduction method allows $5 per square foot up to 300 square feet, for a maximum deduction of $1,500. The regular method calculates actual expenses proportional to your home office percentage and may result in a larger deduction but requires more documentation."
+    },
+    {
+      "id": "q8",
+      "question": "What is bootstrapping in business?",
+      "options": [
+        "Taking out large loans to fund growth",
+        "Funding growth from business profits rather than external capital",
+        "Selling equity to investors",
+        "Using credit cards for all expenses"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Bootstrapping means funding business growth from profits and revenue rather than external capital (loans or investors). This maintains 100% ownership and control, avoids debt payments, and forces financial discipline. Many successful businesses bootstrap to significant revenue before seeking outside capital."
+    },
+    {
+      "id": "q9",
+      "question": "What is the main advantage of an SBA loan over a conventional business loan?",
+      "options": [
+        "SBA loans don't need to be repaid",
+        "SBA loans have no eligibility requirements",
+        "SBA loans typically offer better terms and lower rates due to government guarantee",
+        "SBA loans are approved instantly"
+      ],
+      "correctAnswer": 2,
+      "explanation": "SBA loans are partially guaranteed by the Small Business Administration, reducing lender risk and allowing better terms—lower interest rates, longer repayment periods, and lower down payments. However, they require extensive documentation and have a 30-90 day approval process."
+    },
+    {
+      "id": "q10",
+      "question": "What should you avoid when seeking business financing?",
+      "options": [
+        "SBA loans",
+        "Business lines of credit",
+        "Merchant cash advances with 40-200% effective APR",
+        "All forms of debt"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Merchant cash advances are extremely expensive, often with effective APRs of 40-200%. They should be used only as an absolute last resort. Even credit cards are typically cheaper. Explore all other financing options—lines of credit, term loans, SBA loans, or invoice factoring—before considering merchant cash advances."
+    }
+  }
+}

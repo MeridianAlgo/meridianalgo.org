@@ -1,0 +1,105 @@
+{
+  "id": "01_banking_structure",
+  "title": "Business Banking and Structure",
+  "content": {
+    "hero": {
+      "title": "Business Banking and Legal Structure",
+      "subtitle": "Set up the financial foundation for your business",
+      "image": "/images/lessons/business-banking.jpg"
+    },
+    "introduction": "Choosing the right business structure and setting up proper banking is foundational to your business's financial health and legal protection. These decisions affect your taxes, liability, ability to raise capital, and day-to-day operations. Getting this right from the start saves headaches and money later.",
+    "keyPoints": [
+      "Separate business and personal finances immediately—it's legally and financially critical",
+      "Your business structure (LLC, S-Corp, etc.) affects taxes, liability, and paperwork",
+      "Business credit cards and accounts build business credit separate from personal",
+      "Proper bookkeeping from day one makes tax time easier and provides business insights",
+      "Consider an EIN (Employer Identification Number) even if you don't have employees"
+    ],
+    "sections": [
+      {
+        "title": "Choosing Your Business Structure",
+        "content": "Your business structure determines liability protection, tax treatment, and administrative requirements. Sole Proprietorship is the simplest—you and the business are one entity, but you have unlimited personal liability and pay self-employment tax on all profits. LLC (Limited Liability Company) provides liability protection (personal assets protected from business debts) with flexible tax treatment—can be taxed as sole proprietor, partnership, or corporation. S-Corporation offers liability protection and potential tax savings by allowing you to pay yourself a reasonable salary (subject to payroll taxes) and take remaining profits as distributions (not subject to self-employment tax). C-Corporation is for businesses seeking outside investment, with double taxation but easier to raise capital. Most small businesses start as sole proprietors or LLCs. Consider S-Corp election once profitable (typically $60,000+ net income) to save on self-employment taxes."
+      },
+      {
+        "title": "Setting Up Business Banking",
+        "content": "Open a dedicated business checking account immediately—even before making your first sale. This separates business and personal finances, which is legally required for LLCs and corporations, and essential for tax purposes and bookkeeping. To open a business account, you'll need: your business formation documents (LLC articles, incorporation papers), EIN (Employer Identification Number from the IRS), business license if required, and personal identification. Compare banks on fees, minimum balances, transaction limits, online banking features, and integration with accounting software. Consider online business banks (Novo, Relay, Mercury) for lower fees and better features. Many offer free accounts with no minimums. Also open a business savings account for tax savings and emergency funds—aim to save 3-6 months of operating expenses."
+      },
+      {
+        "title": "Business Credit Cards and Credit",
+        "content": "Business credit cards serve multiple purposes: separate business expenses, build business credit, earn rewards on business spending, and provide short-term cash flow flexibility. Apply for a business credit card once you have an EIN and business bank account. Initially, you'll likely need to personally guarantee the card, but it can still build business credit if the issuer reports to business credit bureaus (Dun & Bradstreet, Experian Business, Equifax Business). Look for cards with: no annual fee (or valuable benefits that justify the fee), rewards aligned with your spending (cash back, travel, office supplies), 0% intro APR for large purchases, and expense management tools. Pay the balance in full monthly to avoid interest. Strong business credit helps you qualify for better terms on loans, leases, and vendor credit lines."
+      },
+      {
+        "title": "Getting an EIN and Business Licenses",
+        "content": "An Employer Identification Number (EIN) is like a Social Security number for your business. It's free and takes minutes to get from the IRS website. You need an EIN if you: have employees, operate as a corporation or partnership, file certain tax returns, or want to open a business bank account (some banks accept SSN for sole proprietors, but EIN is better). Even sole proprietors benefit from an EIN—it keeps your SSN off business documents and helps separate business and personal identity. Business licenses and permits vary by location and industry. Check requirements at federal, state, and local levels. Common licenses: general business license, professional licenses, sales tax permit, health permits (for food businesses), and home occupation permits. Operating without required licenses risks fines and legal issues."
+      },
+      {
+        "title": "Bookkeeping Basics",
+        "content": "Proper bookkeeping tracks income and expenses, ensures tax compliance, and provides insights for business decisions. At minimum, track: all income (sales, payments received), all expenses (categorized by type), accounts receivable (money owed to you), accounts payable (money you owe), and inventory if applicable. Use accounting software (QuickBooks, FreshBooks, Wave, Xero) rather than spreadsheets—it's more accurate, easier for taxes, and provides better reports. Connect your business bank accounts and credit cards for automatic transaction import. Reconcile accounts monthly to catch errors. Save all receipts and invoices—digital is fine. Consider hiring a bookkeeper once revenue reaches $5,000-$10,000/month. Good bookkeeping makes tax preparation easier and cheaper, helps you understand profitability, and is required for loans or investors."
+      },
+      {
+        "title": "Separating Business and Personal Finances",
+        "content": "Never mix business and personal finances—it's the most common small business mistake. Use your business account exclusively for business transactions and personal accounts for personal expenses. If you need money from the business, take an official owner's draw or salary, don't just transfer randomly. Mixing finances: pierces the corporate veil (eliminates liability protection for LLCs/corporations), makes bookkeeping a nightmare, complicates taxes, and looks unprofessional to lenders and investors. If you accidentally use a personal card for business, reimburse yourself officially through the business account with proper documentation. If you use a business card for personal expenses, repay the business immediately. Maintain clear boundaries from day one—it's much harder to untangle later."
+      }
+    ],
+    "callouts": [
+      {
+        "type": "tip",
+        "title": "S-Corp Election Timing",
+        "content": "Once your business is consistently profitable (typically $60,000+ net income), consult a CPA about S-Corp election. This can save thousands in self-employment taxes by allowing you to split income between salary (subject to payroll taxes) and distributions (not subject to self-employment tax). The savings often exceed the additional accounting costs."
+      },
+      {
+        "type": "warning",
+        "title": "Don't Skip the EIN",
+        "content": "Even if you're a sole proprietor without employees, get an EIN. Using your Social Security number for business purposes increases identity theft risk and makes it harder to separate business and personal finances. An EIN is free and takes 5 minutes to obtain online."
+      },
+      {
+        "type": "example",
+        "title": "Real-World Scenario",
+        "content": "Sarah starts a consulting business as a sole proprietor, gets an EIN, opens a business checking account and credit card. After two years earning $80,000 net income, her CPA recommends S-Corp election. By paying herself a $50,000 salary and taking $30,000 as distributions, she saves about $4,500 annually in self-employment taxes."
+      }
+    ],
+    "practicalSteps": [
+      {
+        "step": 1,
+        "title": "Choose Your Business Structure",
+        "description": "Research LLC, S-Corp, and sole proprietorship options. Consider liability protection needs, tax implications, and administrative burden. Consult a CPA or attorney if unsure. File formation documents with your state if forming an LLC or corporation."
+      },
+      {
+        "step": 2,
+        "title": "Obtain Your EIN",
+        "description": "Apply for an EIN at IRS.gov—it's free and instant online. You'll receive your EIN immediately upon completion. Save the confirmation letter for your records."
+      },
+      {
+        "step": 3,
+        "title": "Open Business Bank Accounts",
+        "description": "Research business checking accounts comparing fees, features, and integrations. Open a business checking account and savings account. Order checks and debit card. Set up online banking and mobile app."
+      },
+      {
+        "step": 4,
+        "title": "Apply for Business Credit Card",
+        "description": "Compare business credit cards for rewards, fees, and benefits. Apply for a card that matches your spending patterns. Set up automatic payment from your business checking account to avoid late fees."
+      },
+      {
+        "step": 5,
+        "title": "Set Up Accounting System",
+        "description": "Choose accounting software appropriate for your business size and complexity. Connect bank accounts and credit cards for automatic transaction import. Set up your chart of accounts and expense categories. Schedule weekly or monthly bookkeeping time."
+      },
+      {
+        "step": 6,
+        "title": "Get Required Licenses and Permits",
+        "description": "Research federal, state, and local licensing requirements for your industry and location. Apply for necessary licenses and permits. Mark renewal dates on your calendar to avoid lapses."
+      }
+    ],
+    "quiz": {
+      "question": "What is the main advantage of electing S-Corporation status for a profitable small business?",
+      "options": [
+        "You don't have to pay any taxes",
+        "You can save on self-employment taxes by splitting income between salary and distributions",
+        "You get unlimited liability protection",
+        "You can avoid all paperwork and filing requirements"
+      ],
+      "correctAnswer": 1,
+      "explanation": "S-Corporation election allows you to pay yourself a reasonable salary (subject to payroll taxes) and take remaining profits as distributions (not subject to self-employment tax). This can save thousands annually in self-employment taxes for profitable businesses, though it comes with additional payroll and administrative requirements."
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "title": "Bonds and Fixed Income Quiz",
+  "type": "quiz",
+  "duration": "12 min",
+  "points": 150,
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple-choice",
+      "question": "What is a key principle of bonds and fixed income quiz?",
+      "options": [
+        "35% - Payment history is the most important factor",
+        "30% - Credit utilization matters most",
+        "15% - Length of credit history is key",
+        "10% - New credit inquiries are most important"
+      ],
+      "correct": 0,
+      "explanation": "Payment history accounts for 35% of your credit score, making it the single most important factor. Paying bills on time consistently is crucial for building and maintaining good credit."
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "question": "Which strategy is most effective for long-term success?",
+      "options": [
+        "Below 10% for optimal scores",
+        "Below 30% is recommended",
+        "Below 50% is acceptable",
+        "It doesn't matter as long as you pay on time"
+      ],
+      "correct": 1,
+      "explanation": "Keeping your credit utilization below 30% is recommended for maintaining a good credit score. This means if you have a $1,000 credit limit, try to keep your balance below $300. Lower is even better!"
+    },
+    {
+      "id": 3,
+      "type": "true-false",
+      "question": "Understanding bonds and fixed income quiz is important for financial success.",
+      "correct": true,
+      "explanation": "True. A secured credit card requires a refundable security deposit that typically becomes your credit limit. This makes them easier to get approved for when you're building credit from scratch. After demonstrating responsible use, you can often upgrade to an unsecured card."
+    },
+    {
+      "id": 4,
+      "type": "multiple-choice",
+      "question": "What should you prioritize when getting started?",
+      "options": [
+        "Once per year from each bureau (3 total per year)",
+        "Once per year total (must choose one bureau)",
+        "Twice per year from each bureau",
+        "Only when you're denied credit"
+      ],
+      "correct": 0,
+      "explanation": "You're entitled to one free credit report from each of the three major bureaus (Equifax, Experian, TransUnion) every 12 months through AnnualCreditReport.com. That's 3 free reports per year! Pro tip: Space them out every 4 months to monitor your credit year-round."
+    },
+    {
+      "id": 5,
+      "type": "true-false",
+      "question": "Consistent action is more important than perfect planning.",
+      "correct": false,
+      "explanation": "False. Closing old credit cards can actually hurt your score by reducing your available credit (increasing utilization) and shortening your credit history. Keep old cards open and use them occasionally to maintain your credit history length."
+    },
+    {
+      "id": 6,
+      "type": "multiple-choice",
+      "question": "What's the best first step when starting to build credit?",
+      "options": [
+        "Apply for multiple credit cards at once",
+        "Get a secured credit card or become an authorized user",
+        "Take out a large personal loan",
+        "Wait until you have more money saved"
+      ],
+      "correct": 1,
+      "explanation": "Starting with a secured credit card or becoming an authorized user on someone else's account are the safest, most effective ways to begin building credit. These options are accessible to beginners and help establish positive payment history."
+    },
+    {
+      "id": 7,
+      "type": "multiple-choice",
+      "question": "How long does negative information typically stay on your credit report?",
+      "options": [
+        "1-2 years",
+        "3-5 years",
+        "7 years for most items",
+        "Forever"
+      ],
+      "correct": 2,
+      "explanation": "Most negative information stays on your credit report for 7 years, including late payments, collections, and charge-offs. Bankruptcies can stay for up to 10 years. The good news is that the impact lessens over time, especially if you build positive credit history."
+    },
+    {
+      "id": 8,
+      "type": "true-false",
+      "question": "Checking your own credit score hurts your credit.",
+      "correct": false,
+      "explanation": "False. Checking your own credit score is a 'soft inquiry' and does NOT hurt your credit. Only 'hard inquiries' from lenders when you apply for credit can temporarily lower your score. Check your credit as often as you want!"
+    },
+    {
+      "id": 9,
+      "type": "multiple-choice",
+      "question": "What should you do if you find an error on your credit report?",
+      "options": [
+        "Ignore it - errors don't matter",
+        "Wait for it to fix itself",
+        "Dispute it with the credit bureau in writing",
+        "Close all your credit accounts"
+      ],
+      "correct": 2,
+      "explanation": "If you find an error, dispute it in writing with the credit bureau. They must investigate within 30 days. Include documentation supporting your claim. Errors can significantly impact your score, so it's important to address them promptly."
+    },
+    {
+      "id": 10,
+      "type": "multiple-choice",
+      "question": "What's the minimum credit score typically needed for the best mortgage rates?",
+      "options": [
+        "580-620",
+        "640-680",
+        "700-720",
+        "760-780"
+      ],
+      "correct": 3,
+      "explanation": "A credit score of 760-780 or higher typically qualifies you for the best mortgage rates. While you can get approved with lower scores, you'll pay higher interest rates. Even a small difference in rate can mean tens of thousands of dollars over a 30-year mortgage."
+    }
+  ]
+}

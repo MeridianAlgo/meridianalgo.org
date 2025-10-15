@@ -1,0 +1,74 @@
+{
+  "title": "Tax-Efficient Investing",
+  "type": "exercise",
+  "duration": "26 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Keep More of Your Returns",
+      "subtitle": "Structure your portfolio to minimize taxes without sacrificing growth"
+    },
+    {
+      "type": "overview",
+      "title": "Workshop Focus",
+      "items": [
+        "Understand tax-advantaged account hierarchy",
+        "Apply asset location strategies",
+        "Leverage tax-loss harvesting and capital gains planning",
+        "Create a tax-aware investment checklist"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Tax Drag Explained",
+      "content": "Taxes reduce net returns through dividends, interest, and realized capital gains. Strategic account selection and trade timing can improve after-tax performance, especially for long-term investors."
+    },
+    {
+      "type": "keypoints",
+      "title": "Account Priorities",
+      "points": [
+        {
+          "title": "Tax-Advantaged First",
+          "description": "Maximize contributions to 401(k)s, IRAs, HSAs before taxable accounts when possible."
+        },
+        {
+          "title": "Asset Location",
+          "description": "Hold tax-inefficient assets (bonds, REITs) in tax-deferred accounts; place tax-efficient equities in taxable accounts." 
+        },
+        {
+          "title": "Capital Gains Timing",
+          "description": "Favor long-term holdings to benefit from lower tax rates and defer gains."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Tax Alpha",
+      "content": "Incremental improvements in after-tax returns compound significantly over decades.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Tax-Loss Harvesting Basics",
+      "content": "Selling investments at a loss to offset gains can reduce current taxable income. Reinvest proceeds in a similar, not identical, asset to maintain market exposure and avoid wash-sale rules."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Tax Optimization Plan",
+      "steps": [
+        "List all investment accounts (taxable, traditional, Roth) and note current balances.",
+        "Assign each holding to an account based on tax efficiency—plan any transfers or rebalancing needed.",
+        "Review the past year's realized gains/losses and identify opportunities for tax-loss harvesting.",
+        "Set calendar reminders for quarterly tax check-ins to avoid surprises at year-end.",
+        "Document your tax-aware investing rules in your investment policy statement."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Use Tax Software Integrations",
+      "content": "Tools like TurboTax import brokerage data to highlight opportunities for harvesting and capital gains planning.",
+      "icon": "briefcase"
+    }
+  ]
+}

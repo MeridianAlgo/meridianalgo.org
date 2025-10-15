@@ -1,0 +1,72 @@
+{
+  "title": "Investment Platforms",
+  "type": "reading",
+  "duration": "18 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Choosing Where to Invest",
+      "subtitle": "Brokerage accounts, robo-advisors, and retirement accounts"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Different types of investment accounts and platforms",
+        "How to choose between traditional brokers and robo-advisors",
+        "Understanding fees, minimums, and features",
+        "Setting up and funding your investment accounts"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Types of Investment Accounts",
+      "content": "The main types of investment accounts are brokerage accounts (for general investing), retirement accounts (401(k), IRA, Roth IRA), and education savings accounts (529 plans). Each serves different purposes and has different tax implications. Start with retirement accounts for their tax advantages."
+    },
+    {
+      "type": "keypoints",
+      "title": "Investment Platforms Compared",
+      "points": [
+        {
+          "title": "Traditional Brokerage",
+          "description": "Full control over investments, research tools, but requires more knowledge and time."
+        },
+        {
+          "title": "Robo-Advisor",
+          "description": "Automated investing with low fees, good for beginners, limited customization."
+        },
+        {
+          "title": "Retirement Accounts",
+          "description": "Tax-advantaged accounts like 401(k)s and IRAs with contribution limits and withdrawal rules."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Start with Retirement Accounts",
+      "content": "If your employer offers a 401(k) with matching, contribute enough to get the full match before investing elsewhere. This is essentially free money.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Evaluating Platforms",
+      "content": "Consider fees, minimum investment requirements, available investments, research tools, and customer service. For beginners, low-cost platforms with good educational resources are ideal. Compare expense ratios, trading fees, and account minimums before choosing."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Choose Your Investment Platform",
+      "steps": [
+        "Determine what type of account you need (brokerage vs. retirement)",
+        "Research 3-4 platforms and compare their fees and features",
+        "Open an account with your chosen platform",
+        "Fund the account and make your first investment"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Look Beyond the Marketing",
+      "content": "Many platforms offer sign-up bonuses or free trades initially. Focus on long-term costs, ease of use, and the quality of their investment options rather than short-term promotions."
+    }
+  ]
+}

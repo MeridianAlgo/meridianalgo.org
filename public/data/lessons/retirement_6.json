@@ -1,0 +1,79 @@
+{
+  "title": "Longevity Income Strategies",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Make Your Money Last for Decades",
+      "subtitle": "Blend guaranteed income, flexible withdrawals, and smart risk controls to outpace a long retirement"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Why longevity risk matters even when you have a healthy nest egg",
+        "How to mix Social Security, pensions, annuities, and portfolios into a coherent income plan",
+        "Withdrawal rate guardrails that flex with market performance",
+        "Backup strategies when life expectancy or expenses change unexpectedly"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Longevity Risk 101",
+      "content": "Longevity risk is the possibility that you outlive your money. Because healthcare and lifestyle costs tend to rise later in retirement, extending your time horizon from 85 to 95 dramatically increases the income you must fund. Planning for a long life creates optionality—if you do not live that long, the surplus becomes a legacy gift."
+    },
+    {
+      "type": "keypoints",
+      "title": "Income Building Blocks",
+      "points": [
+        {
+          "title": "Guaranteed Sources",
+          "description": "Social Security, pensions, and annuitized income cover your baseline needs regardless of market swings."
+        },
+        {
+          "title": "Portfolio Withdrawals",
+          "description": "Flexible withdrawals from IRAs and taxable accounts fund discretionary spending but require managing sequence risk."
+        },
+        {
+          "title": "Reserve Buckets",
+          "description": "Cash reserves and short-term bonds cover two to three years of expenses, giving growth assets time to recover after downturns."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Guardrail Withdrawals",
+      "content": "The Guyton-Klinger guardrails adjust income up or down when portfolio performance deviates from plan. This keeps withdrawal rates within sustainable ranges without constant micromanagement.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Coordinating Income Streams",
+      "content": "Map necessary expenses and match them with predictable income sources first. Delay Social Security when possible, layer in a deferred income annuity for late-life protection, and align required minimum distributions (RMDs) with tax-efficient account drawdowns. Evaluate survivor benefits and inflation riders so both spouses stay protected."
+    },
+    {
+      "type": "content",
+      "title": "Contingency Planning",
+      "content": "Stress-test your plan for scenarios such as higher inflation, market drawdowns, long-term care events, or one spouse living well beyond age 95. Use Monte Carlo simulations or planning software to gauge probability of success, and create decision triggers—like cutting discretionary travel if success probability dips below 80%."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Design Your Longevity Playbook",
+      "steps": [
+        "List essential versus discretionary expenses and assign target funding sources to each column.",
+        "Enter your Social Security claiming ages and pension start dates into a retirement income timeline.",
+        "Model a guardrail withdrawal strategy (e.g., 4.5% initial draw with +/- 20% guardrails).",
+        "Decide whether longevity insurance or partial annuitization adds stability to late-life income.",
+        "Schedule an annual longevity review that checks spending, probability of success, and healthcare coverage."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Layer in Purpose",
+      "content": "Assign each income stream to a purpose—housing, adventures, giving—so you can trim or expand those categories intentionally as life evolves.",
+      "icon": "lightbulb"
+    }
+  ]
+}

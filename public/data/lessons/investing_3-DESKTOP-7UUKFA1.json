@@ -1,0 +1,134 @@
+{
+  "title": "Risk Assessment",
+  "type": "exercise",
+  "duration": "20 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Know Your Risk Comfort Zone",
+      "subtitle": "Evaluate how much volatility you can handle before building a portfolio"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Do",
+      "items": [
+        "Explore the factors that influence investment risk",
+        "Score your personal risk tolerance",
+        "Match risk profiles to asset mixes",
+        "Create guardrails for staying invested during turbulence"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Risk Is Personal",
+      "content": "Two investors with identical portfolios can experience opposite emotions. Age, income stability, emergency savings, and temperament all shape how you perceive risk. Understanding these drivers keeps you from bailing out during inevitable downturns." 
+    },
+    {
+      "type": "keypoints",
+      "title": "Risk Drivers",
+      "points": [
+        {
+          "title": "Capacity",
+          "description": "How much loss you could recover from financially. Depends on time horizon, income, and savings." 
+        },
+        {
+          "title": "Tolerance",
+          "description": "Your emotional response to volatility. Some investors panic after a 5% drop while others stay calm through 25%."
+        },
+        {
+          "title": "Need",
+          "description": "The return required to hit goals. Aggressive returns are unnecessary if your plan works with moderate growth."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Volatility Snapshot",
+      "content": "A diversified 80/20 stock-bond mix historically experienced an average drawdown of 18% every 7 years. Planning for that swing keeps you invested.",
+      "color": "yellow"
+    },
+    {
+      "type": "content",
+      "title": "Translating Score to Strategy",
+      "content": "Use a simple scale: conservative, balanced, or growth-oriented. Conservative profiles lean on bonds and dividend stocks. Balanced investors split between broad-market equities and high-quality bonds. Growth profiles focus on equities and alternative assets with smaller bond buffers." 
+    },
+    {
+      "type": "actionsteps",
+      "title": "Complete Your Assessment",
+      "steps": [
+        "Rate yourself 1-5 on statements like 'I lose sleep when investments drop'. Sum the score.",
+        "Classify your score: 5-9 conservative, 10-15 balanced, 16-20 growth.",
+        "Draft a target allocation for your classification (for example, balanced = 60% stock funds, 35% bond funds, 5% cash).",
+        "Write one rule that keeps you from panic selling (e.g., 'wait 72 hours before trading after market drops')."
+      ]
+    },
+    {
+      "type": "resources",
+      "title": "Know Your Risk DNA",
+      "subtitle": "Use psychologist-designed tools to benchmark your comfort with volatility.",
+      "links": [
+        {
+          "label": "Vanguard Risk Tolerance Quiz",
+          "description": "Answer scenario-based questions to see how your reactions align with typical investor profiles.",
+          "url": "https://personal.vanguard.com/us/insights/investingtruths/investing-truth-about-risk"
+        },
+        {
+          "label": "Behavioral Investor Types (UBS)",
+          "description": "Explore the traits of Preservers, Followers, Independents, and Accumulators to spot your tendencies.",
+          "url": "https://www.ubs.com/microsites/wma/insights/en/investment-insights/2018/behavioral-finance/_jcr_content/mainpar/toplevelgrid_2115116187/col1/actionbutton.1277741641.file/bGluay9wYXRoPS9jb250ZW50L2RhbS91YnMvZ2xvYmFsL21pY3Jvc2l0ZXMvd21hL2luc2lnaHRzL2VuL2JlaGF2aW9yYWwtZmluYW5jZS1yZXBvcnQtcnYyLnBkZg=="
+        },
+        {
+          "label": "Morningstar Investor Profile Worksheet",
+          "description": "Print-friendly worksheet combining goals, timelines, and emotional cues.",
+          "url": "https://www.morningstar.com/content/dam/marketing/shared/pdfs/Research/Investor_Self_Assessment_Worksheet.pdf"
+        }
+      ],
+      "layout": "grid"
+    },
+    {
+      "type": "calculator",
+      "title": "Risk Persona Gauge",
+      "calculator": {
+        "id": "risk_persona_score",
+        "description": "Average your capacity, tolerance, and need scores to discover which investing persona fits you best.",
+        "resultLabel": "Suggested Persona",
+        "inputs": [
+          {
+            "id": "capacity",
+            "label": "Capacity score (1-5)",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "placeholder": "4"
+          },
+          {
+            "id": "tolerance",
+            "label": "Tolerance score (1-5)",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "placeholder": "3"
+          },
+          {
+            "id": "need",
+            "label": "Return need score (1-5)",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "placeholder": "4"
+          }
+        ],
+        "formulaNote": "Scores are averaged; higher averages lean toward growth personas.",
+        "highlight": "Keep the persona result handy when markets swing—it's your pre-committed guide.",
+        "ctaLabel": "Pin your persona to your investing dashboard"
+      }
+    },
+    {
+      "type": "protip",
+      "title": "Automate Calm",
+      "content": "Enable automatic rebalancing or set calendar reminders to rebalance twice a year. Small adjustments keep risk aligned without emotional decisions.",
+      "icon": "lightbulb"
+    }
+  ]
+}

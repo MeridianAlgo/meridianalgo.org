@@ -1,0 +1,74 @@
+{
+  "title": "Calculating Retirement Needs",
+  "type": "exercise",
+  "duration": "30 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Know Your Retirement Number",
+      "subtitle": "Estimate the income you'll need and the savings required to support it"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Do",
+      "items": [
+        "Project annual spending in retirement",
+        "Account for inflation and healthcare",
+        "Estimate Social Security and pension benefits",
+        "Translate expenses into a savings target"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Start with Lifestyle Costs",
+      "content": "Retirement planning begins with the life you want to maintain. Break expenses into needs (housing, insurance, groceries), wants (travel, hobbies), and surprises (home repairs, medical). Use today's dollars first; we'll adjust for inflation later." 
+    },
+    {
+      "type": "keypoints",
+      "title": "Critical Inputs",
+      "points": [
+        {
+          "title": "Retirement Age",
+          "description": "Impacts how long your nest egg must last and when you can draw Social Security." 
+        },
+        {
+          "title": "Withdrawal Rate",
+          "description": "Many planners start with 4%, but adjust downward if markets worry you or healthcare is unknown." 
+        },
+        {
+          "title": "Inflation",
+          "description": "Assume 2.5%-3% annual inflation to keep projections realistic over multi-decade retirements." 
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Rule of 25",
+      "content": "Multiply desired annual income by 25 to get a ballpark savings target. $60,000 per year needs roughly $1.5 million invested.",
+      "color": "green"
+    },
+    {
+      "type": "content",
+      "title": "Adjust for Other Income",
+      "content": "Account for guaranteed sources: Social Security, pensions, annuities, or rental income. Subtract these from total spending to find how much your portfolio must deliver. A higher guaranteed floor allows lower withdrawal rates." 
+    },
+    {
+      "type": "actionsteps",
+      "title": "Retirement Needs Worksheet",
+      "steps": [
+        "Download or recreate the provided worksheet template in a spreadsheet.",
+        "List annual expenses in today's dollars, grouped by needs, wants, surprises.",
+        "Apply a 3% inflation factor for each year until retirement.",
+        "Enter expected Social Security/pension amounts (use SSA.gov estimates).",
+        "Calculate the portfolio gap and multiply by 25 (or your preferred withdrawal factor)."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Stress-Test Scenarios",
+      "content": "Model an early retirement age, a late retirement age, and a bear market in the first five years to see how your plan holds up.",
+      "icon": "lightbulb"
+    }
+  ]
+}

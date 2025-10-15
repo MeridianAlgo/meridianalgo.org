@@ -1,0 +1,72 @@
+{
+  "title": "Budget Review and Adjustment",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Keeping Your Budget Current",
+      "subtitle": "Regular review and adjustment for long-term success"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "When and how to review your budget",
+        "Identifying areas for improvement",
+        "Making adjustments without discouragement",
+        "Using budget reviews for goal progress"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Importance of Regular Reviews",
+      "content": "Budgets aren't set-it-and-forget-it tools. Regular reviews help you stay on track, identify problems early, and make necessary adjustments. Most people find monthly reviews work best, with a more comprehensive quarterly or annual review."
+    },
+    {
+      "type": "keypoints",
+      "title": "Budget Review Process",
+      "points": [
+        {
+          "title": "Compare Actual vs. Planned",
+          "description": "Review your actual spending against your budgeted amounts for each category."
+        },
+        {
+          "title": "Identify Variances",
+          "description": "Note where you overspent or underspent and understand why."
+        },
+        {
+          "title": "Adjust as Needed",
+          "description": "Update budget amounts based on new information or changing circumstances."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Be Kind to Yourself",
+      "content": "Budgeting is a skill that improves with practice. Don't get discouraged by initial setbacks - focus on progress and learning from mistakes.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Making Effective Adjustments",
+      "content": "When adjusting your budget, focus on high-impact changes first. If dining out is consistently over budget, look for specific, actionable ways to reduce it. Use budget reviews to celebrate successes and identify areas for improvement."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Conduct Effective Budget Reviews",
+      "steps": [
+        "Schedule monthly budget review sessions in your calendar",
+        "Compare actual spending to budgeted amounts for each category",
+        "Identify the top 2-3 areas for improvement",
+        "Make specific, actionable adjustments to your budget"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Use Technology for Easier Reviews",
+      "content": "Budgeting apps with automatic categorization and reporting make reviews much easier and faster than manual tracking."
+    }
+  ]
+}

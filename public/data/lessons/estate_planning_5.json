@@ -1,0 +1,72 @@
+{
+  "title": "Estate Planning for Business Owners",
+  "type": "reading",
+  "duration": "25 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Protecting Your Business Legacy",
+      "subtitle": "Estate planning strategies for entrepreneurs and business owners"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Business succession planning options",
+        "Tax implications of business transfers",
+        "Key person insurance and buy-sell agreements",
+        "Integrating business assets into your estate plan"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Business Succession Planning",
+      "content": "Every business owner needs a succession plan outlining what happens to the business if you die, become disabled, or want to retire. Options include transferring to family members, selling to partners or employees, or selling to third parties. Start planning early to maximize value and minimize disruption."
+    },
+    {
+      "type": "keypoints",
+      "title": "Succession Planning Strategies",
+      "points": [
+        {
+          "title": "Family Succession",
+          "description": "Transferring business to children or other family members through gifts or sales."
+        },
+        {
+          "title": "Management Buyout",
+          "description": "Selling to key employees or management team members."
+        },
+        {
+          "title": "Third-Party Sale",
+          "description": "Selling to external buyers, often the most lucrative option for valuable businesses."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Buy-Sell Agreements",
+      "content": "These legal contracts specify how business ownership transfers upon death, disability, or retirement. They provide certainty and can help fund business succession.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Tax Considerations for Business Owners",
+      "content": "Business interests may qualify for special tax treatment. Consider entity structure (LLC, corporation, partnership) and use of trusts or other vehicles to minimize estate taxes. Life insurance can provide liquidity for estate taxes or business continuation."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Plan Your Business Succession",
+      "steps": [
+        "Determine your preferred succession option (family, employees, or sale)",
+        "Create or update your business succession plan",
+        "Implement buy-sell agreements with business partners",
+        "Review life insurance needs for business continuation and estate taxes"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Start Planning Early",
+      "content": "Business succession planning takes time and should begin years before you plan to exit. Early planning allows you to maximize business value and implement tax-efficient strategies."
+    }
+  ]
+}

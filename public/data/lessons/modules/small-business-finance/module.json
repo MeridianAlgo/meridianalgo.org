@@ -1,0 +1,54 @@
+{
+  "id": "small-business-finance",
+  "title": "Small Business Finance",
+  "description": "Master financial management for entrepreneurs and small business owners.",
+  "category": "Business",
+  "difficulty": "Advanced",
+  "estimatedTime": "55 minutes",
+  "prerequisites": ["budgeting-basics", "tax-optimization"],
+  "points": 200,
+  "icon": "briefcase",
+  "color": "amber",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "small_business_1",
+      "title": "Business Banking and Structure",
+      "type": "reading",
+      "duration": "14 min",
+      "points": 100,
+      "contentFile": "lessons/01_banking_structure.json"
+    },
+    {
+      "id": "small_business_2",
+      "title": "Cash Flow Management",
+      "type": "reading",
+      "duration": "13 min",
+      "points": 100,
+      "contentFile": "lessons/02_cash_flow.json"
+    },
+    {
+      "id": "small_business_3",
+      "title": "Tax Strategies for Business",
+      "type": "reading",
+      "duration": "14 min",
+      "points": 100,
+      "contentFile": "lessons/03_tax_strategies.json"
+    },
+    {
+      "id": "small_business_4",
+      "title": "Scaling and Growth Finance",
+      "type": "reading",
+      "duration": "14 min",
+      "points": 100,
+      "contentFile": "lessons/04_scaling_growth.json"
+    }
+  ],
+  "quiz": {
+    "id": "small_business_quiz",
+    "title": "Small Business Finance Mastery Quiz",
+    "duration": "15 min",
+    "points": 200,
+    "contentFile": "quiz.json"
+  }
+}

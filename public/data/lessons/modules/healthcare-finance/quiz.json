@@ -1,0 +1,128 @@
+{
+  "id": "healthcare-finance-quiz",
+  "title": "Healthcare Finance Quiz",
+  "description": "Test your knowledge of healthcare savings accounts, Medicare, Medicaid, long-term care planning, and medical debt management.",
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is the primary advantage of an HSA over an FSA?",
+      "options": [
+        "HSAs have no contribution limits",
+        "HSA funds roll over year to year and can be invested for growth",
+        "HSAs can be used for any expense without penalty",
+        "HSAs don't require a high-deductible health plan"
+      ],
+      "correctAnswer": 1,
+      "explanation": "HSAs allow funds to roll over indefinitely and can be invested for long-term growth, unlike FSAs which typically operate on a 'use it or lose it' basis. This makes HSAs powerful retirement savings vehicles with triple tax advantages."
+    },
+    {
+      "id": "q2",
+      "question": "What are the 2024 HSA contribution limits for an individual?",
+      "options": [
+        "$3,050",
+        "$4,150",
+        "$6,500",
+        "$8,300"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 2024 HSA contribution limit for individuals is $4,150, with an additional $1,000 catch-up contribution allowed for those 55 and older. Family coverage allows $8,300."
+    },
+    {
+      "id": "q3",
+      "question": "Which Medicare part covers prescription drugs?",
+      "options": [
+        "Part A",
+        "Part B",
+        "Part C",
+        "Part D"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Medicare Part D provides prescription drug coverage through private insurance plans. Part A covers hospital care, Part B covers medical services, and Part C (Medicare Advantage) is an alternative that bundles coverage."
+    },
+    {
+      "id": "q4",
+      "question": "What happens if you miss your Medicare Initial Enrollment Period without creditable coverage?",
+      "options": [
+        "Nothing, you can enroll anytime",
+        "You pay a one-time penalty fee",
+        "You face a permanent 10% premium penalty for each year delayed",
+        "You must wait until age 70 to enroll"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Missing your Initial Enrollment Period without creditable coverage results in a permanent late enrollment penalty of 10% of the Part B premium for each 12-month period you delayed enrollment. This penalty lasts as long as you have Medicare."
+    },
+    {
+      "id": "q5",
+      "question": "What percentage of people turning 65 will need some form of long-term care?",
+      "options": [
+        "About 30%",
+        "About 50%",
+        "About 70%",
+        "About 90%"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Approximately 70% of people turning 65 will need some form of long-term care in their lifetime, whether in-home care, assisted living, or nursing home care. This makes planning for these costs essential."
+    },
+    {
+      "id": "q6",
+      "question": "Which statement about Medicare and long-term care is correct?",
+      "options": [
+        "Medicare covers all nursing home costs",
+        "Medicare covers unlimited custodial care",
+        "Medicare only covers short-term skilled nursing care after a hospital stay",
+        "Medicare covers in-home care indefinitely"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Medicare only covers short-term skilled nursing facility care (up to 100 days) following a qualifying 3-day hospital stay, and only when skilled care is needed. It does not cover long-term custodial care."
+    },
+    {
+      "id": "q7",
+      "question": "What is the approximate annual cost of a private nursing home room in 2024?",
+      "options": [
+        "$50,000",
+        "$75,000",
+        "$117,000",
+        "$150,000"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The national median cost for a private nursing home room is approximately $9,733 per month or $116,796 annually in 2024. Costs vary significantly by location and typically increase 3-5% each year."
+    },
+    {
+      "id": "q8",
+      "question": "As of 2023, what is the threshold for medical debt to appear on credit reports?",
+      "options": [
+        "All medical debt appears on credit reports",
+        "Medical debt under $100 doesn't appear",
+        "Medical debt under $500 doesn't appear",
+        "Medical debt never appears on credit reports"
+      ],
+      "correctAnswer": 2,
+      "explanation": "As of 2023, medical debt under $500 no longer appears on credit reports. Additionally, paid medical collections are removed immediately, providing better protection for consumers dealing with healthcare costs."
+    },
+    {
+      "id": "q9",
+      "question": "What percentage of medical bills are estimated to contain errors?",
+      "options": [
+        "About 20%",
+        "About 40%",
+        "About 60%",
+        "Up to 80%"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Studies show that up to 80% of medical bills contain errors, including duplicate charges, incorrect quantities, or services not received. This is why requesting and reviewing itemized bills is so important."
+    },
+    {
+      "id": "q10",
+      "question": "What should you do FIRST when you receive a large medical bill you cannot afford?",
+      "options": [
+        "Put it on a credit card immediately",
+        "Request an itemized bill and apply for financial assistance",
+        "Ignore it until it goes to collections",
+        "Agree to the first payment plan offered"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The best first step is to request an itemized bill to identify errors and apply for the hospital's financial assistance program. Many nonprofit hospitals offer significant discounts or free care based on income, which should be explored before other options."
+    }
+  ]
+}

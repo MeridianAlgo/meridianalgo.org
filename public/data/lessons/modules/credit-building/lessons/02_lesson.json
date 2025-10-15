@@ -1,0 +1,66 @@
+{
+  "title": "Building Credit from Zero",
+  "type": "reading",
+  "duration": "18 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Building Credit from Zero",
+      "subtitle": "Start your credit journey the right way",
+      "color": "blue",
+      "icon": "TrendingUp"
+    },
+    {
+      "type": "content",
+      "title": "Starting with No Credit History",
+      "content": "Having no credit history is different from having bad credit. You're starting with a clean slate! The challenge is that lenders have no data to assess your creditworthiness. Here's how to build credit from scratch."
+    },
+    {
+      "type": "key-points",
+      "title": "Best Ways to Build Credit from Zero",
+      "points": [
+        {
+          "title": "Secured Credit Card",
+          "description": "Put down a deposit ($200-500) that becomes your credit limit. Use it for small purchases and pay in full monthly. After 6-12 months of good behavior, you can upgrade to an unsecured card and get your deposit back."
+        },
+        {
+          "title": "Credit Builder Loan",
+          "description": "Banks hold your loan amount in savings while you make payments. After paying off the loan, you get the money back plus you've built credit history. Perfect for beginners!"
+        },
+        {
+          "title": "Become an Authorized User",
+          "description": "Ask a family member with good credit to add you to their credit card. Their positive history can help build your score. Make sure they have excellent payment history!"
+        },
+        {
+          "title": "Student Credit Card",
+          "description": "If you're in college, student cards are designed for people with no credit history. They often have lower limits and fewer perks, but they're easier to get approved for."
+        },
+        {
+          "title": "Rent Reporting Services",
+          "description": "Services like Rental Kharma or RentTrack report your rent payments to credit bureaus. Turn your monthly rent into credit-building activity!"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Your 6-Month Credit Building Plan",
+      "steps": [
+        "Month 1: Apply for a secured credit card with a $300-500 deposit",
+        "Month 1-6: Make small purchases ($20-50/month) and pay in full each month",
+        "Month 2: Set up automatic payments to never miss a due date",
+        "Month 3: Keep credit utilization below 30% (use less than $150 of $500 limit)",
+        "Month 4: Check your credit score - you should see it appear!",
+        "Month 6: Apply for a second credit card or credit builder loan",
+        "Ongoing: Continue perfect payment history and low utilization"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Patience is Key",
+      "content": "Building good credit takes time. You'll see your first score after 3-6 months, but it takes 12-24 months to build a solid credit history. Stay consistent!",
+      "color": "orange",
+      "icon": "Clock"
+    }
+  ]
+}

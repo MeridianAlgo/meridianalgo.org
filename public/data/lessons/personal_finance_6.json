@@ -1,0 +1,72 @@
+{
+  "title": "Financial Goal Setting",
+  "type": "exercise",
+  "duration": "28 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Turning Dreams into Financial Plans",
+      "subtitle": "Setting and achieving meaningful financial goals"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "How to set SMART financial goals",
+        "Prioritizing multiple financial objectives",
+        "Creating action plans for goal achievement",
+        "Tracking progress and adjusting goals"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "SMART Goal Framework",
+      "content": "SMART goals are Specific, Measurable, Achievable, Relevant, and Time-bound. Instead of 'save more money,' set 'save $10,000 for a down payment by December 31, 2025.' This framework makes goals actionable and increases the likelihood of success."
+    },
+    {
+      "type": "keypoints",
+      "title": "SMART Goal Components",
+      "points": [
+        {
+          "title": "Specific",
+          "description": "Clearly define what you want to achieve - not 'save money' but 'save $5,000'."
+        },
+        {
+          "title": "Measurable",
+          "description": "Include numbers so you can track progress - 'pay off $2,500 in credit card debt'."
+        },
+        {
+          "title": "Achievable",
+          "description": "Set challenging but realistic goals based on your current situation and resources."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Balance Short and Long-Term Goals",
+      "content": "Include both immediate goals (build emergency fund) and long-term goals (retirement savings) in your financial plan for balanced progress.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Creating Action Plans",
+      "content": "Break large goals into smaller, manageable steps. For a $10,000 emergency fund, this might mean saving $200 per paycheck. Set milestones and celebrate progress. Use tools like savings challenges or accountability partners to stay motivated."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Set Your Financial Goals",
+      "steps": [
+        "Write down 3-5 financial goals using the SMART framework",
+        "Prioritize goals based on urgency and importance",
+        "Break each goal into specific action steps with deadlines",
+        "Set up tracking systems and regular progress reviews"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Review and Adjust Regularly",
+      "content": "Life circumstances change, so revisit your goals quarterly. Celebrate achievements and adjust goals that are no longer relevant or achievable."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Business Idea Validation",
+  "type": "exercise",
+  "duration": "25 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "From Idea to Viable Business",
+      "subtitle": "Testing your business concept before investing time and money"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Techniques to validate business ideas quickly and cheaply",
+        "Market research methods for new ventures",
+        "Customer validation and feedback gathering",
+        "Minimum viable product (MVP) development and testing"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Importance of Idea Validation",
+      "content": "Most business ideas fail not because they're bad, but because they don't solve a real problem for enough people willing to pay. Validation helps you discover whether your idea has market potential before making significant investments of time and money."
+    },
+    {
+      "type": "keypoints",
+      "title": "Validation Techniques",
+      "points": [
+        {
+          "title": "Problem Validation",
+          "description": "Confirm that your target customers actually experience the problem you want to solve."
+        },
+        {
+          "title": "Solution Validation",
+          "description": "Test whether your proposed solution appeals to potential customers and meets their needs."
+        },
+        {
+          "title": "Market Validation",
+          "description": "Assess market size, competition, and your ability to reach and convert customers profitably."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Talk to Real Customers",
+      "content": "The best validation comes from direct customer conversations. Surveys and online research are helpful, but nothing replaces talking to 10-20 potential customers about their problems and your solution.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Building a Minimum Viable Product (MVP)",
+      "content": "An MVP is the simplest version of your product that allows you to test your core assumptions. It could be a landing page, prototype, or even a manual process. The goal is learning, not perfection. Use tools like no-code platforms to build MVPs quickly and inexpensively."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Validate Your Business Idea",
+      "steps": [
+        "Identify 10-20 potential customers in your target market",
+        "Conduct problem interviews to understand their pain points",
+        "Create a simple landing page or prototype to test interest",
+        "Gather feedback and iterate based on what you learn"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Be Prepared to Pivot",
+      "content": "Your initial idea might not work, but the validation process often reveals better opportunities. Stay open to changing your approach based on customer feedback."
+    }
+  ]
+}

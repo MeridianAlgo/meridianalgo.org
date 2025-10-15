@@ -1,0 +1,73 @@
+{
+  "title": "Social Security Planning",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Maximize Your Social Security Benefit",
+      "subtitle": "Understand how claiming age, earnings history, and spousal rules shape your retirement income"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "How benefits are calculated from your earnings record",
+        "Claiming age trade-offs from 62 to 70",
+        "Strategies for spouses and survivors",
+        "How work income affects benefits before full retirement age"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Benefit Basics",
+      "content": "Social Security replaces a portion of your average indexed monthly earnings from your 35 highest earning years. Filing at full retirement age (FRA) delivers 100% of your primary insurance amount. Claiming earlier permanently reduces benefits, while delaying past FRA boosts them by 8% per year until age 70." 
+    },
+    {
+      "type": "keypoints",
+      "title": "Key Decisions",
+      "points": [
+        {
+          "title": "Full Retirement Age",
+          "description": "For most people retiring today, FRA ranges from 66 to 67 depending on birth year." 
+        },
+        {
+          "title": "Early Claiming",
+          "description": "Taking benefits at 62 can cut payments by as much as 30%." 
+        },
+        {
+          "title": "Delayed Credits",
+          "description": "Waiting past FRA adds 0.67% per month (8% annually) until 70." 
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Spousal Strategies",
+      "content": "A lower-earning spouse can receive up to 50% of the higher earner's FRA benefit. Survivor benefits can reach 100% of the deceased spouse's payment.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Earnings Tests and Taxation",
+      "content": "If you claim before FRA and keep working, the earnings test can temporarily withhold $1 in benefits for every $2 earned above $25,000 (2025 single filer). Withheld benefits are recalculated at FRA, so they are not lost forever. Up to 85% of Social Security can be taxable depending on combined income, so coordinate withdrawals with your tax plan." 
+    },
+    {
+      "type": "actionsteps",
+      "title": "Plan Your Claim",
+      "steps": [
+        "Create a \"my Social Security\" account at SSA.gov to view projected benefits.",
+        "Note your FRA and calculate benefits at 62, FRA, and 70.",
+        "List expected income sources and identify years where delaying Social Security fills a gap.",
+        "If married, map out claiming ages for both partners and consider survivor protection." 
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Coordinate with Taxes",
+      "content": "Use Roth conversions or strategic withdrawals before claiming Social Security to keep taxable income lower later.",
+      "icon": "lightbulb"
+    }
+  ]
+}

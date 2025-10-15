@@ -1,0 +1,53 @@
+{
+  "id": "behavioral-finance",
+  "title": "Behavioral Finance",
+  "description": "Understand psychological biases that affect financial decisions",
+  "duration": "3 weeks",
+  "difficulty": "Intermediate",
+  "icon": "Brain",
+  "color": "purple",
+  "status": "coming-soon",
+  "prerequisites": ["foundations", "investing"],
+  "unlockCost": 800,
+  "lessons": [
+    {
+      "id": "behavioral_finance_1",
+      "title": "Introduction to Behavioral Biases",
+      "type": "reading",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "lessons/01_biases.json"
+    },
+    {
+      "id": "behavioral_finance_2",
+      "title": "Loss Aversion and Risk Perception",
+      "type": "reading",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "lessons/02_loss_aversion.json"
+    },
+    {
+      "id": "behavioral_finance_3",
+      "title": "Herd Mentality in Markets",
+      "type": "exercise",
+      "duration": "25 min",
+      "points": 100,
+      "contentFile": "lessons/03_herd_mentality.json"
+    },
+    {
+      "id": "behavioral_finance_4",
+      "title": "Overcoming Emotional Investing",
+      "type": "exercise",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "lessons/04_emotional_investing.json"
+    }
+  ],
+  "quiz": {
+    "id": "behavioral_finance_quiz",
+    "title": "Behavioral Finance Mastery Quiz",
+    "duration": "12 min",
+    "points": 150,
+    "contentFile": "quiz.json"
+  }
+}

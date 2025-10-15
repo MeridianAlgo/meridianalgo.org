@@ -1,0 +1,72 @@
+{
+  "title": "Tax-Efficient Investing",
+  "type": "exercise",
+  "duration": "26 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Minimizing Investment Taxes",
+      "subtitle": "Strategies to keep more of your investment returns"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Tax implications of different investment accounts",
+        "Tax-loss harvesting strategies",
+        "Asset location optimization",
+        "Retirement account withdrawal planning"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Account Type Tax Treatment",
+      "content": "Different accounts have different tax treatments: taxable brokerage accounts, tax-deferred retirement accounts (Traditional IRA/401(k)), and tax-free accounts (Roth IRA/401(k), HSA). Understanding these differences helps you optimize your after-tax returns."
+    },
+    {
+      "type": "keypoints",
+      "title": "Tax-Efficient Account Usage",
+      "points": [
+        {
+          "title": "Taxable Accounts",
+          "description": "Hold tax-efficient investments like index funds and municipal bonds."
+        },
+        {
+          "title": "Tax-Deferred Accounts",
+          "description": "Hold investments that generate ordinary income like bonds and REITs."
+        },
+        {
+          "title": "Tax-Free Accounts",
+          "description": "Hold growth investments that benefit from tax-free compounding."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Asset Location Matters",
+      "content": "Not all assets are taxed equally. Place tax-inefficient investments (bonds, REITs) in tax-advantaged accounts and tax-efficient investments (stocks) in taxable accounts.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Tax-Loss Harvesting",
+      "content": "This strategy involves selling losing investments to offset gains elsewhere, reducing your tax liability. You can immediately repurchase similar (but not identical) investments to maintain your portfolio allocation while capturing the tax benefit."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Optimize Your Tax Efficiency",
+      "steps": [
+        "Review your current asset location across different account types",
+        "Move tax-inefficient investments to tax-advantaged accounts",
+        "Implement tax-loss harvesting during market downturns",
+        "Plan retirement account withdrawals to minimize taxes"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Consider Tax Diversification",
+      "content": "Having money in taxable, tax-deferred, and tax-free accounts gives you flexibility in retirement to manage your tax bracket and respond to tax law changes."
+    }
+  ]
+}

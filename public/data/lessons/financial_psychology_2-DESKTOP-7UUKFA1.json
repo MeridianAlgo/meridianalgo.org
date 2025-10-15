@@ -1,0 +1,74 @@
+{
+  "title": "Overcoming Financial Stress",
+  "type": "exercise",
+  "duration": "28 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Calm Your Money Anxiety",
+      "subtitle": "Shift from financial fight-or-flight to clarity and control"
+    },
+    {
+      "type": "overview",
+      "title": "You'll Learn",
+      "items": [
+        "Spot the physical signs of money stress",
+        "Use neuroscience-backed tools to regulate your nervous system",
+        "Build a triage plan for urgent financial worries",
+        "Create rituals that keep stress from returning"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Stress and Your Brain",
+      "content": "Financial fear activates the amygdala, narrowing focus and reducing problem-solving capacity. Before you can think clearly about numbers, you need to calm the body. Stress reduction is not a luxury—it is a prerequisite for sound decisions."
+    },
+    {
+      "type": "keypoints",
+      "title": "Signs It's Stress, Not Failure",
+      "points": [
+        {
+          "title": "Physical Tension",
+          "description": "Tight shoulders, shallow breathing when checking balances."
+        },
+        {
+          "title": "Avoidance",
+          "description": "Skipping bill reminders or refusing to open statements."
+        },
+        {
+          "title": "Catastrophic Thinking",
+          "description": "Jumping from one late payment to imagining total financial collapse."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Reset Protocol",
+      "content": "Name what you feel, move the body, then take one small action. Repeat until calm returns.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Three-R System",
+      "content": "Regulate: Use breathwork or movement to calm your nervous system. Reframe: Challenge catastrophic thoughts with facts. Respond: Choose the next smallest step (e.g., email the creditor, check due dates, move $20 to savings)."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Financial Stress Triage",
+      "steps": [
+        "Create a calming playlist, breathwork app shortcut, or short walk routine for immediate relief.",
+        "Write your top three money stressors and one fact-based statement to counter each.",
+        "List support resources—friends, mentors, financial counselors—you can contact within 24 hours.",
+        "Schedule a 30-minute finance focus block where you tackle one stressor using the Three-R system.",
+        "Set a weekly check-in reminder to monitor stress levels and preempt escalation."
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Stress Alarm",
+      "content": "Notice over-checking balances multiple times per day. When it happens, pause and switch to your regulation tool instead.",
+      "icon": "alert-triangle"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Creating Your Financial Plan",
+  "type": "exercise",
+  "duration": "32 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Your Financial Roadmap",
+      "subtitle": "Building a comprehensive plan that guides your financial decisions"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Components of a comprehensive financial plan",
+        "Setting SMART financial goals",
+        "Creating a net worth statement and cash flow analysis",
+        "Developing an action plan and timeline"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Components of a Financial Plan",
+      "content": "A comprehensive financial plan includes assessment of your current situation, goal setting, strategy development, and ongoing monitoring. It covers budgeting, debt management, investment planning, insurance, estate planning, and tax strategies. The plan should be written, specific, and reviewed regularly."
+    },
+    {
+      "type": "keypoints",
+      "title": "Essential Elements",
+      "points": [
+        {
+          "title": "Current Financial Position",
+          "description": "Net worth statement showing assets, liabilities, income, and expenses."
+        },
+        {
+          "title": "Goals and Objectives",
+          "description": "Specific, measurable financial goals with timelines and priorities."
+        },
+        {
+          "title": "Risk Assessment",
+          "description": "Evaluation of financial risks and appropriate insurance coverage."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Financial Planning is Iterative",
+      "content": "Your financial plan isn't set in stone. As your life circumstances change, your plan should evolve to reflect new goals, income levels, and market conditions.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Setting SMART Financial Goals",
+      "content": "SMART goals are Specific, Measurable, Achievable, Relevant, and Time-bound. Instead of 'save more money,' set 'save $10,000 for emergency fund by December 31st.' Break large goals into smaller milestones and celebrate progress along the way."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Create Your Financial Plan",
+      "steps": [
+        "Calculate your current net worth (assets minus liabilities)",
+        "Analyze your cash flow (income minus expenses) for the past 3-6 months",
+        "Set 3-5 specific financial goals with deadlines",
+        "Create an action plan with specific steps for each goal"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Start with What You Can Control",
+      "content": "Focus first on areas where you have direct control, like budgeting and debt reduction, before moving to areas with more uncertainty like investment returns."
+    }
+  ]
+}

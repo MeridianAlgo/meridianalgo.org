@@ -1,0 +1,51 @@
+{
+  "id": "estate-planning",
+  "title": "Estate Planning Essentials",
+  "description": "Plan for the future and protect your legacy",
+  "duration": "2 weeks",
+  "difficulty": "Advanced",
+  "icon": "FileText",
+  "color": "indigo",
+  "status": "active",
+  "lessons": [
+    {
+      "id": "estate-planning_1",
+      "title": "Wills and Trusts Basics",
+      "type": "reading",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/estate-planning/lessons/01_lesson.json"
+    },
+    {
+      "id": "estate-planning_2",
+      "title": "Power of Attorney",
+      "type": "reading",
+      "duration": "15 min",
+      "points": 100,
+      "contentFile": "modules/estate-planning/lessons/02_lesson.json"
+    },
+    {
+      "id": "estate-planning_3",
+      "title": "Beneficiary Designations",
+      "type": "exercise",
+      "duration": "18 min",
+      "points": 100,
+      "contentFile": "modules/estate-planning/lessons/03_lesson.json"
+    },
+    {
+      "id": "estate-planning_4",
+      "title": "Estate Tax Planning",
+      "type": "reading",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "modules/estate-planning/lessons/04_lesson.json"
+    }
+  ],
+  "quiz": {
+    "id": "estate-planning_quiz",
+    "title": "Estate Planning Essentials Quiz",
+    "duration": "10 min",
+    "points": 150,
+    "contentFile": "modules/estate-planning/quiz.json"
+  }
+}

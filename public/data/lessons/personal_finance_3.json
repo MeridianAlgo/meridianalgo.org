@@ -1,0 +1,72 @@
+{
+  "title": "Building an Emergency Fund",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Your Financial Safety Net",
+      "subtitle": "Creating a buffer against life's unexpected expenses"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Why emergency funds are essential",
+        "How much to save for emergencies",
+        "Where to keep your emergency fund",
+        "When and how to use emergency savings"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Purpose of Emergency Funds",
+      "content": "Emergency funds provide peace of mind and financial stability when unexpected expenses arise. They prevent you from going into debt for car repairs, medical bills, or job loss. Having 3-6 months of expenses saved gives you time to handle crises without derailing your long-term financial goals."
+    },
+    {
+      "type": "keypoints",
+      "title": "Emergency Fund Guidelines",
+      "points": [
+        {
+          "title": "Amount to Save",
+          "description": "3 months for single-income households, 6 months for variable income or single parents."
+        },
+        {
+          "title": "What Qualifies as Emergency",
+          "description": "Job loss, major medical expenses, urgent home/car repairs - not vacations or wants."
+        },
+        {
+          "title": "Where to Keep It",
+          "description": "High-yield savings account for liquidity and some growth, separate from checking."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Start Small, Build Consistently",
+      "content": "Even $500 in emergency savings is better than nothing. Build the habit of saving regularly, then increase your savings rate as your income grows.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Building Your Fund",
+      "content": "Start by saving $1,000 for immediate emergencies, then build to 3-6 months of expenses. Use windfalls (tax refunds, bonuses) to boost your fund. Set up automatic transfers from each paycheck to make saving effortless."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Build Your Emergency Fund",
+      "steps": [
+        "Calculate your essential monthly expenses (housing, food, utilities, transportation)",
+        "Set a savings goal (3-6 months of expenses)",
+        "Open a high-yield savings account specifically for emergencies",
+        "Set up automatic transfers and track your progress monthly"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Replenish After Use",
+      "content": "If you need to use your emergency fund, make replenishing it your top financial priority. Adjust your budget to accelerate savings until it's back to your target level."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Setting Up Your Financial Accounts",
+  "type": "exercise",
+  "duration": "22 min",
+  "points": 50,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Organizing Your Financial Life",
+      "subtitle": "Setting up the right accounts for your financial goals"
+    },
+    {
+      "type": "overview",
+      "title": "What You'll Learn",
+      "items": [
+        "Types of bank accounts and when to use each",
+        "Setting up investment and retirement accounts",
+        "Choosing the right financial institutions",
+        "Organizing your financial paperwork"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Essential Account Types",
+      "content": "Every financial plan needs different types of accounts for different purposes. Checking accounts for daily transactions, savings accounts for emergencies, investment accounts for long-term growth, and retirement accounts for tax-advantaged saving. Choose accounts based on fees, accessibility, and features."
+    },
+    {
+      "type": "keypoints",
+      "title": "Account Selection Criteria",
+      "points": [
+        {
+          "title": "Checking Accounts",
+          "description": "Look for no-fee accounts with good mobile banking and ATM access."
+        },
+        {
+          "title": "Savings Accounts",
+          "description": "Prioritize high interest rates, easy transfers, and federal insurance (FDIC/NCUA)."
+        },
+        {
+          "title": "Investment Accounts",
+          "description": "Choose low-cost platforms with good research tools and educational resources."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "title": "Start with High-Yield Savings",
+      "content": "Traditional savings accounts pay very low interest. Online high-yield savings accounts often pay 4-5% APY with no fees and full FDIC insurance.",
+      "color": "orange"
+    },
+    {
+      "type": "content",
+      "title": "Choosing Financial Institutions",
+      "content": "Consider online banks for higher interest rates, credit unions for lower fees and better service, and traditional banks for in-person service and convenience. Compare fees, interest rates, mobile app quality, and customer service before choosing."
+    },
+    {
+      "type": "actionsteps",
+      "title": "Set Up Your Accounts",
+      "steps": [
+        "Open a high-yield savings account for your emergency fund",
+        "Set up direct deposit to automatically fund your accounts",
+        "Open a brokerage account for non-retirement investing",
+        "Organize your account information in a secure digital vault or filing system"
+      ]
+    },
+    {
+      "type": "protip",
+      "title": "Automate Where Possible",
+      "content": "Set up automatic transfers from checking to savings and investment accounts. Automation ensures consistency and removes the temptation to spend money earmarked for other purposes."
+    }
+  ]
+}

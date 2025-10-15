@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { 
   BookOpen, PiggyBank, CreditCard, TrendingUp, 
   Calculator, Target, Award, Users, CheckCircle, ArrowRight,
@@ -21,9 +21,17 @@ interface Skill {
 
 const FinancialLiteracyShowcase = () => {
   const { isAuthenticated } = useAuth();
+  const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
 
   useEffect(() => {
     document.title = 'MeridianAlgo - Financial Literacy Skills';
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSkillIndex((prev) => (prev + 1) % skills.length);
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   const skills: Skill[] = [
@@ -149,6 +157,46 @@ const FinancialLiteracyShowcase = () => {
               Build essential financial skills through our comprehensive curriculum designed by experts. 
               From budgeting basics to advanced investment strategies, we'll guide you every step of the way.
             </p>
+
+            {/* Skills Carousel */}
+            <div className="mb-12 bg-gradient-to-r from-orange-900/20 to-yellow-900/20 border border-orange-500/30 rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-sm font-semibold text-orange-400 mb-4 uppercase tracking-wide">Skills You'll Master</h3>
+              <div className="relative h-24 overflow-hidden">
+                {skills.map((skill, index) => (
+                  <div
+                    key={skill.id}
+                    className={`absolute inset-0 transition-all duration-700 ${
+                      index === currentSkillIndex
+                        ? 'opacity-100 translate-y-0'
+                        : index < currentSkillIndex
+                        ? 'opacity-0 -translate-y-full'
+                        : 'opacity-0 translate-y-full'
+                    }`}
+                  >
+                    <div className="flex items-center justify-center space-x-4">
+                      <div className={`w-16 h-16 rounded-xl bg-${skill.color}-500/20 flex items-center justify-center`}>
+                        {skill.icon}
+                      </div>
+                      <div className="text-left">
+                        <h4 className="text-2xl font-bold text-white">{skill.title}</h4>
+                        <p className="text-gray-400">{skill.lessons} lessons • {skill.duration}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center space-x-2 mt-6">
+                {skills.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSkillIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentSkillIndex ? 'bg-orange-400 w-8' : 'bg-gray-600'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">

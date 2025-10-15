@@ -1,0 +1,1240 @@
+{
+  "modules": [
+    {
+      "id": "couples-finance",
+      "title": "Couples and Money",
+      "description": "Navigate finances as a couple",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "Heart",
+      "color": "red",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "couples-finance_1",
+          "title": "Money Conversations",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/couples-finance/lessons/01_lesson.json"
+        },
+        {
+          "id": "couples-finance_2",
+          "title": "Joint vs Separate Accounts",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/couples-finance/lessons/02_lesson.json"
+        },
+        {
+          "id": "couples-finance_3",
+          "title": "Creating a Couples Budget",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/couples-finance/lessons/03_lesson.json"
+        },
+        {
+          "id": "couples-finance_4",
+          "title": "Financial Goals as a Team",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/couples-finance/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "couples-finance_quiz",
+        "title": "Couples and Money Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/couples-finance/quiz.json"
+      }
+    },
+    {
+      "id": "credit-building",
+      "title": "Credit Building Fundamentals",
+      "description": "Build and maintain excellent credit from scratch",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "TrendingUp",
+      "color": "blue",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "credit-building_1",
+          "title": "Understanding Credit Scores",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/credit-building/lessons/01_lesson.json"
+        },
+        {
+          "id": "credit-building_2",
+          "title": "Building Credit from Zero",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/credit-building/lessons/02_lesson.json"
+        },
+        {
+          "id": "credit-building_3",
+          "title": "Credit Card Best Practices",
+          "type": "exercise",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/credit-building/lessons/03_lesson.json"
+        },
+        {
+          "id": "credit-building_4",
+          "title": "Monitoring and Maintaining Credit",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/credit-building/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "credit-building_quiz",
+        "title": "Credit Building Fundamentals Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/credit-building/quiz.json"
+      }
+    },
+    {
+      "id": "etf-investing",
+      "title": "ETF Investing Strategies",
+      "description": "Master exchange-traded fund investments",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "BarChart",
+      "color": "purple",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "etf-investing_1",
+          "title": "What are ETFs?",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/etf-investing/lessons/01_lesson.json"
+        },
+        {
+          "id": "etf-investing_2",
+          "title": "ETFs vs Mutual Funds",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/etf-investing/lessons/02_lesson.json"
+        },
+        {
+          "id": "etf-investing_3",
+          "title": "Choosing the Right ETFs",
+          "type": "exercise",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/etf-investing/lessons/03_lesson.json"
+        },
+        {
+          "id": "etf-investing_4",
+          "title": "ETF Portfolio Construction",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/etf-investing/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "etf-investing_quiz",
+        "title": "ETF Investing Strategies Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/etf-investing/quiz.json"
+      }
+    },
+    {
+      "id": "financial-abuse-awareness",
+      "title": "Financial Abuse Awareness",
+      "description": "Recognize and recover from financial abuse, build independence",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "Shield",
+      "color": "red",
+      "status": "active",
+      "prerequisites": [],
+      "lessons": [
+        {
+          "id": "financial_abuse_1",
+          "title": "Recognizing Financial Abuse",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/financial-abuse-awareness/lessons/01_recognizing.json"
+        },
+        {
+          "id": "financial_abuse_2",
+          "title": "Credit Recovery Strategies",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/financial-abuse-awareness/lessons/02_credit_recovery.json"
+        },
+        {
+          "id": "financial_abuse_3",
+          "title": "Building Financial Independence",
+          "type": "exercise",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/financial-abuse-awareness/lessons/03_independence.json"
+        },
+        {
+          "id": "financial_abuse_4",
+          "title": "Resources and Support",
+          "type": "reading",
+          "duration": "12 min",
+          "points": 100,
+          "contentFile": "modules/financial-abuse-awareness/lessons/04_resources.json"
+        }
+      ],
+      "quiz": {
+        "id": "financial_abuse_quiz",
+        "title": "Financial Abuse Awareness Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/financial-abuse-awareness/quiz.json"
+      }
+    },
+    {
+      "id": "financial-recovery",
+      "title": "Financial Recovery",
+      "description": "Recover from financial setbacks and rebuild",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "TrendingUp",
+      "color": "blue",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "financial-recovery_1",
+          "title": "Assessing Your Situation",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/financial-recovery/lessons/01_lesson.json"
+        },
+        {
+          "id": "financial-recovery_2",
+          "title": "Creating a Recovery Plan",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/financial-recovery/lessons/02_lesson.json"
+        },
+        {
+          "id": "financial-recovery_3",
+          "title": "Rebuilding Emergency Funds",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/financial-recovery/lessons/03_lesson.json"
+        },
+        {
+          "id": "financial-recovery_4",
+          "title": "Moving Forward",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/financial-recovery/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "financial-recovery_quiz",
+        "title": "Financial Recovery Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/financial-recovery/quiz.json"
+      }
+    },
+    {
+      "id": "frugal-living",
+      "title": "Frugal Living Mastery",
+      "description": "Live well while spending less",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "DollarSign",
+      "color": "green",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "frugal-living_1",
+          "title": "Frugal Mindset",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/frugal-living/lessons/01_lesson.json"
+        },
+        {
+          "id": "frugal-living_2",
+          "title": "Cutting Major Expenses",
+          "type": "exercise",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/frugal-living/lessons/02_lesson.json"
+        },
+        {
+          "id": "frugal-living_3",
+          "title": "Smart Shopping Strategies",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/frugal-living/lessons/03_lesson.json"
+        },
+        {
+          "id": "frugal-living_4",
+          "title": "DIY and Self-Sufficiency",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/frugal-living/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "frugal-living_quiz",
+        "title": "Frugal Living Mastery Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/frugal-living/quiz.json"
+      }
+    },
+    {
+      "id": "gig-economy",
+      "title": "Gig Economy Finance",
+      "description": "Master financial management for freelancers and gig workers",
+      "duration": "3 weeks",
+      "difficulty": "Beginner",
+      "icon": "Briefcase",
+      "color": "green",
+      "status": "coming-soon",
+      "lessons": [
+        {
+          "id": "gig_economy_1",
+          "title": "Managing Irregular Income",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 50,
+          "contentFile": "modules/gig-economy/lessons/01_irregular_income.json"
+        },
+        {
+          "id": "gig_economy_2",
+          "title": "Quarterly Tax Payments",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 50,
+          "contentFile": "modules/gig-economy/lessons/02_quarterly_taxes.json"
+        },
+        {
+          "id": "gig_economy_3",
+          "title": "Retirement Planning for Freelancers",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 50,
+          "contentFile": "modules/gig-economy/lessons/03_retirement.json"
+        },
+        {
+          "id": "gig_economy_4",
+          "title": "Business Expense Tracking",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 50,
+          "contentFile": "modules/gig-economy/lessons/04_expense_tracking.json"
+        }
+      ],
+      "quiz": {
+        "id": "gig_economy_quiz",
+        "title": "Gig Economy Finance Quiz",
+        "duration": "10 min",
+        "points": 100,
+        "contentFile": "modules/gig-economy/quiz.json"
+      }
+    },
+    {
+      "id": "insurance-planning",
+      "title": "Insurance and Risk Management",
+      "description": "Protect yourself and your assets with proper insurance",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "Shield",
+      "color": "green",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "insurance-planning_1",
+          "title": "Types of Insurance Coverage",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/insurance-planning/lessons/01_lesson.json"
+        },
+        {
+          "id": "insurance-planning_2",
+          "title": "Life Insurance Fundamentals",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/insurance-planning/lessons/02_lesson.json"
+        },
+        {
+          "id": "insurance-planning_3",
+          "title": "Health Insurance Basics",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/insurance-planning/lessons/03_lesson.json"
+        },
+        {
+          "id": "insurance-planning_4",
+          "title": "Disability and Liability Insurance",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/insurance-planning/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "insurance-planning_quiz",
+        "title": "Insurance and Risk Management Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/insurance-planning/quiz.json"
+      }
+    },
+    {
+      "id": "retirement-accounts",
+      "title": "Retirement Account Strategies",
+      "description": "Maximize 401k, IRA, and other retirement accounts",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "PiggyBank",
+      "color": "orange",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "retirement-accounts_1",
+          "title": "401(k) Fundamentals",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/retirement-accounts/lessons/01_lesson.json"
+        },
+        {
+          "id": "retirement-accounts_2",
+          "title": "Traditional vs Roth IRA",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/retirement-accounts/lessons/02_lesson.json"
+        },
+        {
+          "id": "retirement-accounts_3",
+          "title": "Contribution Strategies",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/retirement-accounts/lessons/03_lesson.json"
+        },
+        {
+          "id": "retirement-accounts_4",
+          "title": "Retirement Account Rollovers",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/retirement-accounts/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "retirement-accounts_quiz",
+        "title": "Retirement Account Strategies Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/retirement-accounts/quiz.json"
+      }
+    },
+    {
+      "id": "side-hustle-finance",
+      "title": "Side Hustle Financial Management",
+      "description": "Manage finances for your side business",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "Briefcase",
+      "color": "orange",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "side-hustle-finance_1",
+          "title": "Starting a Side Hustle",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/side-hustle-finance/lessons/01_lesson.json"
+        },
+        {
+          "id": "side-hustle-finance_2",
+          "title": "Tracking Side Income",
+          "type": "exercise",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/side-hustle-finance/lessons/02_lesson.json"
+        },
+        {
+          "id": "side-hustle-finance_3",
+          "title": "Side Hustle Tax Basics",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/side-hustle-finance/lessons/03_lesson.json"
+        },
+        {
+          "id": "side-hustle-finance_4",
+          "title": "Scaling Your Side Business",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/side-hustle-finance/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "side-hustle-finance_quiz",
+        "title": "Side Hustle Financial Management Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/side-hustle-finance/quiz.json"
+      }
+    },
+    {
+      "id": "behavioral-finance",
+      "title": "Behavioral Finance",
+      "description": "Understand psychological biases that affect financial decisions",
+      "duration": "3 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Brain",
+      "color": "purple",
+      "status": "coming-soon",
+      "prerequisites": [
+        "foundations",
+        "investing"
+      ],
+      "unlockCost": 800,
+      "lessons": [
+        {
+          "id": "behavioral_finance_1",
+          "title": "Introduction to Behavioral Biases",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/behavioral-finance/lessons/01_biases.json"
+        },
+        {
+          "id": "behavioral_finance_2",
+          "title": "Loss Aversion and Risk Perception",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/behavioral-finance/lessons/02_loss_aversion.json"
+        },
+        {
+          "id": "behavioral_finance_3",
+          "title": "Herd Mentality in Markets",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/behavioral-finance/lessons/03_herd_mentality.json"
+        },
+        {
+          "id": "behavioral_finance_4",
+          "title": "Overcoming Emotional Investing",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/behavioral-finance/lessons/04_emotional_investing.json"
+        }
+      ],
+      "quiz": {
+        "id": "behavioral_finance_quiz",
+        "title": "Behavioral Finance Mastery Quiz",
+        "duration": "12 min",
+        "points": 150,
+        "contentFile": "modules/behavioral-finance/quiz.json"
+      }
+    },
+    {
+      "id": "bonds-fixed-income",
+      "title": "Bonds and Fixed Income",
+      "description": "Understand bonds and fixed-income investments",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "DollarSign",
+      "color": "blue",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "bonds-fixed-income_1",
+          "title": "Bond Basics",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/bonds-fixed-income/lessons/01_lesson.json"
+        },
+        {
+          "id": "bonds-fixed-income_2",
+          "title": "Types of Bonds",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/bonds-fixed-income/lessons/02_lesson.json"
+        },
+        {
+          "id": "bonds-fixed-income_3",
+          "title": "Bond Yields and Prices",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/bonds-fixed-income/lessons/03_lesson.json"
+        },
+        {
+          "id": "bonds-fixed-income_4",
+          "title": "Building a Bond Ladder",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/bonds-fixed-income/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "bonds-fixed-income_quiz",
+        "title": "Bonds and Fixed Income Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/bonds-fixed-income/quiz.json"
+      }
+    },
+    {
+      "id": "cryptocurrency-basics",
+      "title": "Cryptocurrency Fundamentals",
+      "description": "Understand digital currencies and blockchain technology",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Zap",
+      "color": "yellow",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "cryptocurrency-basics_1",
+          "title": "What is Cryptocurrency?",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/cryptocurrency-basics/lessons/01_lesson.json"
+        },
+        {
+          "id": "cryptocurrency-basics_2",
+          "title": "Blockchain Technology Explained",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/cryptocurrency-basics/lessons/02_lesson.json"
+        },
+        {
+          "id": "cryptocurrency-basics_3",
+          "title": "Buying and Storing Crypto",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/cryptocurrency-basics/lessons/03_lesson.json"
+        },
+        {
+          "id": "cryptocurrency-basics_4",
+          "title": "Crypto Investment Risks",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/cryptocurrency-basics/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "cryptocurrency-basics_quiz",
+        "title": "Cryptocurrency Fundamentals Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/cryptocurrency-basics/quiz.json"
+      }
+    },
+    {
+      "id": "dividend-investing",
+      "title": "Dividend Investing",
+      "description": "Build passive income through dividend stocks",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "TrendingUp",
+      "color": "green",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "dividend-investing_1",
+          "title": "Dividend Investing Basics",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/01_lesson.json"
+        },
+        {
+          "id": "dividend-investing_2",
+          "title": "Evaluating Dividend Stocks",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/02_lesson.json"
+        },
+        {
+          "id": "dividend-investing_3",
+          "title": "Dividend Reinvestment Plans",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/03_lesson.json"
+        },
+        {
+          "id": "dividend-investing_4",
+          "title": "Building a Dividend Portfolio",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "dividend-investing_quiz",
+        "title": "Dividend Investing Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/dividend-investing/quiz.json"
+      }
+    },
+    {
+      "id": "financial-psychology",
+      "title": "Financial Psychology",
+      "description": "Understand the psychology behind money decisions",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Brain",
+      "color": "purple",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "financial-psychology_1",
+          "title": "Money and Emotions",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/financial-psychology/lessons/01_lesson.json"
+        },
+        {
+          "id": "financial-psychology_2",
+          "title": "Breaking Bad Money Habits",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/financial-psychology/lessons/02_lesson.json"
+        },
+        {
+          "id": "financial-psychology_3",
+          "title": "Financial Stress Management",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/financial-psychology/lessons/03_lesson.json"
+        },
+        {
+          "id": "financial-psychology_4",
+          "title": "Building Healthy Money Mindsets",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/financial-psychology/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "financial-psychology_quiz",
+        "title": "Financial Psychology Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/financial-psychology/quiz.json"
+      }
+    },
+    {
+      "id": "international-investing",
+      "title": "International Investing",
+      "description": "Diversify globally with international investments",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Globe",
+      "color": "blue",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "international-investing_1",
+          "title": "Why Invest Internationally?",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/international-investing/lessons/01_lesson.json"
+        },
+        {
+          "id": "international-investing_2",
+          "title": "International Investment Vehicles",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/international-investing/lessons/02_lesson.json"
+        },
+        {
+          "id": "international-investing_3",
+          "title": "Currency Risk Management",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/international-investing/lessons/03_lesson.json"
+        },
+        {
+          "id": "international-investing_4",
+          "title": "Emerging Markets",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/international-investing/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "international-investing_quiz",
+        "title": "International Investing Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/international-investing/quiz.json"
+      }
+    },
+    {
+      "id": "real-estate-investing",
+      "title": "Real Estate Investing Basics",
+      "description": "Learn the fundamentals of property investment",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Home",
+      "color": "purple",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "real-estate-investing_1",
+          "title": "Real Estate Investment Strategies",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/real-estate-investing/lessons/01_lesson.json"
+        },
+        {
+          "id": "real-estate-investing_2",
+          "title": "Analyzing Property Deals",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/real-estate-investing/lessons/02_lesson.json"
+        },
+        {
+          "id": "real-estate-investing_3",
+          "title": "Financing Investment Properties",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/real-estate-investing/lessons/03_lesson.json"
+        },
+        {
+          "id": "real-estate-investing_4",
+          "title": "Property Management Essentials",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/real-estate-investing/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "real-estate-investing_quiz",
+        "title": "Real Estate Investing Basics Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/real-estate-investing/quiz.json"
+      }
+    },
+    {
+      "id": "stock-market-basics",
+      "title": "Stock Market Fundamentals",
+      "description": "Learn how to invest in individual stocks",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "TrendingUp",
+      "color": "green",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "stock-market-basics_1",
+          "title": "How the Stock Market Works",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/stock-market-basics/lessons/01_lesson.json"
+        },
+        {
+          "id": "stock-market-basics_2",
+          "title": "Reading Stock Charts",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/stock-market-basics/lessons/02_lesson.json"
+        },
+        {
+          "id": "stock-market-basics_3",
+          "title": "Fundamental Analysis",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/stock-market-basics/lessons/03_lesson.json"
+        },
+        {
+          "id": "stock-market-basics_4",
+          "title": "Building a Stock Portfolio",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/stock-market-basics/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "stock-market-basics_quiz",
+        "title": "Stock Market Fundamentals Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/stock-market-basics/quiz.json"
+      }
+    },
+    {
+      "id": "sustainable-investing",
+      "title": "Sustainable Investing",
+      "description": "Learn about ESG investing, impact investing, and sustainable finance",
+      "duration": "4 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Leaf",
+      "color": "green",
+      "status": "coming-soon",
+      "prerequisites": [
+        "investing"
+      ],
+      "unlockCost": 800,
+      "lessons": [
+        {
+          "id": "sustainable_investing_1",
+          "title": "ESG Investing Principles",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/sustainable-investing/lessons/01_esg_principles.json"
+        },
+        {
+          "id": "sustainable_investing_2",
+          "title": "Impact Investing Strategies",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/sustainable-investing/lessons/02_impact_investing.json"
+        },
+        {
+          "id": "sustainable_investing_3",
+          "title": "Green Bonds and Sustainable Funds",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/sustainable-investing/lessons/03_green_bonds.json"
+        },
+        {
+          "id": "sustainable_investing_4",
+          "title": "Cryptocurrency and Blockchain Basics",
+          "type": "reading",
+          "duration": "28 min",
+          "points": 100,
+          "contentFile": "modules/sustainable-investing/lessons/04_crypto_basics.json"
+        }
+      ],
+      "quiz": {
+        "id": "sustainable_investing_quiz",
+        "title": "Sustainable Investing Quiz",
+        "duration": "12 min",
+        "points": 150,
+        "contentFile": "modules/sustainable-investing/quiz.json"
+      }
+    },
+    {
+      "id": "tax-optimization",
+      "title": "Tax Optimization Strategies",
+      "description": "Minimize taxes legally and maximize deductions",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "FileText",
+      "color": "red",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "tax-optimization_1",
+          "title": "Understanding Tax Brackets",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/tax-optimization/lessons/01_lesson.json"
+        },
+        {
+          "id": "tax-optimization_2",
+          "title": "Common Tax Deductions",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/tax-optimization/lessons/02_lesson.json"
+        },
+        {
+          "id": "tax-optimization_3",
+          "title": "Tax-Advantaged Accounts",
+          "type": "exercise",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/tax-optimization/lessons/03_lesson.json"
+        },
+        {
+          "id": "tax-optimization_4",
+          "title": "Year-End Tax Planning",
+          "type": "reading",
+          "duration": "16 min",
+          "points": 100,
+          "contentFile": "modules/tax-optimization/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "tax-optimization_quiz",
+        "title": "Tax Optimization Strategies Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/tax-optimization/quiz.json"
+      }
+    },
+    {
+      "id": "estate-planning",
+      "title": "Estate Planning Essentials",
+      "description": "Plan for the future and protect your legacy",
+      "duration": "2 weeks",
+      "difficulty": "Advanced",
+      "icon": "FileText",
+      "color": "indigo",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "estate-planning_1",
+          "title": "Wills and Trusts Basics",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/estate-planning/lessons/01_lesson.json"
+        },
+        {
+          "id": "estate-planning_2",
+          "title": "Power of Attorney",
+          "type": "reading",
+          "duration": "15 min",
+          "points": 100,
+          "contentFile": "modules/estate-planning/lessons/02_lesson.json"
+        },
+        {
+          "id": "estate-planning_3",
+          "title": "Beneficiary Designations",
+          "type": "exercise",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/estate-planning/lessons/03_lesson.json"
+        },
+        {
+          "id": "estate-planning_4",
+          "title": "Estate Tax Planning",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/estate-planning/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "estate-planning_quiz",
+        "title": "Estate Planning Essentials Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/estate-planning/quiz.json"
+      }
+    },
+    {
+      "id": "financial-independence",
+      "title": "Financial Independence (FIRE)",
+      "description": "Achieve financial independence and early retirement",
+      "duration": "2 weeks",
+      "difficulty": "Advanced",
+      "icon": "Target",
+      "color": "red",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "financial-independence_1",
+          "title": "FIRE Movement Basics",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/financial-independence/lessons/01_lesson.json"
+        },
+        {
+          "id": "financial-independence_2",
+          "title": "Calculating Your FIRE Number",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/financial-independence/lessons/02_lesson.json"
+        },
+        {
+          "id": "financial-independence_3",
+          "title": "Aggressive Savings Strategies",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/financial-independence/lessons/03_lesson.json"
+        },
+        {
+          "id": "financial-independence_4",
+          "title": "Living in Early Retirement",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/financial-independence/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "financial-independence_quiz",
+        "title": "Financial Independence (FIRE) Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/financial-independence/quiz.json"
+      }
+    },
+    {
+      "id": "options-trading",
+      "title": "Options Trading Basics",
+      "description": "Introduction to options and derivatives",
+      "duration": "2 weeks",
+      "difficulty": "Advanced",
+      "icon": "Zap",
+      "color": "red",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "options-trading_1",
+          "title": "What are Options?",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/options-trading/lessons/01_lesson.json"
+        },
+        {
+          "id": "options-trading_2",
+          "title": "Calls and Puts Explained",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/options-trading/lessons/02_lesson.json"
+        },
+        {
+          "id": "options-trading_3",
+          "title": "Basic Options Strategies",
+          "type": "exercise",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/options-trading/lessons/03_lesson.json"
+        },
+        {
+          "id": "options-trading_4",
+          "title": "Options Risk Management",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/options-trading/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "options-trading_quiz",
+        "title": "Options Trading Basics Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/options-trading/quiz.json"
+      }
+    },
+    {
+      "id": "wealth-preservation",
+      "title": "Wealth Preservation",
+      "description": "Protect and preserve your accumulated wealth",
+      "duration": "2 weeks",
+      "difficulty": "Advanced",
+      "icon": "Shield",
+      "color": "indigo",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "wealth-preservation_1",
+          "title": "Asset Protection Strategies",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/wealth-preservation/lessons/01_lesson.json"
+        },
+        {
+          "id": "wealth-preservation_2",
+          "title": "Diversification for Preservation",
+          "type": "reading",
+          "duration": "18 min",
+          "points": 100,
+          "contentFile": "modules/wealth-preservation/lessons/02_lesson.json"
+        },
+        {
+          "id": "wealth-preservation_3",
+          "title": "Inflation Protection",
+          "type": "exercise",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/wealth-preservation/lessons/03_lesson.json"
+        },
+        {
+          "id": "wealth-preservation_4",
+          "title": "Generational Wealth Transfer",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/wealth-preservation/lessons/04_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "wealth-preservation_quiz",
+        "title": "Wealth Preservation Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/wealth-preservation/quiz.json"
+      }
+    }
+  ],
+  "generatedAt": "2025-10-03T03:38:17.451Z",
+  "version": "2.0.0"
+}
