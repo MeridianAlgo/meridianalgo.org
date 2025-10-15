@@ -134,12 +134,16 @@ const AdminPortal = () => {
         body: JSON.stringify(moduleData)
       });
 
-      const result = await response.json();
-      if (result.success) {
-        alert('Module created! Commit and push changes to see it live.');
-      } else {
-        alert('Error: ' + result.error);
-      }
+      // Download as JSON instead
+      const blob = new Blob([JSON.stringify(moduleData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${moduleData.id}-module.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      alert(`Module JSON downloaded! Add to: public/data/lessons/modules/${moduleData.id}/module.json then commit`);
     } catch (error: any) {
       alert('Error: ' + error.message);
     }
