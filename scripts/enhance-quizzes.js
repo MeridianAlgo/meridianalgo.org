@@ -19,20 +19,20 @@ let enhancedCount = 0;
 modules.forEach(moduleId => {
   const modulePath = path.join(modulesDir, moduleId);
   const quizPath = path.join(modulePath, 'quiz.json');
-  
+
   if (!fs.existsSync(quizPath)) return;
-  
+
   const currentQuiz = JSON.parse(fs.readFileSync(quizPath, 'utf8'));
-  
+
   // Check if quiz already has detailed questions
-  if (currentQuiz.questions && currentQuiz.questions.length > 5 && 
-      currentQuiz.questions[0].explanation && currentQuiz.questions[0].explanation.length > 50) {
+  if (currentQuiz.questions && currentQuiz.questions.length > 5 &&
+    currentQuiz.questions[0].explanation && currentQuiz.questions[0].explanation.length > 50) {
     return; // Already enhanced
   }
-  
+
   // Create enhanced quiz
   const enhancedQuiz = createEnhancedQuiz(currentQuiz.title, moduleId);
-  
+
   fs.writeFileSync(quizPath, JSON.stringify(enhancedQuiz, null, 2));
   enhancedCount++;
   console.log(`✅ Enhanced quiz: ${moduleId}`);
@@ -64,7 +64,7 @@ function createEnhancedQuiz(title, moduleId) {
       q5: 'You can contribute to both a 401(k) and an IRA.'
     }
   };
-  
+
   const questions = moduleTopics[moduleId] || {
     q1: `What is a key principle of ${title.toLowerCase()}?`,
     q2: 'Which strategy is most effective for long-term success?',
@@ -72,7 +72,7 @@ function createEnhancedQuiz(title, moduleId) {
     q4: 'What should you prioritize when getting started?',
     q5: 'Consistent action is more important than perfect planning.'
   };
-  
+
   return {
     title: title,
     type: "quiz",

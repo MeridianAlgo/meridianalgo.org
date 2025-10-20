@@ -383,7 +383,7 @@ const ToolsPage: React.FC = () => {
         <div className="px-8 py-6 space-y-4">
           {/* Budget & Cash Flow */}
           <h2 className="text-xl font-bold text-white mb-4">💰 Budget & Cash Flow</h2>
-          
+
           <CollapsibleTool
             title="50/30/20 Budget Planner"
             icon={<DollarSign className="w-5 h-5" />}

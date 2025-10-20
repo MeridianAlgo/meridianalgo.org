@@ -148,13 +148,13 @@ const CATEGORIES = ['All', 'Machine Learning', 'Trading Tools', 'Research', 'Ana
 
 const OpenSource = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  
+
   useEffect(() => {
     document.title = 'MeridianAlgo - Open Source';
   }, []);
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? PROJECTS 
+  const filteredProjects = selectedCategory === 'All'
+    ? PROJECTS
     : PROJECTS.filter(p => p.category === selectedCategory);
 
   const getLanguageColor = (language: string) => {
@@ -175,7 +175,7 @@ const OpenSource = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
         </div>
-        
+
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-8">
@@ -220,11 +220,10 @@ const OpenSource = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
                     ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                }`}
+                  }`}
               >
                 {category}
               </button>
