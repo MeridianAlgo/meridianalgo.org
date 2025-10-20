@@ -12,32 +12,32 @@
       "id": "credit-building_1",
       "title": "Understanding Credit Scores",
       "type": "reading",
-      "duration": "15 min",
-      "points": 100,
+      "duration": "32 min",
+      "points": 150,
       "contentFile": "modules/credit-building/lessons/01_lesson.json"
     },
     {
       "id": "credit-building_2",
       "title": "Building Credit from Zero",
       "type": "reading",
-      "duration": "18 min",
-      "points": 100,
+      "duration": "30 min",
+      "points": 150,
       "contentFile": "modules/credit-building/lessons/02_lesson.json"
     },
     {
       "id": "credit-building_3",
       "title": "Credit Card Best Practices",
-      "type": "exercise",
-      "duration": "20 min",
-      "points": 100,
+      "type": "reading",
+      "duration": "32 min",
+      "points": 150,
       "contentFile": "modules/credit-building/lessons/03_lesson.json"
     },
     {
       "id": "credit-building_4",
       "title": "Monitoring and Maintaining Credit",
       "type": "reading",
-      "duration": "15 min",
-      "points": 100,
+      "duration": "28 min",
+      "points": 150,
       "contentFile": "modules/credit-building/lessons/04_lesson.json"
     }
   ],

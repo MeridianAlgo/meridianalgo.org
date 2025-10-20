@@ -1,0 +1,162 @@
+{
+  "title": "Joint vs Separate Accounts: Finding Your System",
+  "type": "reading",
+  "duration": "28 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Joint vs Separate Accounts",
+      "subtitle": "Design a banking system that works for your relationship",
+      "color": "red",
+      "icon": "CreditCard"
+    },
+    {
+      "type": "content",
+      "title": "The Great Debate: One Account or Two?",
+      "content": "One of the most common questions couples face is whether to merge their finances completely, keep everything separate, or find a middle ground. There's no universal 'right' answer—the best system depends on your relationship dynamics, financial situations, and personal preferences. What matters most is choosing an approach that promotes transparency, fairness, and shared responsibility.\n\nAccording to recent surveys, about 43% of couples fully merge their finances, 34% keep everything separate, and 23% use a hybrid approach. Interestingly, the trend is shifting: younger couples (millennials and Gen Z) are more likely to maintain some financial independence compared to previous generations. This reflects changing attitudes about autonomy, equality, and the recognition that financial compatibility doesn't require financial uniformity."
+    },
+    {
+      "type": "key-points",
+      "title": "The Three Main Approaches",
+      "points": [
+        {
+          "title": "Fully Joint Accounts (All-In Approach)",
+          "description": "All income goes into shared accounts, and all expenses come from shared funds. This approach maximizes transparency and simplicity but requires high trust and aligned spending habits. Best for couples who view themselves as a complete financial unit."
+        },
+        {
+          "title": "Completely Separate (Independent Approach)",
+          "description": "Each partner maintains their own accounts and splits shared expenses (rent, utilities, groceries) according to an agreed formula. Provides maximum autonomy but requires careful tracking and can create 'yours vs mine' mentality. Works well for couples who value financial independence."
+        },
+        {
+          "title": "Hybrid System (Yours, Mine, and Ours)",
+          "description": "The most popular modern approach: maintain individual accounts for personal spending plus a joint account for shared expenses and goals. Combines transparency for shared finances with autonomy for personal choices. Offers the best of both worlds for many couples."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Fully Joint Accounts: Pros and Cons",
+      "content": "Advantages: Complete transparency eliminates financial secrets. Simplifies money management—one set of accounts to track. Reinforces 'we're in this together' mentality. Easier for couples with similar incomes and spending styles. Streamlines bill paying and budgeting.\n\nDisadvantages: Loss of financial privacy and autonomy. Can create conflict if partners have different spending philosophies. May feel controlling to the partner who earns less. Requires constant communication about every purchase. Can be complicated to untangle if the relationship ends.\n\nBest For: Couples who are married or in long-term committed relationships, have similar financial values and spending habits, and prioritize simplicity over autonomy. Also ideal when one partner stays home or earns significantly less—joint accounts prevent power imbalances."
+    },
+    {
+      "type": "content",
+      "title": "Separate Accounts: Pros and Cons",
+      "content": "Advantages: Maintains financial independence and privacy. No arguments about personal spending choices. Easier to manage if you entered the relationship with established financial lives. Protects individual credit scores. Simpler if the relationship ends.\n\nDisadvantages: Requires meticulous tracking of shared expenses. Can create 'keeping score' mentality. May hide financial problems until they become serious. Complicates shared goals like buying a house. Can feel like you're roommates rather than partners.\n\nBest For: Couples who are dating or newly committed, have significantly different incomes or spending styles, value financial autonomy highly, or have complex financial situations (business ownership, previous marriages, etc.). Also works for couples who prefer clear boundaries and individual responsibility."
+    },
+    {
+      "type": "content",
+      "title": "The Hybrid System: Best of Both Worlds",
+      "content": "The hybrid approach—often called the 'yours, mine, and ours' system—has become increasingly popular because it balances transparency with autonomy. Here's how it typically works:\n\nThe Joint Account: Both partners contribute a set amount or percentage of their income to cover shared expenses: rent/mortgage, utilities, groceries, insurance, joint savings goals, and shared entertainment. This account handles everything you do together.\n\nIndividual Accounts: Each partner maintains their own account for personal spending: individual hobbies, gifts for each other, personal shopping, and discretionary expenses. No questions asked about how this money is spent.\n\nThe Contribution Formula: Couples typically choose one of three methods: (1) Equal dollar amounts—each contributes the same regardless of income, (2) Proportional to income—if one earns 60% of household income, they contribute 60% of shared expenses, or (3) Hybrid percentage—each contributes a set percentage of their income (e.g., 70%) to the joint account, keeping 30% for personal use.\n\nThe proportional approach is often fairest when incomes differ significantly. If one partner earns $80,000 and the other earns $40,000, the higher earner contributes twice as much to shared expenses but both partners have similar amounts of personal spending money relative to their income."
+    },
+    {
+      "type": "calculator",
+      "title": "Hybrid Account Contribution Calculator",
+      "description": "Calculate fair contributions based on your incomes",
+      "calculatorType": "couples-contribution",
+      "inputs": [
+        {
+          "id": "partner1_income",
+          "label": "Partner 1 Monthly Income ($)",
+          "type": "number",
+          "min": 0,
+          "default": 5000
+        },
+        {
+          "id": "partner2_income",
+          "label": "Partner 2 Monthly Income ($)",
+          "type": "number",
+          "min": 0,
+          "default": 3000
+        },
+        {
+          "id": "shared_expenses",
+          "label": "Total Monthly Shared Expenses ($)",
+          "type": "number",
+          "min": 0,
+          "default": 3000
+        },
+        {
+          "id": "contribution_method",
+          "label": "Contribution Method",
+          "type": "select",
+          "options": [
+            {
+              "value": "equal",
+              "label": "Equal Split (50/50)"
+            },
+            {
+              "value": "proportional",
+              "label": "Proportional to Income"
+            },
+            {
+              "value": "percentage",
+              "label": "Fixed Percentage of Income"
+            }
+          ],
+          "default": "proportional"
+        }
+      ],
+      "results": [
+        {
+          "id": "partner1_contribution",
+          "label": "Partner 1 Contributes",
+          "unit": "$"
+        },
+        {
+          "id": "partner2_contribution",
+          "label": "Partner 2 Contributes",
+          "unit": "$"
+        },
+        {
+          "id": "partner1_remaining",
+          "label": "Partner 1 Personal Money",
+          "unit": "$"
+        },
+        {
+          "id": "partner2_remaining",
+          "label": "Partner 2 Personal Money",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Setting Up Your System: Step-by-Step",
+      "steps": [
+        "Have an honest conversation about which approach feels right for your relationship. Consider your values, trust level, and financial complexity.",
+        "If choosing hybrid, use the calculator above to determine fair contributions based on your incomes and shared expenses.",
+        "Open necessary accounts: If going joint, choose a bank together. If hybrid, open a joint checking account while maintaining individual accounts.",
+        "Set up automatic transfers: Automate contributions to joint accounts on payday to avoid forgetting or conflicts.",
+        "Define what counts as 'shared' vs 'personal': Be specific. Does dining out together come from joint or personal funds? What about gifts?",
+        "Create a shared budget for joint expenses: Track spending from the joint account and adjust contributions if needed.",
+        "Schedule a 3-month review: Assess whether your system is working. Be willing to adjust if one approach isn't serving you well.",
+        "Update beneficiaries and emergency contacts: Ensure your accounts reflect your relationship status and wishes."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Red Flags to Watch For",
+      "content": "Regardless of your system, watch for these warning signs: One partner controlling all financial decisions, hiding purchases or accounts, refusing to discuss money, making major financial decisions without consultation, or using money as a weapon in arguments. These behaviors indicate deeper relationship issues that may require professional counseling.",
+      "color": "red",
+      "icon": "AlertTriangle"
+    },
+    {
+      "type": "content",
+      "title": "Special Considerations",
+      "content": "For Unmarried Couples: Be aware that joint accounts don't provide the same legal protections as marriage. Consider what happens if you break up—can one partner drain the account? Have a written agreement about contributions and withdrawals.\n\nFor Second Marriages: If you have children from previous relationships, separate accounts might protect their inheritance rights while a joint account handles current household expenses.\n\nFor Business Owners: Keep business finances completely separate from personal and joint accounts to protect your relationship from business volatility and maintain clear tax records.\n\nFor Different Risk Tolerances: If one partner is a conservative saver and the other is an aggressive investor, consider a hybrid approach where joint funds stay conservative while individual accounts can be invested according to personal risk tolerance."
+    },
+    {
+      "type": "callout",
+      "title": "Key Takeaway",
+      "content": "The 'right' account structure is the one that both partners agree on and that promotes transparency, fairness, and shared financial goals. Don't let anyone tell you there's only one correct way. Choose the system that fits your relationship, and be willing to evolve it as your circumstances change.",
+      "color": "green",
+      "icon": "CheckCircle"
+    },
+    {
+      "type": "content",
+      "title": "Next Steps",
+      "content": "Now that you understand the three main approaches to managing couple finances, it's time to make a decision and implement your system. Use the calculator above to run different scenarios, discuss the pros and cons with your partner, and choose the approach that feels right for both of you. In the next lesson, we'll dive into creating a couples budget that works regardless of which account structure you choose. Remember: you can always adjust your system as your relationship and finances evolve."
+    }
+  ]
+}

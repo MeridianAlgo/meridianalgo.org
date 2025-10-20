@@ -7,12 +7,17 @@ import {
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import { getEarnedAchievements } from '../utils/achievements';
 
 const NewDashboard: React.FC = () => {
   const { user, isAuthenticated, progressData, logout } = useAuth();
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
   const [moduleSummaries, setModuleSummaries] = useState<{ key: string; name: string; total: number; completed: number }[]>([]);
+  const [progressPage, setProgressPage] = useState(0);
+  const [achievementsPage, setAchievementsPage] = useState(0);
+  const PROGRESS_ITEMS_PER_PAGE = 5;
+  const ACHIEVEMENTS_PER_PAGE = 5;
 
   useEffect(() => {
     document.title = 'MeridianAlgo - Dashboard';
@@ -30,11 +35,14 @@ const NewDashboard: React.FC = () => {
     const load = async () => {
       const cs = ContentService.getInstance();
       const mods = await cs.getModules();
-      const summaries = mods.map(m => {
-        const total = m.lessons.length;
-        const completed = (user?.completedConcepts ?? []).filter(c => c.startsWith(m.id + '_') && !c.includes('_quiz')).length;
-        return { key: m.id, name: m.title, total, completed };
-      });
+      // Filter only active modules and map to summaries
+      const summaries = mods
+        .filter(m => m.status === 'active')
+        .map(m => {
+          const total = m.lessons.length;
+          const completed = (user?.completedConcepts ?? []).filter(c => c.startsWith(m.id + '_') && !c.includes('_quiz')).length;
+          return { key: m.id, name: m.title, total, completed };
+        });
       setModuleSummaries(summaries);
     };
     if (isAuthenticated && user) load();
@@ -46,71 +54,27 @@ const NewDashboard: React.FC = () => {
   }
 
   const totalConcepts = progressData?.totalLessons || 30;
-  const completedConcepts = progressData?.completedLessons || 0;
+  const completedConcepts = user.completedConcepts.length; // Use actual completed concepts count
   const progressPercentage = progressData?.progressPercentage || 0;
   const joinDate = new Date(user.joinDate);
   const daysSinceJoined = Math.floor((Date.now() - joinDate.getTime()) / (1000 * 60 * 60 * 24));
 
-  const achievements = [
-    {
-      id: 'first_login',
-      title: 'Welcome Aboard!',
-      description: 'Joined MeridianAlgo',
-      icon: <Users className="w-6 h-6" />,
-      earned: true,
-      date: user.joinDate
-    },
-    {
-      id: 'first_concept',
-      title: 'First Steps',
-      description: 'Completed your first concept',
-      icon: <BookOpen className="w-6 h-6" />,
-      earned: completedConcepts >= 1,
-      date: completedConcepts >= 1 ? user.joinDate : null
-    },
-    {
-      id: 'budgeting_master',
-      title: 'Budgeting Master',
-      description: 'Completed all budgeting concepts',
-      icon: <Target className="w-6 h-6" />,
-      earned: user.completedConcepts.filter(c => c.startsWith('foundations')).length >= 3,
-      date: null
-    },
-    {
-      id: 'streak_3',
-      title: 'Getting Started',
-      description: '3-day learning streak',
-      icon: <TrendingUp className="w-6 h-6" />,
-      earned: user.learningStreak >= 3,
-      date: null
-    },
-    {
-      id: 'streak_7',
-      title: 'Week Warrior',
-      description: '7-day learning streak',
-      icon: <TrendingUp className="w-6 h-6" />,
-      earned: user.learningStreak >= 7,
-      date: null
-    },
-    {
-      id: 'concept_5',
-      title: 'Learning Machine',
-      description: 'Completed 5 concepts',
-      icon: <Star className="w-6 h-6" />,
-      earned: completedConcepts >= 5,
-      date: null
-    },
-    {
-      id: 'halfway_hero',
-      title: 'Halfway Hero',
-      description: 'Completed 50% of all concepts',
-      icon: <Star className="w-6 h-6" />,
-      earned: progressPercentage >= 50,
-      date: null
-    }
-  ];
+  // Use centralized achievements
+  const earnedAchievements = getEarnedAchievements(user, completedConcepts, progressPercentage);
+  
+  // Pagination for progress
+  const totalProgressPages = Math.ceil(moduleSummaries.length / PROGRESS_ITEMS_PER_PAGE);
+  const paginatedModules = moduleSummaries.slice(
+    progressPage * PROGRESS_ITEMS_PER_PAGE,
+    (progressPage + 1) * PROGRESS_ITEMS_PER_PAGE
+  );
 
-  const earnedAchievements = achievements.filter(a => a.earned);
+  // Pagination for achievements
+  const totalAchievementsPages = Math.ceil(earnedAchievements.length / ACHIEVEMENTS_PER_PAGE);
+  const paginatedAchievements = earnedAchievements.slice(
+    achievementsPage * ACHIEVEMENTS_PER_PAGE,
+    (achievementsPage + 1) * ACHIEVEMENTS_PER_PAGE
+  );
 
   return (
     <div className="min-h-screen bg-gray-900 flex">
@@ -232,8 +196,8 @@ const NewDashboard: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-4">
-                {moduleSummaries.map((section, index) => {
+              <div className="space-y-4 mb-4">
+                {paginatedModules.map((section, index) => {
                   const sectionProgress = section.total > 0 ? (section.completed / section.total) * 100 : 0;
                   return (
                     <div key={index}>
@@ -251,6 +215,29 @@ const NewDashboard: React.FC = () => {
                   );
                 })}
               </div>
+              
+              {/* Pagination Controls */}
+              {totalProgressPages > 1 && (
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <button
+                    onClick={() => setProgressPage(p => Math.max(0, p - 1))}
+                    disabled={progressPage === 0}
+                    className="px-3 py-1 rounded-lg bg-gray-700 text-gray-300 hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  >
+                    Previous
+                  </button>
+                  <span className="text-gray-400 text-sm">
+                    Page {progressPage + 1} of {totalProgressPages}
+                  </span>
+                  <button
+                    onClick={() => setProgressPage(p => Math.min(totalProgressPages - 1, p + 1))}
+                    disabled={progressPage === totalProgressPages - 1}
+                    className="px-3 py-1 rounded-lg bg-gray-700 text-gray-300 hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
               <Link 
                 to="/learning"
                 className="mt-6 w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white font-semibold py-3 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center"
@@ -259,39 +246,69 @@ const NewDashboard: React.FC = () => {
               </Link>
             </div>
 
-            {/* Achievements Section */}
+            {/* Achievements Section - Only show earned achievements */}
             <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Achievements</h2>
               
-              <div className="space-y-4">
-                {achievements.map((achievement) => (
-                  <div 
-                    key={achievement.id}
-                    className={`flex items-center space-x-4 p-4 rounded-xl border transition-all ${
-                      achievement.earned 
-                        ? 'bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-400/30' 
-                        : 'bg-gray-700/30 border-gray-600/50'
-                    }`}
+              {earnedAchievements.length === 0 ? (
+                <div className="text-center py-8">
+                  <Award className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+                  <p className="text-gray-400">Complete lessons to earn achievements!</p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {paginatedAchievements.map((achievement) => {
+                    const Icon = achievement.icon;
+                    return (
+                      <div 
+                        key={achievement.id}
+                        className="flex items-center space-x-4 p-4 rounded-xl border bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-yellow-400/30 transition-all"
+                      >
+                        <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-yellow-400/20 text-yellow-400">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-white">
+                            {achievement.title}
+                          </h3>
+                          <p className="text-gray-400 text-sm">{achievement.description}</p>
+                        </div>
+                        <Award className="w-5 h-5 text-yellow-400" />
+                      </div>
+                    );
+                  })}
+                  
+                  {/* Pagination Controls */}
+                  {totalAchievementsPages > 1 && (
+                    <div className="flex items-center justify-center gap-2 mt-4">
+                      <button
+                        onClick={() => setAchievementsPage(p => Math.max(0, p - 1))}
+                        disabled={achievementsPage === 0}
+                        className="px-3 py-1 rounded-lg bg-gray-700 text-gray-300 hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      >
+                        Previous
+                      </button>
+                      <span className="text-gray-400 text-sm">
+                        Page {achievementsPage + 1} of {totalAchievementsPages}
+                      </span>
+                      <button
+                        onClick={() => setAchievementsPage(p => Math.min(totalAchievementsPages - 1, p + 1))}
+                        disabled={achievementsPage === totalAchievementsPages - 1}
+                        className="px-3 py-1 rounded-lg bg-gray-700 text-gray-300 hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  )}
+                  
+                  <Link 
+                    to="/achievements"
+                    className="block text-center text-orange-400 hover:text-orange-300 text-sm font-medium mt-4"
                   >
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      achievement.earned 
-                        ? 'bg-yellow-400/20 text-yellow-400' 
-                        : 'bg-gray-600/50 text-gray-500'
-                    }`}>
-                      {achievement.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className={`font-semibold ${achievement.earned ? 'text-white' : 'text-gray-400'}`}>
-                        {achievement.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm">{achievement.description}</p>
-                    </div>
-                    {achievement.earned && (
-                      <Award className="w-5 h-5 text-yellow-400" />
-                    )}
-                  </div>
-                ))}
-              </div>
+                    View all {earnedAchievements.length} achievements →
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
 

@@ -12,32 +12,32 @@
       "id": "couples-finance_1",
       "title": "Money Conversations",
       "type": "reading",
-      "duration": "16 min",
-      "points": 100,
-      "contentFile": "modules/couples-finance/lessons/01_lesson.json"
+      "duration": "25 min",
+      "points": 150,
+      "contentFile": "modules/couples-finance/lessons/01_money_conversations.json"
     },
     {
       "id": "couples-finance_2",
       "title": "Joint vs Separate Accounts",
       "type": "reading",
-      "duration": "18 min",
-      "points": 100,
+      "duration": "28 min",
+      "points": 150,
       "contentFile": "modules/couples-finance/lessons/02_lesson.json"
     },
     {
       "id": "couples-finance_3",
       "title": "Creating a Couples Budget",
-      "type": "exercise",
-      "duration": "22 min",
-      "points": 100,
+      "type": "reading",
+      "duration": "30 min",
+      "points": 150,
       "contentFile": "modules/couples-finance/lessons/03_lesson.json"
     },
     {
       "id": "couples-finance_4",
       "title": "Financial Goals as a Team",
       "type": "reading",
-      "duration": "20 min",
-      "points": 100,
+      "duration": "28 min",
+      "points": 150,
       "contentFile": "modules/couples-finance/lessons/04_lesson.json"
     }
   ],

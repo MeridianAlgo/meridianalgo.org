@@ -1,0 +1,13 @@
+# MeridianAlgo - Financial Literacy Platform
+# Allow all search engines to crawl
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://meridianalgo.com/sitemap.xml
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1

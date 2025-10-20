@@ -1,0 +1,138 @@
+{
+  "title": "Credit Card Best Practices: Mastering Responsible Use",
+  "type": "reading",
+  "duration": "32 min",
+  "points": 150,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Credit Card Best Practices",
+      "subtitle": "Master the art of using credit cards to build wealth, not debt",
+      "color": "blue",
+      "icon": "CreditCard"
+    },
+    {
+      "type": "content",
+      "title": "The Credit Card Paradox",
+      "content": "Credit cards are simultaneously one of the most powerful financial tools and one of the most dangerous. Used wisely, they build credit, offer fraud protection, provide rewards, and create a detailed spending record. Used carelessly, they trap you in high-interest debt that can take years to escape.\n\nThe difference between these outcomes isn't luck—it's knowledge and discipline. According to the Federal Reserve, the average American household with credit card debt carries a balance of $6,270, paying an average APR of 20.09%. That means they're paying over $1,200 per year just in interest. Meanwhile, responsible credit card users pay $0 in interest while earning hundreds or thousands in rewards annually. This lesson will show you how to be in the second group."
+    },
+    {
+      "type": "key-points",
+      "title": "The Golden Rules of Credit Cards",
+      "points": [
+        {
+          "title": "Pay in Full Every Month",
+          "description": "The single most important rule. If you can't pay the full statement balance by the due date, you shouldn't be using a credit card. Interest charges will always exceed any rewards you earn. Treat your credit card like a debit card—only spend money you already have."
+        },
+        {
+          "title": "Keep Utilization Under 30%",
+          "description": "Your credit utilization ratio (balance ÷ credit limit) is a major factor in your credit score. Keep it below 30% on each card and overall. Even better: below 10%. If your limit is $5,000, keep your balance under $1,500 (or ideally under $500)."
+        },
+        {
+          "title": "Never Miss a Payment",
+          "description": "Payment history is 35% of your credit score. Even one late payment can drop your score by 100+ points and stay on your report for 7 years. Set up autopay for at least the minimum payment as a safety net, even if you plan to pay more manually."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Understanding Credit Card Interest: The True Cost",
+      "content": "Credit card interest compounds daily, not monthly. Here's what that means: If you have a $1,000 balance at 20% APR and make only the minimum payment of $25/month, it will take you 5 years and 7 months to pay off, and you'll pay $681 in interest—nearly 70% extra!\n\nThe Minimum Payment Trap: Credit card companies calculate minimum payments to keep you in debt as long as possible. A typical minimum is 2-3% of your balance or $25, whichever is higher. This barely covers the interest, so your principal barely decreases. If you can only afford the minimum, you can't afford to use the card.\n\nThe Grace Period: Most cards offer a 21-25 day grace period between the statement closing date and the due date. If you pay your full statement balance by the due date, you pay zero interest—even though you used the card all month. This is how responsible users get free short-term loans."
+    },
+    {
+      "type": "calculator",
+      "title": "Credit Card Payoff Calculator",
+      "description": "See how long it takes to pay off your balance",
+      "calculatorType": "credit-card-payoff",
+      "inputs": [
+        {
+          "id": "balance",
+          "label": "Current Balance ($)",
+          "type": "number",
+          "min": 0,
+          "default": 3000
+        },
+        {
+          "id": "apr",
+          "label": "APR (%)",
+          "type": "number",
+          "min": 0,
+          "max": 30,
+          "default": 19.99
+        },
+        {
+          "id": "monthly_payment",
+          "label": "Monthly Payment ($)",
+          "type": "number",
+          "min": 0,
+          "default": 150
+        }
+      ],
+      "results": [
+        {
+          "id": "months_to_payoff",
+          "label": "Months to Pay Off",
+          "unit": "months"
+        },
+        {
+          "id": "total_interest",
+          "label": "Total Interest Paid",
+          "unit": "$"
+        },
+        {
+          "id": "total_paid",
+          "label": "Total Amount Paid",
+          "unit": "$"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Choosing the Right Credit Card",
+      "content": "Not all credit cards are created equal. Here's how to choose:\n\nFor Building Credit: Start with a secured card or student card. These have lower requirements and are designed for credit building. Look for ones that graduate to unsecured cards after 6-12 months of responsible use.\n\nFor Rewards: Only pursue rewards cards after you've proven you can pay in full every month. Choose based on your spending: Cash back cards (1-2% on everything, 3-5% on categories), Travel rewards (best if you travel frequently), or Store cards (only if you shop there regularly and can resist overspending).\n\nFor Balance Transfers: If you have existing debt, a 0% APR balance transfer card can save thousands in interest. But read the fine print: balance transfer fees (typically 3-5%), how long the 0% period lasts, and what the APR becomes afterward. Make a plan to pay off the balance before the promotional period ends."
+    },
+    {
+      "type": "steps",
+      "title": "Setting Up Your Credit Card System",
+      "steps": [
+        "Set up autopay for the full statement balance. This ensures you never miss a payment or pay interest. Make sure your checking account always has enough funds.",
+        "Enable spending alerts. Get text or email notifications for every purchase. This helps you catch fraud immediately and stay aware of your spending.",
+        "Check your statement weekly. Don't wait for the monthly statement. Log in weekly to review charges, catch errors, and ensure you're on track.",
+        "Keep utilization low. If you're approaching 30% of your limit, either pay down the balance mid-cycle or request a credit limit increase.",
+        "Track spending in a budget app. Credit cards make it easy to overspend because you don't see money leaving your account. Use Mint, YNAB, or a spreadsheet to track every purchase.",
+        "Never use your card for cash advances. These have no grace period, higher APRs (often 25%+), and immediate fees (typically 5%). It's a sign you're in financial trouble.",
+        "Review your rewards quarterly. Make sure you're maximizing benefits. Some cards have rotating categories you need to activate.",
+        "Keep your card active but controlled. Use it for one small recurring charge (like Netflix) if you're worried about overspending, then set up autopay."
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Warning: Common Credit Card Traps",
+      "content": "Retail store cards often have APRs of 25-30%—much higher than regular cards. Deferred interest promotions ('No interest for 12 months!') charge you ALL the interest retroactively if you don't pay off the balance in time. Minimum payments are designed to keep you in debt. Cash advances and balance transfer checks are expensive traps. Don't fall for these!",
+      "color": "red",
+      "icon": "AlertTriangle"
+    },
+    {
+      "type": "content",
+      "title": "Building Credit Score with Cards",
+      "content": "Credit cards are the fastest way to build credit score when used correctly:\n\nPayment History (35%): Pay on time, every time. Set up autopay. Even one late payment can drop your score 100+ points.\n\nCredit Utilization (30%): Keep balances below 30% of limits, ideally below 10%. This is reported monthly, so pay down balances before the statement closing date if needed.\n\nLength of Credit History (15%): Keep your oldest card open forever, even if you don't use it much. The age of your oldest account matters.\n\nCredit Mix (10%): Having different types of credit (cards, loans, mortgage) helps, but don't take on debt just for this.\n\nNew Credit (10%): Each application causes a hard inquiry that temporarily lowers your score. Space out applications by 6+ months.\n\nPro Tip: You can have a perfect credit score while using credit cards heavily—just pay in full every month and keep utilization low. Some people with 800+ scores put all their spending on cards for rewards."
+    },
+    {
+      "type": "content",
+      "title": "Maximizing Rewards Without Overspending",
+      "content": "The rewards game is only worth playing if you follow the golden rules. Here's how to maximize value:\n\nThe 2% Rule: A flat 2% cash back card (like Citi Double Cash) is simple and effective. You earn 2% on everything with no categories to track.\n\nCategory Optimization: If you want to maximize rewards, use different cards for different categories: 5% on rotating categories (Chase Freedom), 3% on dining (Capital One Savor), 2% on everything else. But only if you can track this without overspending.\n\nSign-Up Bonuses: These offer the best value—often $500-1,000 in rewards for spending $3,000-5,000 in 3 months. But only pursue if you have that spending naturally planned. Never spend extra just for a bonus.\n\nThe Rewards Trap: Studies show people spend 12-18% more when using credit cards vs cash, even when they plan to pay in full. The rewards don't make up for overspending. Track your spending carefully.\n\nAnnual Fees: Only pay an annual fee if the rewards clearly exceed it. A $95 annual fee needs $4,750 in spending at 2% cash back just to break even. Do the math."
+    },
+    {
+      "type": "callout",
+      "title": "Key Takeaway",
+      "content": "Credit cards are tools, not free money. Use them for convenience, fraud protection, and rewards—but only if you can pay in full every month. If you're carrying a balance, stop using the card immediately and focus on paying it off. Your future self will thank you for avoiding the debt trap.",
+      "color": "green",
+      "icon": "CheckCircle"
+    },
+    {
+      "type": "content",
+      "title": "Next Steps",
+      "content": "Now that you understand credit card best practices, it's time to audit your current situation. Review your credit card statements from the last 3 months. Are you paying in full? What's your utilization? Are you earning rewards or paying interest? Set up autopay if you haven't already. In the next lesson, we'll cover monitoring and maintaining your credit score long-term, including how to dispute errors and recover from credit damage."
+    }
+  ]
+}

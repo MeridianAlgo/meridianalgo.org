@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FileText, Download, Calendar, Eye, X, FolderOpen } from 'lucide-react';
+import { FileText, Download, Calendar, Eye, X, FolderOpen, Search, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Newsletter {
   id: string;
@@ -8,7 +8,12 @@ interface Newsletter {
   fileName: string;
   fileUrl: string;
   uploadDate: string;
+  category?: string;
+  week?: number;
+  thumbnail?: string;
 }
+
+const ITEMS_PER_PAGE = 9;
 
 function useScrollFadeIn() {
   useEffect(() => {
@@ -32,19 +37,19 @@ const Newsletters = () => {
   const [newsletters, setNewsletters] = useState<Newsletter[]>([]);
   const [selectedPdf, setSelectedPdf] = useState<Newsletter | null>(null);
   const [loading, setLoading] = useState(true);
-  // Date filter state (YYYY-MM-DD strings)
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     document.title = 'MeridianAlgo - Newsletters';
   }, []);
 
-  // Load newsletters from the newsletters folder
   useEffect(() => {
     const loadNewsletters = async () => {
       try {
-        // Try to fetch a manifest file that lists all available newsletters
         const response = await fetch('/newsletters/manifest.json');
         if (response.ok) {
           const manifestData = await response.json();
@@ -53,46 +58,13 @@ const Newsletters = () => {
             fileUrl: `/newsletters/${item.fileName}`,
             id: item.fileName.replace(/\.pdf$/i, '').replace(/[^a-zA-Z0-9]/g, '-')
           }));
-          // Sort newest first by uploadDate
           newsletterList.sort((a, b) => new Date(b.uploadDate).getTime() - new Date(a.uploadDate).getTime());
           setNewsletters(newsletterList);
         } else {
-          // If no manifest, try to load some default newsletters
-          const defaultNewsletters = [
-            {
-              id: 'sample-1',
-              title: 'Midwest Financial Wellness Q1 2025',
-              description: 'Comprehensive analysis of regional economic trends and their impact on household financial health.',
-              fileName: 'midwest-financial-wellness-q1-2025.pdf',
-              fileUrl: '/newsletters/midwest-financial-wellness-q1-2025.pdf',
-              uploadDate: '2025-01-15'
-            },
-            {
-              id: 'sample-2',
-              title: 'Community Budgeting Toolkit',
-              description: 'Practical curriculum for facilitating budgeting and credit workshops with local partners.',
-              fileName: 'community-budgeting-toolkit.pdf',
-              fileUrl: '/newsletters/community-budgeting-toolkit.pdf',
-              uploadDate: '2025-01-10'
-            }
-          ];
-          
-          // Check if files actually exist before adding them
-          const existingNewsletters = [];
-          for (const newsletter of defaultNewsletters) {
-            try {
-              const fileResponse = await fetch(newsletter.fileUrl, { method: 'HEAD' });
-              if (fileResponse.ok) {
-                existingNewsletters.push(newsletter);
-              }
-            } catch (error) {
-              // File doesn't exist, skip it
-            }
-          }
-          setNewsletters(existingNewsletters);
+          setNewsletters([]);
         }
       } catch (error) {
-        console.log('No newsletters found in /newsletters folder');
+        console.log('No newsletters found');
         setNewsletters([]);
       } finally {
         setLoading(false);
@@ -118,210 +90,337 @@ const Newsletters = () => {
     });
   };
 
+  const toggleCategory = (category: string) => {
+    setSelectedCategories(prev =>
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+    setCurrentPage(1);
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedCategories([]);
+    setStartDate('');
+    setEndDate('');
+    setCurrentPage(1);
+  };
+
+  // Get unique categories
+  const categories = Array.from(new Set(newsletters.map(n => n.category).filter(Boolean))) as string[];
+
+  // Filter newsletters
+  const filteredNewsletters = newsletters.filter((newsletter) => {
+    // Search filter
+    const matchesSearch = searchQuery === '' ||
+      newsletter.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      newsletter.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+    // Category filter
+    const matchesCategory = selectedCategories.length === 0 ||
+      (newsletter.category && selectedCategories.includes(newsletter.category));
+
+    // Date filter
+    const ts = new Date(newsletter.uploadDate).getTime();
+    const afterStart = startDate ? ts >= new Date(startDate + 'T00:00:00').getTime() : true;
+    const beforeEnd = endDate ? ts <= new Date(endDate + 'T23:59:59').getTime() : true;
+
+    return matchesSearch && matchesCategory && afterStart && beforeEnd;
+  });
+
+  // Pagination
+  const totalPages = Math.ceil(filteredNewsletters.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedNewsletters = filteredNewsletters.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
   return (
-    <div className="relative min-h-screen w-full bg-black pt-24 overflow-x-hidden overflow-y-auto">
+    <div className="relative min-h-screen w-full bg-black overflow-x-hidden overflow-y-auto">
+      {/* Background Pattern - extends to top */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      </div>
 
       {/* Hero Section */}
-      <section className="py-24 fade-in-up bg-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-inter">
-              Newsletters
+      <section className="pt-44 pb-16 relative overflow-hidden">
+        
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-6">
+              <FileText className="w-10 h-10 text-orange-400" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Newsletters</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 max-w-4xl mx-auto leading-relaxed font-inter font-light">
-              Stay informed with our latest insights, regional economic research, and financial literacy strategies.
-              Access our comprehensive collection of newsletters and educational publications.
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+              Stay informed with our latest insights, market analysis, and financial literacy strategies. Access our comprehensive collection of newsletters and educational publications.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Newsletters List */}
-      <section className="py-16 fade-in-up bg-transparent">
+      {/* Search and Filters */}
+      <section className="py-12 fade-in-up bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center font-inter">
-            Available Newsletters
-          </h2>
-          {/* Filters */}
-          <div className="mb-8 bg-slate-900/40 backdrop-blur-md border border-orange-400/20 rounded-2xl p-4 sm:p-6">
+          {/* Search Bar */}
+          <div className="mb-6">
+            <div className="relative max-w-2xl mx-auto">
+              <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setCurrentPage(1);
+                }}
+                placeholder="Search newsletters by title or topic (e.g., 'dividends', 'ratios', 'portfolio')..."
+                className="w-full bg-slate-900/60 backdrop-blur-md border border-orange-400/30 rounded-2xl pl-12 pr-4 py-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600 text-lg"
+              />
+            </div>
+          </div>
+
+          {/* Category Filters */}
+          <div className="mb-6">
+            <div className="flex items-center gap-3 flex-wrap justify-center">
+              <span className="text-slate-400 font-medium flex items-center gap-2">
+                <Filter className="w-4 h-4" />
+                Filter by:
+              </span>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => toggleCategory(category)}
+                  className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                    selectedCategories.includes(category)
+                      ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-lg'
+                      : 'bg-slate-800/60 text-slate-300 hover:bg-slate-700/60 border border-slate-700'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Date Filters */}
+          <div className="bg-slate-900/40 backdrop-blur-md border border-orange-400/20 rounded-2xl p-6 max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-end md:space-x-4 space-y-4 md:space-y-0">
               <div className="flex-1">
-                <label htmlFor="start-date" className="block text-sm text-slate-300 mb-2 font-inter">Start date</label>
+                <label htmlFor="start-date" className="block text-sm text-slate-300 mb-2 font-inter font-medium">
+                  Start date
+                </label>
                 <div className="relative">
                   <Calendar className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                   <input
                     id="start-date"
                     type="date"
                     value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
-                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-2 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600"
+                    onChange={(e) => {
+                      setStartDate(e.target.value);
+                      setCurrentPage(1);
+                    }}
+                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600"
                   />
                 </div>
               </div>
               <div className="flex-1">
-                <label htmlFor="end-date" className="block text-sm text-slate-300 mb-2 font-inter">End date</label>
+                <label htmlFor="end-date" className="block text-sm text-slate-300 mb-2 font-inter font-medium">
+                  End date
+                </label>
                 <div className="relative">
                   <Calendar className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                   <input
                     id="end-date"
                     type="date"
                     value={endDate}
-                    onChange={(e) => setEndDate(e.target.value)}
-                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-2 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600"
+                    onChange={(e) => {
+                      setEndDate(e.target.value);
+                      setCurrentPage(1);
+                    }}
+                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600"
                   />
                 </div>
               </div>
               <div className="md:w-auto">
                 <button
                   type="button"
-                  onClick={() => { setStartDate(''); setEndDate(''); }}
-                  className="inline-flex items-center justify-center w-full md:w-auto bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 px-4 py-2 rounded-lg transition-all duration-300 font-inter"
+                  onClick={clearFilters}
+                  className="inline-flex items-center justify-center w-full md:w-auto bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 px-6 py-3 rounded-lg transition-all duration-300 font-inter font-medium"
                 >
                   <X className="w-4 h-4 mr-2" />
-                  Clear filters
+                  Clear All Filters
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Compute filtered list by date */}
-          {(() => {
-            const filtered = newsletters.filter((n) => {
-              const ts = new Date(n.uploadDate).getTime();
-              const afterStart = startDate ? ts >= new Date(startDate + 'T00:00:00').getTime() : true;
-              const beforeEnd = endDate ? ts <= new Date(endDate + 'T23:59:59').getTime() : true;
-              return afterStart && beforeEnd;
-            });
+          {/* Results Count */}
+          {(searchQuery || selectedCategories.length > 0 || startDate || endDate) && (
+            <div className="text-center mt-6 text-slate-400">
+              Showing {filteredNewsletters.length} of {newsletters.length} newsletters
+            </div>
+          )}
+        </div>
+      </section>
 
-            if (loading) {
-              return (
-                <div className="text-center py-16">
-                  <div className="animate-spin w-12 h-12 border-4 border-orange-400 border-t-transparent rounded-full mx-auto mb-4"></div>
-                  <p className="text-slate-400 text-lg font-inter">Loading newsletters...</p>
-                </div>
-              );
-            }
-
-            if (!loading && newsletters.length === 0) {
-              return (
-                <div className="text-center py-16">
-                  <FolderOpen className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-                  <p className="text-slate-400 text-lg font-inter mb-2">No newsletters found.</p>
-                  <p className="text-slate-500 font-inter font-light">
-                    Add PDF files to the <code className="bg-slate-800 px-2 py-1 rounded text-orange-400">/public/newsletters/</code> folder to display them here.
-                  </p>
-                  <div className="mt-6 text-left max-w-2xl mx-auto bg-slate-900/40 rounded-xl p-6 border border-orange-400/20">
-                    <h3 className="text-white font-semibold mb-3 font-inter">How to add newsletters:</h3>
-                    <ol className="text-slate-300 space-y-2 font-inter font-light">
-                      <li>1. Place your PDF files in the <code className="bg-slate-800 px-1 rounded text-orange-400">/public/newsletters/</code> folder</li>
-                      <li>2. Optionally, create a <code className="bg-slate-800 px-1 rounded text-orange-400">manifest.json</code> file to add titles and descriptions</li>
-                      <li>3. Refresh the page to see your newsletters</li>
-                    </ol>
-                  </div>
-                </div>
-              );
-            }
-
-            if (filtered.length === 0) {
-              return (
-                <div className="text-center py-16">
-                  <FolderOpen className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-                  <p className="text-slate-400 text-lg font-inter mb-2">No newsletters match your date filters.</p>
-                  <button
-                    type="button"
-                    onClick={() => { setStartDate(''); setEndDate(''); }}
-                    className="inline-flex items-center justify-center bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 px-4 py-2 rounded-lg transition-all duration-300 font-inter"
-                  >
-                    <X className="w-4 h-4 mr-2" />
-                    Clear filters
-                  </button>
-                </div>
-              );
-            }
-
-            return (
+      {/* Newsletters Grid */}
+      <section className="py-16 fade-in-up bg-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {loading ? (
+            <div className="text-center py-16">
+              <div className="animate-spin w-12 h-12 border-4 border-orange-400 border-t-transparent rounded-full mx-auto mb-4"></div>
+              <p className="text-slate-400 text-lg font-inter">Loading newsletters...</p>
+            </div>
+          ) : filteredNewsletters.length === 0 ? (
+            <div className="text-center py-16">
+              <FolderOpen className="w-16 h-16 text-slate-400 mx-auto mb-4" />
+              <p className="text-slate-400 text-lg font-inter mb-2">No newsletters found matching your filters.</p>
+              <button
+                onClick={clearFilters}
+                className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-all duration-300 font-inter font-medium mt-4"
+              >
+                Clear Filters
+              </button>
+            </div>
+          ) : (
+            <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filtered.map((newsletter) => {
+                {paginatedNewsletters.map((newsletter) => {
                   const isPdf = newsletter.fileName.toLowerCase().endsWith('.pdf');
                   return (
-                  <div key={newsletter.id} className="bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 border border-orange-400/20 hover:border-orange-400/40 transition-all duration-300 hover:transform hover:scale-105 flex flex-col">
-                    <div className="flex items-start justify-between mb-4">
-                      <FileText className="w-8 h-8 text-orange-400 flex-shrink-0" />
-                    </div>
-                    
-                    <h3 className="text-white font-semibold text-lg mb-2 font-inter line-clamp-2 min-h-[3.5rem]">
-                      {newsletter.title}
-                    </h3>
-                    
-                    <div className="flex-grow">
-                      {newsletter.description && (
-                        <p className="text-slate-300 text-sm mb-4 font-inter font-light line-clamp-3 min-h-[4.5rem]">
+                    <div
+                      key={newsletter.id}
+                      className="group bg-slate-900/60 backdrop-blur-md rounded-2xl overflow-hidden border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20 flex flex-col"
+                    >
+                      {/* Thumbnail */}
+                      <div className="relative h-48 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 flex items-center justify-center overflow-hidden">
+                        {newsletter.thumbnail ? (
+                          <img
+                            src={newsletter.thumbnail}
+                            alt={newsletter.title}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
+                        ) : (
+                          <FileText className="w-20 h-20 text-orange-400/40" />
+                        )}
+                        <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-orange-400 border border-orange-400/30">
+                          {newsletter.category || 'Newsletter'}
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-6 flex flex-col flex-grow">
+                        <h3 className="text-white font-semibold text-xl mb-3 font-inter line-clamp-2 group-hover:text-orange-400 transition-colors">
+                          {newsletter.title}
+                        </h3>
+
+                        <p className="text-slate-300 text-sm mb-4 font-inter font-light line-clamp-3 flex-grow">
                           {newsletter.description}
                         </p>
-                      )}
+
+                        <div className="flex items-center text-slate-400 text-sm mb-4 font-inter">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {formatDate(newsletter.uploadDate)}
+                        </div>
+
+                        {/* CTAs */}
+                        <div className="flex gap-3 mt-auto">
+                          {isPdf ? (
+                            <button
+                              onClick={() => openPdfViewer(newsletter)}
+                              className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold shadow-lg hover:shadow-orange-500/50"
+                            >
+                              <Eye className="w-5 h-5" />
+                              <span>Read Now</span>
+                            </button>
+                          ) : (
+                            <a
+                              href={newsletter.fileUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold"
+                            >
+                              <Eye className="w-5 h-5" />
+                              <span>Open</span>
+                            </a>
+                          )}
+                          <a
+                            href={newsletter.fileUrl}
+                            download={newsletter.fileName}
+                            className="flex-1 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold"
+                          >
+                            <Download className="w-5 h-5" />
+                            <span>Download</span>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    
-                    <div className="flex items-center text-slate-400 text-sm mb-4 font-inter">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {formatDate(newsletter.uploadDate)}
-                    </div>
-                    
-                    <div className="flex space-x-3 mt-auto">
-                      {isPdf ? (
-                        <button
-                          onClick={() => openPdfViewer(newsletter)}
-                          className="flex-1 bg-orange-600 hover:bg-orange-700 text-white px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter h-12"
-                        >
-                          <Eye className="w-4 h-4" />
-                          <span>View</span>
-                        </button>
-                      ) : (
-                        <a
-                          href={newsletter.fileUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter h-12"
-                        >
-                          <Eye className="w-4 h-4" />
-                          <span>Open</span>
-                        </a>
-                      )}
-                      <a
-                        href={newsletter.fileUrl}
-                        download={newsletter.fileName}
-                        className="flex-1 bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 px-4 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-inter h-12"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>Download</span>
-                      </a>
-                    </div>
-                  </div>
-                );})}
+                  );
+                })}
               </div>
-            );
-          })()}
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-2 mt-12">
+                  <button
+                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                        currentPage === page
+                          ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
+                          : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+
+                  <button
+                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
+            </>
+          )}
         </div>
       </section>
 
       {/* PDF Viewer Modal */}
       {selectedPdf && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl w-full max-w-6xl h-full max-h-[90vh] flex flex-col">
-            <div className="flex items-center justify-between p-6 border-b">
-              <h3 className="text-xl font-semibold text-gray-800 font-inter">
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-slate-900 rounded-2xl w-full max-w-6xl h-full max-h-[90vh] flex flex-col border border-orange-400/30">
+            <div className="flex items-center justify-between p-6 border-b border-slate-700">
+              <h3 className="text-xl font-semibold text-white font-inter">
                 {selectedPdf.title}
               </h3>
               <button
                 onClick={closePdfViewer}
-                className="text-gray-500 hover:text-gray-700 transition-colors duration-300"
+                className="text-slate-400 hover:text-white transition-colors duration-300 p-2 hover:bg-slate-800 rounded-lg"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <div className="flex-1 p-6">
+            <div className="flex-1 p-6 overflow-hidden">
               <iframe
                 src={selectedPdf.fileUrl}
-                className="w-full h-full rounded-lg border"
+                className="w-full h-full rounded-lg border border-slate-700"
                 title={selectedPdf.title}
               />
             </div>

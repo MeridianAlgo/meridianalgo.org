@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Handshake, ArrowRight } from 'lucide-react';
 import jukeboxLogo from '../assets/images/jukebox.png';
 import costcoLogo from '../assets/images/Costco.png';
+import hackFoundationLogo from '../assets/images/HackClub.png';
 
 const Partnerships = () => {
   useEffect(() => {
@@ -44,7 +45,38 @@ const Partnerships = () => {
             <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {/* Hack Foundation Partner Card */}
+            <div className="group relative">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">
+                <div className="flex flex-col items-center mb-8">
+                  <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
+                    <img 
+                      src={hackFoundationLogo} 
+                      alt="Hack Foundation Logo" 
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-display font-bold text-white text-center mb-2">The Hack Foundation</h3>
+                  <span className="text-orange-400 text-sm font-medium">Fiscal Sponsor</span>
+                </div>
+                <p className="text-gray-300 mb-8 text-center leading-relaxed text-sm">
+                  The Hack Foundation is our fiscal sponsor, supporting our mission to democratize financial education through their nonprofit infrastructure and resources.
+                </p>
+                <div className="flex justify-center">
+                  <a 
+                    href="https://the.hackfoundation.org/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48"
+                  >
+                    Visit Website
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* Jukebox Print Partner Card */}
             <div className="group relative">
               <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">

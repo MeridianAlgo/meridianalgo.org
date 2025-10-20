@@ -138,6 +138,9 @@ const LearningCenter = () => {
 
         const moduleProgressPercent = calculateModuleProgress(topics);
 
+        // Check if module is locked based on status
+        const isLocked = m.status === 'coming-soon';
+
         const builtModule: ModuleView = {
           id: m.id,
           title: m.title,
@@ -146,7 +149,7 @@ const LearningCenter = () => {
           difficulty: m.difficulty,
           topics,
           progress: moduleProgressPercent,
-          locked: false,
+          locked: isLocked,
           icon: getModuleIcon(m.icon),
           color: m.color,
         };
@@ -169,6 +172,11 @@ const LearningCenter = () => {
     const unlockedSet = new Set(user?.unlockedModules || []);
 
     const updated = orderedModules.map((module) => {
+      // If module is already locked from manifest (coming-soon), keep it locked
+      if (module.locked) {
+        return module;
+      }
+
       let locked = false;
 
       if (module.difficulty === 'Intermediate' && !beginnerComplete) {
@@ -318,8 +326,6 @@ const LearningCenter = () => {
     return null;
   }
 
-  const firstName = user.name.split(' ')[0] || user.name;
-
   return (
     <div className="min-h-screen bg-gray-900 flex">
       <Sidebar
@@ -338,8 +344,8 @@ const LearningCenter = () => {
         <div className="bg-gray-800 border-b border-gray-700 px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-white">
-                Welcome back, <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">{firstName}</span> 📚
+              <h1 className="text-2xl font-bold text-white">
+                Learning Center 📚
               </h1>
               <p className="text-gray-300 mt-1">Continue your financial literacy journey</p>
             </div>
@@ -581,23 +587,12 @@ const LearningCenter = () => {
                     {/* Action Button */}
                     {module.locked ? (
                       <div className="mt-auto space-y-3">
-                        {unlockMessages[module.id] && (
-                          <p className="text-xs text-center text-gray-300">{unlockMessages[module.id]}</p>
-                        )}
-                        <button
-                          onClick={() => handleUnlock(module.id, module.difficulty)}
-                          className={`w-full py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 ${
-                            totalPoints >= getUnlockCost(module.difficulty)
-                              ? 'bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white'
-                              : 'bg-gray-700 text-gray-500 cursor-not-allowed'
-                          }`}
-                          disabled={totalPoints < getUnlockCost(module.difficulty)}
-                        >
-                          <Zap className="w-4 h-4" />
-                          <span>Unlock for {getUnlockCost(module.difficulty)} pts</span>
-                        </button>
+                        <div className="w-full py-3 rounded-lg font-medium bg-gray-700 text-gray-400 cursor-not-allowed flex items-center justify-center space-x-2">
+                          <Lock className="w-4 h-4" />
+                          <span>Coming Soon</span>
+                        </div>
                         <p className="text-xs text-center text-gray-400">
-                          Complete earlier modules or spend points to unlock access.
+                          This module is currently being developed. Check back soon!
                         </p>
                       </div>
                     ) : (

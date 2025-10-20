@@ -65,42 +65,42 @@ const Navbar: React.FC = () => {
           : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <Link to="/" className="flex items-center group">
+      <Link to="/" className="flex items-center group flex-shrink-0">
         <img 
           src="/bitflow_logo.png" 
           alt="Meridian Algo Logo" 
-          className="h-8 w-auto select-none rounded-xl transition-transform duration-300 group-hover:scale-105" 
+          className="h-7 sm:h-8 w-auto select-none rounded-xl transition-transform duration-300 group-hover:scale-105" 
         />
         <div className="flex items-center">
-          <span className="h-8 w-0.5 bg-orange-400 mx-4"></span>
-          <span className="text-white text-2xl font-bold tracking-tight font-inter">
+          <span className="h-6 sm:h-8 w-0.5 bg-orange-400 mx-2 sm:mx-4"></span>
+          <span className="text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight font-inter">
             MeridianAlgo
           </span>
         </div>
       </Link>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex items-center space-x-8">
+      <div className="hidden lg:flex items-center space-x-4 xl:space-x-8 flex-shrink-0">
         {showHome && (
           <>
             <Link
               to="/"
-              className={`inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
+              className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
             >
               Home
             </Link>
-            <span className="mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
+            <span className="mx-0.5 xl:mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
           </>
         )}
 
         {/* About next to Home */}
         <Link
           to="/about"
-          className={`inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
+          className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
         >
           About
         </Link>
-        <span className="mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
+        <span className="mx-0.5 xl:mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
 
         {/* Learn dropdown */}
         <div 
@@ -117,13 +117,13 @@ const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setLearnOpen((v) => !v)}
-            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${
+            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 whitespace-nowrap ${
               (location.pathname === '/learning' || location.pathname === '/tools' || location.pathname === '/financial-literacy' || location.pathname === '/opensource' || location.pathname === '/newsletters' || location.pathname === '/research') ? 'text-orange-400' : ''
             }`}
             aria-haspopup="true"
             aria-expanded={learnOpen}
           >
-            Learning Center
+            Learning
           </button>
           <div 
             className={`${learnOpen ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'} transition-opacity duration-150 absolute left-1/2 -translate-x-1/2 top-full mt-0 w-48 z-50`}
@@ -151,25 +151,25 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <span className="mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
+        <span className="mx-0.5 xl:mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
         {NAV_LINKS.map((link, idx) => (
           <React.Fragment key={link.name}>
             {idx !== 0 && (
-              <span className="mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
+              <span className="mx-0.5 xl:mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
             )}
             {link.external ? (
               <a
                 href={link.to}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
+                className="inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
               >
                 {link.name}
               </a>
             ) : (
               <Link
                 to={link.to}
-                className={`inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
+                className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
               >
                 {link.name}
               </Link>
@@ -178,7 +178,7 @@ const Navbar: React.FC = () => {
         ))}
 
         {/* User Authentication */}
-        <span className="mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
+        <span className="mx-0.5 xl:mx-1 text-orange-400 select-none" aria-hidden="true">|</span>
         {isAuthenticated ? (
           <div 
             className="relative group"
@@ -194,11 +194,11 @@ const Navbar: React.FC = () => {
             <button
               type="button"
               onClick={() => setUserMenuOpen((v) => !v)}
-              className="inline-flex items-center h-8 leading-none cursor-pointer text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
+              className="inline-flex items-center h-8 leading-none cursor-pointer text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
               aria-haspopup="true"
               aria-expanded={userMenuOpen}
             >
-              <User className="w-4 h-4 mr-1" />
+              <User className="w-3 xl:w-4 h-3 xl:h-4 mr-1" />
               {user?.name.split(' ')[0]}
             </button>
             <div 
@@ -250,7 +250,7 @@ const Navbar: React.FC = () => {
         ) : (
           <Link
             to="/login"
-            className="inline-flex items-center h-8 leading-none text-white text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
+            className="inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 whitespace-nowrap"
           >
             Sign In
           </Link>
@@ -259,15 +259,15 @@ const Navbar: React.FC = () => {
 
       {/* Mobile hamburger */}
       <button
-        className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-orange-400 hover:bg-white/5 transition"
+        className="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-orange-400 hover:bg-white/5 transition flex-shrink-0"
         aria-label="Toggle menu"
         onClick={() => setMobileOpen((v) => !v)}
       >
-        {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {mobileOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
       </button>
       
       {/* Mobile menu panel with slide animation */}
-      <div className={`absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-b border-gray-800 md:hidden transition-all duration-300 ${
+      <div className={`absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-b border-gray-800 lg:hidden transition-all duration-300 ${
         mobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
       }`}>
         <div className="px-4 py-4 space-y-2">

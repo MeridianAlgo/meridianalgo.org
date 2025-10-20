@@ -1,96 +1,150 @@
 import { useEffect, useState } from 'react';
-import { Github, Code2, ExternalLink, Users } from 'lucide-react';
+import { Github, Code2, ExternalLink, Star, GitFork } from 'lucide-react';
 
 const PROJECTS = [
   {
+    name: 'AraAI',
+    url: 'https://github.com/MeridianAlgo/AraAI',
+    description: 'AI-powered financial analysis platform for stock volatility forecasting, market predictions, and portfolio optimization using ensemble machine learning.',
+    language: 'Python',
+    license: 'Other',
+    stars: 1,
+    category: 'Machine Learning'
+  },
+  {
+    name: 'Cryptvault',
+    url: 'https://github.com/MeridianAlgo/Cryptvault',
+    description: 'Professional-grade cryptocurrency analysis with advanced AI/ML predictions, 50+ pattern recognition, and TradingView-style terminal charts.',
+    language: 'Python',
+    license: 'MIT',
+    stars: 2,
+    category: 'Machine Learning'
+  },
+  {
+    name: 'TradeRiser',
+    url: 'https://github.com/MeridianAlgo/TradeRiser',
+    description: 'Modular crypto trading bot with TP/SL. Real-time Alpaca API, 6 indicators, paper trading. Easy to customize. Beginner-friendly. Production-ready.',
+    language: 'JavaScript',
+    license: 'MIT',
+    category: 'Trading Tools'
+  },
+  {
+    name: 'Bitflow',
+    url: 'https://github.com/MeridianAlgo/Bitflow',
+    description: 'Combination of Node.js and Python designed to help research trading strategies and test your own strategies in algorithmic trading.',
+    language: 'JavaScript',
+    license: 'Other',
+    category: 'Trading Tools'
+  },
+  {
+    name: 'Apex-Analysis',
+    url: 'https://github.com/MeridianAlgo/Apex-Analysis',
+    description: 'Stock Analysis and Identification tools for comprehensive market research.',
+    language: 'Python',
+    category: 'Analysis Tools'
+  },
+  {
+    name: 'Python-Packages',
+    url: 'https://github.com/MeridianAlgo/Python-Packages',
+    description: 'Python packages available on PyPI. Install with: pip install meridianalgo',
+    language: 'Python',
+    license: 'MIT',
+    stars: 1,
+    category: 'Libraries'
+  },
+  {
+    name: 'Adaptive-MA-Selection',
+    url: 'https://github.com/MeridianAlgo/Adaptive-MA-Selection',
+    description: 'Adaptive Moving Average Selection algorithms for dynamic market analysis.',
+    language: 'Python',
+    license: 'MIT',
+    category: 'Analysis Tools'
+  },
+  {
+    name: 'Portfolio-Optimization',
+    url: 'https://github.com/MeridianAlgo/Portfolio-Optimization',
+    description: 'Portfolio optimization tools and strategies for wealth management.',
+    language: 'Python',
+    category: 'Research'
+  },
+  {
+    name: 'Portfolio-Optimization-Research',
+    url: 'https://github.com/MeridianAlgo/Portfolio-Optimization-Research',
+    description: 'Research project on different ways to optimize portfolios with machine learning.',
+    language: 'Python',
+    license: 'MIT',
+    category: 'Research'
+  },
+  {
+    name: 'Option-Pricing-Research',
+    url: 'https://github.com/MeridianAlgo/Option-Pricing-Research',
+    description: 'Automated, quant-grade platform for option pricing research supporting Black-Scholes, Heston, and ML techniques.',
+    language: 'Python',
+    license: 'MIT',
+    stars: 1,
+    category: 'Research'
+  },
+  {
+    name: 'FinAI',
+    url: 'https://github.com/MeridianAlgo/FinAI',
+    description: 'Financial AI platform for analysis and predictions using advanced machine learning.',
+    language: 'Python',
+    license: 'MIT',
+    stars: 1,
+    category: 'Machine Learning'
+  },
+  {
+    name: 'TimeSeries-Prediction-Research',
+    url: 'https://github.com/MeridianAlgo/TimeSeries-Prediction-Research',
+    description: 'Time-Series research for understanding quantitative finance applications.',
+    language: 'HTML',
+    license: 'MIT',
+    category: 'Research'
+  },
+  {
+    name: 'Utils',
+    url: 'https://github.com/MeridianAlgo/Utils',
+    description: 'Utilities for beginners in Python and JavaScript. Educational purposes only.',
+    language: 'Python',
+    license: 'MIT',
+    stars: 1,
+    category: 'Libraries'
+  },
+  {
+    name: 'Bitflow-Original',
+    url: 'https://github.com/MeridianAlgo/Bitflow-Original',
+    description: 'Original Bitflow implementation for algorithmic trading research.',
+    language: 'JavaScript',
+    category: 'Trading Tools'
+  },
+  {
+    name: 'Javascript-Packages',
+    url: 'https://github.com/MeridianAlgo/Javascript-Packages',
+    description: 'NPM packages. Install with: npm i meridianalgo-js',
+    language: 'TypeScript',
+    license: 'MIT',
+    category: 'Libraries'
+  },
+  {
     name: 'In-NodeJS',
     url: 'https://github.com/MeridianAlgo/In-NodeJS',
-    description: 'Interactive Node.js-based simulations for classroom discussions on investing fundamentals and community wealth building.',
-    category: 'Resources',
+    description: 'Advanced Node.js-based trading tools for algorithmic research using Alpaca paper trading API.',
     language: 'JavaScript',
-    features: ['Financial Simulations', 'Teaching Resources', 'Community Workshops']
+    license: 'MPL-2.0',
+    stars: 1,
+    category: 'Trading Tools'
   },
   {
-    name: 'In-Pine',
-    url: 'https://github.com/MeridianAlgo/In-Pine',
-    description: 'Educational Pine Script lessons that explain market movements and personal finance concepts through visual indicators.',
-    category: 'Education',
-    language: 'Pine Script',
-    features: ['Interactive Lessons', 'Visual Indicators', 'Self-Guided Learning']
-  },
-  {
-    name: 'Python Library',
-    url: 'https://github.com/MeridianAlgo/Packages',
-    description: 'A comprehensive Python library for financial literacy workshops, budgeting labs, and community data storytelling. Also available on PyPI.',
-    category: 'Resources',
-    language: 'Python',
-    features: ['PyPI Package', 'Budgeting Labs', 'Data Storytelling']
-  },
-  {
-    name: 'JavaScript Packages',
-    url: 'https://github.com/MeridianAlgo/Javascript-Packages',
-    description: 'Collection of JavaScript packages and utilities for building financial literacy dashboards and interactive lessons.',
-    category: 'Resources',
-    language: 'JavaScript',
-    features: ['NPM Packages', 'Education Utilities', 'Financial Tools']
-  },
-  {
-    name: 'Utilities',
-    url: 'https://github.com/MeridianAlgo/Utils',
-    description: 'Utility scripts and tools for managing financial education events, surveys, and community research.',
-    category: 'Resources',
-    language: 'Python',
-    features: ['Data Processing', 'Community Surveys', 'Research Tools']
-  },
-  {
-    name: 'BitFlow',
-    url: 'https://github.com/MeridianAlgo/In-NodeJS/tree/main/BitFlow',
-    description: 'Real-time data exploration engine built with Node.js to help classrooms analyze market trends and personal finance scenarios.',
-    category: 'Learning Platform',
-    language: 'JavaScript',
-    features: ['Real-time Insights', 'Market Education', 'Interactive Demos']
-  },
-  {
-    name: 'Cryptvault',
-    url: 'https://github.com/MeridianAlgo/Cryptvault',
-    description: 'Charting resource using machine learning to identify the best types of charting on specific tickers.',
-    category: 'Machine Learning',
-    language: 'Python',
-    features: ['Charting Analysis', 'ML Optimization', 'Ticker-Specific Charts']
-  },
-  {
-    name: 'Ara',
-    url: 'https://github.com/MeridianAlgo/Ara',
-    description: 'Machine learning tools that support financial equity research and help students explore economic resilience metrics.',
-    category: 'Education',
-    language: 'Python',
-    features: ['ML Education', 'Equity Metrics', 'Community Analysis']
-  },
-  {
-    name: 'Cryptvault',
-    url: 'https://github.com/MeridianAlgo/Cryptvault',
-    description: 'Charting resource using machine learning to explain savings and investment concepts across different community case studies.',
-    category: 'Education',
-    language: 'Python',
-    features: ['Charting Analysis', 'ML Optimization', 'Community Case Studies']
-  },
-  {
-    name: 'TimeSeries Research',
-    url: 'https://github.com/MeridianAlgo/TimeSeries-Prediction',
-    description: 'Advanced time series analysis tools used in our research to forecast Midwestern economic trends and household resilience.',
-    category: 'Research',
-    language: 'Python',
-    features: ['Time Series Analysis', 'Economic Forecasting', 'ML Models']
+    name: 'MeridianAlgo',
+    url: 'https://github.com/MeridianAlgo/MeridianAlgo',
+    description: 'Main repository for MeridianAlgo organization and documentation.',
+    language: 'Various',
+    license: 'MIT',
+    category: 'Documentation'
   }
 ];
 
-const CATEGORIES = [
-  { name: 'All', color: 'orange' },
-  { name: 'Resources', color: 'orange' },
-  { name: 'Education', color: 'orange' },
-  { name: 'Learning Platform', color: 'orange' },
-  { name: 'Machine Learning', color: 'orange' }
-];
+const CATEGORIES = ['All', 'Machine Learning', 'Trading Tools', 'Research', 'Analysis Tools', 'Libraries', 'Documentation'];
 
 const OpenSource = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -101,72 +155,78 @@ const OpenSource = () => {
 
   const filteredProjects = selectedCategory === 'All' 
     ? PROJECTS 
-    : PROJECTS.filter(project => project.category === selectedCategory);
+    : PROJECTS.filter(p => p.category === selectedCategory);
 
-  const getLanguageColor = (language: string): string => {
+  const getLanguageColor = (language: string) => {
     const colors: Record<string, string> = {
+      'Python': 'bg-blue-500',
       'JavaScript': 'bg-yellow-500',
-      'Python': 'bg-orange-500',
-      'Pine Script': 'bg-orange-400',
-      'TypeScript': 'bg-orange-600'
+      'TypeScript': 'bg-blue-400',
+      'HTML': 'bg-orange-500',
+      'Various': 'bg-purple-500'
     };
     return colors[language] || 'bg-gray-500';
   };
 
-  const getCategoryColor = () => {
-    // Unified orange theme for all cards
-    return 'border-orange-400 bg-orange-500/5';
-  };
-
   return (
-    <div className="relative min-h-screen w-full bg-black pt-24 overflow-x-hidden overflow-y-auto">
-
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Github className="w-16 h-16 text-orange-400 mr-4" />
-            <h1 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl font-inter" style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7)' }}>
-              Open Source
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-8">
+              <Github className="w-10 h-10 text-orange-400" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Open Source</span>
             </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light mb-8">
+              All our tools, research, and educational resources are freely available. Built by the community, for the community.
+            </p>
           </div>
-          <p className="text-xl md:text-2xl text-slate-200 mb-8 font-inter font-light max-w-4xl mx-auto" style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}>
-            MeridianAlgo is built on the belief that transparency and collaboration drive community prosperity. Our open source lessons, simulations, and research help Midwestern learners build lasting financial confidence together.
-          </p>
-          
+
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto mb-12">
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">10</div>
-              <div className="text-slate-300 font-inter">Active Projects</div>
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">17</div>
+              <div className="text-gray-400">Active Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-300 mb-2">100%</div>
-              <div className="text-slate-300 font-inter">Open Source</div>
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
+                <span className="text-orange-400">MIT</span>
+              </div>
+              <div className="text-gray-400">License</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">MIT</div>
-              <div className="text-slate-300 font-inter">Licensed</div>
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">
+                <span className="text-orange-400">100%</span>
+              </div>
+              <div className="text-gray-400 whitespace-nowrap">Open Source</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+      <section className="py-8 border-y border-gray-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-wrap gap-3 justify-center">
             {CATEGORIES.map((category) => (
               <button
-                key={category.name}
-                onClick={() => setSelectedCategory(category.name)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 font-inter ${
-                  selectedCategory === category.name
-                    ? 'bg-orange-600 text-white shadow-lg scale-105'
-                    : 'bg-slate-800/60 text-slate-300 hover:bg-orange-600/20 hover:text-white'
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
               >
-                {category.name}
+                {category}
               </button>
             ))}
           </div>
@@ -175,103 +235,66 @@ const OpenSource = () => {
 
       {/* Projects Grid */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
-              <div 
-                key={project.name} 
-                className={`group bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 border-2 ${getCategoryColor()} hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex flex-col`}
+              <a
+                key={project.name}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 flex flex-col"
               >
-                {/* Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <Code2 className="w-8 h-8 text-orange-400" />
-                    <div>
-                      <h3 className="text-white text-lg font-semibold leading-snug">{project.name}</h3>
-                      <div className="flex items-center space-x-2 mt-2">
-                        <span className={`w-3 h-3 rounded-full ${getLanguageColor(project.language)}`}></span>
-                        <span className="text-xs text-slate-400 font-inter">{project.language}</span>
-                        <span className="text-xs font-medium text-gray-300 bg-gray-700/50 px-2 py-0.5 rounded-full whitespace-nowrap">
-                          {project.category}
-                        </span>
-                      </div>
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <Code2 className="w-6 h-6 text-orange-400" />
+                    <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">
+                      {project.name}
+                    </h3>
                   </div>
+                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors" />
                 </div>
 
-                {/* Description */}
-                <p className="text-slate-300 mb-6 font-inter font-light leading-relaxed">
+                <p className="text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
                   {project.description}
                 </p>
 
-                {/* Features */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.features.map((feature) => (
-                      <span 
-                        key={feature}
-                        className="px-3 py-1 text-xs bg-orange-900/20 text-orange-300 rounded-full font-inter"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex items-center gap-2 mt-auto">
+                  <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium ${getLanguageColor(project.language)} text-white`}>
+                    {project.language}
+                  </span>
+                  {project.license && (
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-orange-500/20 text-orange-400 border border-orange-400/30">
+                      {project.license}
+                    </span>
+                  )}
                 </div>
-
-                {/* Actions */}
-                <div className="flex space-x-3 mt-auto">
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter group-hover:shadow-lg h-12"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span>View Code</span>
-                  </a>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-3 bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 rounded-xl transition-all duration-300 flex items-center justify-center h-12 w-12"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="bg-gradient-to-r from-orange-900/10 to-orange-900/20 rounded-3xl p-12 border border-orange-400/30">
-            <Users className="w-16 h-16 text-orange-400 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-inter">Join Our Community</h2>
-            <p className="text-xl text-slate-200 mb-8 font-inter font-light">
-              By making our technology open, we empower a global community to innovate, learn, and build a more equitable financial future—together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://github.com/MeridianAlgo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter"
-              >
-                <Github className="w-5 h-5" />
-                <span>Explore All Repositories</span>
-              </a>
-              <a
-                href="/contact"
-                className="bg-white text-gray-900 border border-gray-200 hover:bg-orange-600 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 font-inter"
-              >
-                <Users className="w-5 h-5" />
-                <span>Get Involved</span>
-              </a>
-            </div>
-          </div>
+      {/* CTA Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 to-yellow-900/20"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="text-white">Contribute to </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Open Source</span>
+          </h2>
+          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+            Join our community of developers, researchers, and educators building the future of financial literacy.
+          </p>
+          <a
+            href="https://github.com/MeridianAlgo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg"
+          >
+            <Github className="w-5 h-5" />
+            View on GitHub
+          </a>
         </div>
       </section>
     </div>

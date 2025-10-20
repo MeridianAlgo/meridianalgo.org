@@ -14,32 +14,32 @@
           "id": "couples-finance_1",
           "title": "Money Conversations",
           "type": "reading",
-          "duration": "16 min",
-          "points": 100,
-          "contentFile": "modules/couples-finance/lessons/01_lesson.json"
+          "duration": "25 min",
+          "points": 150,
+          "contentFile": "modules/couples-finance/lessons/01_money_conversations.json"
         },
         {
           "id": "couples-finance_2",
           "title": "Joint vs Separate Accounts",
           "type": "reading",
-          "duration": "18 min",
-          "points": 100,
+          "duration": "28 min",
+          "points": 150,
           "contentFile": "modules/couples-finance/lessons/02_lesson.json"
         },
         {
           "id": "couples-finance_3",
           "title": "Creating a Couples Budget",
-          "type": "exercise",
-          "duration": "22 min",
-          "points": 100,
+          "type": "reading",
+          "duration": "30 min",
+          "points": 150,
           "contentFile": "modules/couples-finance/lessons/03_lesson.json"
         },
         {
           "id": "couples-finance_4",
           "title": "Financial Goals as a Team",
           "type": "reading",
-          "duration": "20 min",
-          "points": 100,
+          "duration": "28 min",
+          "points": 150,
           "contentFile": "modules/couples-finance/lessons/04_lesson.json"
         }
       ],
@@ -65,32 +65,32 @@
           "id": "credit-building_1",
           "title": "Understanding Credit Scores",
           "type": "reading",
-          "duration": "15 min",
-          "points": 100,
+          "duration": "32 min",
+          "points": 150,
           "contentFile": "modules/credit-building/lessons/01_lesson.json"
         },
         {
           "id": "credit-building_2",
           "title": "Building Credit from Zero",
           "type": "reading",
-          "duration": "18 min",
-          "points": 100,
+          "duration": "30 min",
+          "points": 150,
           "contentFile": "modules/credit-building/lessons/02_lesson.json"
         },
         {
           "id": "credit-building_3",
           "title": "Credit Card Best Practices",
-          "type": "exercise",
-          "duration": "20 min",
-          "points": 100,
+          "type": "reading",
+          "duration": "32 min",
+          "points": 150,
           "contentFile": "modules/credit-building/lessons/03_lesson.json"
         },
         {
           "id": "credit-building_4",
           "title": "Monitoring and Maintaining Credit",
           "type": "reading",
-          "duration": "15 min",
-          "points": 100,
+          "duration": "28 min",
+          "points": 150,
           "contentFile": "modules/credit-building/lessons/04_lesson.json"
         }
       ],
@@ -110,7 +110,7 @@
       "difficulty": "Beginner",
       "icon": "BarChart",
       "color": "purple",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "etf-investing_1",
@@ -161,7 +161,7 @@
       "difficulty": "Beginner",
       "icon": "Shield",
       "color": "red",
-      "status": "active",
+      "status": "coming-soon",
       "prerequisites": [],
       "lessons": [
         {
@@ -213,7 +213,7 @@
       "difficulty": "Beginner",
       "icon": "TrendingUp",
       "color": "blue",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "financial-recovery_1",
@@ -264,7 +264,7 @@
       "difficulty": "Beginner",
       "icon": "DollarSign",
       "color": "green",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "frugal-living_1",
@@ -366,7 +366,7 @@
       "difficulty": "Beginner",
       "icon": "Shield",
       "color": "green",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "insurance-planning_1",
@@ -417,7 +417,7 @@
       "difficulty": "Beginner",
       "icon": "PiggyBank",
       "color": "orange",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "retirement-accounts_1",
@@ -468,7 +468,7 @@
       "difficulty": "Beginner",
       "icon": "Briefcase",
       "color": "orange",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "side-hustle-finance_1",
@@ -575,7 +575,7 @@
       "difficulty": "Intermediate",
       "icon": "DollarSign",
       "color": "blue",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "bonds-fixed-income_1",
@@ -632,7 +632,7 @@
       "points": 150,
       "icon": "graduation-cap",
       "color": "indigo",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "college_planning_1",
@@ -683,7 +683,7 @@
       "difficulty": "Intermediate",
       "icon": "Zap",
       "color": "yellow",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "cryptocurrency-basics_1",
@@ -734,7 +734,7 @@
       "difficulty": "Intermediate",
       "icon": "TrendingUp",
       "color": "green",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "dividend-investing_1",
@@ -785,7 +785,7 @@
       "difficulty": "Intermediate",
       "icon": "Brain",
       "color": "purple",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "financial-psychology_1",
@@ -842,7 +842,7 @@
       "points": 150,
       "icon": "heart-pulse",
       "color": "rose",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "healthcare_finance_1",
@@ -893,7 +893,7 @@
       "difficulty": "Intermediate",
       "icon": "Globe",
       "color": "blue",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "international-investing_1",
@@ -944,7 +944,7 @@
       "difficulty": "Intermediate",
       "icon": "Home",
       "color": "purple",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "real-estate-investing_1",
@@ -995,7 +995,7 @@
       "difficulty": "Intermediate",
       "icon": "TrendingUp",
       "color": "green",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "stock-market-basics_1",
@@ -1101,7 +1101,7 @@
       "difficulty": "Intermediate",
       "icon": "FileText",
       "color": "red",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "tax-optimization_1",
@@ -1152,7 +1152,7 @@
       "difficulty": "Advanced",
       "icon": "FileText",
       "color": "indigo",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "estate-planning_1",
@@ -1203,7 +1203,7 @@
       "difficulty": "Advanced",
       "icon": "Target",
       "color": "red",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "financial-independence_1",
@@ -1254,7 +1254,7 @@
       "difficulty": "Advanced",
       "icon": "Zap",
       "color": "red",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "options-trading_1",
@@ -1311,7 +1311,7 @@
       "points": 200,
       "icon": "briefcase",
       "color": "amber",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "small_business_1",
@@ -1362,7 +1362,7 @@
       "difficulty": "Advanced",
       "icon": "Shield",
       "color": "indigo",
-      "status": "active",
+      "status": "coming-soon",
       "lessons": [
         {
           "id": "wealth-preservation_1",
@@ -1406,6 +1406,6 @@
       }
     }
   ],
-  "generatedAt": "2025-10-15T02:22:55.476Z",
+  "generatedAt": "2025-10-19T03:57:21.722Z",
   "version": "2.0.0"
 }

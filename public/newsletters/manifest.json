@@ -1,64 +1,121 @@
 {
   "newsletters": [
     {
-      "title": "Smart Cents Weekly - Inaugural Newsletter",
-      "description": "Our first ever weekly newsletter covering market insights, trading strategies, and analysis for young investors.",
+      "title": "Smart Cents Weekly - Week 1",
+      "description": "Launch edition: Your first steps into market insights, trading fundamentals, and building wealth as a young investor.",
       "fileName": "Smart Cents Weekly - Newsletter Week 1 (2).pdf",
-      "uploadDate": "2025-08-04"
+      "uploadDate": "2025-08-05",
+      "category": "Smart Cents Weekly",
+      "week": 1,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Smart Cents Weekly - 2nd Newsletter",
-      "description": "Our second newsletter covering market insights, stock picks, and analysis for young investors.",
+      "title": "Smart Cents Weekly - Week 2",
+      "description": "Stock picking strategies revealed: Learn how to identify winning stocks and avoid common beginner mistakes.",
       "fileName": "Smart Cents Weekly - Newsletter Week 2 (1).pdf",
-      "uploadDate": "2025-08-11"
+      "uploadDate": "2025-08-12",
+      "category": "Smart Cents Weekly",
+      "week": 2,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Smart Cents Weekly - 5th Newsletter",
-      "description": "Continuing our weekly insights with market analysis, strategy spotlights, and timely finance tips.",
-      "fileName": "Smart Cents Weekly - Newsletter Week 5 (1).pdf",
-      "uploadDate": "2025-09-01"
-    },
-    {
-      "title": "Smart Cents Weekly - 3rd Newsletter",
-      "description": "Week 3 edition with market updates and practical finance lessons.",
+      "title": "Smart Cents Weekly - Week 3",
+      "description": "Market updates decoded: Understanding economic indicators and what they mean for your portfolio.",
       "fileName": "Smart Cents Weekly - Newsletter Week 3.pdf",
-      "uploadDate": "2025-08-18"
+      "uploadDate": "2025-08-19",
+      "category": "Smart Cents Weekly",
+      "week": 3,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Smart Cents Weekly - 4th Newsletter",
-      "description": "Week 4 edition continuing our series on financial literacy and markets.",
+      "title": "Smart Cents Weekly - Week 4",
+      "description": "Financial literacy essentials: Building your foundation for long-term wealth creation and smart money management.",
       "fileName": "Smart Cents Weekly - Newsletter Week 4.pdf",
-      "uploadDate": "2025-08-25"
+      "uploadDate": "2025-08-26",
+      "category": "Smart Cents Weekly",
+      "week": 4,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Smart Cents Weekly - 6th Newsletter",
-      "description": "Week 6 edition with timely insights and youth-focused finance education.",
+      "title": "Smart Cents Weekly - Week 5",
+      "description": "Strategy spotlight: Advanced market analysis techniques and actionable finance tips for growing investors.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 5 (1).pdf",
+      "uploadDate": "2025-09-02",
+      "category": "Smart Cents Weekly",
+      "week": 5,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
+    },
+    {
+      "title": "Smart Cents Weekly - Week 6",
+      "description": "Youth finance revolution: Timely insights on building wealth in your 20s and 30s with modern strategies.",
       "fileName": "Smart Cents Weekly - Newsletter Week 6.pdf",
-      "uploadDate": "2025-09-08"
+      "uploadDate": "2025-09-09",
+      "category": "Smart Cents Weekly",
+      "week": 6,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Smart Cents Weekly - 7th Newsletter",
-      "description": "Week 7 edition continuing our series on financial literacy and learning about dividends.",
+      "title": "Smart Cents Weekly - Week 7",
+      "description": "Dividend investing masterclass: How to generate passive income and build wealth through dividend stocks.",
       "fileName": "Smart Cents Weekly - Newsletter Week 7.pdf",
-      "uploadDate": "2025-09-15"
+      "uploadDate": "2025-09-16",
+      "category": "Smart Cents Weekly",
+      "week": 7,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Smart Cents Weekly - 8th Newsletter",
-      "description": "Week 8 edition featuring dollar-cost averaging and the psychology of the markets.",
+      "title": "Smart Cents Weekly - Week 8",
+      "description": "Dollar-cost averaging explained: Master this proven strategy and understand the psychology behind market movements.",
       "fileName": "Smart Cents Weekly - Newsletter Week 8.pdf",
-      "uploadDate": "2025-09-22"
+      "uploadDate": "2025-09-23",
+      "category": "Smart Cents Weekly",
+      "week": 8,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Smart Cents Weekly - Newsletter Week 9",
-      "description": "Week 9 edition with insights into ratios and a look at indecies.",
+      "title": "Smart Cents Weekly - Week 9",
+      "description": "Ratio analysis deep dive: P/E vs. P/S ratios explained, plus understanding market indices for smarter investing.",
       "fileName": "Smart Cents Weekly - Newsletter Week 9.pdf",
-      "uploadDate": "2025-09-28"
+      "uploadDate": "2025-09-29",
+      "category": "Smart Cents Weekly",
+      "week": 9,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     },
     {
-      "title": "Corporate Compass - Newsletter Week 1",
-      "description": "Our inagural edition of Corporate Compass - Our Company Research Newsletter",
+      "title": "Corporate Compass - Week 1",
+      "description": "Inaugural edition: In-depth company research, financial analysis, and investment opportunities you need to know.",
       "fileName": "Corporate Compass - Newsletter Week 3.pdf",
-      "uploadDate": "2025-09-28"
+      "uploadDate": "2025-09-29",
+      "category": "Corporate Compass",
+      "week": 1,
+      "thumbnail": "/newsletter-thumbnails/corporate-compass-default.png"
+    },
+    {
+      "title": "Smart Cents Weekly - Week 10",
+      "description": "Market insights evolution: Advanced strategies for navigating volatile markets and protecting your portfolio.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 10.pdf",
+      "uploadDate": "2025-10-06",
+      "category": "Smart Cents Weekly",
+      "week": 10,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
+    },
+    {
+      "title": "Smart Cents Weekly - Week 11",
+      "description": "Trading strategies unlocked: Advanced techniques for active traders and comprehensive market analysis.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 11.pdf",
+      "uploadDate": "2025-10-13",
+      "category": "Smart Cents Weekly",
+      "week": 11,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
+    },
+    {
+      "title": "Smart Cents Weekly - Week 12",
+      "description": "Portfolio management mastery: Expert tips for diversification, risk management, and maximizing investment returns.",
+      "fileName": "Smart Cents Weekly - Newsletter Week 12.pdf",
+      "uploadDate": "2025-10-20",
+      "category": "Smart Cents Weekly",
+      "week": 12,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     }
   ]
 }

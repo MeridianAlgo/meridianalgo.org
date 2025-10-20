@@ -10,6 +10,7 @@ interface Module {
   difficulty: string;
   icon: string;
   color: string;
+  status?: string;
   lessons: LessonInfo[];
   quiz: QuizInfo;
 }

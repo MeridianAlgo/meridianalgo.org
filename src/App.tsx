@@ -11,8 +11,7 @@ import { AuthProvider } from './contexts/AuthContext';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Login = lazy(() => import('./pages/Login'));
-const FinancialLiteracy = lazy(() => import('./pages/FinancialLiteracyNew'));
-const FinancialLiteracyShowcase = lazy(() => import('./pages/FinancialLiteracyShowcase'));
+const FinancialLiteracy = lazy(() => import('./pages/FinancialLiteracy'));
 const Learning = lazy(() => import('./pages/Learning'));
 const LearningCenter = lazy(() => import('./pages/LearningCenter'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -28,7 +27,7 @@ const OpenSource = lazy(() => import('./pages/OpenSource'));
 const Research = lazy(() => import('./pages/Research'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ToolsPage = lazy(() => import('./pages/ToolsPage'));
-const AdminPortal = lazy(() => import('./pages/AdminPortal'));
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -57,8 +56,7 @@ function App() {
               <Route path="/" element={<AppLayout />}>
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
-                <Route path="financial-literacy" element={<FinancialLiteracyShowcase />} />
-                <Route path="financial-literacy-old" element={<FinancialLiteracy />} />
+                <Route path="financial-literacy" element={<FinancialLiteracy />} />
                 <Route path="opensource" element={<OpenSource />} />
                 <Route path="newsletters" element={<Newsletters />} />
                 <Route path="research" element={<Research />} />
@@ -111,12 +109,7 @@ function App() {
                 </ProtectedRoute>
               } />
 
-              {/* Admin Portal */}
-              <Route path="/admin" element={
-                <ProtectedRoute>
-                  <AdminPortal />
-                </ProtectedRoute>
-              } />
+
 
               {/* Lesson page without navbar */}
               <Route path="/lesson/:moduleId/:lessonId" element={

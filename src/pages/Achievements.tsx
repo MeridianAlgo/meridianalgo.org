@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { 
-  BookOpen, Award, TrendingUp, Target, Star, Users, Home,
-  Trophy, Flame, Calendar, Zap, FileText, Shield, Building,
-  Lightbulb, Brain, Clock, Moon, Lock, CheckCircle
+  BookOpen, Trophy, Flame, Zap, Lock, CheckCircle
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import { ACHIEVEMENTS, getEarnedAchievements, getTotalAchievementPoints } from '../utils/achievements';
 
 const Achievements: React.FC = () => {
   const { user, isAuthenticated, logout } = useAuth();
@@ -28,12 +27,23 @@ const Achievements: React.FC = () => {
     return null; // Will redirect to login
   }
 
-  const firstName = user.name.split(' ')[0] || user.name;
-
   const completedConcepts = user.completedConcepts.length;
-  const totalConcepts = 30;
-  const progressPercentage = (completedConcepts / totalConcepts) * 100;
+  
+  // Calculate progress percentage properly - need to get from progressData
+  const { progressData } = useAuth();
+  const progressPercentage = progressData?.progressPercentage || 0;
 
+  // Use centralized achievements
+  const earnedAchievements = getEarnedAchievements(user, completedConcepts, progressPercentage);
+  const totalPoints = getTotalAchievementPoints(user, completedConcepts, progressPercentage);
+
+  const achievements = ACHIEVEMENTS.map(achievement => ({
+    ...achievement,
+    earned: achievement.checkEarned(user, completedConcepts, progressPercentage),
+    earnedDate: achievement.checkEarned(user, completedConcepts, progressPercentage) ? user.joinDate : null
+  }));
+
+  /* OLD ACHIEVEMENTS - REPLACED WITH CENTRALIZED VERSION
   const achievements = [
     {
       id: 'welcome',
@@ -275,10 +285,7 @@ const Achievements: React.FC = () => {
       category: 'Special',
       points: 150
     }
-  ];
-
-  const earnedAchievements = achievements.filter(a => a.earned);
-  const totalPoints = earnedAchievements.reduce((sum, achievement) => sum + achievement.points, 0);
+  ]; */
 
   const categories = ['All', 'Getting Started', 'Learning', 'Consistency', 'Modules', 'Progress', 'Points', 'Quizzes', 'Special'];
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -305,11 +312,11 @@ const Achievements: React.FC = () => {
         <div className="bg-gray-800 border-b border-gray-700 px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-white">
-                Welcome back, <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">{firstName}</span>
+              <h1 className="text-2xl font-bold text-white">
+                Achievements 🏆
               </h1>
               <p className="text-gray-300 mt-1">
-                Track your progress and celebrate your milestones! 🏆
+                Track your progress and celebrate your milestones!
               </p>
             </div>
             <div className="flex items-center space-x-6">
@@ -409,7 +416,11 @@ const Achievements: React.FC = () => {
                       ? 'bg-orange-500/20 text-orange-400'
                       : 'bg-gray-700 text-gray-500'
                   }`}>
-                    {achievement.earned ? achievement.icon : <Lock className="w-8 h-8" />}
+                    {achievement.earned ? (
+                      React.createElement(achievement.icon, { className: "w-8 h-8" })
+                    ) : (
+                      <Lock className="w-8 h-8" />
+                    )}
                   </div>
                   {achievement.earned && (
                     <CheckCircle className="w-6 h-6 text-green-400" />
