@@ -116,6 +116,15 @@
       "category": "Smart Cents Weekly",
       "week": 12,
       "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
+    },
+    {
+      "title": "Smart Cents Weekly - Week 14",
+      "description": "Latest market insights and financial strategies for smart investors navigating today's economic landscape.",
+      "fileName": "Smart Cents Weekly - Week 14.pdf",
+      "uploadDate": "2025-11-02",
+      "category": "Smart Cents Weekly",
+      "week": 14,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     }
   ]
 }
