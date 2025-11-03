@@ -142,7 +142,7 @@ const LessonPage: React.FC = () => {
         return (
           <div key={index} className="mb-6">
             {section.title && <h2 className="text-2xl font-bold text-white mb-4">{section.title}</h2>}
-            <div className="text-gray-300 leading-relaxed text-lg">
+            <div className="text-gray-300 leading-relaxed text-lg whitespace-pre-wrap">
               {section.content}
             </div>
           </div>
@@ -155,7 +155,7 @@ const LessonPage: React.FC = () => {
               <Star className={`w-5 h-5 text-${section.color || 'orange'}-400 mr-2`} />
               {section.title}
             </h3>
-            <p className="text-gray-300 text-lg leading-relaxed">{section.content}</p>
+            <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-wrap">{section.content}</p>
           </div>
         );
       
@@ -201,7 +201,7 @@ const LessonPage: React.FC = () => {
               <Lightbulb className="w-5 h-5 text-yellow-400 mr-2" />
               {section.title}
             </h3>
-            <p className="text-gray-300 text-lg leading-relaxed">{section.content}</p>
+            <p className="text-gray-300 text-lg leading-relaxed whitespace-pre-wrap">{section.content}</p>
           </div>
         );
       

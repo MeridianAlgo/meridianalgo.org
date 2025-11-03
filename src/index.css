@@ -286,3 +286,11 @@ img, video, svg, canvas {
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out forwards;
 }
+/*
+ Preserve whitespace and line breaks in lesson content */
+.lesson-content p,
+.lesson-content div,
+[class*="lesson"] p,
+[class*="content"] p {
+  white-space: pre-wrap;
+}

@@ -1,7 +1,7 @@
 {
   "title": "Credit Building Fundamentals Quiz",
   "type": "quiz",
-  "duration": "12 min",
+  "duration": "15 min",
   "points": 150,
   "passingScore": 70,
   "questions": [
@@ -116,6 +116,118 @@
       ],
       "correct": 3,
       "explanation": "A credit score of 760-780 or higher typically qualifies you for the best mortgage rates. While you can get approved with lower scores, you'll pay higher interest rates. Even a small difference in rate can mean tens of thousands of dollars over a 30-year mortgage."
+    },
+    {
+      "id": 11,
+      "type": "multiple-choice",
+      "question": "What is the 'pay for delete' strategy when dealing with collections?",
+      "options": [
+        "Paying the minimum amount to delete your account",
+        "Negotiating with collectors to remove the negative item in exchange for payment",
+        "Deleting your credit cards after paying them off",
+        "Paying extra fees to speed up credit report updates"
+      ],
+      "correct": 1,
+      "explanation": "Pay for delete is a negotiation strategy where you offer to pay a collection debt in full (or settle for less) in exchange for the collector completely removing the negative item from your credit report. Always get this agreement in writing before paying!"
+    },
+    {
+      "id": 12,
+      "type": "true-false",
+      "question": "Making a payment on an old debt can restart the statute of limitations.",
+      "correct": true,
+      "explanation": "True. Making a payment or even acknowledging that you owe an old debt can restart the statute of limitations in many states, giving creditors more time to sue you. This is why you should send a debt validation letter first and never admit the debt is yours until you've verified it."
+    },
+    {
+      "id": 13,
+      "type": "multiple-choice",
+      "question": "What is the optimal credit utilization for achieving an 800+ credit score?",
+      "options": [
+        "Under 30%",
+        "Under 20%",
+        "Under 10%",
+        "Under 5%"
+      ],
+      "correct": 3,
+      "explanation": "While under 30% is good, achieving an 800+ credit score typically requires keeping utilization under 5%. This shows exceptional credit management and maximizes your score. Pay down balances before your statement closes to report low utilization."
+    },
+    {
+      "id": 14,
+      "type": "multiple-choice",
+      "question": "What is the AZEO (All Zero Except One) method?",
+      "options": [
+        "Paying all cards to zero and closing all but one",
+        "Letting all cards report $0 balance except one card with 1-5% utilization",
+        "Using only one credit card for all purchases",
+        "Keeping zero balance on all cards at all times"
+      ],
+      "correct": 1,
+      "explanation": "AZEO is an advanced optimization technique where you pay all credit cards to $0 before the statement closes, except one card that reports a small balance (1-5% of total credit limit). This can boost scores 10-30 points for those already in the 750+ range."
+    },
+    {
+      "id": 15,
+      "type": "true-false",
+      "question": "Reporting 0% utilization on all credit cards is optimal for your credit score.",
+      "correct": false,
+      "explanation": "False. While 0% utilization isn't bad, reporting 1-9% utilization is actually better. This shows you're actively using credit responsibly. Reporting 0% on all cards means scoring models can't assess your current credit management behavior."
+    },
+    {
+      "id": 16,
+      "type": "multiple-choice",
+      "question": "When should you request a credit limit increase?",
+      "options": [
+        "Every month to maximize your available credit",
+        "Every 6-12 months with perfect payment history",
+        "Only when you're denied for a loan",
+        "Never - it will hurt your credit score"
+      ],
+      "correct": 1,
+      "explanation": "Request credit limit increases every 6-12 months if you have perfect payment history. Always ask if they can do it with a soft pull only. Higher limits lower your utilization ratio, which can boost your score 15-30 points without any additional spending."
+    },
+    {
+      "id": 17,
+      "type": "multiple-choice",
+      "question": "How long does a Chapter 7 bankruptcy stay on your credit report?",
+      "options": [
+        "3 years",
+        "7 years",
+        "10 years",
+        "15 years"
+      ],
+      "correct": 2,
+      "explanation": "Chapter 7 bankruptcy stays on your credit report for 10 years from the filing date. Chapter 13 bankruptcy stays for 7 years. However, the impact on your score decreases over time, especially if you rebuild positive credit history."
+    },
+    {
+      "id": 18,
+      "type": "true-false",
+      "question": "Becoming an authorized user on someone else's credit card can instantly add years to your credit history.",
+      "correct": true,
+      "explanation": "True. When you become an authorized user, the entire payment history of that card is typically added to your credit report. If it's a 20-year-old card with perfect history, you instantly gain 20 years of positive credit history, potentially boosting your score 50-100+ points."
+    },
+    {
+      "id": 19,
+      "type": "multiple-choice",
+      "question": "What percentage of Americans have credit scores above 800?",
+      "options": [
+        "5%",
+        "21%",
+        "45%",
+        "60%"
+      ],
+      "correct": 1,
+      "explanation": "Only 21% of Americans have credit scores above 800. This elite group enjoys the best interest rates and terms on all credit products, saving tens of thousands of dollars over their lifetime. With the right strategies, you can join this group!"
+    },
+    {
+      "id": 20,
+      "type": "multiple-choice",
+      "question": "What should you do if you're applying for a mortgage in the next 6 months?",
+      "options": [
+        "Open several new credit cards to increase available credit",
+        "Close old unused credit cards to simplify your profile",
+        "Freeze all credit optimization efforts and maintain stability",
+        "Request credit limit increases on all cards"
+      ],
+      "correct": 2,
+      "explanation": "If you're applying for a mortgage soon, freeze all credit optimization efforts. Don't open new accounts, close old ones, or request limit increases. Lenders want to see stability. Make these changes after your mortgage closes."
     }
   ]
 }

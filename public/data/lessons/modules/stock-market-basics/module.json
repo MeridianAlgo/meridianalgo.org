@@ -39,6 +39,22 @@
       "duration": "18 min",
       "points": 100,
       "contentFile": "modules/stock-market-basics/lessons/04_lesson.json"
+    },
+    {
+      "id": "stock-market-basics_5",
+      "title": "Technical Analysis Fundamentals",
+      "type": "reading",
+      "duration": "30 min",
+      "points": 100,
+      "contentFile": "modules/stock-market-basics/lessons/05_lesson.json"
+    },
+    {
+      "id": "stock-market-basics_6",
+      "title": "Risk Management & Position Sizing",
+      "type": "reading",
+      "duration": "28 min",
+      "points": 100,
+      "contentFile": "modules/stock-market-basics/lessons/06_lesson.json"
     }
   ],
   "quiz": {

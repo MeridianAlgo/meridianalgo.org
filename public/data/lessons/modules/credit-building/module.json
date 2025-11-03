@@ -39,6 +39,22 @@
       "duration": "28 min",
       "points": 150,
       "contentFile": "modules/credit-building/lessons/04_lesson.json"
+    },
+    {
+      "id": "credit-building_5",
+      "title": "Credit Repair & Dispute Strategies",
+      "type": "reading",
+      "duration": "35 min",
+      "points": 150,
+      "contentFile": "modules/credit-building/lessons/05_lesson.json"
+    },
+    {
+      "id": "credit-building_6",
+      "title": "Advanced Credit Optimization",
+      "type": "reading",
+      "duration": "32 min",
+      "points": 150,
+      "contentFile": "modules/credit-building/lessons/06_lesson.json"
     }
   ],
   "quiz": {

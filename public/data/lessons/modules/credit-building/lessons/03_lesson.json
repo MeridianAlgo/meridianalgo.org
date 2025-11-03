@@ -71,7 +71,7 @@
     {
       "type": "content",
       "title": "⚡ The Utilization Strategy",
-      "content": "Credit utilization is calculated based on your statement balance—the balance reported to credit bureaus when your statement closes.\n\n🎯 The Problem:\n\nYou have a $2,000 credit limit. You charge $1,500 during the month and pay it off in full. But if your statement closes with that $1,500 balance, your utilization is 75%—terrible for your score, even though you paid in full.\n\n✅ The Solution:\n\nPay down your balance BEFORE the statement closing date. If your statement closes on the 15th and your payment is due on the 10th of the next month, make a payment on the 14th to reduce your statement balance.\n\n📅 Example Timeline:\n\n• June 1-15: You charge $1,500 to your card\n• June 14: You pay $1,200, bringing balance to $300\n• June 15: Statement closes with $300 balance (15% utilization—excellent!)\n• July 10: You pay the $300 statement balance\n• Result: You used $1,500 of credit but only reported 15% utilization"
+      "content": "Credit utilization is calculated based on your statement balance—the balance reported to credit bureaus when your statement closes.\n\n🎯 The Problem:\n\nYou have a $2,000 credit limit. You charge $1,500 during the month and pay it off in full. But if your statement closes with that $1,500 balance, your utilization is 75%—terrible for your score, even though you paid in full.\n\n✅ The Solution:\n\nPay down your balance BEFORE the statement closing date. If your statement closes on the 15th and your payment is due on the 10th of the next month, make a payment on the 14th to reduce your statement balance.\n\n📅 Example Timeline:\n\n• June 1-15: You charge $1,500 to your card\n\n• June 14: You pay $1,200, bringing balance to $300\n\n• June 15: Statement closes with $300 balance (15% utilization—excellent!)\n\n• July 10: You pay the $300 statement balance\n\n• Result: You used $1,500 of credit but only reported 15% utilization"
     },
     {
       "type": "calculator",
@@ -110,10 +110,26 @@
         }
       ],
       "results": [
-        {"id": "current_utilization", "label": "Current Utilization", "unit": "%"},
-        {"id": "max_balance_target", "label": "Max Balance for Target Utilization", "unit": "$"},
-        {"id": "payment_needed", "label": "Payment Needed Before Statement", "unit": "$"},
-        {"id": "utilization_impact", "label": "Score Impact", "unit": ""}
+        {
+          "id": "current_utilization",
+          "label": "Current Utilization",
+          "unit": "%"
+        },
+        {
+          "id": "max_balance_target",
+          "label": "Max Balance for Target Utilization",
+          "unit": "$"
+        },
+        {
+          "id": "payment_needed",
+          "label": "Payment Needed Before Statement",
+          "unit": "$"
+        },
+        {
+          "id": "utilization_impact",
+          "label": "Score Impact",
+          "unit": ""
+        }
       ]
     },
     {
