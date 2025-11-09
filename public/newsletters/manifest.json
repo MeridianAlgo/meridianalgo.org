@@ -125,6 +125,15 @@
       "category": "Smart Cents Weekly",
       "week": 14,
       "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
+    },
+    {
+      "title": "Smart Cents Weekly - Week 15",
+      "description": "Exclusive: The making of the next trillionaire, inside the $87B power play shaking Wall Street, and groundbreaking AI alliances reshaping global markets. Plus, advanced market strategies for serious investors.",
+      "fileName": "Smart Cents Weekly 15.pdf",
+      "uploadDate": "2025-11-09",
+      "category": "Smart Cents Weekly",
+      "week": 15,
+      "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"
     }
   ]
 }
