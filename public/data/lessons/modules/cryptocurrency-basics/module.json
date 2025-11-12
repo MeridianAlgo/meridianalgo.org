@@ -6,46 +6,6 @@
   "difficulty": "Intermediate",
   "icon": "Zap",
   "color": "yellow",
-  "status": "active",
-  "lessons": [
-    {
-      "id": "cryptocurrency-basics_1",
-      "title": "What is Cryptocurrency?",
-      "type": "reading",
-      "duration": "15 min",
-      "points": 100,
-      "contentFile": "modules/cryptocurrency-basics/lessons/01_lesson.json"
-    },
-    {
-      "id": "cryptocurrency-basics_2",
-      "title": "Blockchain Technology Explained",
-      "type": "reading",
-      "duration": "20 min",
-      "points": 100,
-      "contentFile": "modules/cryptocurrency-basics/lessons/02_lesson.json"
-    },
-    {
-      "id": "cryptocurrency-basics_3",
-      "title": "Buying and Storing Crypto",
-      "type": "exercise",
-      "duration": "25 min",
-      "points": 100,
-      "contentFile": "modules/cryptocurrency-basics/lessons/03_lesson.json"
-    },
-    {
-      "id": "cryptocurrency-basics_4",
-      "title": "Crypto Investment Risks",
-      "type": "reading",
-      "duration": "18 min",
-      "points": 100,
-      "contentFile": "modules/cryptocurrency-basics/lessons/04_lesson.json"
-    }
-  ],
-  "quiz": {
-    "id": "cryptocurrency-basics_quiz",
-    "title": "Cryptocurrency Fundamentals Quiz",
-    "duration": "10 min",
-    "points": 150,
-    "contentFile": "modules/cryptocurrency-basics/quiz.json"
-  }
+  "status": "coming-soon",
+  "lessons": []
 }

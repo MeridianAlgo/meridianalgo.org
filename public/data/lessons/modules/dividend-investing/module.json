@@ -6,46 +6,6 @@
   "difficulty": "Intermediate",
   "icon": "TrendingUp",
   "color": "green",
-  "status": "active",
-  "lessons": [
-    {
-      "id": "dividend-investing_1",
-      "title": "Dividend Investing Basics",
-      "type": "reading",
-      "duration": "18 min",
-      "points": 100,
-      "contentFile": "modules/dividend-investing/lessons/01_lesson.json"
-    },
-    {
-      "id": "dividend-investing_2",
-      "title": "Evaluating Dividend Stocks",
-      "type": "exercise",
-      "duration": "22 min",
-      "points": 100,
-      "contentFile": "modules/dividend-investing/lessons/02_lesson.json"
-    },
-    {
-      "id": "dividend-investing_3",
-      "title": "Dividend Reinvestment Plans",
-      "type": "reading",
-      "duration": "16 min",
-      "points": 100,
-      "contentFile": "modules/dividend-investing/lessons/03_lesson.json"
-    },
-    {
-      "id": "dividend-investing_4",
-      "title": "Building a Dividend Portfolio",
-      "type": "reading",
-      "duration": "20 min",
-      "points": 100,
-      "contentFile": "modules/dividend-investing/lessons/04_lesson.json"
-    }
-  ],
-  "quiz": {
-    "id": "dividend-investing_quiz",
-    "title": "Dividend Investing Quiz",
-    "duration": "10 min",
-    "points": 150,
-    "contentFile": "modules/dividend-investing/quiz.json"
-  }
+  "status": "coming-soon",
+  "lessons": []
 }

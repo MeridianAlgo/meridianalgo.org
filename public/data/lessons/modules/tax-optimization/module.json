@@ -1,51 +1,11 @@
 {
   "id": "tax-optimization",
   "title": "Tax Optimization Strategies",
-  "description": "Minimize taxes legally and maximize deductions",
+  "description": "Minimize taxes and maximize your after-tax returns",
   "duration": "2 weeks",
-  "difficulty": "Intermediate",
-  "icon": "FileText",
-  "color": "red",
-  "status": "active",
-  "lessons": [
-    {
-      "id": "tax-optimization_1",
-      "title": "Understanding Tax Brackets",
-      "type": "reading",
-      "duration": "15 min",
-      "points": 100,
-      "contentFile": "modules/tax-optimization/lessons/01_lesson.json"
-    },
-    {
-      "id": "tax-optimization_2",
-      "title": "Common Tax Deductions",
-      "type": "reading",
-      "duration": "20 min",
-      "points": 100,
-      "contentFile": "modules/tax-optimization/lessons/02_lesson.json"
-    },
-    {
-      "id": "tax-optimization_3",
-      "title": "Tax-Advantaged Accounts",
-      "type": "exercise",
-      "duration": "18 min",
-      "points": 100,
-      "contentFile": "modules/tax-optimization/lessons/03_lesson.json"
-    },
-    {
-      "id": "tax-optimization_4",
-      "title": "Year-End Tax Planning",
-      "type": "reading",
-      "duration": "16 min",
-      "points": 100,
-      "contentFile": "modules/tax-optimization/lessons/04_lesson.json"
-    }
-  ],
-  "quiz": {
-    "id": "tax-optimization_quiz",
-    "title": "Tax Optimization Strategies Quiz",
-    "duration": "10 min",
-    "points": 150,
-    "contentFile": "modules/tax-optimization/quiz.json"
-  }
+  "difficulty": "Advanced",
+  "icon": "Calculator",
+  "color": "blue",
+  "status": "coming-soon",
+  "lessons": []
 }

@@ -227,19 +227,13 @@ const Login: React.FC = () => {
               </button>
             </form>
 
-            <div className="mt-6 pt-6 border-t border-slate-700/50 space-y-3">
+            <div className="mt-6 pt-6 border-t border-slate-700/50">
               <Link 
                 to="/"
                 className="text-slate-400 hover:text-orange-400 text-sm font-medium transition-all duration-300 flex items-center justify-center space-x-2 group"
               >
                 <span className="group-hover:-translate-x-1 transition-transform duration-300">←</span>
                 <span>Back to home</span>
-              </Link>
-              <Link 
-                to="/admin"
-                className="text-slate-500 hover:text-slate-400 text-xs transition-all duration-300 flex items-center justify-center"
-              >
-                Admin Portal
               </Link>
             </div>
           </div>
