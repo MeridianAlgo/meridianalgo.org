@@ -2,7 +2,7 @@
   "id": "stock-market-basics",
   "title": "Stock Market Fundamentals",
   "description": "Learn how to invest in individual stocks",
-  "duration": "2 weeks",
+  "duration": "2.5 weeks",
   "difficulty": "Intermediate",
   "icon": "TrendingUp",
   "color": "green",
@@ -19,7 +19,7 @@
     {
       "id": "stock-market-basics_2",
       "title": "Reading Stock Charts",
-      "type": "exercise",
+      "type": "reading",
       "duration": "25 min",
       "points": 100,
       "contentFile": "modules/stock-market-basics/lessons/02_lesson.json"
@@ -28,7 +28,7 @@
       "id": "stock-market-basics_3",
       "title": "Fundamental Analysis",
       "type": "reading",
-      "duration": "22 min",
+      "duration": "28 min",
       "points": 100,
       "contentFile": "modules/stock-market-basics/lessons/03_lesson.json"
     },
@@ -36,15 +36,31 @@
       "id": "stock-market-basics_4",
       "title": "Building a Stock Portfolio",
       "type": "reading",
-      "duration": "18 min",
+      "duration": "25 min",
       "points": 100,
       "contentFile": "modules/stock-market-basics/lessons/04_lesson.json"
+    },
+    {
+      "id": "stock-market-basics_5",
+      "title": "Risk Management & Position Sizing",
+      "type": "reading",
+      "duration": "22 min",
+      "points": 100,
+      "contentFile": "modules/stock-market-basics/lessons/05_lesson.json"
+    },
+    {
+      "id": "stock-market-basics_6",
+      "title": "Common Investing Mistakes",
+      "type": "reading",
+      "duration": "20 min",
+      "points": 100,
+      "contentFile": "modules/stock-market-basics/lessons/06_lesson.json"
     }
   ],
   "quiz": {
     "id": "stock-market-basics_quiz",
     "title": "Stock Market Fundamentals Quiz",
-    "duration": "10 min",
+    "duration": "12 min",
     "points": 150,
     "contentFile": "modules/stock-market-basics/quiz.json"
   }

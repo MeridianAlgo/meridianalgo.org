@@ -1,0 +1,89 @@
+{
+  "title": "Risk Management & Position Sizing",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Risk Management",
+      "subtitle": "Protect your capital and survive market volatility",
+      "color": "green",
+      "icon": "Shield"
+    },
+    {
+      "type": "callout",
+      "title": "The First Rule of Investing",
+      "content": "Warren Buffett's Rule #1: Never lose money. Rule #2: Never forget Rule #1. While losses are inevitable, managing risk ensures no single loss can devastate your portfolio. Survival is the prerequisite for long-term success.",
+      "color": "red",
+      "icon": "AlertTriangle"
+    },
+    {
+      "type": "content",
+      "title": "Understanding Investment Risk",
+      "content": "Risk in investing isn't just about losing money - it's about the uncertainty of returns. Different types of risk affect your portfolio:\n\nMarket Risk: The risk that the entire market declines. Even great companies fall during bear markets. Diversification across asset classes helps.\n\nCompany-Specific Risk: The risk that a single company fails or underperforms. Enron, Lehman Brothers, and countless others have gone to zero. Diversification across stocks eliminates this.\n\nSector Risk: The risk that an entire industry struggles. Tech crashed in 2000, banks in 2008, energy in 2020. Diversify across sectors.\n\nCurrency Risk: For international investments, exchange rate changes affect returns. A strong dollar hurts international stock returns for US investors.\n\nInflation Risk: The risk that inflation erodes purchasing power. Bonds are particularly vulnerable. Stocks historically outpace inflation long-term."
+    },
+    {
+      "type": "key-points",
+      "title": "Position Sizing Rules",
+      "points": [
+        {
+          "title": "The 5% Rule",
+          "description": "No single stock should exceed 5% of your portfolio. Even your highest-conviction idea can be wrong. This limits damage from any single mistake."
+        },
+        {
+          "title": "The 1% Risk Rule",
+          "description": "Never risk more than 1-2% of your portfolio on a single trade. If you have $100,000 and set a 10% stop loss, your maximum position is $10,000-$20,000."
+        },
+        {
+          "title": "Sector Limits",
+          "description": "Cap any single sector at 20-25% of your portfolio. Tech might be exciting, but concentration creates vulnerability."
+        },
+        {
+          "title": "Scale Into Positions",
+          "description": "Don't buy your full position at once. Start with 1/3 or 1/2, then add more if the thesis plays out. This reduces the impact of bad timing."
+        },
+        {
+          "title": "Cash Reserve",
+          "description": "Keep 5-15% in cash for opportunities. Market crashes create buying opportunities, but only if you have cash available."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Stop Losses and Exit Strategies",
+      "content": "A stop loss is a predetermined price at which you'll sell to limit losses. Types include:\n\nFixed Percentage Stop: Sell if the stock drops 10-15% from your purchase price. Simple but doesn't account for volatility.\n\nTrailing Stop: Moves up with the stock price but never down. A 15% trailing stop on a stock that rises from $100 to $150 would trigger at $127.50.\n\nSupport-Based Stop: Set stops just below key support levels identified on charts. More sophisticated but requires technical analysis skills.\n\nTime-Based Exit: If a stock hasn't performed as expected within a certain timeframe (6-12 months), reconsider the position.\n\nFundamental Stop: Exit if the investment thesis breaks - management change, competitive threat, or deteriorating financials."
+    },
+    {
+      "type": "steps",
+      "title": "Creating Your Risk Management Plan",
+      "steps": [
+        "Define your maximum portfolio drawdown tolerance (e.g., 20% decline)",
+        "Set position size limits - no single stock over 5% of portfolio",
+        "Establish sector concentration limits - no sector over 25%",
+        "Decide on your stop loss strategy before buying any stock",
+        "Calculate position sizes based on your stop loss level",
+        "Maintain a cash reserve for opportunities (5-15%)",
+        "Review portfolio risk monthly - rebalance if limits are exceeded",
+        "Document your rules and follow them consistently"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Emotional Risk Management",
+      "content": "The biggest risk isn't market volatility - it's your own emotions. Fear and greed drive poor decisions:\n\nFear: Causes panic selling at market bottoms, locking in losses. The cure: have a plan before volatility hits and stick to it.\n\nGreed: Causes over-concentration in winners and chasing hot stocks. The cure: position limits and regular rebalancing.\n\nOverconfidence: After a winning streak, investors take excessive risks. The cure: follow your rules regardless of recent results.\n\nLoss Aversion: Holding losers too long hoping to break even. The cure: predetermined stop losses and regular portfolio reviews.\n\nRecency Bias: Assuming recent trends will continue forever. The cure: study market history and maintain diversification."
+    },
+    {
+      "type": "callout",
+      "title": "Key Takeaway",
+      "content": "Risk management isn't about avoiding all risk - it's about taking calculated risks where the potential reward justifies the potential loss. Define your rules before you invest, write them down, and follow them consistently. The investors who survive long-term are the ones who manage risk well.",
+      "color": "blue",
+      "icon": "Shield"
+    },
+    {
+      "type": "content",
+      "title": "Next Steps",
+      "content": "Before making your next investment, write down your risk management rules. What's your maximum position size? Where will you set your stop loss? What would make you sell? Having these answers before you buy removes emotion from the equation."
+    }
+  ]
+}

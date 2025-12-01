@@ -1,0 +1,94 @@
+{
+  "title": "Building a Dividend Portfolio",
+  "type": "reading",
+  "duration": "26 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Building a Dividend Portfolio",
+      "subtitle": "Create a diversified income-generating portfolio",
+      "color": "green",
+      "icon": "PieChart"
+    },
+    {
+      "type": "content",
+      "title": "Portfolio Construction Principles",
+      "content": "A dividend portfolio isn't just a collection of high-yield stocks. It's a carefully constructed mix of companies across different sectors, with varying yields and growth rates, designed to provide reliable and growing income.\n\nThe goal is diversification—not just in number of stocks, but in income sources. If all your dividend stocks are in one sector (like energy), a sector downturn could devastate your income."
+    },
+    {
+      "type": "key-points",
+      "title": "Diversification Guidelines",
+      "points": [
+        {
+          "title": "Number of Stocks: 20-30",
+          "description": "Enough to diversify risk, but not so many you can't track them. Each position should be 3-5% of your portfolio. No single stock over 5%."
+        },
+        {
+          "title": "Sector Allocation",
+          "description": "Spread across at least 8-10 sectors. No sector should exceed 20% of your portfolio. Include defensive sectors (utilities, consumer staples, healthcare) for stability."
+        },
+        {
+          "title": "Yield Mix",
+          "description": "Blend high-yield stocks (4-6%) with dividend growers (2-3% yield, 10%+ growth). This balances current income with future income growth."
+        },
+        {
+          "title": "Geographic Diversification",
+          "description": "Consider 10-20% in international dividend stocks. Many foreign companies pay higher yields than US counterparts."
+        },
+        {
+          "title": "REITs Allocation",
+          "description": "Real Estate Investment Trusts offer high yields (4-6%) and diversification from traditional stocks. Limit to 10-15% of portfolio due to interest rate sensitivity."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Sector Allocation for Dividend Investors",
+      "content": "Different sectors have different dividend characteristics:\n\nDefensive Sectors (Higher Yields, Slower Growth):\n- Utilities: 3-4% yields, stable but slow growth\n- Consumer Staples: 2.5-3.5% yields, recession-resistant\n- Healthcare: 2-3% yields, aging population tailwind\n\nCyclical Sectors (Variable):\n- Financials: 2-4% yields, sensitive to interest rates\n- Industrials: 2-3% yields, tied to economic cycles\n- Energy: 3-6% yields, volatile with oil prices\n\nGrowth Sectors (Lower Yields, Higher Growth):\n- Technology: 1-2% yields, but fast dividend growth\n- Consumer Discretionary: 1-2% yields, economic sensitivity\n\nHigh-Yield Sectors:\n- REITs: 4-6% yields, required to pay 90% of income\n- MLPs: 6-8% yields, complex tax treatment\n- BDCs: 8-10% yields, higher risk\n\nA balanced dividend portfolio includes exposure to multiple sectors, with heavier weights in defensive sectors for stability."
+    },
+    {
+      "type": "content",
+      "title": "Sample Dividend Portfolio",
+      "content": "Here's a sample 20-stock dividend portfolio:\n\nConsumer Staples (15%):\n- Procter & Gamble (PG)\n- Coca-Cola (KO)\n- PepsiCo (PEP)\n\nHealthcare (15%):\n- Johnson & Johnson (JNJ)\n- AbbVie (ABBV)\n- Pfizer (PFE)\n\nFinancials (12%):\n- JPMorgan Chase (JPM)\n- BlackRock (BLK)\n\nIndustrials (10%):\n- 3M (MMM)\n- Caterpillar (CAT)\n\nTechnology (10%):\n- Microsoft (MSFT)\n- Apple (AAPL)\n\nUtilities (10%):\n- NextEra Energy (NEE)\n- Duke Energy (DUK)\n\nEnergy (8%):\n- Chevron (CVX)\n- ExxonMobil (XOM)\n\nREITs (10%):\n- Realty Income (O)\n- Digital Realty (DLR)\n\nTelecom (5%):\n- Verizon (VZ)\n\nConsumer Discretionary (5%):\n- Home Depot (HD)\n\nThis portfolio yields approximately 3% with 6-8% dividend growth potential."
+    },
+    {
+      "type": "steps",
+      "title": "Building Your Dividend Portfolio",
+      "steps": [
+        "Determine your income goal - how much annual dividend income do you want?",
+        "Calculate required portfolio size - divide income goal by target yield (e.g., $12,000 / 3% = $400,000)",
+        "Choose your sector allocation based on your risk tolerance and income needs",
+        "Select 2-3 quality dividend stocks per sector using the evaluation criteria from Lesson 2",
+        "Start with your highest-conviction picks and add positions over time",
+        "Invest equal amounts in each position initially (equal-weight)",
+        "Enable dividend reinvestment (DRIP) to compound your returns",
+        "Rebalance annually to maintain target allocations"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "The Power of DRIP",
+      "content": "Dividend Reinvestment Plans (DRIP) automatically use your dividends to buy more shares. Over 30 years, reinvesting dividends can triple your total return compared to taking cash. Enable DRIP in your brokerage account settings.",
+      "color": "blue",
+      "icon": "TrendingUp"
+    },
+    {
+      "type": "content",
+      "title": "Dividend ETFs as Building Blocks",
+      "content": "If picking 20-30 individual stocks seems overwhelming, dividend ETFs offer instant diversification:\n\nBroad Dividend ETFs:\n- VYM (Vanguard High Dividend Yield): 400+ stocks, ~3% yield\n- SCHD (Schwab US Dividend Equity): 100 stocks, ~3.5% yield, quality focus\n- VIG (Vanguard Dividend Appreciation): Dividend growers, ~2% yield\n\nHigh-Yield ETFs:\n- HDV (iShares Core High Dividend): ~3.5% yield\n- SPYD (SPDR Portfolio S&P 500 High Dividend): ~4.5% yield\n\nDividend Growth ETFs:\n- DGRO (iShares Core Dividend Growth): Focus on dividend growth\n- NOBL (ProShares S&P 500 Dividend Aristocrats): Only Aristocrats\n\nA simple approach: 70% SCHD + 30% VIG gives you high-quality dividend stocks with a blend of yield and growth."
+    },
+    {
+      "type": "callout",
+      "title": "Key Takeaway",
+      "content": "Diversification is essential for dividend investors. Spread your income across sectors, blend yield with growth, and don't let any single stock dominate your portfolio. A well-diversified dividend portfolio can weather market storms while providing growing income.",
+      "color": "green",
+      "icon": "CheckCircle"
+    },
+    {
+      "type": "content",
+      "title": "Next Steps",
+      "content": "You now know how to build a diversified dividend portfolio. In the next lesson, we'll cover dividend reinvestment strategies and how to maximize the compounding effect of your dividends."
+    }
+  ]
+}

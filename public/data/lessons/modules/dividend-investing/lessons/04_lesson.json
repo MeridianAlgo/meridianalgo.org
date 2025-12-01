@@ -1,0 +1,96 @@
+{
+  "title": "Dividend Reinvestment & Compounding",
+  "type": "reading",
+  "duration": "22 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Dividend Reinvestment",
+      "subtitle": "Harness the power of compounding dividends",
+      "color": "green",
+      "icon": "RefreshCw"
+    },
+    {
+      "type": "callout",
+      "title": "The Eighth Wonder of the World",
+      "content": "Einstein allegedly called compound interest the eighth wonder of the world. Dividend reinvestment is compound interest on steroids—your dividends buy more shares, which pay more dividends, which buy more shares. Over decades, this snowball effect is transformative.",
+      "color": "green",
+      "icon": "TrendingUp"
+    },
+    {
+      "type": "content",
+      "title": "How Dividend Reinvestment Works",
+      "content": "When you reinvest dividends, instead of receiving cash, your dividends automatically purchase additional shares of the same stock or fund.\n\nExample:\n- You own 100 shares of a $50 stock with a 3% yield\n- Annual dividend: $150 (100 shares × $50 × 3%)\n- Reinvested: $150 buys 3 more shares\n- Next year: 103 shares pay $154.50\n- And so on...\n\nOver 30 years, those reinvested dividends can more than double your share count, even without adding new money. Combined with dividend growth, your income can increase 10x or more."
+    },
+    {
+      "type": "content",
+      "title": "The Math of Compounding Dividends",
+      "content": "Let's see the real impact with numbers:\n\nScenario: $100,000 invested in dividend stocks\n- Starting yield: 3%\n- Dividend growth: 7% annually\n- Stock price growth: 5% annually\n\nWithout Reinvestment (Taking Cash):\n- Year 1 income: $3,000\n- Year 10 income: $5,900\n- Year 20 income: $11,600\n- Year 30 income: $22,800\n- Total dividends received: $290,000\n- Portfolio value: $432,000\n\nWith Reinvestment (DRIP):\n- Year 1 income: $3,000 (reinvested)\n- Year 10 income: $9,200 (reinvested)\n- Year 20 income: $28,500 (reinvested)\n- Year 30 income: $88,000 (if you stopped reinvesting)\n- Portfolio value: $1,450,000\n\nThe difference is staggering. Reinvesting dividends for 30 years turns $100,000 into $1.45 million, with $88,000 in annual income. Taking cash leaves you with $432,000 and $22,800 in income."
+    },
+    {
+      "type": "key-points",
+      "title": "DRIP Options",
+      "points": [
+        {
+          "title": "Brokerage DRIP",
+          "description": "Most brokers offer free automatic dividend reinvestment. Enable it in your account settings. Dividends buy fractional shares of the same stock. Simple and effective."
+        },
+        {
+          "title": "Company DRIP",
+          "description": "Some companies offer direct DRIP programs, sometimes with discounts (1-5% off share price). Requires more paperwork but can save money on large positions."
+        },
+        {
+          "title": "Selective Reinvestment",
+          "description": "Instead of automatic DRIP, collect dividends as cash and manually invest in your most undervalued holdings. More work but allows strategic rebalancing."
+        },
+        {
+          "title": "Hybrid Approach",
+          "description": "DRIP during accumulation phase, then switch to cash dividends in retirement when you need income. Most investors should DRIP until they need the income."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "When to DRIP vs. Take Cash",
+      "content": "DRIP (Reinvest) When:\n- You're in the accumulation phase (building wealth)\n- You don't need the income for living expenses\n- You're investing in tax-advantaged accounts (IRA, 401k)\n- You want to maximize long-term growth\n\nTake Cash When:\n- You're retired and need income\n- You want to rebalance by investing dividends elsewhere\n- The stock is overvalued and you'd rather buy something cheaper\n- You need liquidity for emergencies\n\nMost investors should DRIP until retirement, then gradually switch to cash dividends as they need income."
+    },
+    {
+      "type": "callout",
+      "title": "Tax Consideration",
+      "content": "In taxable accounts, you owe taxes on dividends whether you reinvest or take cash. DRIP doesn't defer taxes. Consider holding dividend stocks in tax-advantaged accounts (IRA, 401k) to avoid annual tax drag.",
+      "color": "blue",
+      "icon": "Info"
+    },
+    {
+      "type": "steps",
+      "title": "Maximizing Dividend Compounding",
+      "steps": [
+        "Enable DRIP in your brokerage account for all dividend positions",
+        "Prioritize dividend stocks in tax-advantaged accounts (IRA, 401k)",
+        "Focus on dividend growth stocks—7% annual dividend growth doubles income every 10 years",
+        "Reinvest for as long as possible—time is the key ingredient",
+        "Add new money regularly to accelerate the compounding effect",
+        "Don't interrupt compounding by selling during market dips",
+        "Track your dividend income growth annually to stay motivated"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Dividend Snowball in Action",
+      "content": "Here's how a real dividend snowball might grow:\n\nYear 1: $500/month invested, 3% yield = $180 annual dividends\nYear 5: $30,000 portfolio, $1,100 annual dividends\nYear 10: $75,000 portfolio, $3,200 annual dividends\nYear 15: $150,000 portfolio, $7,500 annual dividends\nYear 20: $280,000 portfolio, $15,000 annual dividends\nYear 25: $500,000 portfolio, $30,000 annual dividends\nYear 30: $850,000 portfolio, $55,000 annual dividends\n\nBy year 30, your dividends alone ($55,000/year) exceed your total annual contributions ($6,000/year). The snowball is now self-sustaining."
+    },
+    {
+      "type": "callout",
+      "title": "Key Takeaway",
+      "content": "Dividend reinvestment is the secret weapon of wealthy dividend investors. The earlier you start and the longer you reinvest, the more powerful the compounding effect. Be patient, stay consistent, and let time do the heavy lifting.",
+      "color": "green",
+      "icon": "CheckCircle"
+    },
+    {
+      "type": "content",
+      "title": "Next Steps",
+      "content": "You now understand the power of dividend reinvestment. In the next lesson, we'll cover the tax implications of dividend investing and strategies to minimize your tax burden."
+    }
+  ]
+}

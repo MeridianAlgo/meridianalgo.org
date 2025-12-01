@@ -1,0 +1,127 @@
+{
+  "title": "Dividend Investing Quiz",
+  "description": "Test your knowledge of dividend investing strategies",
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is dividend yield?",
+      "options": [
+        "The total dividends paid over a company's lifetime",
+        "Annual dividend divided by stock price",
+        "The percentage of earnings paid as dividends",
+        "The growth rate of dividends over time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dividend yield is calculated by dividing the annual dividend by the current stock price. A $100 stock paying $3 annually has a 3% yield."
+    },
+    {
+      "id": "q2",
+      "question": "What is a Dividend Aristocrat?",
+      "options": [
+        "Any stock that pays a dividend",
+        "A stock with a yield over 5%",
+        "An S&P 500 company that has increased dividends for 25+ consecutive years",
+        "A company that pays monthly dividends"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Dividend Aristocrats are S&P 500 companies that have increased their dividends for at least 25 consecutive years, demonstrating exceptional dividend reliability."
+    },
+    {
+      "id": "q3",
+      "question": "What payout ratio is generally considered sustainable for most companies?",
+      "options": [
+        "Under 30%",
+        "Under 60%",
+        "Under 90%",
+        "Over 100%"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A payout ratio under 60% is generally sustainable, leaving room for dividend growth and providing a cushion during tough times. REITs are an exception as they must pay 90%+."
+    },
+    {
+      "id": "q4",
+      "question": "Why might an extremely high dividend yield (8%+) be a warning sign?",
+      "options": [
+        "High yields always indicate a great investment",
+        "The market may be expecting a dividend cut",
+        "The company is too profitable",
+        "High yields mean low risk"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Extremely high yields often indicate the market expects a dividend cut. The yield appears high because the stock price has fallen due to concerns about the company's ability to maintain the dividend."
+    },
+    {
+      "id": "q5",
+      "question": "What is DRIP in dividend investing?",
+      "options": [
+        "Dividend Reduction Investment Plan",
+        "Dividend Reinvestment Plan",
+        "Direct Return Investment Portfolio",
+        "Dividend Risk Insurance Program"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DRIP stands for Dividend Reinvestment Plan, which automatically uses your dividends to purchase additional shares of the same stock, accelerating compounding."
+    },
+    {
+      "id": "q6",
+      "question": "How are qualified dividends typically taxed for most investors?",
+      "options": [
+        "As ordinary income (up to 37%)",
+        "At long-term capital gains rates (0%, 15%, or 20%)",
+        "They are tax-free",
+        "At a flat 25% rate"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Qualified dividends are taxed at favorable long-term capital gains rates (0%, 15%, or 20% depending on income), which is lower than ordinary income tax rates."
+    },
+    {
+      "id": "q7",
+      "question": "Where should you ideally hold REIT investments for tax efficiency?",
+      "options": [
+        "Taxable brokerage account",
+        "Tax-advantaged accounts (IRA, 401k)",
+        "It doesn't matter",
+        "Only in Roth accounts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "REIT dividends are mostly taxed as ordinary income (up to 37%), not qualified dividends. Holding them in tax-advantaged accounts like IRAs or 401(k)s avoids this annual tax drag."
+    },
+    {
+      "id": "q8",
+      "question": "What is the recommended number of dividend stocks for proper diversification?",
+      "options": [
+        "5-10 stocks",
+        "20-30 stocks",
+        "50-100 stocks",
+        "Just 1-2 high-yield stocks"
+      ],
+      "correctAnswer": 1,
+      "explanation": "20-30 stocks across 8-10 sectors provides adequate diversification without being unmanageable. Each position should be 3-5% of your portfolio."
+    },
+    {
+      "id": "q9",
+      "question": "What happens to a stock's price on the ex-dividend date?",
+      "options": [
+        "It typically increases by the dividend amount",
+        "It typically decreases by approximately the dividend amount",
+        "It stays exactly the same",
+        "It always doubles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "On the ex-dividend date, the stock price typically drops by approximately the dividend amount because new buyers won't receive the upcoming dividend payment."
+    },
+    {
+      "id": "q10",
+      "question": "Which strategy focuses on stocks with lower current yields but higher dividend growth rates?",
+      "options": [
+        "High yield strategy",
+        "Dividend growth strategy",
+        "Value investing",
+        "Day trading"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The dividend growth strategy focuses on stocks with lower current yields (1.5-3%) but high dividend growth rates (8-15% annually), resulting in much higher income over time."
+    }
+  ]
+}

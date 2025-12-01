@@ -93,7 +93,7 @@ class ContentService {
     }
 
     try {
-      const response = await fetch('/data/lessons/manifest.json');
+      const response = await fetch('/data/lessons/manifest.json?v=2.1.0');
       if (!response.ok) {
         throw new Error('Failed to load lesson manifest');
       }

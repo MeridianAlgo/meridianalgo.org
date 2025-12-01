@@ -3,8 +3,8 @@
     {
       "id": "couples-finance",
       "title": "Couples and Money",
-      "description": "Navigate finances as a couple",
-      "duration": "2 weeks",
+      "description": "Navigate finances as a couple and build a strong financial partnership",
+      "duration": "2.5 weeks",
       "difficulty": "Beginner",
       "icon": "Heart",
       "color": "red",
@@ -41,12 +41,28 @@
           "duration": "28 min",
           "points": 150,
           "contentFile": "modules/couples-finance/lessons/04_lesson.json"
+        },
+        {
+          "id": "couples-finance_5",
+          "title": "Handling Financial Disagreements",
+          "type": "reading",
+          "duration": "26 min",
+          "points": 150,
+          "contentFile": "modules/couples-finance/lessons/05_lesson.json"
+        },
+        {
+          "id": "couples-finance_6",
+          "title": "Major Financial Decisions",
+          "type": "reading",
+          "duration": "28 min",
+          "points": 150,
+          "contentFile": "modules/couples-finance/lessons/06_lesson.json"
         }
       ],
       "quiz": {
         "id": "couples-finance_quiz",
         "title": "Couples and Money Quiz",
-        "duration": "10 min",
+        "duration": "12 min",
         "points": 150,
         "contentFile": "modules/couples-finance/quiz.json"
       }
@@ -186,55 +202,11 @@
       }
     },
     {
-      "id": "behavioral-finance",
-      "title": "Behavioral Finance",
-      "description": "Understand psychological biases that affect financial decisions",
-      "duration": "2 weeks",
-      "difficulty": "Intermediate",
-      "icon": "Brain",
-      "color": "purple",
-      "status": "coming-soon",
-      "lessons": []
-    },
-    {
-      "id": "cryptocurrency-basics",
-      "title": "Cryptocurrency Fundamentals",
-      "description": "Understand digital currencies and blockchain technology",
-      "duration": "2 weeks",
-      "difficulty": "Intermediate",
-      "icon": "Zap",
-      "color": "yellow",
-      "status": "coming-soon",
-      "lessons": []
-    },
-    {
-      "id": "dividend-investing",
-      "title": "Dividend Investing",
-      "description": "Build passive income through dividend stocks",
-      "duration": "2 weeks",
-      "difficulty": "Intermediate",
-      "icon": "TrendingUp",
-      "color": "green",
-      "status": "coming-soon",
-      "lessons": []
-    },
-    {
-      "id": "retirement-planning",
-      "title": "Retirement Planning",
-      "description": "Secure your financial future with smart retirement strategies",
-      "duration": "3 weeks",
-      "difficulty": "Intermediate",
-      "icon": "PiggyBank",
-      "color": "orange",
-      "status": "coming-soon",
-      "lessons": []
-    },
-    {
       "id": "stock-market-basics",
       "title": "Stock Market Fundamentals",
       "description": "Learn how to invest in individual stocks",
-      "duration": "2 weeks",
-      "difficulty": "Intermediate",
+      "duration": "2.5 weeks",
+      "difficulty": "Beginner",
       "icon": "TrendingUp",
       "color": "green",
       "status": "active",
@@ -250,7 +222,7 @@
         {
           "id": "stock-market-basics_2",
           "title": "Reading Stock Charts",
-          "type": "exercise",
+          "type": "reading",
           "duration": "25 min",
           "points": 100,
           "contentFile": "modules/stock-market-basics/lessons/02_lesson.json"
@@ -259,7 +231,7 @@
           "id": "stock-market-basics_3",
           "title": "Fundamental Analysis",
           "type": "reading",
-          "duration": "22 min",
+          "duration": "28 min",
           "points": 100,
           "contentFile": "modules/stock-market-basics/lessons/03_lesson.json"
         },
@@ -267,17 +239,154 @@
           "id": "stock-market-basics_4",
           "title": "Building a Stock Portfolio",
           "type": "reading",
-          "duration": "18 min",
+          "duration": "25 min",
           "points": 100,
           "contentFile": "modules/stock-market-basics/lessons/04_lesson.json"
+        },
+        {
+          "id": "stock-market-basics_5",
+          "title": "Risk Management & Position Sizing",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/stock-market-basics/lessons/05_lesson.json"
+        },
+        {
+          "id": "stock-market-basics_6",
+          "title": "Common Investing Mistakes",
+          "type": "reading",
+          "duration": "20 min",
+          "points": 100,
+          "contentFile": "modules/stock-market-basics/lessons/06_lesson.json"
         }
       ],
       "quiz": {
         "id": "stock-market-basics_quiz",
         "title": "Stock Market Fundamentals Quiz",
-        "duration": "10 min",
+        "duration": "12 min",
         "points": 150,
         "contentFile": "modules/stock-market-basics/quiz.json"
+      }
+    },
+    {
+      "id": "dividend-investing",
+      "title": "Dividend Investing",
+      "description": "Build passive income through dividend stocks",
+      "duration": "2 weeks",
+      "difficulty": "Beginner",
+      "icon": "DollarSign",
+      "color": "green",
+      "status": "active",
+      "lessons": [
+        {
+          "id": "dividend-investing_1",
+          "title": "Introduction to Dividend Investing",
+          "type": "reading",
+          "duration": "25 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/01_lesson.json"
+        },
+        {
+          "id": "dividend-investing_2",
+          "title": "Evaluating Dividend Stocks",
+          "type": "reading",
+          "duration": "28 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/02_lesson.json"
+        },
+        {
+          "id": "dividend-investing_3",
+          "title": "Building a Dividend Portfolio",
+          "type": "reading",
+          "duration": "26 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/03_lesson.json"
+        },
+        {
+          "id": "dividend-investing_4",
+          "title": "Dividend Reinvestment & Compounding",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/04_lesson.json"
+        },
+        {
+          "id": "dividend-investing_5",
+          "title": "Dividend Taxes & Tax-Efficient Strategies",
+          "type": "reading",
+          "duration": "24 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/05_lesson.json"
+        },
+        {
+          "id": "dividend-investing_6",
+          "title": "Dividend Investing Mistakes & Best Practices",
+          "type": "reading",
+          "duration": "22 min",
+          "points": 100,
+          "contentFile": "modules/dividend-investing/lessons/06_lesson.json"
+        }
+      ],
+      "quiz": {
+        "id": "dividend-investing_quiz",
+        "title": "Dividend Investing Quiz",
+        "duration": "12 min",
+        "points": 150,
+        "contentFile": "modules/dividend-investing/quiz.json"
+      }
+    },
+    {
+      "id": "behavioral-finance",
+      "title": "Behavioral Finance",
+      "description": "Understand psychological biases that affect financial decisions",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Brain",
+      "color": "purple",
+      "status": "coming-soon",
+      "lessons": [],
+      "quiz": {
+        "id": "behavioral-finance_quiz",
+        "title": "Behavioral Finance Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/behavioral-finance/quiz.json"
+      }
+    },
+    {
+      "id": "cryptocurrency-basics",
+      "title": "Cryptocurrency Fundamentals",
+      "description": "Understand digital currencies and blockchain technology",
+      "duration": "2 weeks",
+      "difficulty": "Intermediate",
+      "icon": "Zap",
+      "color": "yellow",
+      "status": "coming-soon",
+      "lessons": [],
+      "quiz": {
+        "id": "cryptocurrency-basics_quiz",
+        "title": "Cryptocurrency Fundamentals Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/cryptocurrency-basics/quiz.json"
+      }
+    },
+    {
+      "id": "retirement-planning",
+      "title": "Retirement Planning",
+      "description": "Secure your financial future with smart retirement strategies",
+      "duration": "3 weeks",
+      "difficulty": "Intermediate",
+      "icon": "PiggyBank",
+      "color": "orange",
+      "status": "coming-soon",
+      "lessons": [],
+      "quiz": {
+        "id": "retirement-planning_quiz",
+        "title": "Retirement Planning Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/retirement-planning/quiz.json"
       }
     },
     {
@@ -289,7 +398,14 @@
       "icon": "Zap",
       "color": "purple",
       "status": "coming-soon",
-      "lessons": []
+      "lessons": [],
+      "quiz": {
+        "id": "options-trading_quiz",
+        "title": "Options Trading Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/options-trading/quiz.json"
+      }
     },
     {
       "id": "real-estate-investing",
@@ -300,7 +416,14 @@
       "icon": "Home",
       "color": "indigo",
       "status": "coming-soon",
-      "lessons": []
+      "lessons": [],
+      "quiz": {
+        "id": "real-estate-investing_quiz",
+        "title": "Real Estate Investing Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/real-estate-investing/quiz.json"
+      }
     },
     {
       "id": "tax-optimization",
@@ -311,9 +434,16 @@
       "icon": "Calculator",
       "color": "blue",
       "status": "coming-soon",
-      "lessons": []
+      "lessons": [],
+      "quiz": {
+        "id": "tax-optimization_quiz",
+        "title": "Tax Optimization Quiz",
+        "duration": "10 min",
+        "points": 150,
+        "contentFile": "modules/tax-optimization/quiz.json"
+      }
     }
   ],
-  "generatedAt": "2025-11-12T01:39:32.892Z",
-  "version": "2.0.0"
+  "generatedAt": "2025-11-30T19:30:00.000Z",
+  "version": "2.1.0"
 }

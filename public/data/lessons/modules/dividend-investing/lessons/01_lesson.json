@@ -1,0 +1,95 @@
+{
+  "title": "Introduction to Dividend Investing",
+  "type": "reading",
+  "duration": "25 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Dividend Investing Basics",
+      "subtitle": "Build passive income that grows over time",
+      "color": "green",
+      "icon": "DollarSign"
+    },
+    {
+      "type": "callout",
+      "title": "The Power of Dividends",
+      "content": "Since 1926, dividends have contributed approximately 40% of the S&P 500's total return. Companies like Coca-Cola, Johnson & Johnson, and Procter & Gamble have paid dividends for over 100 years. Dividend investing isn't just about income—it's about owning quality businesses.",
+      "color": "green",
+      "icon": "TrendingUp"
+    },
+    {
+      "type": "content",
+      "title": "What Are Dividends?",
+      "content": "A dividend is a portion of a company's profits distributed to shareholders. When a company earns money, it can either reinvest those profits back into the business or return them to shareholders as dividends.\n\nFor example, if you own 100 shares of a company that pays $1 per share annually in dividends, you receive $100 per year just for owning the stock—regardless of whether the stock price goes up or down.\n\nDividends are typically paid quarterly (every 3 months), though some companies pay monthly, semi-annually, or annually. The payment is deposited directly into your brokerage account."
+    },
+    {
+      "type": "key-points",
+      "title": "Key Dividend Terms",
+      "points": [
+        {
+          "title": "Dividend Yield",
+          "description": "Annual dividend divided by stock price. A $100 stock paying $3/year has a 3% yield. Higher isn't always better—extremely high yields (8%+) often signal trouble."
+        },
+        {
+          "title": "Payout Ratio",
+          "description": "Percentage of earnings paid as dividends. A company earning $4/share and paying $2/share has a 50% payout ratio. Under 60% is generally sustainable; over 80% may be risky."
+        },
+        {
+          "title": "Ex-Dividend Date",
+          "description": "The cutoff date to receive the next dividend. You must own shares BEFORE this date. Buy on or after, and you won't get the upcoming payment."
+        },
+        {
+          "title": "Dividend Growth Rate",
+          "description": "How fast dividends increase annually. A company raising dividends 7% yearly doubles your income in 10 years. Growth matters more than current yield for long-term investors."
+        },
+        {
+          "title": "Dividend Aristocrats",
+          "description": "S&P 500 companies that have increased dividends for 25+ consecutive years. These are the gold standard of dividend reliability."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Why Invest in Dividend Stocks?",
+      "content": "Passive Income: Dividends provide cash flow without selling shares. Retirees can live off dividends while keeping their principal intact.\n\nCompounding Power: Reinvesting dividends buys more shares, which pay more dividends, which buy more shares. This snowball effect is powerful over decades.\n\nDownside Protection: Dividend stocks tend to fall less during market crashes. The income provides a cushion, and investors are reluctant to sell income-producing assets.\n\nInflation Hedge: Companies that consistently raise dividends help your income keep pace with inflation. A 3% yield growing 7% annually beats inflation.\n\nQuality Filter: Companies that pay consistent dividends tend to be profitable, well-managed, and financially stable. The dividend is a signal of quality."
+    },
+    {
+      "type": "content",
+      "title": "Dividend Yield vs. Dividend Growth",
+      "content": "There are two main dividend investing strategies:\n\nHigh Yield Strategy: Focus on stocks with yields of 4-6%+. Provides more immediate income but often slower growth. Best for retirees who need income now. Risk: High yields can signal distress.\n\nDividend Growth Strategy: Focus on stocks with lower yields (1.5-3%) but high dividend growth rates (8-15% annually). Less income today but much more in 10-20 years. Best for younger investors building wealth.\n\nExample over 20 years with $100,000 invested:\n\nHigh Yield (5% yield, 2% growth): Year 1 income: $5,000. Year 20 income: $7,400.\n\nDividend Growth (2.5% yield, 10% growth): Year 1 income: $2,500. Year 20 income: $16,800.\n\nThe dividend growth strategy produces less income initially but far more over time. Choose based on your timeline and income needs."
+    },
+    {
+      "type": "callout",
+      "title": "The Dividend Trap",
+      "content": "Beware of extremely high yields (8%+). They often indicate the market expects a dividend cut. A 10% yield that gets cut to 5% means you lose half your income AND the stock price usually crashes. Quality over yield.",
+      "color": "red",
+      "icon": "AlertTriangle"
+    },
+    {
+      "type": "steps",
+      "title": "Getting Started with Dividend Investing",
+      "steps": [
+        "Open a brokerage account if you don't have one (Fidelity, Schwab, Vanguard recommended)",
+        "Decide your strategy: high yield for income now, or dividend growth for income later",
+        "Start with dividend ETFs (VYM, SCHD, VIG) for instant diversification",
+        "Research individual dividend stocks using the criteria in upcoming lessons",
+        "Enable dividend reinvestment (DRIP) to automatically buy more shares",
+        "Track your dividend income monthly to watch it grow",
+        "Be patient—dividend investing rewards long-term holders"
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "Key Takeaway",
+      "content": "Dividend investing is about building a portfolio of quality companies that pay you to own them. Focus on sustainable dividends from profitable businesses, reinvest to compound your returns, and think in decades, not days.",
+      "color": "green",
+      "icon": "CheckCircle"
+    },
+    {
+      "type": "content",
+      "title": "Next Steps",
+      "content": "You now understand the basics of dividend investing. In the next lesson, we'll dive into how to evaluate dividend stocks—the specific metrics and criteria that separate great dividend payers from dividend traps."
+    }
+  ]
+}

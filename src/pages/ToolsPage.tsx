@@ -349,6 +349,140 @@ const ToolsPage: React.FC = () => {
     return { futureCost, future, gap: Math.max(0, futureCost - future) };
   }, [collegeCost, collegeYears, collegeSavings, collegeMonthly, collegeReturn]);
 
+  // Net Worth Calculator
+  const [nwCash, setNwCash] = useState('15000');
+  const [nwInvestments, setNwInvestments] = useState('50000');
+  const [nwProperty, setNwProperty] = useState('250000');
+  const [nwDebt, setNwDebt] = useState('180000');
+  const netWorthCalc = useMemo(() => {
+    const cash = parseNumericInput(nwCash) || 0;
+    const investments = parseNumericInput(nwInvestments) || 0;
+    const property = parseNumericInput(nwProperty) || 0;
+    const debt = parseNumericInput(nwDebt) || 0;
+    const totalAssets = cash + investments + property;
+    const netWorth = totalAssets - debt;
+    return { totalAssets, debt, netWorth };
+  }, [nwCash, nwInvestments, nwProperty, nwDebt]);
+
+  // Savings Goal Calculator
+  const [goalAmount, setGoalAmount] = useState('10000');
+  const [goalMonths, setGoalMonths] = useState('24');
+  const [goalCurrent, setGoalCurrent] = useState('1000');
+  const [goalRate, setGoalRate] = useState('4');
+  const savingsGoalCalc = useMemo(() => {
+    const goal = parseNumericInput(goalAmount) || 0;
+    const months = parseNumericInput(goalMonths) || 1;
+    const current = parseNumericInput(goalCurrent) || 0;
+    const rate = parseNumericInput(goalRate) / 100 / 12 || 0;
+    const remaining = goal - current;
+    const simpleMonthly = remaining / months;
+    // With interest
+    let monthlyWithInterest = simpleMonthly;
+    if (rate > 0) {
+      const futureOfCurrent = current * Math.pow(1 + rate, months);
+      const needed = goal - futureOfCurrent;
+      monthlyWithInterest = needed > 0 ? needed * rate / (Math.pow(1 + rate, months) - 1) : 0;
+    }
+    return { simpleMonthly, monthlyWithInterest: Math.max(0, monthlyWithInterest), remaining };
+  }, [goalAmount, goalMonths, goalCurrent, goalRate]);
+
+  // Inflation Calculator
+  const [inflationAmount, setInflationAmount] = useState('100');
+  const [inflationYears, setInflationYears] = useState('10');
+  const [inflationRate, setInflationRate] = useState('3');
+  const inflationCalc = useMemo(() => {
+    const amount = parseNumericInput(inflationAmount) || 0;
+    const years = parseNumericInput(inflationYears) || 0;
+    const rate = parseNumericInput(inflationRate) / 100 || 0;
+    const futureValue = amount * Math.pow(1 + rate, years);
+    const purchasingPower = amount / Math.pow(1 + rate, years);
+    const lostValue = amount - purchasingPower;
+    return { futureValue, purchasingPower, lostValue };
+  }, [inflationAmount, inflationYears, inflationRate]);
+
+  // Tip Calculator
+  const [tipBillAmount, setTipBillAmount] = useState('85');
+  const [tipPercent, setTipPercent] = useState('18');
+  const [tipSplitWays, setTipSplitWays] = useState('2');
+  const tipCalc = useMemo(() => {
+    const bill = parseNumericInput(tipBillAmount) || 0;
+    const percent = parseNumericInput(tipPercent) || 0;
+    const split = parseNumericInput(tipSplitWays) || 1;
+    const tipAmount = bill * (percent / 100);
+    const total = bill + tipAmount;
+    const perPerson = total / split;
+    return { tipAmount, total, perPerson };
+  }, [tipBillAmount, tipPercent, tipSplitWays]);
+
+  // Paycheck Calculator
+  const [paycheckGross, setPaycheckGross] = useState('5000');
+  const [paycheckFederal, setPaycheckFederal] = useState('12');
+  const [paycheckState, setPaycheckState] = useState('5');
+  const [paycheck401k, setPaycheck401k] = useState('6');
+  const paycheckCalc = useMemo(() => {
+    const gross = parseNumericInput(paycheckGross) || 0;
+    const federal = parseNumericInput(paycheckFederal) / 100 || 0;
+    const state = parseNumericInput(paycheckState) / 100 || 0;
+    const k401 = parseNumericInput(paycheck401k) / 100 || 0;
+    const fica = 0.0765; // Social Security + Medicare
+    const federalTax = gross * federal;
+    const stateTax = gross * state;
+    const ficaTax = gross * fica;
+    const retirement = gross * k401;
+    const totalDeductions = federalTax + stateTax + ficaTax + retirement;
+    const netPay = gross - totalDeductions;
+    return { federalTax, stateTax, ficaTax, retirement, totalDeductions, netPay };
+  }, [paycheckGross, paycheckFederal, paycheckState, paycheck401k]);
+
+  // Loan Comparison Calculator
+  const [loanAmount, setLoanAmount] = useState('25000');
+  const [loan1Rate, setLoan1Rate] = useState('6.5');
+  const [loan1Term, setLoan1Term] = useState('60');
+  const [loan2Rate, setLoan2Rate] = useState('4.9');
+  const [loan2Term, setLoan2Term] = useState('48');
+  const loanCompareCalc = useMemo(() => {
+    const principal = parseNumericInput(loanAmount) || 0;
+    const r1 = parseNumericInput(loan1Rate) / 100 / 12 || 0;
+    const n1 = parseNumericInput(loan1Term) || 1;
+    const r2 = parseNumericInput(loan2Rate) / 100 / 12 || 0;
+    const n2 = parseNumericInput(loan2Term) || 1;
+    const pmt1 = r1 > 0 ? principal * r1 * Math.pow(1 + r1, n1) / (Math.pow(1 + r1, n1) - 1) : principal / n1;
+    const pmt2 = r2 > 0 ? principal * r2 * Math.pow(1 + r2, n2) / (Math.pow(1 + r2, n2) - 1) : principal / n2;
+    const total1 = pmt1 * n1;
+    const total2 = pmt2 * n2;
+    const interest1 = total1 - principal;
+    const interest2 = total2 - principal;
+    return { pmt1, pmt2, total1, total2, interest1, interest2, savings: total1 - total2 };
+  }, [loanAmount, loan1Rate, loan1Term, loan2Rate, loan2Term]);
+
+  // Investment Return Calculator
+  const [invInitial, setInvInitial] = useState('10000');
+  const [invFinal, setInvFinal] = useState('15000');
+  const [invYears, setInvYears] = useState('3');
+  const investmentReturnCalc = useMemo(() => {
+    const initial = parseNumericInput(invInitial) || 1;
+    const final = parseNumericInput(invFinal) || 0;
+    const years = parseNumericInput(invYears) || 1;
+    const totalReturn = ((final - initial) / initial) * 100;
+    const annualReturn = (Math.pow(final / initial, 1 / years) - 1) * 100;
+    const gain = final - initial;
+    return { totalReturn, annualReturn, gain };
+  }, [invInitial, invFinal, invYears]);
+
+  // Break-Even Calculator
+  const [beFixedCosts, setBeFixedCosts] = useState('5000');
+  const [bePrice, setBePrice] = useState('50');
+  const [beVariableCost, setBeVariableCost] = useState('20');
+  const breakEvenCalc = useMemo(() => {
+    const fixed = parseNumericInput(beFixedCosts) || 0;
+    const price = parseNumericInput(bePrice) || 0;
+    const variable = parseNumericInput(beVariableCost) || 0;
+    const margin = price - variable;
+    const breakEvenUnits = margin > 0 ? Math.ceil(fixed / margin) : 0;
+    const breakEvenRevenue = breakEvenUnits * price;
+    return { breakEvenUnits, breakEvenRevenue, margin };
+  }, [beFixedCosts, bePrice, beVariableCost]);
+
   if (!isAuthenticated || !user) {
     return null;
   }
@@ -967,6 +1101,338 @@ const ToolsPage: React.FC = () => {
                 <p className="text-2xl font-bold text-green-400">{formatCurrency(hsaCalc.taxSavings)}</p>
                 <p className="text-sm text-gray-400 mt-2">Future Value: {formatCurrency(hsaCalc.future)}</p>
                 <p className="text-sm text-orange-400">Total Tax Savings: {formatCurrency(hsaCalc.totalSavings)}</p>
+              </div>
+            </div>
+          </CollapsibleTool>
+
+          <CollapsibleTool
+            title="Paycheck Calculator"
+            icon={<DollarSign className="w-5 h-5" />}
+            description="Estimate your take-home pay after deductions"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Gross Pay (per paycheck)</label>
+                <input type="number" value={paycheckGross} onChange={e => setPaycheckGross(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">Federal Tax %</label>
+                  <input type="number" value={paycheckFederal} onChange={e => setPaycheckFederal(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">State Tax %</label>
+                  <input type="number" value={paycheckState} onChange={e => setPaycheckState(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">401(k) Contribution %</label>
+                <input type="number" value={paycheck401k} onChange={e => setPaycheck401k(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 mt-4">
+                <p className="text-sm text-gray-400">Net Pay (Take-Home)</p>
+                <p className="text-2xl font-bold text-green-400">{formatCurrency(paycheckCalc.netPay)}</p>
+                <div className="grid grid-cols-2 gap-2 mt-3 text-sm">
+                  <p className="text-gray-400">Federal: <span className="text-red-400">{formatCurrency(paycheckCalc.federalTax)}</span></p>
+                  <p className="text-gray-400">State: <span className="text-red-400">{formatCurrency(paycheckCalc.stateTax)}</span></p>
+                  <p className="text-gray-400">FICA: <span className="text-red-400">{formatCurrency(paycheckCalc.ficaTax)}</span></p>
+                  <p className="text-gray-400">401(k): <span className="text-blue-400">{formatCurrency(paycheckCalc.retirement)}</span></p>
+                </div>
+              </div>
+            </div>
+          </CollapsibleTool>
+
+          {/* Quick Tools */}
+          <h2 className="text-xl font-bold text-white mb-4 mt-8">⚡ Quick Tools</h2>
+
+          <CollapsibleTool
+            title="Net Worth Calculator"
+            icon={<TrendingUp className="w-5 h-5" />}
+            description="Track your total assets minus liabilities"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Cash & Savings</label>
+                <input type="number" value={nwCash} onChange={e => setNwCash(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Investments (stocks, 401k, etc.)</label>
+                <input type="number" value={nwInvestments} onChange={e => setNwInvestments(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Property Value</label>
+                <input type="number" value={nwProperty} onChange={e => setNwProperty(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Total Debt (mortgage, loans, etc.)</label>
+                <input type="number" value={nwDebt} onChange={e => setNwDebt(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 mt-4">
+                <p className="text-sm text-gray-400">Net Worth</p>
+                <p className={`text-2xl font-bold ${netWorthCalc.netWorth >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {formatCurrency(netWorthCalc.netWorth)}
+                </p>
+                <p className="text-sm text-gray-400 mt-2">Total Assets: {formatCurrency(netWorthCalc.totalAssets)}</p>
+                <p className="text-sm text-red-400">Total Debt: {formatCurrency(netWorthCalc.debt)}</p>
+              </div>
+            </div>
+          </CollapsibleTool>
+
+          <CollapsibleTool
+            title="Savings Goal Calculator"
+            icon={<PiggyBank className="w-5 h-5" />}
+            description="Calculate monthly savings needed to reach your goal"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Goal Amount</label>
+                <input type="number" value={goalAmount} onChange={e => setGoalAmount(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Months to Goal</label>
+                <input type="number" value={goalMonths} onChange={e => setGoalMonths(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Current Savings</label>
+                <input type="number" value={goalCurrent} onChange={e => setGoalCurrent(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Savings Account Rate %</label>
+                <input type="number" value={goalRate} onChange={e => setGoalRate(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 mt-4">
+                <p className="text-sm text-gray-400">Monthly Savings Needed</p>
+                <p className="text-2xl font-bold text-orange-400">{formatCurrency(savingsGoalCalc.monthlyWithInterest)}</p>
+                <p className="text-sm text-gray-400 mt-2">Without interest: {formatCurrency(savingsGoalCalc.simpleMonthly)}/mo</p>
+                <p className="text-sm text-gray-400">Remaining to save: {formatCurrency(savingsGoalCalc.remaining)}</p>
+              </div>
+            </div>
+          </CollapsibleTool>
+
+          <CollapsibleTool
+            title="Inflation Calculator"
+            icon={<Percent className="w-5 h-5" />}
+            description="See how inflation affects purchasing power"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Amount Today</label>
+                <input type="number" value={inflationAmount} onChange={e => setInflationAmount(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">Years</label>
+                  <input type="number" value={inflationYears} onChange={e => setInflationYears(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">Inflation Rate %</label>
+                  <input type="number" value={inflationRate} onChange={e => setInflationRate(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 mt-4">
+                <p className="text-sm text-gray-400">Future Cost of Same Item</p>
+                <p className="text-2xl font-bold text-red-400">{formatCurrency(inflationCalc.futureValue)}</p>
+                <p className="text-sm text-gray-400 mt-2">Today's {formatCurrency(parseNumericInput(inflationAmount))} will feel like:</p>
+                <p className="text-lg font-bold text-orange-400">{formatCurrency(inflationCalc.purchasingPower)}</p>
+              </div>
+            </div>
+          </CollapsibleTool>
+
+          <CollapsibleTool
+            title="Tip Calculator"
+            icon={<Receipt className="w-5 h-5" />}
+            description="Calculate tips and split bills easily"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Bill Amount</label>
+                <input type="number" value={tipBillAmount} onChange={e => setTipBillAmount(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">Tip %</label>
+                  <input type="number" value={tipPercent} onChange={e => setTipPercent(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">Split Ways</label>
+                  <input type="number" value={tipSplitWays} onChange={e => setTipSplitWays(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 mt-4">
+                <div className="grid grid-cols-3 gap-3">
+                  <div>
+                    <p className="text-xs text-gray-400">Tip</p>
+                    <p className="text-lg font-bold text-green-400">{formatCurrency(tipCalc.tipAmount)}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400">Total</p>
+                    <p className="text-lg font-bold text-white">{formatCurrency(tipCalc.total)}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400">Per Person</p>
+                    <p className="text-lg font-bold text-orange-400">{formatCurrency(tipCalc.perPerson)}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CollapsibleTool>
+
+          <CollapsibleTool
+            title="Loan Comparison"
+            icon={<Calculator className="w-5 h-5" />}
+            description="Compare two loan options side by side"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Loan Amount</label>
+                <input type="number" value={loanAmount} onChange={e => setLoanAmount(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-blue-400">Loan Option 1</p>
+                  <div>
+                    <label className="block text-xs text-gray-400 mb-1">Rate %</label>
+                    <input type="number" value={loan1Rate} onChange={e => setLoan1Rate(e.target.value)}
+                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-gray-400 mb-1">Term (months)</label>
+                    <input type="number" value={loan1Term} onChange={e => setLoan1Term(e.target.value)}
+                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm font-medium text-green-400">Loan Option 2</p>
+                  <div>
+                    <label className="block text-xs text-gray-400 mb-1">Rate %</label>
+                    <input type="number" value={loan2Rate} onChange={e => setLoan2Rate(e.target.value)}
+                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-gray-400 mb-1">Term (months)</label>
+                    <input type="number" value={loan2Term} onChange={e => setLoan2Term(e.target.value)}
+                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3 mt-4">
+                <div className="bg-gray-900 rounded-lg p-3">
+                  <p className="text-xs text-blue-400 font-medium">Option 1</p>
+                  <p className="text-lg font-bold text-white">{formatCurrency(loanCompareCalc.pmt1)}/mo</p>
+                  <p className="text-xs text-gray-400">Total: {formatCurrency(loanCompareCalc.total1)}</p>
+                  <p className="text-xs text-red-400">Interest: {formatCurrency(loanCompareCalc.interest1)}</p>
+                </div>
+                <div className="bg-gray-900 rounded-lg p-3">
+                  <p className="text-xs text-green-400 font-medium">Option 2</p>
+                  <p className="text-lg font-bold text-white">{formatCurrency(loanCompareCalc.pmt2)}/mo</p>
+                  <p className="text-xs text-gray-400">Total: {formatCurrency(loanCompareCalc.total2)}</p>
+                  <p className="text-xs text-red-400">Interest: {formatCurrency(loanCompareCalc.interest2)}</p>
+                </div>
+              </div>
+              <p className="text-sm text-center mt-2">
+                {loanCompareCalc.savings > 0 ? (
+                  <span className="text-green-400">Option 2 saves {formatCurrency(loanCompareCalc.savings)} total</span>
+                ) : loanCompareCalc.savings < 0 ? (
+                  <span className="text-green-400">Option 1 saves {formatCurrency(Math.abs(loanCompareCalc.savings))} total</span>
+                ) : (
+                  <span className="text-gray-400">Both options cost the same</span>
+                )}
+              </p>
+            </div>
+          </CollapsibleTool>
+
+          <CollapsibleTool
+            title="Investment Return Calculator"
+            icon={<TrendingUp className="w-5 h-5" />}
+            description="Calculate your actual investment returns"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Initial Investment</label>
+                <input type="number" value={invInitial} onChange={e => setInvInitial(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Current Value</label>
+                <input type="number" value={invFinal} onChange={e => setInvFinal(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Years Held</label>
+                <input type="number" value={invYears} onChange={e => setInvYears(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 mt-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-xs text-gray-400">Total Return</p>
+                    <p className={`text-xl font-bold ${investmentReturnCalc.totalReturn >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                      {investmentReturnCalc.totalReturn.toFixed(2)}%
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400">Annualized Return</p>
+                    <p className={`text-xl font-bold ${investmentReturnCalc.annualReturn >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                      {investmentReturnCalc.annualReturn.toFixed(2)}%
+                    </p>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-400 mt-3">
+                  Gain/Loss: <span className={investmentReturnCalc.gain >= 0 ? 'text-green-400' : 'text-red-400'}>
+                    {formatCurrency(investmentReturnCalc.gain)}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </CollapsibleTool>
+
+          <CollapsibleTool
+            title="Break-Even Calculator"
+            icon={<Briefcase className="w-5 h-5" />}
+            description="Calculate break-even point for business decisions"
+          >
+            <div className="space-y-3">
+              <div>
+                <label className="block text-sm text-gray-300 mb-1">Fixed Costs</label>
+                <input type="number" value={beFixedCosts} onChange={e => setBeFixedCosts(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">Price per Unit</label>
+                  <input type="number" value={bePrice} onChange={e => setBePrice(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+                <div>
+                  <label className="block text-sm text-gray-300 mb-1">Variable Cost per Unit</label>
+                  <input type="number" value={beVariableCost} onChange={e => setBeVariableCost(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+                </div>
+              </div>
+              <div className="bg-gray-900 rounded-lg p-4 mt-4">
+                <p className="text-sm text-gray-400">Break-Even Point</p>
+                <p className="text-2xl font-bold text-orange-400">{breakEvenCalc.breakEvenUnits.toLocaleString()} units</p>
+                <p className="text-sm text-gray-400 mt-2">Revenue needed: {formatCurrency(breakEvenCalc.breakEvenRevenue)}</p>
+                <p className="text-sm text-green-400">Profit margin per unit: {formatCurrency(breakEvenCalc.margin)}</p>
               </div>
             </div>
           </CollapsibleTool>

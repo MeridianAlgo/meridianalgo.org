@@ -1,0 +1,94 @@
+{
+  "title": "Common Investing Mistakes to Avoid",
+  "type": "reading",
+  "duration": "20 min",
+  "points": 100,
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Investing Mistakes to Avoid",
+      "subtitle": "Learn from others' expensive lessons",
+      "color": "green",
+      "icon": "AlertTriangle"
+    },
+    {
+      "type": "content",
+      "title": "Why Mistakes Matter",
+      "content": "Every successful investor has made costly mistakes. The difference is they learned from them and didn't repeat them. By studying common mistakes, you can avoid the painful (and expensive) process of learning them firsthand.\n\nResearch shows that individual investors underperform the market by 2-4% annually, largely due to behavioral mistakes. Avoiding these errors can add hundreds of thousands of dollars to your lifetime wealth."
+    },
+    {
+      "type": "key-points",
+      "title": "The Biggest Investing Mistakes",
+      "points": [
+        {
+          "title": "Trying to Time the Market",
+          "description": "Missing just the 10 best days in a 20-year period cuts your returns in half. Nobody consistently predicts market tops and bottoms. Time in the market beats timing the market."
+        },
+        {
+          "title": "Chasing Past Performance",
+          "description": "Last year's best-performing fund or stock rarely repeats. By the time something is 'hot,' the easy gains are gone. Buy based on value and fundamentals, not recent returns."
+        },
+        {
+          "title": "Panic Selling During Crashes",
+          "description": "Markets have recovered from every crash in history. Selling during a crash locks in losses and misses the recovery. The best returns often come right after the worst days."
+        },
+        {
+          "title": "Over-Concentration",
+          "description": "Putting too much in one stock, sector, or asset class. Even great companies can fail. Diversification is the only free lunch in investing."
+        },
+        {
+          "title": "Ignoring Fees and Taxes",
+          "description": "A 1% annual fee compounds to 25% of your wealth over 30 years. Frequent trading triggers short-term capital gains taxes. Keep costs low and hold for the long term."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Behavioral Traps",
+      "content": "Confirmation Bias: Seeking information that confirms what you already believe. If you love a stock, you'll find reasons to buy more even when warning signs appear. Actively seek out opposing viewpoints.\n\nAnchoring: Fixating on a specific price. 'I'll sell when it gets back to my purchase price.' The stock doesn't know or care what you paid. Evaluate based on current value, not past prices.\n\nHerd Mentality: Buying because everyone else is buying. This is how bubbles form. When taxi drivers give stock tips, it's usually time to sell, not buy.\n\nOverconfidence: Believing you're smarter than the market. Even professional fund managers underperform indexes most of the time. Humility is an investing virtue.\n\nAction Bias: Feeling like you need to do something. Sometimes the best action is no action. Frequent trading usually hurts returns."
+    },
+    {
+      "type": "callout",
+      "title": "The Cost of Panic Selling",
+      "content": "An investor who put $10,000 in the S&P 500 in 2000 and held through two crashes would have about $64,000 by 2024. An investor who panic sold during the 2008 crash and waited until 2013 to reinvest would have only $38,000. Staying invested matters.",
+      "color": "red",
+      "icon": "TrendingDown"
+    },
+    {
+      "type": "content",
+      "title": "Practical Mistakes",
+      "content": "Not Starting Early Enough: Every year you delay costs you significantly due to compound interest. Start with whatever you can, even $50/month.\n\nNot Having an Emergency Fund: Investing money you might need forces you to sell at bad times. Keep 3-6 months of expenses in cash before investing.\n\nInvesting Without a Plan: Random stock picks without a strategy leads to a messy, underperforming portfolio. Define your goals, timeline, and strategy first.\n\nChecking Your Portfolio Too Often: Daily monitoring leads to emotional decisions. Check monthly or quarterly at most.\n\nNot Rebalancing: Letting winners grow unchecked increases concentration risk. Rebalance annually to maintain your target allocation.\n\nIgnoring Tax-Advantaged Accounts: Not maxing out 401(k) matches is leaving free money on the table. Prioritize tax-advantaged accounts before taxable investing."
+    },
+    {
+      "type": "steps",
+      "title": "How to Avoid These Mistakes",
+      "steps": [
+        "Create a written investment plan with clear goals and rules",
+        "Automate your investments to remove emotion from the equation",
+        "Set it and forget it - check your portfolio quarterly, not daily",
+        "Use index funds for most of your portfolio to ensure diversification",
+        "Keep an investment journal to track your decisions and learn from mistakes",
+        "Have an accountability partner or advisor to check your impulses",
+        "Study market history to understand that volatility is normal",
+        "Focus on what you can control: costs, diversification, and behavior"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "When to Seek Help",
+      "content": "Consider working with a financial advisor if:\n\n- You have a complex financial situation (business ownership, inheritance, divorce)\n- You find yourself making emotional decisions repeatedly\n- You don't have time or interest to manage investments yourself\n- You're approaching retirement and need income planning\n- You want a second opinion on major financial decisions\n\nLook for fee-only fiduciary advisors who are legally required to act in your best interest. Avoid advisors who earn commissions on products they sell you."
+    },
+    {
+      "type": "callout",
+      "title": "Key Takeaway",
+      "content": "The biggest enemy of good investment returns is investor behavior. The market will do what it does - you can't control that. But you can control your behavior: staying invested, keeping costs low, diversifying, and avoiding emotional decisions. Master your behavior, and you'll outperform most investors.",
+      "color": "green",
+      "icon": "CheckCircle"
+    },
+    {
+      "type": "content",
+      "title": "Congratulations!",
+      "content": "You've completed the Stock Market Fundamentals module! You now understand how the market works, how to read charts, how to analyze companies, how to build a portfolio, how to manage risk, and what mistakes to avoid. Take the quiz to test your knowledge and earn your completion badge."
+    }
+  ]
+}
