@@ -143,6 +143,15 @@
                             "category":  "Smart Cents Weekly",
                             "title":  "Smart Cents Weekly - Week 16",
                             "uploadDate":  "2025-11-16"
+                        },
+                        {
+                            "thumbnail":  "/newsletter-thumbnails/smart-cents-default.png",
+                            "description":  "Year-end market wrap-up and investment outlook for the coming year, with strategies to position your portfolio for success.",
+                            "week":  17,
+                            "fileName":  "Smart Cents Weekly - Week 17.pdf",
+                            "category":  "Smart Cents Weekly",
+                            "title":  "Smart Cents Weekly - Week 17",
+                            "uploadDate":  "2025-11-23"
                         }
                     ]
 }
