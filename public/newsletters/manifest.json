@@ -152,6 +152,7 @@
                             "category":  "Smart Cents Weekly",
                             "title":  "Smart Cents Weekly - Week 17",
                             "uploadDate":  "2025-11-23"
-                        }
+                        },
+                        {"title": "Smart Cents Weekly - Week 18", "description": "New year investment strategies: Market predictions, portfolio rebalancing tips, and financial goals for the upcoming year.", "fileName": "Smart Cents Weekly - Week 18.pdf", "uploadDate": "2025-11-30", "category": "Smart Cents Weekly", "week": 18, "thumbnail": "/newsletter-thumbnails/smart-cents-default.png"}
                     ]
 }
