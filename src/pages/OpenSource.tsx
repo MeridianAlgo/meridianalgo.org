@@ -1,76 +1,89 @@
 import { useEffect, useState } from 'react';
-import { Github, Code2, ExternalLink, Star, GitFork } from 'lucide-react';
+import { Github, Code2, ExternalLink } from 'lucide-react';
 
 const PROJECTS = [
   {
-    name: 'AraAI',
-    url: 'https://github.com/MeridianAlgo/AraAI',
-    description: 'AI-powered financial analysis platform for stock volatility forecasting, market predictions, and portfolio optimization using ensemble machine learning.',
+    name: 'FinAI',
+    url: 'https://github.com/MeridianAlgo/FinAI',
+    description: 'We are researching and developing our own in-house LLM, which will be focused on finance-based chats and requests.',
     language: 'Python',
-    license: 'Other',
-    stars: 1,
+    license: 'MIT',
     category: 'Machine Learning'
+  },
+  {
+    name: 'Midnight.AI',
+    url: 'https://github.com/MeridianAlgo/Midnight.AI',
+    description: 'A multi-objective trading engine with a pretrained model, direct Alpaca API integration for paper trading, and a built-in backtester.',
+    language: 'Python',
+    license: 'MIT',
+    category: 'Machine Learning'
+  },
+  {
+    name: 'Learn-Quant',
+    url: 'https://github.com/MeridianAlgo/Learn-Quant',
+    description: 'This repository offers beginners in Python and JavaScript a look at the utilities that go into creating each of our programs.',
+    language: 'Python',
+    category: 'Libraries'
   },
   {
     name: 'Cryptvault',
     url: 'https://github.com/MeridianAlgo/Cryptvault',
-    description: 'Professional-grade cryptocurrency analysis with advanced AI/ML predictions, 50+ pattern recognition, and TradingView-style terminal charts.',
+    description: 'Professional-grade cryptocurrency analysis with advanced AI/ML predictions, 50+ pattern recognition, and MathPlotLib terminal charts.',
     language: 'Python',
-    license: 'MIT',
-    stars: 2,
+    license: 'BSD 3-Clause',
     category: 'Machine Learning'
   },
   {
-    name: 'TradeRiser',
-    url: 'https://github.com/MeridianAlgo/TradeRiser',
-    description: 'Modular crypto trading bot with TP/SL. Real-time Alpaca API, 6 indicators, paper trading. Easy to customize. Beginner-friendly. Production-ready.',
-    language: 'JavaScript',
-    license: 'MIT',
-    category: 'Trading Tools'
+    name: 'MeridianAlgo',
+    url: 'https://github.com/MeridianAlgo/MeridianAlgo',
+    description: 'Welcome to MeridianAlgo! Dive into our collection of repositories, where you will find innovative algorithms, tools, and projects.',
+    language: 'Various',
+    category: 'Documentation'
   },
   {
-    name: 'Bitflow',
-    url: 'https://github.com/MeridianAlgo/Bitflow',
-    description: 'Combination of Node.js and Python designed to help research trading strategies and test your own strategies in algorithmic trading.',
-    language: 'JavaScript',
+    name: 'AraAI',
+    url: 'https://github.com/MeridianAlgo/AraAI',
+    description: 'Ara AI is an AI-powered financial analysis platform developed by MeridianAlgo, designed for stock volatility forecasting and market predictions.',
+    language: 'Python',
     license: 'Other',
-    category: 'Trading Tools'
+    category: 'Machine Learning'
+  },
+  {
+    name: 'Javascript-Packages',
+    url: 'https://www.npmjs.com/package/meridianalgo-js',
+    description: 'To view our NPM packages, run the command npm i meridianalgo-js in your terminal.',
+    language: 'TypeScript',
+    license: 'MIT',
+    category: 'Libraries'
   },
   {
     name: 'Apex-Analysis',
     url: 'https://github.com/MeridianAlgo/Apex-Analysis',
-    description: 'Stock Analysis and Identification tools for comprehensive market research.',
+    description: 'Beginner-friendly stock analysis and research platform.',
     language: 'Python',
+    license: 'MIT',
     category: 'Analysis Tools'
   },
   {
     name: 'Python-Packages',
-    url: 'https://github.com/MeridianAlgo/Python-Packages',
-    description: 'Python packages available on PyPI. Install with: pip install meridianalgo',
+    url: 'https://pypi.org/project/meridianalgo/',
+    description: 'To view our Python packages, run the command pip install meridianalgo in your terminal.',
     language: 'Python',
     license: 'MIT',
-    stars: 1,
     category: 'Libraries'
   },
   {
-    name: 'Adaptive-MA-Selection',
-    url: 'https://github.com/MeridianAlgo/Adaptive-MA-Selection',
-    description: 'Adaptive Moving Average Selection algorithms for dynamic market analysis.',
+    name: 'Cyrptax',
+    url: 'https://github.com/MeridianAlgo/Cyrptax',
+    description: 'A all in one crypto tax platform aimed at making your life easier with crypto tax for free.',
     language: 'Python',
-    license: 'MIT',
-    category: 'Analysis Tools'
-  },
-  {
-    name: 'Portfolio-Optimization',
-    url: 'https://github.com/MeridianAlgo/Portfolio-Optimization',
-    description: 'Portfolio optimization tools and strategies for wealth management.',
-    language: 'Python',
-    category: 'Research'
+    license: 'Other',
+    category: 'Tools'
   },
   {
     name: 'Portfolio-Optimization-Research',
     url: 'https://github.com/MeridianAlgo/Portfolio-Optimization-Research',
-    description: 'Research project on different ways to optimize portfolios with machine learning.',
+    description: 'Learning to optimize your portfolio is challenging. Therefore, we wanted to research different ways to optimize our portfolio.',
     language: 'Python',
     license: 'MIT',
     category: 'Research'
@@ -78,73 +91,22 @@ const PROJECTS = [
   {
     name: 'Option-Pricing-Research',
     url: 'https://github.com/MeridianAlgo/Option-Pricing-Research',
-    description: 'Automated, quant-grade platform for option pricing research supporting Black-Scholes, Heston, and ML techniques.',
+    description: 'Automated, quant-grade, all-in-one platform for option pricing research, supporting Black-Scholes, Heston, and ML techniques.',
     language: 'Python',
     license: 'MIT',
-    stars: 1,
     category: 'Research'
   },
   {
-    name: 'FinAI',
-    url: 'https://github.com/MeridianAlgo/FinAI',
-    description: 'Financial AI platform for analysis and predictions using advanced machine learning.',
-    language: 'Python',
-    license: 'MIT',
-    stars: 1,
-    category: 'Machine Learning'
-  },
-  {
-    name: 'TimeSeries-Prediction-Research',
-    url: 'https://github.com/MeridianAlgo/TimeSeries-Prediction-Research',
-    description: 'Time-Series research for understanding quantitative finance applications.',
+    name: 'TimeSeries-Prediciton-Research',
+    url: 'https://github.com/MeridianAlgo/TimeSeries-Prediciton-Research',
+    description: 'Time-Series Research is our way of understanding how it can relate to quantitative finance.',
     language: 'HTML',
     license: 'MIT',
     category: 'Research'
-  },
-  {
-    name: 'Utils',
-    url: 'https://github.com/MeridianAlgo/Utils',
-    description: 'Utilities for beginners in Python and JavaScript. Educational purposes only.',
-    language: 'Python',
-    license: 'MIT',
-    stars: 1,
-    category: 'Libraries'
-  },
-  {
-    name: 'Bitflow-Original',
-    url: 'https://github.com/MeridianAlgo/Bitflow-Original',
-    description: 'Original Bitflow implementation for algorithmic trading research.',
-    language: 'JavaScript',
-    category: 'Trading Tools'
-  },
-  {
-    name: 'Javascript-Packages',
-    url: 'https://github.com/MeridianAlgo/Javascript-Packages',
-    description: 'NPM packages. Install with: npm i meridianalgo-js',
-    language: 'TypeScript',
-    license: 'MIT',
-    category: 'Libraries'
-  },
-  {
-    name: 'In-NodeJS',
-    url: 'https://github.com/MeridianAlgo/In-NodeJS',
-    description: 'Advanced Node.js-based trading tools for algorithmic research using Alpaca paper trading API.',
-    language: 'JavaScript',
-    license: 'MPL-2.0',
-    stars: 1,
-    category: 'Trading Tools'
-  },
-  {
-    name: 'MeridianAlgo',
-    url: 'https://github.com/MeridianAlgo/MeridianAlgo',
-    description: 'Main repository for MeridianAlgo organization and documentation.',
-    language: 'Various',
-    license: 'MIT',
-    category: 'Documentation'
   }
 ];
 
-const CATEGORIES = ['All', 'Machine Learning', 'Trading Tools', 'Research', 'Analysis Tools', 'Libraries', 'Documentation'];
+const CATEGORIES = ['All', 'Machine Learning', 'Research', 'Analysis Tools', 'Libraries', 'Documentation', 'Tools'];
 
 const OpenSource = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -193,7 +155,7 @@ const OpenSource = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">17</div>
+              <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400 mb-2">{PROJECTS.length}</div>
               <div className="text-gray-400">Active Projects</div>
             </div>
             <div className="text-center">
@@ -221,8 +183,8 @@ const OpenSource = () => {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
-                    ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   }`}
               >
                 {category}

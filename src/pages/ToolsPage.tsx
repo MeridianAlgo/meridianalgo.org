@@ -1,11 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+
 import {
-  ArrowLeft, DollarSign, PiggyBank, CreditCard, Home, TrendingUp,
-  Calculator, Receipt, Shield, Briefcase, Percent, ArrowUp
+  DollarSign, PiggyBank, CreditCard, Home, TrendingUp,
+  Calculator, Receipt, Shield, Briefcase, ChevronDown
 } from 'lucide-react';
-import Sidebar from '../components/Sidebar';
-import { useAuth } from '../contexts/AuthContext';
 import CollapsibleTool from '../components/CollapsibleTool';
 
 function formatCurrency(n: number) {
@@ -20,31 +18,17 @@ const parseNumericInput = (value: string): number => {
 };
 
 const ToolsPage: React.FC = () => {
-  const { user, isAuthenticated, logout } = useAuth();
-  const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 768 : true));
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
   useEffect(() => {
     document.title = 'MeridianAlgo - Tools & Calculators';
   }, []);
 
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate('/login', { state: { from: { pathname: '/tools' } } });
+
+
+  const scrollToContent = () => {
+    const content = document.getElementById('tools-start');
+    if (content) {
+      content.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [isAuthenticated, navigate]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 300);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // 50/30/20 Budget
@@ -94,14 +78,14 @@ const ToolsPage: React.FC = () => {
     const rate = parseNumericInput(compoundRate) || 0;
     const n = years * 12;
     const r = rate / 100 / 12;
-    let future = P * Math.pow(1 + r, n);
+    let futureValue = P * Math.pow(1 + r, n);
     if (r > 0) {
-      future += PMT * ((Math.pow(1 + r, n) - 1) / r);
+      futureValue += PMT * ((Math.pow(1 + r, n) - 1) / r);
     } else {
-      future += PMT * n;
+      futureValue += PMT * n;
     }
     const totalContributions = P + PMT * n;
-    return { future, totalContributions, earnings: future - totalContributions };
+    return { futureValue, totalContributions, earnings: futureValue - totalContributions };
   }, [compoundInitial, compoundMonthly, compoundYears, compoundRate]);
 
   // Debt Payoff
@@ -140,9 +124,9 @@ const ToolsPage: React.FC = () => {
     const debt = parseNumericInput(monthlyDebt) || 0;
     const rate = parseNumericInput(mortgageRate) || 0;
     const down = parseNumericInput(downPayment) || 0;
-    const monthlyIncome = income / 12;
-    const front = monthlyIncome * 0.28;
-    const back = monthlyIncome * 0.36 - debt;
+    const monthlyIncomeValue = income / 12;
+    const front = monthlyIncomeValue * 0.28;
+    const back = monthlyIncomeValue * 0.36 - debt;
     const maxPayment = Math.min(front, back);
     const r = rate / 100 / 12;
     const n = 30 * 12;
@@ -244,8 +228,8 @@ const ToolsPage: React.FC = () => {
     const annualContrib = salary * contribPct;
     const annualMatch = annualContrib * matchPct;
     const totalAnnual = annualContrib + annualMatch;
-    const future = totalAnnual * ((Math.pow(1 + returnRate, years) - 1) / returnRate);
-    return { annualContrib, annualMatch, future };
+    const futureValue = totalAnnual * ((Math.pow(1 + returnRate, years) - 1) / returnRate);
+    return { annualContrib, annualMatch, futureValue };
   }, [k401Salary, k401Contribution, k401Match, k401Years, k401Return]);
 
   // Car Affordability
@@ -258,9 +242,9 @@ const ToolsPage: React.FC = () => {
     const down = parseNumericInput(carDownPayment) || 0;
     const rate = parseNumericInput(carLoanRate) / 100 / 12 || 0;
     const months = parseNumericInput(carLoanTerm) || 0;
-    const maxMonthly = income / 12 * 0.15; // 15% rule
-    const loanAmount = rate > 0 ? maxMonthly * (1 - Math.pow(1 + rate, -months)) / rate : maxMonthly * months;
-    return { maxMonthly, maxCarPrice: loanAmount + down };
+    const maxMonthly = (income / 12) * 0.15; // 15% rule
+    const loanAmountValue = rate > 0 ? (maxMonthly * (1 - Math.pow(1 + rate, -months))) / rate : maxMonthly * months;
+    return { maxMonthly, maxCarPrice: loanAmountValue + down };
   }, [carIncome, carDownPayment, carLoanRate, carLoanTerm]);
 
   // Credit Card Payoff
@@ -310,8 +294,8 @@ const ToolsPage: React.FC = () => {
   const retirementCalc = useMemo(() => {
     const balance = parseNumericInput(retirementBalance) || 0;
     const rate = parseNumericInput(retirementWithdrawal) / 100 || 0;
-    const annualIncome = balance * rate;
-    return { annualIncome, monthlyIncome: annualIncome / 12 };
+    const annualIncomeValue = balance * rate;
+    return { annualIncome: annualIncomeValue, monthlyIncome: annualIncomeValue / 12 };
   }, [retirementBalance, retirementWithdrawal]);
 
   // HSA Calculator
@@ -324,9 +308,9 @@ const ToolsPage: React.FC = () => {
     const taxRate = parseNumericInput(hsaTaxRate) / 100 || 0;
     const years = parseNumericInput(hsaYears) || 0;
     const returnRate = parseNumericInput(hsaReturn) / 100 || 0;
-    const taxSavings = contrib * taxRate;
-    const future = contrib * ((Math.pow(1 + returnRate, years) - 1) / returnRate);
-    return { taxSavings, future, totalSavings: taxSavings * years };
+    const taxSavingsValue = contrib * taxRate;
+    const futureValue = contrib * ((Math.pow(1 + returnRate, years) - 1) / returnRate);
+    return { taxSavings: taxSavingsValue, futureValue, totalSavings: taxSavingsValue * years };
   }, [hsaContribution, hsaTaxRate, hsaYears, hsaReturn]);
 
   // College Savings (529)
@@ -340,79 +324,18 @@ const ToolsPage: React.FC = () => {
     const years = parseNumericInput(collegeYears) || 0;
     const current = parseNumericInput(collegeSavings) || 0;
     const monthly = parseNumericInput(collegeMonthly) || 0;
-    const returnRate = parseNumericInput(collegeReturn) / 100 || 0;
-    const futureCost = cost * Math.pow(1.04, years); // 4% inflation
-    const r = returnRate / 12;
+    const returnRateValue = parseNumericInput(collegeReturn) / 100 || 0;
+    const futureCostValue = cost * Math.pow(1.04, years); // 4% inflation
+    const r = returnRateValue / 12;
     const n = years * 12;
-    let future = current * Math.pow(1 + r, n);
-    future += monthly * ((Math.pow(1 + r, n) - 1) / r);
-    return { futureCost, future, gap: Math.max(0, futureCost - future) };
-  }, [collegeCost, collegeYears, collegeSavings, collegeMonthly, collegeReturn]);
-
-  // Net Worth Calculator
-  const [nwCash, setNwCash] = useState('15000');
-  const [nwInvestments, setNwInvestments] = useState('50000');
-  const [nwProperty, setNwProperty] = useState('250000');
-  const [nwDebt, setNwDebt] = useState('180000');
-  const netWorthCalc = useMemo(() => {
-    const cash = parseNumericInput(nwCash) || 0;
-    const investments = parseNumericInput(nwInvestments) || 0;
-    const property = parseNumericInput(nwProperty) || 0;
-    const debt = parseNumericInput(nwDebt) || 0;
-    const totalAssets = cash + investments + property;
-    const netWorth = totalAssets - debt;
-    return { totalAssets, debt, netWorth };
-  }, [nwCash, nwInvestments, nwProperty, nwDebt]);
-
-  // Savings Goal Calculator
-  const [goalAmount, setGoalAmount] = useState('10000');
-  const [goalMonths, setGoalMonths] = useState('24');
-  const [goalCurrent, setGoalCurrent] = useState('1000');
-  const [goalRate, setGoalRate] = useState('4');
-  const savingsGoalCalc = useMemo(() => {
-    const goal = parseNumericInput(goalAmount) || 0;
-    const months = parseNumericInput(goalMonths) || 1;
-    const current = parseNumericInput(goalCurrent) || 0;
-    const rate = parseNumericInput(goalRate) / 100 / 12 || 0;
-    const remaining = goal - current;
-    const simpleMonthly = remaining / months;
-    // With interest
-    let monthlyWithInterest = simpleMonthly;
-    if (rate > 0) {
-      const futureOfCurrent = current * Math.pow(1 + rate, months);
-      const needed = goal - futureOfCurrent;
-      monthlyWithInterest = needed > 0 ? needed * rate / (Math.pow(1 + rate, months) - 1) : 0;
+    let futureValue = current * Math.pow(1 + r, n);
+    if (r > 0) {
+      futureValue += (monthly * (Math.pow(1 + r, n) - 1)) / r;
+    } else {
+      futureValue += monthly * n;
     }
-    return { simpleMonthly, monthlyWithInterest: Math.max(0, monthlyWithInterest), remaining };
-  }, [goalAmount, goalMonths, goalCurrent, goalRate]);
-
-  // Inflation Calculator
-  const [inflationAmount, setInflationAmount] = useState('100');
-  const [inflationYears, setInflationYears] = useState('10');
-  const [inflationRate, setInflationRate] = useState('3');
-  const inflationCalc = useMemo(() => {
-    const amount = parseNumericInput(inflationAmount) || 0;
-    const years = parseNumericInput(inflationYears) || 0;
-    const rate = parseNumericInput(inflationRate) / 100 || 0;
-    const futureValue = amount * Math.pow(1 + rate, years);
-    const purchasingPower = amount / Math.pow(1 + rate, years);
-    const lostValue = amount - purchasingPower;
-    return { futureValue, purchasingPower, lostValue };
-  }, [inflationAmount, inflationYears, inflationRate]);
-
-  // Tip Calculator
-  const [tipBillAmount, setTipBillAmount] = useState('85');
-  const [tipPercent, setTipPercent] = useState('18');
-  const [tipSplitWays, setTipSplitWays] = useState('2');
-  const tipCalc = useMemo(() => {
-    const bill = parseNumericInput(tipBillAmount) || 0;
-    const percent = parseNumericInput(tipPercent) || 0;
-    const split = parseNumericInput(tipSplitWays) || 1;
-    const tipAmount = bill * (percent / 100);
-    const total = bill + tipAmount;
-    const perPerson = total / split;
-    return { tipAmount, total, perPerson };
-  }, [tipBillAmount, tipPercent, tipSplitWays]);
+    return { futureCost: futureCostValue, future: futureValue, gap: Math.max(0, futureCostValue - futureValue) };
+  }, [collegeCost, collegeYears, collegeSavings, collegeMonthly, collegeReturn]);
 
   // Paycheck Calculator
   const [paycheckGross, setPaycheckGross] = useState('5000');
@@ -425,1027 +348,713 @@ const ToolsPage: React.FC = () => {
     const state = parseNumericInput(paycheckState) / 100 || 0;
     const k401 = parseNumericInput(paycheck401k) / 100 || 0;
     const fica = 0.0765; // Social Security + Medicare
-    const federalTax = gross * federal;
-    const stateTax = gross * state;
-    const ficaTax = gross * fica;
-    const retirement = gross * k401;
-    const totalDeductions = federalTax + stateTax + ficaTax + retirement;
-    const netPay = gross - totalDeductions;
-    return { federalTax, stateTax, ficaTax, retirement, totalDeductions, netPay };
+    const federalTaxValue = gross * federal;
+    const stateTaxValue = gross * state;
+    const ficaTaxValue = gross * fica;
+    const retirementValue = gross * k401;
+    const totalDeductionsValue = federalTaxValue + stateTaxValue + ficaTaxValue + retirementValue;
+    const netPayValue = gross - totalDeductionsValue;
+    return { federalTax: federalTaxValue, stateTax: stateTaxValue, ficaTax: ficaTaxValue, retirement: retirementValue, totalDeductions: totalDeductionsValue, netPay: netPayValue };
   }, [paycheckGross, paycheckFederal, paycheckState, paycheck401k]);
 
-  // Loan Comparison Calculator
-  const [loanAmount, setLoanAmount] = useState('25000');
-  const [loan1Rate, setLoan1Rate] = useState('6.5');
-  const [loan1Term, setLoan1Term] = useState('60');
-  const [loan2Rate, setLoan2Rate] = useState('4.9');
-  const [loan2Term, setLoan2Term] = useState('48');
-  const loanCompareCalc = useMemo(() => {
-    const principal = parseNumericInput(loanAmount) || 0;
-    const r1 = parseNumericInput(loan1Rate) / 100 / 12 || 0;
-    const n1 = parseNumericInput(loan1Term) || 1;
-    const r2 = parseNumericInput(loan2Rate) / 100 / 12 || 0;
-    const n2 = parseNumericInput(loan2Term) || 1;
-    const pmt1 = r1 > 0 ? principal * r1 * Math.pow(1 + r1, n1) / (Math.pow(1 + r1, n1) - 1) : principal / n1;
-    const pmt2 = r2 > 0 ? principal * r2 * Math.pow(1 + r2, n2) / (Math.pow(1 + r2, n2) - 1) : principal / n2;
-    const total1 = pmt1 * n1;
-    const total2 = pmt2 * n2;
-    const interest1 = total1 - principal;
-    const interest2 = total2 - principal;
-    return { pmt1, pmt2, total1, total2, interest1, interest2, savings: total1 - total2 };
-  }, [loanAmount, loan1Rate, loan1Term, loan2Rate, loan2Term]);
-
-  // Investment Return Calculator
-  const [invInitial, setInvInitial] = useState('10000');
-  const [invFinal, setInvFinal] = useState('15000');
-  const [invYears, setInvYears] = useState('3');
-  const investmentReturnCalc = useMemo(() => {
-    const initial = parseNumericInput(invInitial) || 1;
-    const final = parseNumericInput(invFinal) || 0;
-    const years = parseNumericInput(invYears) || 1;
-    const totalReturn = ((final - initial) / initial) * 100;
-    const annualReturn = (Math.pow(final / initial, 1 / years) - 1) * 100;
-    const gain = final - initial;
-    return { totalReturn, annualReturn, gain };
-  }, [invInitial, invFinal, invYears]);
-
-  // Break-Even Calculator
-  const [beFixedCosts, setBeFixedCosts] = useState('5000');
-  const [bePrice, setBePrice] = useState('50');
-  const [beVariableCost, setBeVariableCost] = useState('20');
-  const breakEvenCalc = useMemo(() => {
-    const fixed = parseNumericInput(beFixedCosts) || 0;
-    const price = parseNumericInput(bePrice) || 0;
-    const variable = parseNumericInput(beVariableCost) || 0;
-    const margin = price - variable;
-    const breakEvenUnits = margin > 0 ? Math.ceil(fixed / margin) : 0;
-    const breakEvenRevenue = breakEvenUnits * price;
-    return { breakEvenUnits, breakEvenRevenue, margin };
-  }, [beFixedCosts, bePrice, beVariableCost]);
-
-  if (!isAuthenticated || !user) {
-    return null;
-  }
-
   return (
-    <div className="min-h-screen bg-gray-900 flex">
-      <Sidebar
-        sidebarOpen={sidebarOpen}
-        setSidebarOpen={setSidebarOpen}
-        activePage="financialTools"
-        user={user}
-        onLogout={async () => {
-          await logout();
-          navigate('/');
-        }}
-      />
+    <div className="min-h-screen bg-black text-white relative">
+      {/* Background Pattern */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      </div>
 
-      <div className={`flex-1 overflow-y-auto transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${sidebarOpen ? 'ml-72' : 'ml-20'}`}>
-        {/* Header */}
-        <div className="bg-gray-800 border-b border-gray-700 px-8 py-6">
-          <div className="flex items-center space-x-4">
-            <Link to="/learning" className="p-2 hover:bg-gray-700 rounded-lg transition-colors text-gray-300 hover:text-white">
-              <ArrowLeft className="w-5 h-5" />
-            </Link>
-            <div>
-              <h1 className="text-2xl font-bold text-white">Financial Tools & Calculators</h1>
-              <p className="text-gray-300">Interactive calculators to plan, learn, and experiment with your finances.</p>
-            </div>
-          </div>
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/10 blur-[100px] rounded-full pointer-events-none"></div>
         </div>
 
-        <div className="px-8 py-6 space-y-4">
-          {/* Budget & Cash Flow */}
-          <h2 className="text-xl font-bold text-white mb-4">💰 Budget & Cash Flow</h2>
+        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-8 border border-white/5">
+            <Calculator className="w-10 h-10 text-orange-400" />
+          </div>
 
-          <CollapsibleTool
-            title="50/30/20 Budget Planner"
-            icon={<DollarSign className="w-5 h-5" />}
-            description="Balance your spending with the popular 50/30/20 rule"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Income</label>
-                <input type="number" value={income} onChange={e => setIncome(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-3 gap-3">
-                <div>
-                  <label className="block text-xs text-gray-400 mb-1">Needs %</label>
-                  <input type="number" value={needs} onChange={e => setNeeds(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-xs text-gray-400 mb-1">Wants %</label>
-                  <input type="number" value={wants} onChange={e => setWants(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-xs text-gray-400 mb-1">Savings %</label>
-                  <input type="number" value={savings} onChange={e => setSavings(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <p className={`text-xs ${budgetCalc.balanced ? 'text-green-400' : 'text-red-400'}`}>
-                {budgetCalc.balanced ? '✓ Balanced!' : '✗ Must equal 100%'}
-              </p>
-              <div className="grid grid-cols-3 gap-3 mt-4">
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-gray-400">Needs</p>
-                  <p className="text-white font-semibold">{formatCurrency(budgetCalc.needsAmt)}</p>
-                </div>
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-gray-400">Wants</p>
-                  <p className="text-white font-semibold">{formatCurrency(budgetCalc.wantsAmt)}</p>
-                </div>
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-gray-400">Savings</p>
-                  <p className="text-white font-semibold">{formatCurrency(budgetCalc.savingsAmt)}</p>
-                </div>
-              </div>
+          <h1 className="text-4xl md:text-7xl font-display font-bold mb-6 leading-tight uppercase tracking-tight text-white">
+            Financial <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Tools</span>
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light mb-10">
+            Interactive calculators to plan, experiment, and optimize your financial future.
+          </p>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce">
+          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors">
+            <ChevronDown className="w-8 h-8" />
+          </button>
+        </div>
+      </section>
+
+      <div id="tools-start" className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="space-y-24">
+          {/* Section: Budget & Cash Flow */}
+          <section>
+            <div className="flex items-center space-x-4 mb-8 justify-center">
+              <DollarSign className="w-8 h-8 text-orange-400" />
+              <h2 className="text-3xl font-display font-bold text-white uppercase tracking-tight">Budget & Cash Flow</h2>
             </div>
-          </CollapsibleTool>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent mb-12"></div>
 
-          <CollapsibleTool
-            title="Emergency Fund Calculator"
-            icon={<Shield className="w-5 h-5" />}
-            description="Calculate how much you need for financial emergencies"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Expenses</label>
-                <input type="number" value={monthlyExpenses} onChange={e => setMonthlyExpenses(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Months of Coverage</label>
-                <input type="number" value={coverageMonths} onChange={e => setCoverageMonths(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Current Savings</label>
-                <input type="number" value={emergencySavings} onChange={e => setEmergencySavings(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Target Fund</p>
-                <p className="text-2xl font-bold text-white">{formatCurrency(emergencyCalc.target)}</p>
-                <p className="text-sm text-orange-400 mt-2">Gap: {formatCurrency(emergencyCalc.gap)}</p>
-                <p className="text-xs text-gray-400 mt-1">You have {emergencyCalc.monthsCovered.toFixed(1)} months covered</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          {/* Saving & Investing */}
-          <h2 className="text-xl font-bold text-white mb-4 mt-8">📈 Saving & Investing</h2>
-
-          <CollapsibleTool
-            title="Compound Interest Calculator"
-            icon={<TrendingUp className="w-5 h-5" />}
-            description="See the power of compound interest over time"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Initial Investment</label>
-                <input type="number" value={compoundInitial} onChange={e => setCompoundInitial(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Contribution</label>
-                <input type="number" value={compoundMonthly} onChange={e => setCompoundMonthly(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Years</label>
-                  <input type="number" value={compoundYears} onChange={e => setCompoundYears(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Annual Return %</label>
-                  <input type="number" value={compoundRate} onChange={e => setCompoundRate(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Future Value</p>
-                <p className="text-2xl font-bold text-green-400">{formatCurrency(compoundCalc.future)}</p>
-                <p className="text-sm text-gray-400 mt-2">Total Contributions: {formatCurrency(compoundCalc.totalContributions)}</p>
-                <p className="text-sm text-orange-400">Earnings: {formatCurrency(compoundCalc.earnings)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Roth IRA vs Traditional IRA"
-            icon={<PiggyBank className="w-5 h-5" />}
-            description="Compare tax advantages of Roth vs Traditional IRA"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Annual Contribution</label>
-                <input type="number" value={iraContribution} onChange={e => setIraContribution(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Tax Rate %</label>
-                  <input type="number" value={iraTaxRate} onChange={e => setIraTaxRate(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Years</label>
-                  <input type="number" value={iraYears} onChange={e => setIraYears(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Expected Return %</label>
-                <input type="number" value={iraReturn} onChange={e => setIraReturn(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3 mt-4">
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-gray-400">Roth IRA (After-Tax)</p>
-                  <p className="text-lg font-bold text-green-400">{formatCurrency(iraCalc.rothFuture)}</p>
-                </div>
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-gray-400">Traditional (After-Tax)</p>
-                  <p className="text-lg font-bold text-blue-400">{formatCurrency(iraCalc.tradAfterTax)}</p>
-                </div>
-              </div>
-              <p className="text-sm text-orange-400 mt-2">
-                {iraCalc.difference > 0 ? 'Roth IRA wins by ' : 'Traditional IRA wins by '}
-                {formatCurrency(Math.abs(iraCalc.difference))}
-              </p>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="401(k) Calculator"
-            icon={<Briefcase className="w-5 h-5" />}
-            description="Calculate your 401(k) growth with employer match"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Annual Salary</label>
-                <input type="number" value={k401Salary} onChange={e => setK401Salary(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Your Contribution %</label>
-                  <input type="number" value={k401Contribution} onChange={e => setK401Contribution(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Employer Match %</label>
-                  <input type="number" value={k401Match} onChange={e => setK401Match(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Years</label>
-                  <input type="number" value={k401Years} onChange={e => setK401Years(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Return %</label>
-                  <input type="number" value={k401Return} onChange={e => setK401Return(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Future Balance</p>
-                <p className="text-2xl font-bold text-green-400">{formatCurrency(k401Calc.future)}</p>
-                <p className="text-sm text-gray-400 mt-2">Your Annual: {formatCurrency(k401Calc.annualContrib)}</p>
-                <p className="text-sm text-orange-400">Employer Match: {formatCurrency(k401Calc.annualMatch)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          {/* Debt & Credit */}
-          <h2 className="text-xl font-bold text-white mb-4 mt-8">💳 Debt & Credit</h2>
-
-          <CollapsibleTool
-            title="Debt Payoff Calculator"
-            icon={<CreditCard className="w-5 h-5" />}
-            description="Calculate how long it will take to pay off your debt"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Total Balance</label>
-                <input type="number" value={debtBalance} onChange={e => setDebtBalance(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">APR %</label>
-                <input type="number" value={debtAPR} onChange={e => setDebtAPR(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Minimum Payment</label>
-                  <input type="number" value={debtMinPay} onChange={e => setDebtMinPay(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Extra Payment</label>
-                  <input type="number" value={debtExtra} onChange={e => setDebtExtra(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Payoff Time</p>
-                <p className="text-2xl font-bold text-white">{debtCalc.months} months ({(debtCalc.months / 12).toFixed(1)} years)</p>
-                <p className="text-sm text-red-400 mt-2">Total Interest: {formatCurrency(debtCalc.totalInterest)}</p>
-                <p className="text-sm text-gray-400">Total Paid: {formatCurrency(debtCalc.totalPaid)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Credit Card Payoff"
-            icon={<CreditCard className="w-5 h-5" />}
-            description="Plan your credit card debt elimination"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Card Balance</label>
-                <input type="number" value={ccBalance} onChange={e => setCcBalance(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">APR %</label>
-                <input type="number" value={ccAPR} onChange={e => setCcAPR(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Payment</label>
-                <input type="number" value={ccPayment} onChange={e => setCcPayment(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Payoff Time</p>
-                <p className="text-2xl font-bold text-white">{ccCalc.months} months</p>
-                <p className="text-sm text-red-400 mt-2">Interest: {formatCurrency(ccCalc.totalInterest)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Student Loan Payoff"
-            icon={<Receipt className="w-5 h-5" />}
-            description="Calculate your student loan repayment timeline"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Loan Balance</label>
-                <input type="number" value={studentLoanBalance} onChange={e => setStudentLoanBalance(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Interest Rate %</label>
-                <input type="number" value={studentLoanRate} onChange={e => setStudentLoanRate(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Payment</label>
-                <input type="number" value={studentLoanPayment} onChange={e => setStudentLoanPayment(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Payoff Time</p>
-                <p className="text-2xl font-bold text-white">{studentLoanCalc.years.toFixed(1)} years</p>
-                <p className="text-sm text-red-400 mt-2">Total Interest: {formatCurrency(studentLoanCalc.totalInterest)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          {/* Home & Real Estate */}
-          <h2 className="text-xl font-bold text-white mb-4 mt-8">🏠 Home & Real Estate</h2>
-
-          <CollapsibleTool
-            title="Mortgage Affordability"
-            icon={<Home className="w-5 h-5" />}
-            description="Calculate how much house you can afford"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Annual Income</label>
-                <input type="number" value={annualIncome} onChange={e => setAnnualIncome(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Debt Payments</label>
-                <input type="number" value={monthlyDebt} onChange={e => setMonthlyDebt(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Interest Rate %</label>
-                  <input type="number" value={mortgageRate} onChange={e => setMortgageRate(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Down Payment</label>
-                  <input type="number" value={downPayment} onChange={e => setDownPayment(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Max Home Price</p>
-                <p className="text-2xl font-bold text-green-400">{formatCurrency(mortgageCalc.homePrice)}</p>
-                <p className="text-sm text-gray-400 mt-2">Max Monthly Payment: {formatCurrency(mortgageCalc.maxPayment)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Rent vs Buy Calculator"
-            icon={<Home className="w-5 h-5" />}
-            description="Compare the costs of renting vs buying"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Rent</label>
-                <input type="number" value={rentMonthly} onChange={e => setRentMonthly(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Home Purchase Price</label>
-                <input type="number" value={homePrice} onChange={e => setHomePrice(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Years to Compare</label>
-                <input type="number" value={rentVsBuyYears} onChange={e => setRentVsBuyYears(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3 mt-4">
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-gray-400">Total Rent Cost</p>
-                  <p className="text-lg font-bold text-blue-400">{formatCurrency(rentVsBuyCalc.totalRent)}</p>
-                </div>
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-gray-400">Total Buy Cost</p>
-                  <p className="text-lg font-bold text-orange-400">{formatCurrency(rentVsBuyCalc.totalBuy)}</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-400 mt-2">
-                {rentVsBuyCalc.difference > 0 ? 'Renting saves ' : 'Buying saves '}
-                {formatCurrency(Math.abs(rentVsBuyCalc.difference))}
-              </p>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Car Affordability"
-            icon={<Calculator className="w-5 h-5" />}
-            description="Calculate how much car you can afford"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Annual Income</label>
-                <input type="number" value={carIncome} onChange={e => setCarIncome(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Down Payment</label>
-                <input type="number" value={carDownPayment} onChange={e => setCarDownPayment(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Loan Rate %</label>
-                  <input type="number" value={carLoanRate} onChange={e => setCarLoanRate(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Loan Term (months)</label>
-                  <input type="number" value={carLoanTerm} onChange={e => setCarLoanTerm(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Max Car Price</p>
-                <p className="text-2xl font-bold text-green-400">{formatCurrency(carCalc.maxCarPrice)}</p>
-                <p className="text-sm text-gray-400 mt-2">Max Monthly Payment: {formatCurrency(carCalc.maxMonthly)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          {/* Retirement & Future Planning */}
-          <h2 className="text-xl font-bold text-white mb-4 mt-8">🎯 Retirement & Future Planning</h2>
-
-          <CollapsibleTool
-            title="FIRE Calculator"
-            icon={<TrendingUp className="w-5 h-5" />}
-            description="Calculate when you can achieve Financial Independence"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Annual Expenses</label>
-                <input type="number" value={fireAnnualExpenses} onChange={e => setFireAnnualExpenses(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Current Savings</label>
-                <input type="number" value={fireCurrentSavings} onChange={e => setFireCurrentSavings(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Monthly Savings</label>
-                <input type="number" value={fireMonthlySavings} onChange={e => setFireMonthlySavings(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Expected Return %</label>
-                <input type="number" value={fireReturnRate} onChange={e => setFireReturnRate(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">FIRE Number (25x expenses)</p>
-                <p className="text-2xl font-bold text-orange-400">{formatCurrency(fireCalc.fireNumber)}</p>
-                <p className="text-sm text-gray-400 mt-2">Years to FIRE: {fireCalc.yearsToFire.toFixed(1)}</p>
-                <p className="text-sm text-red-400">Gap: {formatCurrency(fireCalc.gap)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Retirement Withdrawal Calculator"
-            icon={<PiggyBank className="w-5 h-5" />}
-            description="Calculate safe withdrawal rates for retirement"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Retirement Balance</label>
-                <input type="number" value={retirementBalance} onChange={e => setRetirementBalance(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Withdrawal Rate % (4% rule)</label>
-                <input type="number" value={retirementWithdrawal} onChange={e => setRetirementWithdrawal(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Annual Income</p>
-                <p className="text-2xl font-bold text-green-400">{formatCurrency(retirementCalc.annualIncome)}</p>
-                <p className="text-sm text-gray-400 mt-2">Monthly Income: {formatCurrency(retirementCalc.monthlyIncome)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="College Savings (529 Plan)"
-            icon={<Receipt className="w-5 h-5" />}
-            description="Plan for future college expenses"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Target College Cost (today's dollars)</label>
-                <input type="number" value={collegeCost} onChange={e => setCollegeCost(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Years Until College</label>
-                <input type="number" value={collegeYears} onChange={e => setCollegeYears(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Current Savings</label>
-                <input type="number" value={collegeSavings} onChange={e => setCollegeSavings(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Monthly Savings</label>
-                  <input type="number" value={collegeMonthly} onChange={e => setCollegeMonthly(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Return %</label>
-                  <input type="number" value={collegeReturn} onChange={e => setCollegeReturn(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Future Cost (with inflation)</p>
-                <p className="text-2xl font-bold text-red-400">{formatCurrency(collegeCalc.futureCost)}</p>
-                <p className="text-sm text-green-400 mt-2">Your Savings Will Be: {formatCurrency(collegeCalc.future)}</p>
-                <p className="text-sm text-orange-400">Gap: {formatCurrency(collegeCalc.gap)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          {/* Tax & Insurance */}
-          <h2 className="text-xl font-bold text-white mb-4 mt-8">📊 Tax & Insurance</h2>
-
-          <CollapsibleTool
-            title="Federal Tax Calculator"
-            icon={<Percent className="w-5 h-5" />}
-            description="Estimate your federal income tax"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Annual Income</label>
-                <input type="number" value={taxIncome} onChange={e => setTaxIncome(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Standard Deduction</label>
-                <input type="number" value={taxDeductions} onChange={e => setTaxDeductions(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Estimated Tax</p>
-                <p className="text-2xl font-bold text-red-400">{formatCurrency(taxCalc.tax)}</p>
-                <p className="text-sm text-gray-400 mt-2">Effective Rate: {taxCalc.effectiveRate.toFixed(2)}%</p>
-                <p className="text-sm text-green-400">After-Tax Income: {formatCurrency(taxCalc.afterTax)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="HSA/FSA Calculator"
-            icon={<Shield className="w-5 h-5" />}
-            description="Calculate HSA tax savings and growth"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Annual Contribution</label>
-                <input type="number" value={hsaContribution} onChange={e => setHsaContribution(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Tax Rate %</label>
-                  <input type="number" value={hsaTaxRate} onChange={e => setHsaTaxRate(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Years</label>
-                  <input type="number" value={hsaYears} onChange={e => setHsaYears(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Expected Return %</label>
-                <input type="number" value={hsaReturn} onChange={e => setHsaReturn(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Annual Tax Savings</p>
-                <p className="text-2xl font-bold text-green-400">{formatCurrency(hsaCalc.taxSavings)}</p>
-                <p className="text-sm text-gray-400 mt-2">Future Value: {formatCurrency(hsaCalc.future)}</p>
-                <p className="text-sm text-orange-400">Total Tax Savings: {formatCurrency(hsaCalc.totalSavings)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Paycheck Calculator"
-            icon={<DollarSign className="w-5 h-5" />}
-            description="Estimate your take-home pay after deductions"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Gross Pay (per paycheck)</label>
-                <input type="number" value={paycheckGross} onChange={e => setPaycheckGross(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Federal Tax %</label>
-                  <input type="number" value={paycheckFederal} onChange={e => setPaycheckFederal(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">State Tax %</label>
-                  <input type="number" value={paycheckState} onChange={e => setPaycheckState(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">401(k) Contribution %</label>
-                <input type="number" value={paycheck401k} onChange={e => setPaycheck401k(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Net Pay (Take-Home)</p>
-                <p className="text-2xl font-bold text-green-400">{formatCurrency(paycheckCalc.netPay)}</p>
-                <div className="grid grid-cols-2 gap-2 mt-3 text-sm">
-                  <p className="text-gray-400">Federal: <span className="text-red-400">{formatCurrency(paycheckCalc.federalTax)}</span></p>
-                  <p className="text-gray-400">State: <span className="text-red-400">{formatCurrency(paycheckCalc.stateTax)}</span></p>
-                  <p className="text-gray-400">FICA: <span className="text-red-400">{formatCurrency(paycheckCalc.ficaTax)}</span></p>
-                  <p className="text-gray-400">401(k): <span className="text-blue-400">{formatCurrency(paycheckCalc.retirement)}</span></p>
-                </div>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          {/* Quick Tools */}
-          <h2 className="text-xl font-bold text-white mb-4 mt-8">⚡ Quick Tools</h2>
-
-          <CollapsibleTool
-            title="Net Worth Calculator"
-            icon={<TrendingUp className="w-5 h-5" />}
-            description="Track your total assets minus liabilities"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Cash & Savings</label>
-                <input type="number" value={nwCash} onChange={e => setNwCash(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Investments (stocks, 401k, etc.)</label>
-                <input type="number" value={nwInvestments} onChange={e => setNwInvestments(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Property Value</label>
-                <input type="number" value={nwProperty} onChange={e => setNwProperty(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Total Debt (mortgage, loans, etc.)</label>
-                <input type="number" value={nwDebt} onChange={e => setNwDebt(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Net Worth</p>
-                <p className={`text-2xl font-bold ${netWorthCalc.netWorth >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                  {formatCurrency(netWorthCalc.netWorth)}
-                </p>
-                <p className="text-sm text-gray-400 mt-2">Total Assets: {formatCurrency(netWorthCalc.totalAssets)}</p>
-                <p className="text-sm text-red-400">Total Debt: {formatCurrency(netWorthCalc.debt)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Savings Goal Calculator"
-            icon={<PiggyBank className="w-5 h-5" />}
-            description="Calculate monthly savings needed to reach your goal"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Goal Amount</label>
-                <input type="number" value={goalAmount} onChange={e => setGoalAmount(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Months to Goal</label>
-                <input type="number" value={goalMonths} onChange={e => setGoalMonths(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Current Savings</label>
-                <input type="number" value={goalCurrent} onChange={e => setGoalCurrent(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Savings Account Rate %</label>
-                <input type="number" value={goalRate} onChange={e => setGoalRate(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Monthly Savings Needed</p>
-                <p className="text-2xl font-bold text-orange-400">{formatCurrency(savingsGoalCalc.monthlyWithInterest)}</p>
-                <p className="text-sm text-gray-400 mt-2">Without interest: {formatCurrency(savingsGoalCalc.simpleMonthly)}/mo</p>
-                <p className="text-sm text-gray-400">Remaining to save: {formatCurrency(savingsGoalCalc.remaining)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Inflation Calculator"
-            icon={<Percent className="w-5 h-5" />}
-            description="See how inflation affects purchasing power"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Amount Today</label>
-                <input type="number" value={inflationAmount} onChange={e => setInflationAmount(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Years</label>
-                  <input type="number" value={inflationYears} onChange={e => setInflationYears(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Inflation Rate %</label>
-                  <input type="number" value={inflationRate} onChange={e => setInflationRate(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Future Cost of Same Item</p>
-                <p className="text-2xl font-bold text-red-400">{formatCurrency(inflationCalc.futureValue)}</p>
-                <p className="text-sm text-gray-400 mt-2">Today's {formatCurrency(parseNumericInput(inflationAmount))} will feel like:</p>
-                <p className="text-lg font-bold text-orange-400">{formatCurrency(inflationCalc.purchasingPower)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
-
-          <CollapsibleTool
-            title="Tip Calculator"
-            icon={<Receipt className="w-5 h-5" />}
-            description="Calculate tips and split bills easily"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Bill Amount</label>
-                <input type="number" value={tipBillAmount} onChange={e => setTipBillAmount(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Tip %</label>
-                  <input type="number" value={tipPercent} onChange={e => setTipPercent(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Split Ways</label>
-                  <input type="number" value={tipSplitWays} onChange={e => setTipSplitWays(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <div className="grid grid-cols-3 gap-3">
+            <div className="grid gap-6 md:grid-cols-2 items-start">
+              <CollapsibleTool
+                title="50/30/20 Budget Planner"
+                icon={<DollarSign className="w-5 h-5" />}
+                description="Balance your spending with the popular 50/30/20 rule"
+              >
+                <div className="space-y-4">
                   <div>
-                    <p className="text-xs text-gray-400">Tip</p>
-                    <p className="text-lg font-bold text-green-400">{formatCurrency(tipCalc.tipAmount)}</p>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Income</label>
+                    <input type="number" value={income} onChange={e => setIncome(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400 focus:outline-none transition-all" />
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-400">Total</p>
-                    <p className="text-lg font-bold text-white">{formatCurrency(tipCalc.total)}</p>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Needs %</label>
+                      <input type="number" value={needs} onChange={e => setNeeds(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Wants %</label>
+                      <input type="number" value={wants} onChange={e => setWants(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Savings %</label>
+                      <input type="number" value={savings} onChange={e => setSavings(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-400">Per Person</p>
-                    <p className="text-lg font-bold text-orange-400">{formatCurrency(tipCalc.perPerson)}</p>
+                  <p className={`text-xs text-center font-mono ${budgetCalc.balanced ? 'text-green-400' : 'text-red-400'}`}>
+                    {budgetCalc.balanced ? '✓ Balanced' : '✗ Must equal 100%'}
+                  </p>
+                  <div className="grid grid-cols-3 gap-3 mt-4">
+                    <div className="bg-white/5 rounded-xl p-4 text-center">
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Needs</p>
+                      <p className="text-white font-bold">{formatCurrency(budgetCalc.needsAmt)}</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4 text-center">
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Wants</p>
+                      <p className="text-white font-bold">{formatCurrency(budgetCalc.wantsAmt)}</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4 text-center">
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Savings</p>
+                      <p className="text-white font-bold">{formatCurrency(budgetCalc.savingsAmt)}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </CollapsibleTool>
+              </CollapsibleTool>
 
-          <CollapsibleTool
-            title="Loan Comparison"
-            icon={<Calculator className="w-5 h-5" />}
-            description="Compare two loan options side by side"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Loan Amount</label>
-                <input type="number" value={loanAmount} onChange={e => setLoanAmount(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-blue-400">Loan Option 1</p>
+              <CollapsibleTool
+                title="Emergency Fund Calculator"
+                icon={<Shield className="w-5 h-5" />}
+                description="Calculate how much you need for financial emergencies"
+              >
+                <div className="space-y-4">
                   <div>
-                    <label className="block text-xs text-gray-400 mb-1">Rate %</label>
-                    <input type="number" value={loan1Rate} onChange={e => setLoan1Rate(e.target.value)}
-                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Expenses</label>
+                    <input type="number" value={monthlyExpenses} onChange={e => setMonthlyExpenses(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div>
-                    <label className="block text-xs text-gray-400 mb-1">Term (months)</label>
-                    <input type="number" value={loan1Term} onChange={e => setLoan1Term(e.target.value)}
-                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-green-400">Loan Option 2</p>
-                  <div>
-                    <label className="block text-xs text-gray-400 mb-1">Rate %</label>
-                    <input type="number" value={loan2Rate} onChange={e => setLoan2Rate(e.target.value)}
-                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Months of Coverage</label>
+                    <input type="number" value={coverageMonths} onChange={e => setCoverageMonths(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div>
-                    <label className="block text-xs text-gray-400 mb-1">Term (months)</label>
-                    <input type="number" value={loan2Term} onChange={e => setLoan2Term(e.target.value)}
-                      className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white text-sm" />
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Current Savings</label>
+                    <input type="number" value={emergencySavings} onChange={e => setEmergencySavings(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-6 mt-4 border border-white/5">
+                    <p className="text-sm text-gray-400 uppercase tracking-wider mb-2">Target Fund</p>
+                    <p className="text-3xl font-bold text-white mb-2">{formatCurrency(emergencyCalc.target)}</p>
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-orange-400">Gap: {formatCurrency(emergencyCalc.gap)}</span>
+                      <span className="text-gray-400">{emergencyCalc.monthsCovered.toFixed(1)} months ready</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3 mt-4">
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-blue-400 font-medium">Option 1</p>
-                  <p className="text-lg font-bold text-white">{formatCurrency(loanCompareCalc.pmt1)}/mo</p>
-                  <p className="text-xs text-gray-400">Total: {formatCurrency(loanCompareCalc.total1)}</p>
-                  <p className="text-xs text-red-400">Interest: {formatCurrency(loanCompareCalc.interest1)}</p>
-                </div>
-                <div className="bg-gray-900 rounded-lg p-3">
-                  <p className="text-xs text-green-400 font-medium">Option 2</p>
-                  <p className="text-lg font-bold text-white">{formatCurrency(loanCompareCalc.pmt2)}/mo</p>
-                  <p className="text-xs text-gray-400">Total: {formatCurrency(loanCompareCalc.total2)}</p>
-                  <p className="text-xs text-red-400">Interest: {formatCurrency(loanCompareCalc.interest2)}</p>
-                </div>
-              </div>
-              <p className="text-sm text-center mt-2">
-                {loanCompareCalc.savings > 0 ? (
-                  <span className="text-green-400">Option 2 saves {formatCurrency(loanCompareCalc.savings)} total</span>
-                ) : loanCompareCalc.savings < 0 ? (
-                  <span className="text-green-400">Option 1 saves {formatCurrency(Math.abs(loanCompareCalc.savings))} total</span>
-                ) : (
-                  <span className="text-gray-400">Both options cost the same</span>
-                )}
-              </p>
+              </CollapsibleTool>
             </div>
-          </CollapsibleTool>
+          </section>
 
-          <CollapsibleTool
-            title="Investment Return Calculator"
-            icon={<TrendingUp className="w-5 h-5" />}
-            description="Calculate your actual investment returns"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Initial Investment</label>
-                <input type="number" value={invInitial} onChange={e => setInvInitial(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Current Value</label>
-                <input type="number" value={invFinal} onChange={e => setInvFinal(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Years Held</label>
-                <input type="number" value={invYears} onChange={e => setInvYears(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <div className="grid grid-cols-2 gap-4">
+          {/* Section: Saving & Investing */}
+          <section>
+            <div className="flex items-center space-x-4 mb-8 justify-center">
+              <TrendingUp className="w-8 h-8 text-orange-400" />
+              <h2 className="text-3xl font-display font-bold text-white uppercase tracking-tight">Saving & Investing</h2>
+            </div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent mb-12"></div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+              <CollapsibleTool
+                title="Compound Interest"
+                icon={<TrendingUp className="w-5 h-5" />}
+                description="See the power of compounding"
+              >
+                <div className="space-y-4">
                   <div>
-                    <p className="text-xs text-gray-400">Total Return</p>
-                    <p className={`text-xl font-bold ${investmentReturnCalc.totalReturn >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                      {investmentReturnCalc.totalReturn.toFixed(2)}%
-                    </p>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Initial</label>
+                    <input type="number" value={compoundInitial} onChange={e => setCompoundInitial(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly +</label>
+                      <input type="number" value={compoundMonthly} onChange={e => setCompoundMonthly(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Years</label>
+                      <input type="number" value={compoundYears} onChange={e => setCompoundYears(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">Annualized Return</p>
-                    <p className={`text-xl font-bold ${investmentReturnCalc.annualReturn >= 0 ? 'text-green-400' : 'text-red-400'}`}>
-                      {investmentReturnCalc.annualReturn.toFixed(2)}%
-                    </p>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Rate %</label>
+                    <input type="number" value={compoundRate} onChange={e => setCompoundRate(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Future Value</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(compoundCalc.futureValue)}</p>
                   </div>
                 </div>
-                <p className="text-sm text-gray-400 mt-3">
-                  Gain/Loss: <span className={investmentReturnCalc.gain >= 0 ? 'text-green-400' : 'text-red-400'}>
-                    {formatCurrency(investmentReturnCalc.gain)}
-                  </span>
-                </p>
-              </div>
-            </div>
-          </CollapsibleTool>
+              </CollapsibleTool>
 
-          <CollapsibleTool
-            title="Break-Even Calculator"
-            icon={<Briefcase className="w-5 h-5" />}
-            description="Calculate break-even point for business decisions"
-          >
-            <div className="space-y-3">
-              <div>
-                <label className="block text-sm text-gray-300 mb-1">Fixed Costs</label>
-                <input type="number" value={beFixedCosts} onChange={e => setBeFixedCosts(e.target.value)}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Price per Unit</label>
-                  <input type="number" value={bePrice} onChange={e => setBePrice(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
+              <CollapsibleTool
+                title="Roth vs Trad IRA"
+                icon={<PiggyBank className="w-5 h-5" />}
+                description="Compare retirement accounts"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Contribution</label>
+                    <input type="number" value={iraContribution} onChange={e => setIraContribution(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Tax Rate %</label>
+                      <input type="number" value={iraTaxRate} onChange={e => setIraTaxRate(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Years</label>
+                      <input type="number" value={iraYears} onChange={e => setIraYears(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Return %</label>
+                      <input type="number" value={iraReturn} onChange={e => setIraReturn(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Roth Advantage</p>
+                    <p className="text-2xl font-bold text-orange-400">{formatCurrency(Math.abs(iraCalc.difference))}</p>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm text-gray-300 mb-1">Variable Cost per Unit</label>
-                  <input type="number" value={beVariableCost} onChange={e => setBeVariableCost(e.target.value)}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white" />
-                </div>
-              </div>
-              <div className="bg-gray-900 rounded-lg p-4 mt-4">
-                <p className="text-sm text-gray-400">Break-Even Point</p>
-                <p className="text-2xl font-bold text-orange-400">{breakEvenCalc.breakEvenUnits.toLocaleString()} units</p>
-                <p className="text-sm text-gray-400 mt-2">Revenue needed: {formatCurrency(breakEvenCalc.breakEvenRevenue)}</p>
-                <p className="text-sm text-green-400">Profit margin per unit: {formatCurrency(breakEvenCalc.margin)}</p>
-              </div>
-            </div>
-          </CollapsibleTool>
+              </CollapsibleTool>
 
-          {/* Back to Top Button */}
-          {showBackToTop && (
-            <button
-              onClick={scrollToTop}
-              className="fixed bottom-8 right-8 bg-orange-600 hover:bg-orange-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
-            >
-              <ArrowUp className="w-6 h-6" />
-            </button>
-          )}
+              <CollapsibleTool
+                title="401(k) Match"
+                icon={<Briefcase className="w-5 h-5" />}
+                description="Employer match bonuses"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Salary</label>
+                    <input type="number" value={k401Salary} onChange={e => setK401Salary(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Your Contrib %</label>
+                      <input type="number" value={k401Contribution} onChange={e => setK401Contribution(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Match %</label>
+                      <input type="number" value={k401Match} onChange={e => setK401Match(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Years</label>
+                      <input type="number" value={k401Years} onChange={e => setK401Years(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Return %</label>
+                      <input type="number" value={k401Return} onChange={e => setK401Return(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Pot. Future Value</p>
+                    <p className="text-2xl font-bold text-blue-400">{formatCurrency(k401Calc.futureValue)}</p>
+                    <p className="text-xs text-gray-500 mt-1">based on {formatCurrency(k401Calc.annualMatch)}/yr match</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+            </div>
+          </section>
+
+          {/* Section: Debt & Loans */}
+          <section>
+            <div className="flex items-center space-x-4 mb-8 justify-center">
+              <CreditCard className="w-8 h-8 text-orange-400" />
+              <h2 className="text-3xl font-display font-bold text-white uppercase tracking-tight">Debt & Loans</h2>
+            </div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent mb-12"></div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+              <CollapsibleTool
+                title="Debt Payoff"
+                icon={<CreditCard className="w-5 h-5" />}
+                description="Plan your debt freedom"
+              >
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Balance</label>
+                      <input type="number" value={debtBalance} onChange={e => setDebtBalance(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">APR %</label>
+                      <input type="number" value={debtAPR} onChange={e => setDebtAPR(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Min Pay</label>
+                      <input type="number" value={debtMinPay} onChange={e => setDebtMinPay(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Extra</label>
+                      <input type="number" value={debtExtra} onChange={e => setDebtExtra(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Time to Payoff</p>
+                    <p className="text-2xl font-bold text-white">{debtCalc.months} months</p>
+                    <p className="text-xs text-gray-500 mt-1">Total Paid: {formatCurrency(debtCalc.totalPaid)}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="Mortgage Affordability"
+                icon={<Home className="w-5 h-5" />}
+                description="How much house can you afford?"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Income</label>
+                    <input type="number" value={annualIncome} onChange={e => setAnnualIncome(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Mth Loan Debt</label>
+                      <input type="number" value={monthlyDebt} onChange={e => setMonthlyDebt(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Down Pmt</label>
+                      <input type="number" value={downPayment} onChange={e => setDownPayment(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Interest Rate %</label>
+                    <input type="number" value={mortgageRate} onChange={e => setMortgageRate(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Max Home Price</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(mortgageCalc.homePrice)}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="Car Affordability"
+                icon={<Calculator className="w-5 h-5" />}
+                description="15% income rule"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Income</label>
+                    <input type="number" value={carIncome} onChange={e => setCarIncome(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Down Pmt</label>
+                      <input type="number" value={carDownPayment} onChange={e => setCarDownPayment(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Loan Rate %</label>
+                      <input type="number" value={carLoanRate} onChange={e => setCarLoanRate(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Loan Term (Months)</label>
+                    <input type="number" value={carLoanTerm} onChange={e => setCarLoanTerm(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Max Car Price</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(carCalc.maxCarPrice)}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+            </div>
+          </section>
+
+          {/* Section: Paycheck & HSA */}
+          <section>
+            <div className="flex items-center space-x-4 mb-8 justify-center">
+              <Receipt className="w-8 h-8 text-orange-400" />
+              <h2 className="text-3xl font-display font-bold text-white uppercase tracking-tight">Income & Benefits</h2>
+            </div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent mb-12"></div>
+
+            <div className="grid gap-6 md:grid-cols-2 items-start">
+              <CollapsibleTool
+                title="Paycheck Estimator"
+                icon={<DollarSign className="w-5 h-5" />}
+                description="See your take-home pay"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Gross Pay (Monthly)</label>
+                    <input type="number" value={paycheckGross} onChange={e => setPaycheckGross(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Fed Tax %</label>
+                      <input type="number" value={paycheckFederal} onChange={e => setPaycheckFederal(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">State %</label>
+                      <input type="number" value={paycheckState} onChange={e => setPaycheckState(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">401k %</label>
+                      <input type="number" value={paycheck401k} onChange={e => setPaycheck401k(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Net Take-Home</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(paycheckCalc.netPay)}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="HSA Savings"
+                icon={<Shield className="w-5 h-5" />}
+                description="Triple tax advantage"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Contribution</label>
+                    <input type="number" value={hsaContribution} onChange={e => setHsaContribution(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Tax Rate %</label>
+                      <input type="number" value={hsaTaxRate} onChange={e => setHsaTaxRate(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Years</label>
+                      <input type="number" value={hsaYears} onChange={e => setHsaYears(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Return %</label>
+                      <input type="number" value={hsaReturn} onChange={e => setHsaReturn(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Future HSA Value</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(hsaCalc.futureValue)}</p>
+                    <p className="text-xs text-gray-500 mt-1">Tax Savings: {formatCurrency(hsaCalc.taxSavings)}/yr</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+            </div>
+          </section>
+
+          {/* More tools section */}
+
+
+          {/* Section: Advanced Planning */}
+          <section>
+            <div className="flex items-center space-x-4 mb-8 justify-center">
+              <TrendingUp className="w-8 h-8 text-orange-400" />
+              <h2 className="text-3xl font-display font-bold text-white uppercase tracking-tight">Advanced Planning</h2>
+            </div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent mb-12"></div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+              <CollapsibleTool
+                title="FIRE Calculator"
+                icon={<TrendingUp className="w-5 h-5" />}
+                description="Financial Independence Retire Early"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Expenses in Retirement</label>
+                    <input type="number" value={fireAnnualExpenses} onChange={e => setFireAnnualExpenses(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Current Savings</label>
+                    <input type="number" value={fireCurrentSavings} onChange={e => setFireCurrentSavings(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Save</label>
+                      <input type="number" value={fireMonthlySavings} onChange={e => setFireMonthlySavings(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Return %</label>
+                      <input type="number" value={fireReturnRate} onChange={e => setFireReturnRate(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">FIRE Number</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(fireCalc.fireNumber)}</p>
+                    <p className="text-sm text-white mt-1">{fireCalc.yearsToFire.toFixed(1)} years to goal</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="Rent vs Buy"
+                icon={<Home className="w-5 h-5" />}
+                description="Compare 5-year outlook"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Rent</label>
+                    <input type="number" value={rentMonthly} onChange={e => setRentMonthly(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Home Price</label>
+                    <input type="number" value={homePrice} onChange={e => setHomePrice(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Comaprison Years</label>
+                    <input type="number" value={rentVsBuyYears} onChange={e => setRentVsBuyYears(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Verdict</p>
+                    <p className="text-xl font-bold text-white">{rentVsBuyCalc.difference > 0 ? "Rent is Cheaper" : "Buy is Cheaper"}</p>
+                    <p className="text-xs text-gray-500 mt-1">Difference: {formatCurrency(Math.abs(rentVsBuyCalc.difference))}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="Student Loan Payoff"
+                icon={<Briefcase className="w-5 h-5" />}
+                description="Plan your customized payoff strategy"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Loan Balance</label>
+                    <input type="number" value={studentLoanBalance} onChange={e => setStudentLoanBalance(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Rate %</label>
+                      <input type="number" value={studentLoanRate} onChange={e => setStudentLoanRate(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Pay</label>
+                      <input type="number" value={studentLoanPayment} onChange={e => setStudentLoanPayment(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Time to Payoff</p>
+                    <p className="text-2xl font-bold text-white">{studentLoanCalc.years.toFixed(1)} years</p>
+                    <p className="text-xs text-gray-500 mt-1">Total Interest: {formatCurrency(studentLoanCalc.totalInterest)}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+            </div>
+          </section>
+
+          {/* Section: More Calculators */}
+          <section>
+            <div className="flex items-center space-x-4 mb-8 justify-center">
+              <Calculator className="w-8 h-8 text-orange-400" />
+              <h2 className="text-3xl font-display font-bold text-white uppercase tracking-tight">More Calculators</h2>
+            </div>
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent mb-12"></div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 items-start">
+              <CollapsibleTool
+                title="Credit Card Payoff"
+                icon={<CreditCard className="w-5 h-5" />}
+                description="Kill high interest debt"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Balance</label>
+                    <input type="number" value={ccBalance} onChange={e => setCcBalance(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">APR %</label>
+                      <input type="number" value={ccAPR} onChange={e => setCcAPR(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Pay</label>
+                      <input type="number" value={ccPayment} onChange={e => setCcPayment(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Time to Payoff</p>
+                    <p className="text-2xl font-bold text-white">{ccCalc.months} months</p>
+                    <p className="text-xs text-gray-500 mt-1">Total Interest: {formatCurrency(ccCalc.totalInterest)}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="Investment Withdrawal"
+                icon={<PiggyBank className="w-5 h-5" />}
+                description="Safe withdrawal rates"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Portfolio Balance</label>
+                    <input type="number" value={retirementBalance} onChange={e => setRetirementBalance(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Withdrawal Rate %</label>
+                    <input type="number" value={retirementWithdrawal} onChange={e => setRetirementWithdrawal(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Monthly Income</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(retirementCalc.monthlyIncome)}</p>
+                    <p className="text-xs text-gray-500 mt-1">{formatCurrency(retirementCalc.annualIncome)}/year</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="Income Tax Estimator"
+                icon={<Receipt className="w-5 h-5" />}
+                description="Estimate federal taxes"
+              >
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Taxable Income</label>
+                    <input type="number" value={taxIncome} onChange={e => setTaxIncome(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Standard Deduction</label>
+                    <input type="number" value={taxDeductions} onChange={e => setTaxDeductions(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Est. Tax</p>
+                    <p className="text-2xl font-bold text-white">{formatCurrency(taxCalc.tax)}</p>
+                    <p className="text-xs text-gray-500 mt-1">Effective Rate: {taxCalc.effectiveRate.toFixed(1)}%</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+
+              <CollapsibleTool
+                title="College Savings (529)"
+                icon={<TrendingUp className="w-5 h-5" />}
+                description="Plan for education costs"
+              >
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Est. Cost</label>
+                      <input type="number" value={collegeCost} onChange={e => setCollegeCost(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Years</label>
+                      <input type="number" value={collegeYears} onChange={e => setCollegeYears(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Current</label>
+                      <input type="number" value={collegeSavings} onChange={e => setCollegeSavings(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly +</label>
+                      <input type="number" value={collegeMonthly} onChange={e => setCollegeMonthly(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm text-gray-300 mb-2 font-medium">Return %</label>
+                    <input type="number" value={collegeReturn} onChange={e => setCollegeReturn(e.target.value)}
+                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
+                    <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Projected Value</p>
+                    <p className="text-2xl font-bold text-green-400">{formatCurrency(collegeCalc.future)}</p>
+                    <p className="text-xs text-gray-500 mt-1">Gap: {formatCurrency(collegeCalc.gap)}</p>
+                  </div>
+                </div>
+              </CollapsibleTool>
+            </div>
+          </section>
+          <div className="flex justify-center py-12">
+            <p className="text-gray-500 text-sm font-mono tracking-widest uppercase">More calculators coming soon...</p>
+          </div>
         </div>
       </div>
     </div>
