@@ -1,0 +1,32 @@
+name = "meridianalgo"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+name = "meridianalgo-prod"
+route = "yourdomain.com/*"
+zone_id = ""
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.ts", "src/**/*.tsx"]
+
+[build.upload]
+format = "service-worker"
+
+[env.production.build.upload]
+format = "modules"
+
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*.wasm"]
+fallthrough = true
+
+[[build.upload.rules]]
+type = "Text"
+globs = ["**/*.txt", "**/*.html"]
+fallthrough = true
