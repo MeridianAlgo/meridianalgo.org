@@ -74,7 +74,8 @@ const CODESTACK = [
   { name: 'Python', icon: <Code2 className="w-8 h-8 text-blue-500" /> },
   { name: 'Rust', icon: <Code2 className="w-8 h-8 text-orange-600" /> },
   { name: 'C++', icon: <Code2 className="w-8 h-8 text-blue-600" /> },
-  { name: 'PostgreSQL', icon: <Database className="w-8 h-8 text-indigo-400" /> }
+  { name: 'PostgreSQL', icon: <Database className="w-8 h-8 text-indigo-400" /> },
+  { name: 'SQL', icon: <Database className="w-8 h-8 text-cyan-400" /> }
 ];
 
 const Home = () => {
