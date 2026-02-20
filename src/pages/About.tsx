@@ -31,7 +31,7 @@ const About = () => {
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-light mb-10">
               We're a student-led nonprofit building a global community around financial literacy and open-source tools.
             </p>
-            <div className="inline-flex items-center gap-2 text-orange-400 font-semibold bg-orange-500/10 px-6 py-3 rounded-full border border-orange-400/30 cursor-target">
+            <div className="inline-flex items-center gap-2 text-orange-400 font-semibold bg-orange-500/10 px-6 py-3 rounded-full border border-orange-400/30">
               <Globe className="w-5 h-5" />
               Operating in 4 Countries Worldwide
             </div>
@@ -40,7 +40,7 @@ const About = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce">
-          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors cursor-target">
+          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors">
             <ChevronDown className="w-8 h-8" />
           </button>
         </div>
@@ -77,21 +77,21 @@ const About = () => {
             <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-900/80 p-8 rounded-3xl border border-gray-800 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-target">
+            <div className="bg-gray-900/80 p-8 rounded-3xl border border-gray-800 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <BookOpen className="w-6 h-6 text-orange-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4 text-center tracking-tight">Practical Education</h3>
               <p className="text-gray-400 text-center text-sm leading-relaxed font-light">Financial newsletters, tutorials, and tools tailored for everyday users not just Wall Street insiders.</p>
             </div>
-            <div className="bg-gray-900/80 p-8 rounded-3xl border border-gray-800 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-target">
+            <div className="bg-gray-900/80 p-8 rounded-3xl border border-gray-800 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Zap className="w-6 h-6 text-orange-400" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4 text-center tracking-tight">Ethical Algorithms</h3>
               <p className="text-gray-400 text-center text-sm leading-relaxed font-light">We champion fairness, interpretability, and responsible AI in financial education and decision-making tools.</p>
             </div>
-            <div className="bg-gray-900/80 p-8 rounded-3xl border border-gray-800 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-target">
+            <div className="bg-gray-900/80 p-8 rounded-3xl border border-gray-800 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
               <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <Globe className="w-6 h-6 text-orange-400" />
               </div>

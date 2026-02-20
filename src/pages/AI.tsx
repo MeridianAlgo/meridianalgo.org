@@ -42,7 +42,7 @@ const AI = () => {
 
                 {/* Scroll Indicator */}
                 <div className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce">
-                    <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors cursor-target">
+                    <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors">
                         <ChevronDown className="w-8 h-8" />
                     </button>
                 </div>
@@ -54,7 +54,7 @@ const AI = () => {
                     <div className="grid grid-cols-1 gap-24">
 
                         {/* FinAI Card - Full Width Detail - Removed Image Section */}
-                        <div className="group relative bg-gray-900/40 border border-gray-800 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-sm overflow-hidden hover:border-blue-400/30 transition-all duration-500 cursor-target">
+                        <div className="group relative bg-gray-900/40 border border-gray-800 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-sm overflow-hidden hover:border-blue-400/30 transition-all duration-500">
                             <div className="absolute -right-20 -top-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all"></div>
 
                             <div className="relative z-10 grid md:grid-cols-1 gap-12 items-center">
@@ -80,7 +80,7 @@ const AI = () => {
                                             <span className="text-sm text-blue-300">Privacy Focus</span>
                                         </div>
                                     </div>
-                                    <a href="https://github.com/MeridianAlgo/FinAI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-blue-500/25 uppercase tracking-wide text-sm cursor-target">
+                                    <a href="https://github.com/MeridianAlgo/FinAI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-blue-500/25 uppercase tracking-wide text-sm">
                                         View Repository <Globe className="w-4 h-4 ml-2" />
                                     </a>
                                 </div>
@@ -88,7 +88,7 @@ const AI = () => {
                         </div>
 
                         {/* Midnight.AI Card - Full Width Detail - Removed Image Section */}
-                        <div className="group relative bg-gray-900/40 border border-gray-800 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-sm overflow-hidden hover:border-purple-400/30 transition-all duration-500 cursor-target">
+                        <div className="group relative bg-gray-900/40 border border-gray-800 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-sm overflow-hidden hover:border-purple-400/30 transition-all duration-500">
                             <div className="absolute -left-20 -bottom-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all"></div>
 
                             <div className="relative z-10 grid md:grid-cols-1 gap-12 items-center">
@@ -114,7 +114,7 @@ const AI = () => {
                                             <span className="text-sm text-purple-300">Alpaca Integration</span>
                                         </div>
                                     </div>
-                                    <a href="https://github.com/MeridianAlgo/Midnight.AI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-purple-500/25 uppercase tracking-wide text-sm cursor-target">
+                                    <a href="https://github.com/MeridianAlgo/Midnight.AI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-purple-500/25 uppercase tracking-wide text-sm">
                                         View Repository <Globe className="w-4 h-4 ml-2" />
                                     </a>
                                 </div>
@@ -122,7 +122,7 @@ const AI = () => {
                         </div>
 
                         {/* AraAI Card - Full Width Detail */}
-                        <div className="group relative bg-gray-900/40 border border-gray-800 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-sm overflow-hidden hover:border-cyan-400/30 transition-all duration-500 cursor-target">
+                        <div className="group relative bg-gray-900/40 border border-gray-800 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-sm overflow-hidden hover:border-cyan-400/30 transition-all duration-500">
                             <div className="absolute -right-20 -top-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all"></div>
 
                             <div className="relative z-10 grid md:grid-cols-1 gap-12 items-center">
@@ -148,7 +148,7 @@ const AI = () => {
                                             <span className="text-sm text-cyan-300">Volatility Forecasting</span>
                                         </div>
                                     </div>
-                                    <a href="https://github.com/MeridianAlgo/AraAI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-cyan-500/25 uppercase tracking-wide text-sm cursor-target">
+                                    <a href="https://github.com/MeridianAlgo/AraAI" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl font-bold transition-all shadow-lg hover:shadow-cyan-500/25 uppercase tracking-wide text-sm">
                                         View Repository <Globe className="w-4 h-4 ml-2" />
                                     </a>
                                 </div>
@@ -164,19 +164,19 @@ const AI = () => {
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h3 className="text-2xl font-bold mb-12 uppercase tracking-widest text-gray-500">Technology Stack</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 transition-colors cursor-target">
+                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 transition-colors">
                             <div className="text-3xl font-bold text-blue-400 mb-2">LLM</div>
                             <div className="text-xs text-gray-400 uppercase tracking-wider">Transformer Models</div>
                         </div>
-                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/30 transition-colors cursor-target">
+                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/30 transition-colors">
                             <div className="text-3xl font-bold text-purple-400 mb-2">RL</div>
                             <div className="text-xs text-gray-400 uppercase tracking-wider">Reinforcement Learning</div>
                         </div>
-                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-green-500/30 transition-colors cursor-target">
+                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-green-500/30 transition-colors">
                             <div className="text-3xl font-bold text-green-400 mb-2">PyTorch</div>
                             <div className="text-xs text-gray-400 uppercase tracking-wider">Deep Learning Framework</div>
                         </div>
-                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-orange-500/30 transition-colors cursor-target">
+                        <div className="p-6 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-orange-500/30 transition-colors">
                             <div className="text-3xl font-bold text-orange-400 mb-2">API</div>
                             <div className="text-xs text-gray-400 uppercase tracking-wider">Real-time Data</div>
                         </div>

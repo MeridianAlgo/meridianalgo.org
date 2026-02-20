@@ -42,7 +42,7 @@ const Contact = () => {
               </p>
               <button
                 onClick={() => window.location.reload()}
-                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 font-inter cursor-target"
+                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 font-inter"
               >
                 Send Another Message
               </button>
@@ -111,7 +111,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-2">Open Source</h3>
-                      <a href="https://github.com/MeridianAlgo" className="text-orange-400 hover:text-orange-300 transition-colors duration-300 cursor-target">
+                      <a href="https://github.com/MeridianAlgo" className="text-orange-400 hover:text-orange-300 transition-colors duration-300">
                         github.com/MeridianAlgo
                       </a>
                       <p className="text-gray-400 text-sm mt-1">Contribute to our projects</p>
@@ -138,19 +138,19 @@ const Contact = () => {
                 <div className="flex space-x-4">
                   <a
                     href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A107717373&keywords=meridianalgo&origin=RICH_QUERY_SUGGESTION&position=0&searchId=78e6a6ae-9729-449e-8747-3931ace9b150&sid=M2v&spellCorrectionEnabled=false"
-                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50 cursor-target"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
                   >
                     <Linkedin className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
                   <a
                     href="https://x.com/MeridianAlgo"
-                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50 cursor-target"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
                   >
                     <X className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
                   <a
                     href="https://github.com/MeridianAlgo"
-                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50 cursor-target"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
                   >
                     <Github className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
@@ -160,19 +160,19 @@ const Contact = () => {
               <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
                 <h4 className="text-white font-semibold mb-6 text-lg">Ways to Engage</h4>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
                     <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
                     <span>Co-create community financial literacy programs</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                     <span>Host a workshop in your Midwestern community</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
                     <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     <span>Access classroom-ready educational resources</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300">
                     <div className="w-2 h-2 bg-orange-700 rounded-full"></div>
                     <span>Partner with our regional research initiatives</span>
                   </div>
@@ -196,7 +196,7 @@ const Contact = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500 cursor-target"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
                     placeholder="Your full name"
                   />
                   <ValidationError
@@ -216,7 +216,7 @@ const Contact = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500 cursor-target"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
                     placeholder="your.email@example.com"
                   />
                   <ValidationError
@@ -234,7 +234,7 @@ const Contact = () => {
                   <select
                     id="interest"
                     name="interest"
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500 cursor-target"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
                   >
                     <option value="">Select your interest</option>
                     <option value="financial-literacy">Financial Literacy Programs</option>
@@ -255,7 +255,7 @@ const Contact = () => {
                     name="message"
                     required
                     rows={6}
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 resize-none hover:border-gray-500 cursor-target"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 resize-none hover:border-gray-500"
                     placeholder="Tell us about your interest in MeridianAlgo..."
                   />
                   <ValidationError
@@ -269,7 +269,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center space-x-3 hover:shadow-lg hover:shadow-orange-500/25 cursor-target"
+                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center space-x-3 hover:shadow-lg hover:shadow-orange-500/25"
                 >
                   <Send className="w-5 h-5" />
                   <span>{state.submitting ? 'Sending...' : 'Send Message'}</span>

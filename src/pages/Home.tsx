@@ -72,10 +72,9 @@ const FEATURES = [
 const CODESTACK = [
   { name: 'Node.js', icon: <Server className="w-8 h-8 text-green-500" /> },
   { name: 'Python', icon: <Code2 className="w-8 h-8 text-blue-500" /> },
-  { name: 'React', icon: <Code2 className="w-8 h-8 text-cyan-400" /> },
-  { name: 'TypeScript', icon: <Code2 className="w-8 h-8 text-blue-400" /> },
-  { name: 'PostgreSQL', icon: <Database className="w-8 h-8 text-indigo-400" /> },
-  { name: 'TensorFlow', icon: <Cpu className="w-8 h-8 text-orange-500" /> }
+  { name: 'Rust', icon: <Code2 className="w-8 h-8 text-orange-600" /> },
+  { name: 'C++', icon: <Code2 className="w-8 h-8 text-blue-600" /> },
+  { name: 'PostgreSQL', icon: <Database className="w-8 h-8 text-indigo-400" /> }
 ];
 
 const Home = () => {
@@ -162,13 +161,13 @@ const Home = () => {
           <div className="animate-fade-in-up flex flex-col sm:flex-row gap-5 justify-center items-center" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             <Link
               to="/tools"
-              className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-bold text-base transition-all duration-300 shadow-xl hover:shadow-orange-500/20 active:scale-95 cursor-target"
+              className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-bold text-base transition-all duration-300 shadow-xl hover:shadow-orange-500/20 active:scale-95"
             >
               Try Our Tools
             </Link>
             <Link
               to="/opensource"
-              className="px-8 py-4 border border-orange-400/50 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 rounded-xl font-bold text-base transition-all duration-300 backdrop-blur-sm active:scale-95 shadow-lg cursor-target"
+              className="px-8 py-4 border border-orange-400/50 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 rounded-xl font-bold text-base transition-all duration-300 backdrop-blur-sm active:scale-95 shadow-lg"
             >
               Explore Open Source
             </Link>
@@ -211,7 +210,7 @@ const Home = () => {
                   { icon: <Calculator />, title: 'Financial Tools', desc: 'Interactive calculators designed for real-world scenarios.', link: '/tools' },
                   { icon: <Code2 />, title: 'Open Source', desc: 'Access our libraries and contribute to the future of finance.', link: '/opensource' }
                 ].map((box, i) => (
-                  <Link key={i} to={box.link} className="group bg-black/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-orange-400/40 transition-all duration-300 hover:-translate-y-1 flex flex-col items-start text-left shadow-2xl z-20 cursor-target">
+                  <Link key={i} to={box.link} className="group bg-black/80 backdrop-blur-xl p-8 rounded-3xl border border-white/10 hover:border-orange-400/40 transition-all duration-300 hover:-translate-y-1 flex flex-col items-start text-left shadow-2xl z-20">
                     <div className="p-3 bg-orange-500/10 rounded-xl mb-6 group-hover:bg-orange-500/20 transition-colors ring-1 ring-orange-500/20">
                       {box.icon && React.cloneElement(box.icon as React.ReactElement, { className: "w-6 h-6 text-orange-400" })}
                     </div>
@@ -255,7 +254,7 @@ const Home = () => {
               {[...OPEN_SOURCE_PROJECTS, ...OPEN_SOURCE_PROJECTS, ...OPEN_SOURCE_PROJECTS].map((project, index) => (
                 <div
                   key={`${project.id}-${index}`}
-                  className={`flex-none w-[400px] bg-black/80 backdrop-blur-xl border border-white/10 hover:border-orange-400/40 p-8 rounded-[2rem] transition-all duration-500 group relative overflow-hidden flex flex-col shadow-2xl cursor-target`}
+                  className={`flex-none w-[400px] bg-black/80 backdrop-blur-xl border border-white/10 hover:border-orange-400/40 p-8 rounded-[2rem] transition-all duration-500 group relative overflow-hidden flex flex-col shadow-2xl`}
                 >
                   <div className="flex items-center space-x-5 mb-8 relative z-10">
                     <div className="p-4 bg-gray-900 rounded-xl ring-1 ring-white/10 group-hover:ring-orange-400/40 transition-all duration-300">
@@ -275,7 +274,7 @@ const Home = () => {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto w-full inline-flex items-center justify-center px-6 py-3 bg-orange-500/5 hover:bg-orange-500 text-white rounded-xl font-bold transition-all duration-300 border border-orange-400/10 group-hover:border-transparent shadow-lg uppercase tracking-widest text-[10px] cursor-target"
+                    className="mt-auto w-full inline-flex items-center justify-center px-6 py-3 bg-orange-500/5 hover:bg-orange-500 text-white rounded-xl font-bold transition-all duration-300 border border-orange-400/10 group-hover:border-transparent shadow-lg uppercase tracking-widest text-[10px]"
                   >
                     <Github className="w-4 h-4 mr-3" />
                     Repository
@@ -284,7 +283,7 @@ const Home = () => {
               ))}
             </div>
             <div className="mt-8">
-              <Link to="/opensource" className="px-6 py-3 rounded-xl border border-orange-400/40 text-orange-400 hover:bg-orange-500 hover:text-white transition-all duration-300 font-bold whitespace-nowrap text-xs uppercase tracking-[0.2em] shadow-lg inline-block cursor-target">
+              <Link to="/opensource" className="px-6 py-3 rounded-xl border border-orange-400/40 text-orange-400 hover:bg-orange-500 hover:text-white transition-all duration-300 font-bold whitespace-nowrap text-xs uppercase tracking-[0.2em] shadow-lg inline-block">
                 Explore All Projects
               </Link>
             </div>
@@ -315,7 +314,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
               {FEATURES.map((feature, index) => (
-                <div key={index} className="bg-gray-900/20 backdrop-blur-sm rounded-[2rem] p-10 border border-white/5 transition-all duration-500 hover:border-orange-400/40 group relative overflow-hidden z-20 cursor-target">
+                <div key={index} className="bg-gray-900/20 backdrop-blur-sm rounded-[2rem] p-10 border border-white/5 transition-all duration-500 hover:border-orange-400/40 group relative overflow-hidden z-20">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-400/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <h3 className="text-xl font-bold text-white mb-6 tracking-tight group-hover:text-orange-400 transition-colors uppercase font-display leading-tight">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed font-light">{feature.desc}</p>
@@ -357,7 +356,7 @@ const Home = () => {
               Built with cutting-edge open source technologies for performance, reliability, and scale.
             </p>
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-              <Link to="/about" className="w-full sm:w-auto px-12 py-5 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-bold text-lg transition-all shadow-xl active:scale-95 text-center uppercase tracking-wider cursor-target">
+              <Link to="/about" className="w-full sm:w-auto px-12 py-5 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-bold text-lg transition-all shadow-xl active:scale-95 text-center uppercase tracking-wider">
                 Our Story
               </Link>
             </div>

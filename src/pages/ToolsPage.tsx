@@ -386,7 +386,7 @@ const ToolsPage: React.FC = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce">
-          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors cursor-target">
+          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors">
             <ChevronDown className="w-8 h-8" />
           </button>
         </div>

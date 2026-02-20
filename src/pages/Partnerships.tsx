@@ -48,7 +48,7 @@ const Partnerships = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Hack Foundation Partner Card */}
             <div className="group relative">
-              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl cursor-target">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
                     <img
@@ -68,7 +68,7 @@ const Partnerships = () => {
                     href="https://the.hackfoundation.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48 cursor-target"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48"
                   >
                     Visit Website
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -79,7 +79,7 @@ const Partnerships = () => {
 
             {/* Jukebox Print Partner Card */}
             <div className="group relative">
-              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl cursor-target">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
                     <img
@@ -99,7 +99,7 @@ const Partnerships = () => {
                     href="https://www.jukeboxprint.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48 cursor-target"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48"
                   >
                     Visit Website
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -110,7 +110,7 @@ const Partnerships = () => {
 
             {/* Costco Partner Card */}
             <div className="group relative">
-              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl cursor-target">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
                     <img
@@ -130,7 +130,7 @@ const Partnerships = () => {
                     href="https://www.costco.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48 cursor-target"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48"
                   >
                     Visit Website
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -150,7 +150,7 @@ const Partnerships = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2 cursor-target"
+                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2"
               >
                 <span>Get in Touch</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -159,7 +159,7 @@ const Partnerships = () => {
               </Link>
               <a
                 href="mailto:partnerships@meridianalgo.com"
-                className="px-8 py-3.5 bg-transparent hover:bg-white/5 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2 cursor-target"
+                className="px-8 py-3.5 bg-transparent hover:bg-white/5 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2"
               >
                 <span>Email Us</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +193,7 @@ const Partnerships = () => {
                   icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
                 }
               ].map((item, index) => (
-                <div key={index} className="bg-gray-800/30 p-6 rounded-2xl hover:bg-gray-800/50 transition-colors duration-300 border border-transparent hover:border-orange-400/30 cursor-target">
+                <div key={index} className="bg-gray-800/30 p-6 rounded-2xl hover:bg-gray-800/50 transition-colors duration-300 border border-transparent hover:border-orange-400/30">
                   <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4">
                     <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />

@@ -182,7 +182,7 @@ const OpenSource = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 cursor-target ${selectedCategory === category
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
                   ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   }`}
@@ -204,7 +204,7 @@ const OpenSource = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 flex flex-col cursor-target"
+                className="group bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-orange-400/40 transition-all duration-300 hover:scale-105 flex flex-col"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -251,7 +251,7 @@ const OpenSource = () => {
             href="https://github.com/MeridianAlgo"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg cursor-target"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg"
           >
             <Github className="w-5 h-5" />
             View on GitHub
