@@ -1,6 +1,5 @@
 import { Mail, Linkedin, X, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import React from 'react';
 
 const Footer = () => {
   return (
@@ -12,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           {/* Logo and Bio Section */}
           <div className="flex-1 max-w-md">
-            <Link to="/" className="flex items-center space-x-4 mb-6 group">
+            <Link to="/" className="flex items-center space-x-4 mb-6 group cursor-target">
               <div className="w-10 h-10 rounded-2xl overflow-hidden bg-white/5 p-1 ring-1 ring-white/10">
                 <img
                   src="/meridianalgo.png"
@@ -44,7 +43,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-900 border border-gray-800 hover:border-orange-400/50 hover:bg-orange-500/5 p-2 rounded-lg transition-all duration-300 group text-gray-400 hover:text-orange-400"
+                  className="bg-gray-900 border border-gray-800 hover:border-orange-400/50 hover:bg-orange-500/5 p-2 rounded-lg transition-all duration-300 group text-gray-400 hover:text-orange-400 cursor-target"
                 >
                   {social.icon}
                 </a>
@@ -64,9 +63,9 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400 pl-3">Platform</h4>
               <ul className="space-y-2">
-                <li><Link to="/about" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">About Us</Link></li>
-                <li><Link to="/newsletters" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">Newsletters</Link></li>
-                <li><Link to="/contact" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">Contact</Link></li>
+                <li><Link to="/about" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">About Us</Link></li>
+                <li><Link to="/newsletters" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">Newsletters</Link></li>
+                <li><Link to="/contact" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">Contact</Link></li>
               </ul>
             </div>
 
@@ -74,9 +73,9 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400 pl-3">Resources</h4>
               <ul className="space-y-2">
-                <li><Link to="/tools" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">Financial Tools</Link></li>
-                <li><Link to="/opensource" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">Open Source</Link></li>
-                <li><Link to="/research" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">Research</Link></li>
+                <li><Link to="/tools" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">Financial Tools</Link></li>
+                <li><Link to="/opensource" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">Open Source</Link></li>
+                <li><Link to="/research" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">Research</Link></li>
               </ul>
             </div>
 
@@ -84,9 +83,9 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400 pl-3">Community</h4>
               <ul className="space-y-2">
-                <li><Link to="/partnerships" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">Partnerships</Link></li>
+                <li><Link to="/partnerships" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">Partnerships</Link></li>
                 <li>
-                  <a href="https://the.hackfoundation.org/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light">
+                  <a href="https://the.hackfoundation.org/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-400 transition-colors text-xs font-light cursor-target">
                     The Hack Foundation
                   </a>
                 </li>
@@ -104,8 +103,8 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="/legal/Privacy Policy for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-500 hover:text-orange-400 transition-colors uppercase tracking-widest">Privacy</a>
-            <a href="/legal/Terms of Service for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-500 hover:text-orange-400 transition-colors uppercase tracking-widest">Terms</a>
+            <a href="/legal/Privacy Policy for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-500 hover:text-orange-400 transition-colors uppercase tracking-widest cursor-target">Privacy</a>
+            <a href="/legal/Terms of Service for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-500 hover:text-orange-400 transition-colors uppercase tracking-widest cursor-target">Terms</a>
           </div>
         </div>
       </div>

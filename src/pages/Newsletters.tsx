@@ -143,7 +143,7 @@ const Newsletters = () => {
 
       {/* Hero Section */}
       <section className="pt-44 pb-16 relative overflow-hidden">
-        
+
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-6">
@@ -175,7 +175,7 @@ const Newsletters = () => {
                   setCurrentPage(1);
                 }}
                 placeholder="Search newsletters by title or topic (e.g., 'dividends', 'ratios', 'portfolio')..."
-                className="w-full bg-slate-900/60 backdrop-blur-md border border-orange-400/30 rounded-2xl pl-12 pr-4 py-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600 text-lg"
+                className="w-full bg-slate-900/60 backdrop-blur-md border border-orange-400/30 rounded-2xl pl-12 pr-4 py-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600 text-lg cursor-target"
               />
             </div>
           </div>
@@ -191,11 +191,10 @@ const Newsletters = () => {
                 <button
                   key={category}
                   onClick={() => toggleCategory(category)}
-                  className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
-                    selectedCategories.includes(category)
+                  className={`px-4 py-2 rounded-full font-medium transition-all duration-300 cursor-target ${selectedCategories.includes(category)
                       ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-lg'
                       : 'bg-slate-800/60 text-slate-300 hover:bg-slate-700/60 border border-slate-700'
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>
@@ -220,7 +219,7 @@ const Newsletters = () => {
                       setStartDate(e.target.value);
                       setCurrentPage(1);
                     }}
-                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600"
+                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600 cursor-target"
                   />
                 </div>
               </div>
@@ -238,7 +237,7 @@ const Newsletters = () => {
                       setEndDate(e.target.value);
                       setCurrentPage(1);
                     }}
-                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600"
+                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-10 pr-3 py-3 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:border-orange-600 cursor-target"
                   />
                 </div>
               </div>
@@ -246,7 +245,7 @@ const Newsletters = () => {
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="inline-flex items-center justify-center w-full md:w-auto bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 px-6 py-3 rounded-lg transition-all duration-300 font-inter font-medium"
+                  className="inline-flex items-center justify-center w-full md:w-auto bg-white text-gray-900 hover:bg-orange-600 hover:text-white border border-gray-200 px-6 py-3 rounded-lg transition-all duration-300 font-inter font-medium cursor-target"
                 >
                   <X className="w-4 h-4 mr-2" />
                   Clear All Filters
@@ -278,7 +277,7 @@ const Newsletters = () => {
               <p className="text-slate-400 text-lg font-inter mb-2">No newsletters found matching your filters.</p>
               <button
                 onClick={clearFilters}
-                className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-all duration-300 font-inter font-medium mt-4"
+                className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-all duration-300 font-inter font-medium mt-4 cursor-target"
               >
                 Clear Filters
               </button>
@@ -291,7 +290,7 @@ const Newsletters = () => {
                   return (
                     <div
                       key={newsletter.id}
-                      className="group bg-slate-900/60 backdrop-blur-md rounded-2xl overflow-hidden border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20 flex flex-col"
+                      className="group bg-slate-900/60 backdrop-blur-md rounded-2xl overflow-hidden border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20 flex flex-col cursor-target"
                     >
                       {/* Thumbnail */}
                       <div className="relative h-48 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 flex items-center justify-center overflow-hidden">
@@ -332,7 +331,7 @@ const Newsletters = () => {
                           {isPdf ? (
                             <button
                               onClick={() => openPdfViewer(newsletter)}
-                              className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold shadow-lg hover:shadow-orange-500/50"
+                              className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold shadow-lg hover:shadow-orange-500/50 cursor-target"
                             >
                               <Eye className="w-5 h-5" />
                               <span>Read Now</span>
@@ -342,7 +341,7 @@ const Newsletters = () => {
                               href={newsletter.fileUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold"
+                              className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold cursor-target"
                             >
                               <Eye className="w-5 h-5" />
                               <span>Open</span>
@@ -351,7 +350,7 @@ const Newsletters = () => {
                           <a
                             href={newsletter.fileUrl}
                             download={newsletter.fileName}
-                            className="flex-1 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold"
+                            className="flex-1 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 font-inter font-semibold cursor-target"
                           >
                             <Download className="w-5 h-5" />
                             <span>Download</span>
@@ -369,7 +368,7 @@ const Newsletters = () => {
                   <button
                     onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                     disabled={currentPage === 1}
-                    className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-target"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
@@ -378,11 +377,10 @@ const Newsletters = () => {
                     <button
                       key={page}
                       onClick={() => setCurrentPage(page)}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                        currentPage === page
+                      className={`px-4 py-2 rounded-lg font-medium transition-all cursor-target ${currentPage === page
                           ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white'
                           : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                      }`}
+                        }`}
                     >
                       {page}
                     </button>
@@ -391,7 +389,7 @@ const Newsletters = () => {
                   <button
                     onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                     disabled={currentPage === totalPages}
-                    className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-target"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>

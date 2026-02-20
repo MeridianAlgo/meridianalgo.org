@@ -84,7 +84,7 @@ const Research = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce">
-          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors">
+          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors cursor-target">
             <ChevronDown className="w-8 h-8" />
           </button>
         </div>
@@ -102,7 +102,7 @@ const Research = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {researchAreas.map((area, index) => (
-              <div key={index} className="bg-black/40 border border-gray-800/50 hover:border-orange-400/30 hover:bg-black/60 transition-all duration-300 backdrop-blur-sm p-8 rounded-3xl group hovered:scale-105">
+              <div key={index} className="bg-black/40 border border-gray-800/50 hover:border-orange-400/30 hover:bg-black/60 transition-all duration-300 backdrop-blur-sm p-8 rounded-3xl group hovered:scale-105 cursor-target">
                 <div className={`w-16 h-16 bg-${area.color}-500/10 rounded-xl flex items-center justify-center mb-6`}>
                   {area.icon}
                 </div>
@@ -129,7 +129,7 @@ const Research = () => {
 
           <div className="space-y-6">
             {publications.map((pub, index) => (
-              <div key={index} className="bg-black/40 border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-8 rounded-3xl">
+              <div key={index} className="bg-black/40 border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-8 rounded-3xl cursor-target">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white mb-2 md:mb-0 tracking-tight">{pub.title}</h3>
                   <div className="flex items-center space-x-4">
@@ -162,13 +162,13 @@ const Research = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-200 uppercase tracking-wider shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-200 uppercase tracking-wider shadow-lg cursor-target"
               >
                 Get in Touch
               </a>
               <a
                 href="/opensource"
-                className="inline-flex items-center justify-center px-8 py-4 border border-gray-600 text-base font-bold rounded-xl text-white hover:border-orange-400 hover:text-orange-400 transition-colors duration-200 uppercase tracking-wider"
+                className="inline-flex items-center justify-center px-8 py-4 border border-gray-600 text-base font-bold rounded-xl text-white hover:border-orange-400 hover:text-orange-400 transition-colors duration-200 uppercase tracking-wider cursor-target"
               >
                 View Our Code
               </a>

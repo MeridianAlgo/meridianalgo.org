@@ -17,7 +17,7 @@ const Partnerships = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
         </div>
-        
+
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-8">
@@ -48,12 +48,12 @@ const Partnerships = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Hack Foundation Partner Card */}
             <div className="group relative">
-              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl cursor-target">
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
-                    <img 
-                      src={hackFoundationLogo} 
-                      alt="Hack Foundation Logo" 
+                    <img
+                      src={hackFoundationLogo}
+                      alt="Hack Foundation Logo"
                       className="h-16 w-auto object-contain"
                     />
                   </div>
@@ -64,11 +64,11 @@ const Partnerships = () => {
                   The Hack Foundation is our fiscal sponsor, supporting our mission to democratize financial education through their nonprofit infrastructure and resources.
                 </p>
                 <div className="flex justify-center">
-                  <a 
-                    href="https://the.hackfoundation.org/" 
-                    target="_blank" 
+                  <a
+                    href="https://the.hackfoundation.org/"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48 cursor-target"
                   >
                     Visit Website
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -79,12 +79,12 @@ const Partnerships = () => {
 
             {/* Jukebox Print Partner Card */}
             <div className="group relative">
-              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl cursor-target">
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
-                    <img 
-                      src={jukeboxLogo} 
-                      alt="Jukebox Print Logo" 
+                    <img
+                      src={jukeboxLogo}
+                      alt="Jukebox Print Logo"
                       className="h-16 w-auto object-contain"
                     />
                   </div>
@@ -95,11 +95,11 @@ const Partnerships = () => {
                   Leading provider of high-quality printing services, helping businesses and individuals bring their creative visions to life with exceptional products and outstanding customer service.
                 </p>
                 <div className="flex justify-center">
-                  <a 
-                    href="https://www.jukeboxprint.com/" 
-                    target="_blank" 
+                  <a
+                    href="https://www.jukeboxprint.com/"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48 cursor-target"
                   >
                     Visit Website
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -110,12 +110,12 @@ const Partnerships = () => {
 
             {/* Costco Partner Card */}
             <div className="group relative">
-              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl">
+              <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 hover:scale-[1.02] p-8 rounded-3xl cursor-target">
                 <div className="flex flex-col items-center mb-8">
                   <div className="w-24 h-24 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl p-4 mb-6 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 border border-orange-400/30">
-                    <img 
-                      src={costcoLogo} 
-                      alt="Costco Logo" 
+                    <img
+                      src={costcoLogo}
+                      alt="Costco Logo"
                       className="h-16 w-auto object-contain"
                     />
                   </div>
@@ -126,11 +126,11 @@ const Partnerships = () => {
                   Costco helps provide food for our events, ensuring we have the resources to host successful gatherings.
                 </p>
                 <div className="flex justify-center">
-                  <a 
+                  <a
                     href="https://www.costco.com/"
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-medium transition-all duration-300 group w-48 cursor-target"
                   >
                     Visit Website
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -148,18 +148,18 @@ const Partnerships = () => {
               Interested in partnering with us? We're always looking for innovative companies to collaborate with and create mutually beneficial relationships.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link 
-                to="/contact" 
-                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2"
+              <Link
+                to="/contact"
+                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2 cursor-target"
               >
                 <span>Get in Touch</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </Link>
-              <a 
+              <a
                 href="mailto:partnerships@meridianalgo.com"
-                className="px-8 py-3.5 bg-transparent hover:bg-white/5 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2"
+                className="px-8 py-3.5 bg-transparent hover:bg-white/5 text-white rounded-full font-medium transition-all duration-300 transform hover:scale-105 border border-white/10 hover:border-white/20 flex items-center justify-center space-x-2 cursor-target"
               >
                 <span>Email Us</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +193,7 @@ const Partnerships = () => {
                   icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
                 }
               ].map((item, index) => (
-                <div key={index} className="bg-gray-800/30 p-6 rounded-2xl hover:bg-gray-800/50 transition-colors duration-300 border border-transparent hover:border-orange-400/30">
+                <div key={index} className="bg-gray-800/30 p-6 rounded-2xl hover:bg-gray-800/50 transition-colors duration-300 border border-transparent hover:border-orange-400/30 cursor-target">
                   <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4">
                     <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />

@@ -1,16 +1,28 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollToTopButton from './ScrollToTopButton';
+import TargetCursor from './TargetCursor/TargetCursor';
 
 interface AppLayoutProps {
   authenticated?: boolean;
 }
 
 const AppLayout: React.FC<AppLayoutProps> = ({ authenticated = false }) => {
+  const { pathname } = useLocation();
+  const isMainPage = ['/', '/about', '/tools', '/opensource', '/newsletters', '/research', '/partnerships'].includes(pathname);
+
   return (
     <div className={`min-h-screen ${authenticated ? 'bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900' : 'bg-black'}`}>
+      {isMainPage && (
+        <TargetCursor
+          spinDuration={2}
+          hideDefaultCursor
+          parallaxOn
+          hoverDuration={0.2}
+        />
+      )}
       {/* Authenticated users get a different background pattern */}
       {authenticated && (
         <div className="fixed inset-0 opacity-5 pointer-events-none">
@@ -21,7 +33,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ authenticated = false }) => {
           }}></div>
         </div>
       )}
-      
+
       <Navbar />
       <main className="relative z-10">
         <Outlet />

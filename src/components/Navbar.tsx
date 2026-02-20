@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
         : 'bg-transparent border-b border-transparent'
         }`}
     >
-      <Link to="/" className="flex items-center group flex-shrink-0">
+      <Link to="/" className="flex items-center group flex-shrink-0 cursor-target">
         <img
           src="/meridianalgo.png"
           alt="Meridian Algo Logo"
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           <>
             <Link
               to="/"
-              className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
+              className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 cursor-target ${location.pathname === '/' ? 'text-orange-400' : ''}`}
             >
               Home
             </Link>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
 
         <Link
           to="/about"
-          className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
+          className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 cursor-target ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
         >
           About
         </Link>
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setLearnOpen((v) => !v)}
-            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 whitespace-nowrap ${(location.pathname === '/tools' || location.pathname === '/opensource' || location.pathname === '/newsletters' || location.pathname === '/research') ? 'text-orange-400' : ''
+            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 whitespace-nowrap cursor-target ${(location.pathname === '/tools' || location.pathname === '/opensource' || location.pathname === '/newsletters' || location.pathname === '/research') ? 'text-orange-400' : ''
               }`}
             aria-haspopup="true"
             aria-expanded={learnOpen}
@@ -124,7 +124,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={link.name}
                   to={link.to}
-                  className="block px-4 py-3 text-sm text-white hover:text-orange-400 hover:bg-gray-800/50 rounded-lg transition-colors text-center"
+                  className="block px-4 py-3 text-sm text-white hover:text-orange-400 hover:bg-gray-800/50 rounded-lg transition-colors text-left cursor-target"
                   onClick={() => setLearnOpen(false)}
                 >
                   {link.name}
@@ -152,13 +152,15 @@ const Navbar: React.FC = () => {
             ) : (
               <Link
                 to={link.to}
-                className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
+                className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 cursor-target ${location.pathname === link.to ? 'text-orange-400' : ''}`}
               >
                 {link.name}
               </Link>
             )}
           </React.Fragment>
         ))}
+
+
       </div>
 
       {/* Mobile hamburger */}

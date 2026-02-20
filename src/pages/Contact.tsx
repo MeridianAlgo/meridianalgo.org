@@ -22,7 +22,7 @@ function useScrollFadeIn() {
 const Contact = () => {
   useScrollFadeIn();
   const [state, handleSubmit] = useForm("xkgzwdoa");
-  
+
   useEffect(() => {
     document.title = 'MeridianAlgo - Contact';
   }, []);
@@ -40,9 +40,9 @@ const Contact = () => {
               <p className="text-xl text-slate-300 mb-8 font-inter font-light">
                 Your message has been sent successfully. We'll get back to you within 24 hours!
               </p>
-              <button 
+              <button
                 onClick={() => window.location.reload()}
-                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 font-inter"
+                className="bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 font-inter cursor-target"
               >
                 Send Another Message
               </button>
@@ -60,7 +60,7 @@ const Contact = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
         </div>
-        
+
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl mb-8">
@@ -89,7 +89,7 @@ const Contact = () => {
                 </h2>
                 <div className="w-16 h-0.5 bg-gradient-to-r from-orange-400 to-yellow-400 mx-auto"></div>
               </div>
-              
+
               <div className="space-y-6 mb-12">
                 <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-6 rounded-2xl">
                   <div className="flex items-start space-x-4">
@@ -98,12 +98,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-2">Email</h3>
-                      <p className="text-gray-300">meridianalgo@gmail.com</p>
+                      <p className="text-gray-300">contact@meridianalgo.org</p>
                       <p className="text-gray-400 text-sm mt-1">We respond within 24 hours</p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-6 rounded-2xl">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center">
@@ -111,14 +111,14 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-2">Open Source</h3>
-                      <a href="https://github.com/MeridianAlgo" className="text-orange-400 hover:text-orange-300 transition-colors duration-300">
+                      <a href="https://github.com/MeridianAlgo" className="text-orange-400 hover:text-orange-300 transition-colors duration-300 cursor-target">
                         github.com/MeridianAlgo
                       </a>
                       <p className="text-gray-400 text-sm mt-1">Contribute to our projects</p>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-400/30 transition-all duration-300 p-6 rounded-2xl">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center">
@@ -136,21 +136,21 @@ const Contact = () => {
               <div className="mb-12">
                 <h3 className="text-white font-semibold text-lg mb-6">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a 
+                  <a
                     href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A107717373&keywords=meridianalgo&origin=RICH_QUERY_SUGGESTION&position=0&searchId=78e6a6ae-9729-449e-8747-3931ace9b150&sid=M2v&spellCorrectionEnabled=false"
-                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50 cursor-target"
                   >
                     <Linkedin className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
-                  <a 
+                  <a
                     href="https://x.com/MeridianAlgo"
-                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50 cursor-target"
                   >
                     <X className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
-                  <a 
+                  <a
                     href="https://github.com/MeridianAlgo"
-                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50"
+                    className="bg-gray-800/50 hover:bg-orange-500 p-3 rounded-xl transition-all duration-300 hover:scale-110 border border-gray-700/50 hover:border-orange-400/50 cursor-target"
                   >
                     <Github className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
@@ -160,19 +160,19 @@ const Contact = () => {
               <div className="bg-black/40 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
                 <h4 className="text-white font-semibold mb-6 text-lg">Ways to Engage</h4>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
                     <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
                     <span>Co-create community financial literacy programs</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
                     <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                     <span>Host a workshop in your Midwestern community</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
                     <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     <span>Access classroom-ready educational resources</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
+                  <div className="flex items-center space-x-3 text-gray-300 hover:text-orange-400 transition-colors duration-300 cursor-target">
                     <div className="w-2 h-2 bg-orange-700 rounded-full"></div>
                     <span>Partner with our regional research initiatives</span>
                   </div>
@@ -196,11 +196,11 @@ const Contact = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500 cursor-target"
                     placeholder="Your full name"
                   />
-                  <ValidationError 
-                    prefix="Name" 
+                  <ValidationError
+                    prefix="Name"
                     field="name"
                     errors={state.errors}
                     className="text-red-400 text-sm mt-2"
@@ -216,11 +216,11 @@ const Contact = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500 cursor-target"
                     placeholder="your.email@example.com"
                   />
-                  <ValidationError 
-                    prefix="Email" 
+                  <ValidationError
+                    prefix="Email"
                     field="email"
                     errors={state.errors}
                     className="text-red-400 text-sm mt-2"
@@ -234,7 +234,7 @@ const Contact = () => {
                   <select
                     id="interest"
                     name="interest"
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white focus:border-orange-500 focus:outline-none transition-all duration-300 hover:border-gray-500 cursor-target"
                   >
                     <option value="">Select your interest</option>
                     <option value="financial-literacy">Financial Literacy Programs</option>
@@ -255,11 +255,11 @@ const Contact = () => {
                     name="message"
                     required
                     rows={6}
-                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 resize-none hover:border-gray-500"
+                    className="w-full bg-gray-900/50 border border-gray-600/50 rounded-xl px-4 py-4 text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 resize-none hover:border-gray-500 cursor-target"
                     placeholder="Tell us about your interest in MeridianAlgo..."
                   />
-                  <ValidationError 
-                    prefix="Message" 
+                  <ValidationError
+                    prefix="Message"
                     field="message"
                     errors={state.errors}
                     className="text-red-400 text-sm mt-2"
@@ -269,7 +269,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center space-x-3 hover:shadow-lg hover:shadow-orange-500/25"
+                  className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white font-semibold py-4 rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] flex items-center justify-center space-x-3 hover:shadow-lg hover:shadow-orange-500/25 cursor-target"
                 >
                   <Send className="w-5 h-5" />
                   <span>{state.submitting ? 'Sending...' : 'Send Message'}</span>

@@ -386,7 +386,7 @@ const ToolsPage: React.FC = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer animate-bounce">
-          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors">
+          <button onClick={scrollToContent} className="text-gray-500 hover:text-white transition-colors cursor-target">
             <ChevronDown className="w-8 h-8" />
           </button>
         </div>
@@ -412,23 +412,23 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Income</label>
                     <input type="number" value={income} onChange={e => setIncome(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400 focus:outline-none transition-all" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400 focus:outline-none transition-all" />
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Needs %</label>
                       <input type="number" value={needs} onChange={e => setNeeds(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Wants %</label>
                       <input type="number" value={wants} onChange={e => setWants(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Savings %</label>
                       <input type="number" value={savings} onChange={e => setSavings(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white focus:ring-2 focus:ring-orange-400" />
                     </div>
                   </div>
                   <p className={`text-xs text-center font-mono ${budgetCalc.balanced ? 'text-green-400' : 'text-red-400'}`}>
@@ -460,17 +460,17 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Expenses</label>
                     <input type="number" value={monthlyExpenses} onChange={e => setMonthlyExpenses(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Months of Coverage</label>
                     <input type="number" value={coverageMonths} onChange={e => setCoverageMonths(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Current Savings</label>
                     <input type="number" value={emergencySavings} onChange={e => setEmergencySavings(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div className="bg-white/5 rounded-xl p-6 mt-4 border border-white/5">
                     <p className="text-sm text-gray-400 uppercase tracking-wider mb-2">Target Fund</p>
@@ -503,24 +503,24 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Initial</label>
                     <input type="number" value={compoundInitial} onChange={e => setCompoundInitial(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly +</label>
                       <input type="number" value={compoundMonthly} onChange={e => setCompoundMonthly(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Years</label>
                       <input type="number" value={compoundYears} onChange={e => setCompoundYears(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Rate %</label>
                     <input type="number" value={compoundRate} onChange={e => setCompoundRate(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Future Value</p>
@@ -538,23 +538,23 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Contribution</label>
                     <input type="number" value={iraContribution} onChange={e => setIraContribution(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-3 gap-3">
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Tax Rate %</label>
                       <input type="number" value={iraTaxRate} onChange={e => setIraTaxRate(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Years</label>
                       <input type="number" value={iraYears} onChange={e => setIraYears(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Return %</label>
                       <input type="number" value={iraReturn} onChange={e => setIraReturn(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -573,30 +573,30 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Salary</label>
                     <input type="number" value={k401Salary} onChange={e => setK401Salary(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Your Contrib %</label>
                       <input type="number" value={k401Contribution} onChange={e => setK401Contribution(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Match %</label>
                       <input type="number" value={k401Match} onChange={e => setK401Match(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Years</label>
                       <input type="number" value={k401Years} onChange={e => setK401Years(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Return %</label>
                       <input type="number" value={k401Return} onChange={e => setK401Return(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -628,24 +628,24 @@ const ToolsPage: React.FC = () => {
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Balance</label>
                       <input type="number" value={debtBalance} onChange={e => setDebtBalance(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">APR %</label>
                       <input type="number" value={debtAPR} onChange={e => setDebtAPR(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Min Pay</label>
                       <input type="number" value={debtMinPay} onChange={e => setDebtMinPay(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Extra</label>
                       <input type="number" value={debtExtra} onChange={e => setDebtExtra(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -665,24 +665,24 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Income</label>
                     <input type="number" value={annualIncome} onChange={e => setAnnualIncome(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Mth Loan Debt</label>
                       <input type="number" value={monthlyDebt} onChange={e => setMonthlyDebt(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Down Pmt</label>
                       <input type="number" value={downPayment} onChange={e => setDownPayment(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Interest Rate %</label>
                     <input type="number" value={mortgageRate} onChange={e => setMortgageRate(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Max Home Price</p>
@@ -700,24 +700,24 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Income</label>
                     <input type="number" value={carIncome} onChange={e => setCarIncome(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Down Pmt</label>
                       <input type="number" value={carDownPayment} onChange={e => setCarDownPayment(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Loan Rate %</label>
                       <input type="number" value={carLoanRate} onChange={e => setCarLoanRate(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Loan Term (Months)</label>
                     <input type="number" value={carLoanTerm} onChange={e => setCarLoanTerm(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Max Car Price</p>
@@ -746,23 +746,23 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Gross Pay (Monthly)</label>
                     <input type="number" value={paycheckGross} onChange={e => setPaycheckGross(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div className="grid grid-cols-3 gap-3">
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Fed Tax %</label>
                       <input type="number" value={paycheckFederal} onChange={e => setPaycheckFederal(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">State %</label>
                       <input type="number" value={paycheckState} onChange={e => setPaycheckState(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">401k %</label>
                       <input type="number" value={paycheck401k} onChange={e => setPaycheck401k(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -781,23 +781,23 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Contribution</label>
                     <input type="number" value={hsaContribution} onChange={e => setHsaContribution(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:ring-2 focus:ring-orange-400" />
                   </div>
                   <div className="grid grid-cols-3 gap-3">
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Tax Rate %</label>
                       <input type="number" value={hsaTaxRate} onChange={e => setHsaTaxRate(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Years</label>
                       <input type="number" value={hsaYears} onChange={e => setHsaYears(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                     <div>
                       <label className="block text-xs text-gray-400 mb-1 uppercase tracking-wider">Return %</label>
                       <input type="number" value={hsaReturn} onChange={e => setHsaReturn(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -831,23 +831,23 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Annual Expenses in Retirement</label>
                     <input type="number" value={fireAnnualExpenses} onChange={e => setFireAnnualExpenses(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Current Savings</label>
                     <input type="number" value={fireCurrentSavings} onChange={e => setFireCurrentSavings(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Save</label>
                       <input type="number" value={fireMonthlySavings} onChange={e => setFireMonthlySavings(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Return %</label>
                       <input type="number" value={fireReturnRate} onChange={e => setFireReturnRate(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -867,17 +867,17 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Rent</label>
                     <input type="number" value={rentMonthly} onChange={e => setRentMonthly(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Home Price</label>
                     <input type="number" value={homePrice} onChange={e => setHomePrice(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Comaprison Years</label>
                     <input type="number" value={rentVsBuyYears} onChange={e => setRentVsBuyYears(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Verdict</p>
@@ -896,18 +896,18 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Loan Balance</label>
                     <input type="number" value={studentLoanBalance} onChange={e => setStudentLoanBalance(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Rate %</label>
                       <input type="number" value={studentLoanRate} onChange={e => setStudentLoanRate(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Pay</label>
                       <input type="number" value={studentLoanPayment} onChange={e => setStudentLoanPayment(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -938,18 +938,18 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Balance</label>
                     <input type="number" value={ccBalance} onChange={e => setCcBalance(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">APR %</label>
                       <input type="number" value={ccAPR} onChange={e => setCcAPR(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-300 mb-2 font-medium">Monthly Pay</label>
                       <input type="number" value={ccPayment} onChange={e => setCcPayment(e.target.value)}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                        className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                     </div>
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
@@ -969,12 +969,12 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Portfolio Balance</label>
                     <input type="number" value={retirementBalance} onChange={e => setRetirementBalance(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Withdrawal Rate %</label>
                     <input type="number" value={retirementWithdrawal} onChange={e => setRetirementWithdrawal(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div className="bg-white/5 rounded-xl p-4 text-center border border-white/5">
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Monthly Income</p>
@@ -993,7 +993,7 @@ const ToolsPage: React.FC = () => {
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Taxable Income</label>
                     <input type="number" value={taxIncome} onChange={e => setTaxIncome(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
+                      className="cursor-target w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white" />
                   </div>
                   <div>
                     <label className="block text-sm text-gray-300 mb-2 font-medium">Standard Deduction</label>
