@@ -16,9 +16,6 @@ const Research = lazy(() => import('./pages/Research'));
 const AI = lazy(() => import('./pages/AI'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ToolsPage = lazy(() => import('./pages/ToolsPage'));
-const Learn = lazy(() => import('./pages/Learn'));
-const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
-const Login = lazy(() => import('./pages/Login'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,13 +39,6 @@ function App() {
           </div>
         }>
           <Routes>
-            {/* Login page */}
-            <Route path="/login" element={<Login />} />
-
-            {/* Protected routes */}
-            <Route path="/learn" element={<Learn />} />
-            <Route path="/admin" element={<AdminDashboard />} />
-
             {/* Public routes with standard layout */}
             <Route path="/" element={<AppLayout />}>
               <Route index element={<Home />} />
