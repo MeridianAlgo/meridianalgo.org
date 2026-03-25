@@ -12,7 +12,6 @@ const Newsletters = lazy(() => import('./pages/Newsletters'));
 const Partnerships = lazy(() => import('./pages/Partnerships'));
 const Contact = lazy(() => import('./pages/Contact'));
 const OpenSource = lazy(() => import('./pages/OpenSource'));
-const Research = lazy(() => import('./pages/Research'));
 const AI = lazy(() => import('./pages/AI'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const ToolsPage = lazy(() => import('./pages/ToolsPage'));
@@ -46,7 +45,6 @@ function App() {
               <Route path="tools" element={<ToolsPage />} />
               <Route path="opensource" element={<OpenSource />} />
               <Route path="newsletters" element={<Newsletters />} />
-              <Route path="research" element={<Research />} />
               <Route path="ai" element={<AI />} />
               <Route path="partnerships" element={<Partnerships />} />
               <Route path="contact" element={<Contact />} />

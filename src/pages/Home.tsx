@@ -182,17 +182,17 @@ const Home = () => {
         {/* Purpose Section with Split Line */}
         <section id="purpose" className="relative py-32 overflow-hidden bg-black/80 backdrop-blur-sm">
           {/* Solid Orange Divider */}
-          <div className="absolute top-0 left-0 w-full h-px bg-orange-500"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-orange-500/55"></div>
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             {/* The Solid Splitter Line - Top of Section Box */}
-            <div className="absolute top-16 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] md:w-[calc(100%-12rem)] h-px bg-orange-400/25"></div>
+            <div className="absolute top-16 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] md:w-[calc(100%-12rem)] h-px bg-orange-400/15"></div>
 
-            <div className="absolute -top-[152px] left-1/2 -translate-x-1/2 w-px h-[217px] bg-orange-400/25"></div>
+            <div className="absolute -top-[152px] left-1/2 -translate-x-1/2 w-px h-[217px] bg-orange-400/15"></div>
 
             {/* Edge Vertical Lines (Frame) */}
-            <div className="absolute top-16 left-6 md:left-24 w-px h-[698px] bg-orange-400/25"></div>
-            <div className="absolute top-16 right-6 md:right-24 w-px h-[802px] bg-orange-400/25"></div>
+            <div className="absolute top-16 left-6 md:left-24 w-px h-[698px] bg-orange-400/15"></div>
+            <div className="absolute top-16 right-6 md:right-24 w-px h-[802px] bg-orange-400/15"></div>
 
             <div className="relative text-center space-y-6 pt-24">
               <div className="mb-16 max-w-3xl mx-auto">
@@ -227,13 +227,13 @@ const Home = () => {
         {/* Open Source Section - Full Screen Width */}
         <section className="relative py-32 overflow-hidden bg-black/80 backdrop-blur-sm">
           {/* Solid Orange Divider */}
-          <div className="absolute top-0 left-0 w-full h-px bg-orange-500"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-orange-500/55"></div>
 
           {/* Architectural Lines Continuing Through */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="max-w-7xl mx-auto px-6 h-full relative">
-              <div className="absolute top-0 left-6 md:left-24 w-px h-[calc(100%+8rem)] bg-orange-400/25 z-0"></div>
-              <div className="absolute top-0 right-6 md:right-24 w-px h-[calc(100%+8rem)] bg-orange-400/25 z-0"></div>
+              <div className="absolute top-0 left-6 md:left-24 w-px h-[calc(100%+8rem)] bg-orange-400/15 z-0"></div>
+              <div className="absolute top-0 right-6 md:right-24 w-px h-[calc(100%+8rem)] bg-orange-400/15 z-0"></div>
             </div>
           </div>
 
@@ -294,13 +294,13 @@ const Home = () => {
         {/* Why MeridianAlgo Section - Matched Typography & Continuity */}
         <section className="py-32 bg-black/80 backdrop-blur-sm relative">
           {/* Solid Orange Divider */}
-          <div className="absolute top-0 left-0 w-full h-px bg-orange-500"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-orange-500/55"></div>
 
           {/* Architectural Lines Continuing Through */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="max-w-7xl mx-auto px-6 h-full relative">
-              <div className="absolute top-0 left-6 md:left-24 w-px h-[calc(100%+8rem)] bg-orange-400/25 z-0"></div>
-              <div className="absolute top-0 right-6 md:right-24 w-px h-[calc(100%+8rem)] bg-orange-400/25 z-0"></div>
+              <div className="absolute top-0 left-6 md:left-24 w-px h-[calc(100%+8rem)] bg-orange-400/15 z-0"></div>
+              <div className="absolute top-0 right-6 md:right-24 w-px h-[calc(100%+8rem)] bg-orange-400/15 z-0"></div>
             </div>
           </div>
 
@@ -328,15 +328,15 @@ const Home = () => {
         {/* Codestack Section (Formerly Start Now) */}
         <section className="py-32 relative bg-black/80 backdrop-blur-sm">
           {/* Solid Orange Divider */}
-          <div className="absolute top-0 left-0 w-full h-px bg-orange-500"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-orange-500/55"></div>
 
           {/* Architectural Lines Ending */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="max-w-7xl mx-auto px-6 h-full relative">
-              <div className="absolute top-0 left-6 md:left-24 w-px h-full bg-orange-400/25 z-0"></div>
-              <div className="absolute top-0 right-6 md:right-24 w-px h-full bg-orange-400/25 z-0"></div>
+              <div className="absolute top-0 left-6 md:left-24 w-px h-full bg-orange-400/15 z-0"></div>
+              <div className="absolute top-0 right-6 md:right-24 w-px h-full bg-orange-400/15 z-0"></div>
               {/* Bottom Cap Line */}
-              <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] md:w-[calc(100%-12rem)] h-px bg-orange-400/25 z-0"></div>
+              <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] md:w-[calc(100%-12rem)] h-px bg-orange-400/15 z-0"></div>
             </div>
           </div>
 

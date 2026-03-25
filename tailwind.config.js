@@ -4,9 +4,9 @@ content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 theme: {
 extend: {
 fontFamily: {
-'sans': ['Inter', 'system-ui', 'sans-serif'],
-'display': ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
-'mono': ['JetBrains Mono', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+'sans': ['"Google Sans Flex"', 'system-ui', 'sans-serif'],
+'display': ['"Google Sans Flex"', 'system-ui', 'sans-serif'],
+'mono': ['"JetBrains Mono"', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
 },
 fontSize: {
 'xs': ['0.75rem', { lineHeight: '1.5', letterSpacing: '0.05em' }],
