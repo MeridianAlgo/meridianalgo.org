@@ -162,7 +162,7 @@ const Home = () => {
           <div className="animate-fade-in-up flex flex-col sm:flex-row gap-5 justify-center items-center" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             <Link
               to="/tools"
-              className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-bold text-base transition-all duration-300 shadow-xl hover:shadow-orange-500/20 active:scale-95"
+              className="px-8 py-4 bg-orange-500 hover:bg-white text-white hover:text-black rounded-xl font-bold text-base transition-all duration-300 shadow-xl active:scale-95"
             >
               Try Our Tools
             </Link>

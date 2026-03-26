@@ -56,7 +56,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="pt-44 pb-24 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:20px_20px]"></div>
         </div>

@@ -75,7 +75,7 @@ const About = () => {
         <section className="relative py-32 bg-black overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-px bg-orange-500/50" />
 
-          <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 pointer-events-none z-0">
             <div className="max-w-7xl mx-auto px-6 h-full relative">
               <div className="absolute top-0 left-6 md:left-24 w-px h-full bg-orange-400/15" />
               <div className="absolute top-0 right-6 md:right-24 w-px h-full bg-orange-400/15" />
@@ -91,7 +91,7 @@ const About = () => {
                 What Sets Us <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Apart</span>
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
               {[
                 {
                   icon: <BookOpen className="w-6 h-6 text-orange-400/80" />,
@@ -142,7 +142,7 @@ const About = () => {
               Our Vision
             </span>
             <h2 className="text-3xl md:text-6xl font-display font-bold text-white mb-8 tracking-tight uppercase leading-tight mt-6">
-              A World Without <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Barriers</span>
+              A World Without <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300 pr-1">Barriers</span>
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed font-light max-w-2xl mx-auto mb-14">
               A world where market insights and wealth creation are accessible to everyone, regardless of background or capital.
@@ -150,13 +150,13 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/tools"
-                className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-bold text-base transition-colors duration-200 shadow-xl uppercase tracking-wider"
+                className="px-8 py-4 bg-orange-500 hover:bg-white text-white hover:text-black rounded-xl font-bold text-base transition-all duration-300 shadow-xl active:scale-95 uppercase tracking-wider"
               >
                 Try Our Tools
               </Link>
               <Link
                 to="/newsletters"
-                className="px-8 py-4 border border-white/15 text-gray-300 hover:border-white/30 hover:text-white rounded-xl font-bold text-base transition-colors duration-200 uppercase tracking-wider"
+                className="px-8 py-4 border border-orange-400/50 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 rounded-xl font-bold text-base transition-all duration-300 active:scale-95 uppercase tracking-wider"
               >
                 Read Newsletter
               </Link>

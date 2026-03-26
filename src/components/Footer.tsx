@@ -20,11 +20,11 @@ const Footer = () => {
                 <span className="text-white font-bold text-2xl tracking-tight">
                   Meridian<span className="text-orange-400">Algo</span>
                 </span>
-                <span className="text-[10px] font-mono text-gray-600 uppercase tracking-widest mt-1">v4.1.0</span>
+                <span className="text-[10px] font-mono text-gray-600 uppercase tracking-widest mt-1">v4.2.0</span>
               </div>
             </Link>
 
-            <p className="text-gray-500 mb-8 leading-relaxed text-sm font-light">
+            <p className="text-gray-400 mb-8 leading-relaxed text-sm font-light">
               Democratizing financial intelligence through transparent research and powerful open-source utilities.
             </p>
 
@@ -59,9 +59,10 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400/60 pl-3">Platform</h4>
               <ul className="space-y-2">
-                <li><Link to="/about" className="text-gray-500 hover:text-white transition-colors duration-200 text-xs font-light">About Us</Link></li>
-                <li><Link to="/newsletters" className="text-gray-500 hover:text-white transition-colors duration-200 text-xs font-light">Newsletters</Link></li>
-                <li><Link to="/contact" className="text-gray-500 hover:text-white transition-colors duration-200 text-xs font-light">Contact</Link></li>
+                <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">About Us</Link></li>
+                <li><Link to="/newsletters" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Newsletters</Link></li>
+                <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Contact</Link></li>
+                <li><a href="https://github.com/MeridianAlgo/meridianalgo.org/releases" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Changelog</a></li>
               </ul>
             </div>
 
@@ -69,8 +70,8 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400/60 pl-3">Resources</h4>
               <ul className="space-y-2">
-                <li><Link to="/tools" className="text-gray-500 hover:text-white transition-colors duration-200 text-xs font-light">Financial Tools</Link></li>
-                <li><Link to="/opensource" className="text-gray-500 hover:text-white transition-colors duration-200 text-xs font-light">Open Source</Link></li>
+                <li><Link to="/tools" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Financial Tools</Link></li>
+                <li><Link to="/opensource" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Open Source</Link></li>
               </ul>
             </div>
 
@@ -78,9 +79,9 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400/60 pl-3">Community</h4>
               <ul className="space-y-2">
-                <li><Link to="/partnerships" className="text-gray-500 hover:text-white transition-colors duration-200 text-xs font-light">Partnerships</Link></li>
+                <li><Link to="/partnerships" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Partnerships</Link></li>
                 <li>
-                  <a href="https://the.hackfoundation.org/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200 text-xs font-light">
+                  <a href="https://the.hackfoundation.org/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">
                     The Hack Foundation
                   </a>
                 </li>

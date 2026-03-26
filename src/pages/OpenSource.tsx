@@ -189,13 +189,6 @@ const OpenSource = () => {
         <section className="relative py-24 bg-black overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-px bg-orange-500/50" />
 
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="max-w-7xl mx-auto px-6 h-full relative">
-              <div className="absolute top-0 left-6 md:left-24 w-px h-full bg-orange-400/15" />
-              <div className="absolute top-0 right-6 md:right-24 w-px h-full bg-orange-400/15" />
-            </div>
-          </div>
-
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             {/* Category filter */}
             <div className="flex flex-wrap gap-2 justify-center mb-16">
@@ -259,14 +252,6 @@ const OpenSource = () => {
         {/* CTA */}
         <section className="relative py-32 bg-black overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-px bg-orange-500/50" />
-
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="max-w-7xl mx-auto px-6 h-full relative">
-              <div className="absolute top-0 left-6 md:left-24 w-px h-full bg-orange-400/15" />
-              <div className="absolute top-0 right-6 md:right-24 w-px h-full bg-orange-400/15" />
-              <div className="absolute bottom-16 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] md:w-[calc(100%-12rem)] h-px bg-orange-400/15" />
-            </div>
-          </div>
 
           <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
             <span className="text-[10px] uppercase tracking-[0.4em] text-orange-400/80 font-mono mb-6 inline-block bg-black px-4 py-2 rounded-full border border-white/10">

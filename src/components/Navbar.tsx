@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
           }}
         />
         {/* Word slides LEFT toward orange line, clipped by overflow-hidden */}
-        <div className="overflow-hidden">
+        <div className="overflow-hidden pr-1">
           <span
             className="inline-block text-white text-lg sm:text-xl md:text-2xl font-bold tracking-tight select-none whitespace-nowrap"
             style={{
@@ -144,7 +144,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={link.name}
                   to={link.to}
-                  className="block px-4 py-3 text-[11px] text-gray-400 hover:text-white hover:bg-white/5 transition-colors duration-150 text-center font-mono uppercase tracking-wider"
+                  className="block px-4 py-3 text-[11px] text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-150 text-center font-mono uppercase tracking-wider"
                   onClick={() => setLearnOpen(false)}
                 >
                   {link.name}
