@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -8,11 +7,6 @@ interface NavLink {
   to: string;
   external?: boolean;
 }
-
-const NAV_LINKS: NavLink[] = [
-  { name: 'AI', to: '/ai' },
-  { name: 'Contact', to: '/contact' },
-];
 
 const LEARN_LINKS: NavLink[] = [
   { name: 'Financial Tools', to: '/tools' },
@@ -60,7 +54,7 @@ const Navbar: React.FC = () => {
         />
         {/* Orange divider — stays fixed, fades out after word slides away */}
         <span
-          className="h-6 sm:h-8 w-0.5 bg-orange-400 mx-2 sm:mx-4 flex-shrink-0"
+          className="h-6 sm:h-8 w-0.5 bg-orange-300 mx-2 sm:mx-4 flex-shrink-0"
           style={{
             opacity: nameHidden ? 0 : 1,
             transition: 'opacity 220ms ease',
@@ -89,7 +83,7 @@ const Navbar: React.FC = () => {
           <>
             <Link
               to="/"
-              className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-400' : ''}`}
+              className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-300 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/' ? 'text-orange-300' : ''}`}
             >
               Home
             </Link>
@@ -99,7 +93,7 @@ const Navbar: React.FC = () => {
 
         <Link
           to="/about"
-          className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}
+          className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-300 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === '/about' ? 'text-orange-300' : ''}`}
         >
           About
         </Link>
@@ -120,8 +114,8 @@ const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => setLearnOpen((v) => !v)}
-            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 whitespace-nowrap ${
-              (location.pathname === '/tools' || location.pathname === '/opensource' || location.pathname === '/newsletters') ? 'text-orange-400' : ''
+            className={`inline-flex items-center h-8 leading-none cursor-pointer text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-300 transition-colors duration-200 uppercase font-mono px-1 whitespace-nowrap ${
+              (location.pathname === '/tools' || location.pathname === '/opensource' || location.pathname === '/newsletters') ? 'text-orange-300' : ''
             }`}
             aria-haspopup="true"
             aria-expanded={learnOpen}
@@ -144,7 +138,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={link.name}
                   to={link.to}
-                  className="block px-4 py-3 text-[11px] text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-150 text-center font-mono uppercase tracking-wider"
+                  className="block px-4 py-3 text-[11px] text-white hover:text-orange-300 hover:bg-white/5 transition-colors duration-150 text-center font-mono uppercase tracking-wider"
                   onClick={() => setLearnOpen(false)}
                 >
                   {link.name}
@@ -154,36 +148,11 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <span className="mx-0.5 xl:mx-1 text-white/20 select-none" aria-hidden="true">|</span>
-        {NAV_LINKS.map((link, idx) => (
-          <React.Fragment key={link.name}>
-            {idx !== 0 && (
-              <span className="mx-0.5 xl:mx-1 text-white/20 select-none" aria-hidden="true">|</span>
-            )}
-            {link.external ? (
-              <a
-                href={link.to}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1"
-              >
-                {link.name}
-              </a>
-            ) : (
-              <Link
-                to={link.to}
-                className={`inline-flex items-center h-8 leading-none text-white text-xs xl:text-sm font-medium tracking-wide hover:text-orange-400 transition-colors duration-200 uppercase font-mono px-1 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
-              >
-                {link.name}
-              </Link>
-            )}
-          </React.Fragment>
-        ))}
       </div>
 
       {/* Mobile hamburger */}
       <button
-        className="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200 flex-shrink-0"
+        className="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-white hover:text-orange-300 hover:bg-white/5 transition-colors duration-200 flex-shrink-0"
         aria-label="Toggle menu"
         onClick={() => setMobileOpen((v) => !v)}
       >
@@ -195,8 +164,8 @@ const Navbar: React.FC = () => {
         mobileOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
       }`}>
         <div className="px-4 py-4 space-y-1">
-          <Link onClick={closeMobile} to="/" className={`block px-3 py-2 text-sm text-white hover:text-orange-400 transition-colors duration-150 ${location.pathname === '/' ? 'text-orange-400' : ''}`}>Home</Link>
-          <Link onClick={closeMobile} to="/about" className={`block px-3 py-2 text-sm text-white hover:text-orange-400 transition-colors duration-150 ${location.pathname === '/about' ? 'text-orange-400' : ''}`}>About</Link>
+          <Link onClick={closeMobile} to="/" className={`block px-3 py-2 text-sm text-white hover:text-orange-300 transition-colors duration-150 ${location.pathname === '/' ? 'text-orange-300' : ''}`}>Home</Link>
+          <Link onClick={closeMobile} to="/about" className={`block px-3 py-2 text-sm text-white hover:text-orange-300 transition-colors duration-150 ${location.pathname === '/about' ? 'text-orange-300' : ''}`}>About</Link>
           <div className="pt-2">
             <div className="px-3 text-gray-600 text-[10px] uppercase tracking-widest mb-1 font-mono">Learn</div>
             {LEARN_LINKS.map((link) => (
@@ -204,19 +173,12 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 onClick={closeMobile}
                 to={link.to}
-                className={`block px-5 py-2 text-sm text-gray-400 hover:text-white transition-colors duration-150 ${location.pathname === link.to ? 'text-orange-400' : ''}`}
+                className={`block px-5 py-2 text-sm text-gray-400 hover:text-white transition-colors duration-150 ${location.pathname === link.to ? 'text-orange-300' : ''}`}
               >
                 {link.name}
               </Link>
             ))}
           </div>
-          {NAV_LINKS.map((link) => (
-            link.external ? (
-              <a key={link.name} onClick={closeMobile} href={link.to} target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-sm text-white hover:text-orange-400 transition-colors duration-150">{link.name}</a>
-            ) : (
-              <Link key={link.name} onClick={closeMobile} to={link.to} className={`block px-3 py-2 text-sm text-white hover:text-orange-400 transition-colors duration-150 ${location.pathname === link.to ? 'text-orange-400' : ''}`}>{link.name}</Link>
-            )
-          ))}
         </div>
       </div>
     </nav>

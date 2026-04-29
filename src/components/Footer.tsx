@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-bold text-2xl tracking-tight">
-                  Meridian<span className="text-orange-400">Algo</span>
+                  Meridian<span className="text-orange-300">Algo</span>
                 </span>
                 <span className="text-[10px] font-mono text-gray-600 uppercase tracking-widest mt-1">v4.2.0</span>
               </div>
@@ -57,18 +57,16 @@ const Footer = () => {
           <div className="flex-[2] grid grid-cols-2 sm:grid-cols-3 gap-8">
             {/* Platform */}
             <div>
-              <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400/60 pl-3">Platform</h4>
+              <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-300/60 pl-3">Platform</h4>
               <ul className="space-y-2">
                 <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">About Us</Link></li>
                 <li><Link to="/newsletters" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Newsletters</Link></li>
-                <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Contact</Link></li>
-                <li><a href="https://github.com/MeridianAlgo/meridianalgo.org/releases" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Changelog</a></li>
               </ul>
             </div>
 
             {/* Resources */}
             <div>
-              <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400/60 pl-3">Resources</h4>
+              <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-300/60 pl-3">Resources</h4>
               <ul className="space-y-2">
                 <li><Link to="/tools" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Financial Tools</Link></li>
                 <li><Link to="/opensource" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Open Source</Link></li>
@@ -77,9 +75,10 @@ const Footer = () => {
 
             {/* Community */}
             <div>
-              <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-400/60 pl-3">Community</h4>
+              <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-l-2 border-orange-300/60 pl-3">Community</h4>
               <ul className="space-y-2">
                 <li><Link to="/partnerships" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Partnerships</Link></li>
+                <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">Contact</Link></li>
                 <li>
                   <a href="https://the.hackfoundation.org/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200 text-xs font-light">
                     The Hack Foundation
@@ -96,6 +95,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} MeridianAlgo. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
+            <a href="https://github.com/MeridianAlgo/meridianalgo.org/releases" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-600 hover:text-gray-400 transition-colors duration-200 uppercase tracking-widest">Changelog</a>
             <a href="/legal/Privacy Policy for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-600 hover:text-gray-400 transition-colors duration-200 uppercase tracking-widest">Privacy</a>
             <a href="/legal/Terms of Service for MeridianAlgo.pdf" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-600 hover:text-gray-400 transition-colors duration-200 uppercase tracking-widest">Terms</a>
           </div>

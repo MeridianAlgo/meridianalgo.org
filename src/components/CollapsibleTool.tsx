@@ -19,13 +19,13 @@ const CollapsibleTool: React.FC<CollapsibleToolProps> = ({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="bg-gray-900/40 backdrop-blur-md rounded-3xl border border-white/10 hover:border-orange-400/30 transition-all duration-300 overflow-hidden shadow-xl">
+    <div className="bg-gray-900/40 backdrop-blur-md rounded-3xl border border-white/10 hover:border-orange-300/30 transition-all duration-300 overflow-hidden shadow-xl">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-6 flex items-center justify-between hover:bg-white/5 transition-colors text-left"
       >
         <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-orange-500/10 to-yellow-500/10 rounded-2xl flex items-center justify-center text-orange-400 border border-orange-400/20 group-hover:scale-110 transition-transform">
+          <div className="w-12 h-12 bg-gradient-to-br from-orange-400/10 to-yellow-500/10 rounded-2xl flex items-center justify-center text-orange-300 border border-orange-300/20 group-hover:scale-110 transition-transform">
             {icon}
           </div>
           <div>
@@ -35,7 +35,7 @@ const CollapsibleTool: React.FC<CollapsibleToolProps> = ({
             )}
           </div>
         </div>
-        <div className={`text-orange-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+        <div className={`text-orange-300 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
           <ChevronDown className="w-6 h-6" />
         </div>
       </button>

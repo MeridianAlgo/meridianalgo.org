@@ -102,7 +102,7 @@ const Newsletters = () => {
   const paginatedNewsletters = filteredNewsletters.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <div className="relative min-h-screen w-full bg-black text-white selection:bg-orange-500/20">
+    <div className="relative min-h-screen w-full bg-black text-white selection:bg-orange-400/20">
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -110,13 +110,13 @@ const Newsletters = () => {
 
         <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
           <div className="animate-fade-in-up">
-            <span className="text-[10px] uppercase tracking-[0.4em] text-orange-400/80 font-mono mb-8 inline-block bg-white/5 px-4 py-2 rounded-full border border-white/10">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-orange-300/80 font-mono mb-8 inline-block bg-white/5 px-4 py-2 rounded-full border border-white/10">
               Weekly Publication
             </span>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
             <h1 className="text-5xl md:text-8xl font-display font-bold mb-6 leading-none uppercase tracking-tight text-white mt-6">
-              News<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">letters</span>
+              News<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-300">letters</span>
             </h1>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
@@ -141,7 +141,7 @@ const Newsletters = () => {
 
       {/* Search & Filter + Grid */}
       <section className="relative py-24 bg-black overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-orange-500/50" />
+        <div className="absolute top-0 left-0 w-full h-px bg-orange-400/50" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           {/* Search */}
@@ -153,7 +153,7 @@ const Newsletters = () => {
                 value={searchQuery}
                 onChange={(e) => { setSearchQuery(e.target.value); setCurrentPage(1); }}
                 placeholder="Search newsletters by title or topic..."
-                className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-orange-400/50 focus:ring-1 focus:ring-orange-400/30 transition-colors text-sm"
+                className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-orange-300/50 focus:ring-1 focus:ring-orange-300/30 transition-colors text-sm"
               />
             </div>
           </div>
@@ -170,7 +170,7 @@ const Newsletters = () => {
                   onClick={() => toggleCategory(category)}
                   className={`px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider transition-colors duration-200 ${
                     selectedCategories.includes(category)
-                      ? 'bg-orange-500/20 text-orange-400 border border-orange-500/40'
+                      ? 'bg-orange-400/20 text-orange-300 border border-orange-400/40'
                       : 'bg-white/5 text-gray-400 border border-white/10 hover:border-white/20 hover:text-white'
                   }`}
                 >
@@ -194,7 +194,7 @@ const Newsletters = () => {
                     type="date"
                     value={startDate}
                     onChange={(e) => { setStartDate(e.target.value); setCurrentPage(1); }}
-                    className="w-full bg-black/40 border border-white/10 rounded-lg pl-10 pr-3 py-3 text-gray-200 focus:outline-none focus:border-orange-400/50 text-sm"
+                    className="w-full bg-black/40 border border-white/10 rounded-lg pl-10 pr-3 py-3 text-gray-200 focus:outline-none focus:border-orange-300/50 text-sm"
                   />
                 </div>
               </div>
@@ -209,7 +209,7 @@ const Newsletters = () => {
                     type="date"
                     value={endDate}
                     onChange={(e) => { setEndDate(e.target.value); setCurrentPage(1); }}
-                    className="w-full bg-black/40 border border-white/10 rounded-lg pl-10 pr-3 py-3 text-gray-200 focus:outline-none focus:border-orange-400/50 text-sm"
+                    className="w-full bg-black/40 border border-white/10 rounded-lg pl-10 pr-3 py-3 text-gray-200 focus:outline-none focus:border-orange-300/50 text-sm"
                   />
                 </div>
               </div>
@@ -235,7 +235,7 @@ const Newsletters = () => {
           {/* Grid */}
           {loading ? (
             <div className="text-center py-24">
-              <div className="animate-spin w-10 h-10 border-2 border-orange-400 border-t-transparent rounded-full mx-auto mb-4" />
+              <div className="animate-spin w-10 h-10 border-2 border-orange-300 border-t-transparent rounded-full mx-auto mb-4" />
               <p className="text-gray-500 text-sm font-mono uppercase tracking-wider">Loading...</p>
             </div>
           ) : filteredNewsletters.length === 0 ? (
@@ -244,7 +244,7 @@ const Newsletters = () => {
               <p className="text-gray-500 text-sm mb-6">No newsletters match your filters.</p>
               <button
                 onClick={clearFilters}
-                className="px-6 py-3 bg-orange-500 hover:bg-white hover:text-black text-white rounded-xl text-sm font-bold transition-all duration-300 uppercase tracking-wider"
+                className="px-6 py-3 bg-orange-400 hover:bg-white hover:text-black text-white rounded-xl text-sm font-bold transition-all duration-300 uppercase tracking-wider"
               >
                 Clear Filters
               </button>
@@ -259,10 +259,10 @@ const Newsletters = () => {
                       key={newsletter.id}
                       className="group bg-gray-900/20 border border-white/5 hover:border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 flex flex-col relative"
                     >
-                      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-300/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                       {/* Thumbnail */}
-                      <div className="relative h-44 bg-gradient-to-br from-orange-500/10 to-amber-500/10 flex items-center justify-center overflow-hidden flex-shrink-0">
+                      <div className="relative h-44 bg-gradient-to-br from-orange-400/10 to-amber-500/10 flex items-center justify-center overflow-hidden flex-shrink-0">
                         {newsletter.thumbnail ? (
                           <img
                             src={newsletter.thumbnail}
@@ -271,16 +271,16 @@ const Newsletters = () => {
                             onError={(e) => { e.currentTarget.style.display = 'none'; }}
                           />
                         ) : (
-                          <FileText className="w-16 h-16 text-orange-400/20" />
+                          <FileText className="w-16 h-16 text-orange-300/20" />
                         )}
-                        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider text-orange-400 border border-orange-400/20">
+                        <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider text-orange-300 border border-orange-300/20">
                           {newsletter.category || 'Newsletter'}
                         </div>
                       </div>
 
                       {/* Content */}
                       <div className="p-6 flex flex-col flex-grow">
-                        <h3 className="text-white font-bold text-base mb-2 line-clamp-2 group-hover:text-orange-400/90 transition-colors duration-200 uppercase tracking-tight">
+                        <h3 className="text-white font-bold text-base mb-2 line-clamp-2 group-hover:text-orange-300/90 transition-colors duration-200 uppercase tracking-tight">
                           {newsletter.title}
                         </h3>
 
@@ -297,7 +297,7 @@ const Newsletters = () => {
                           {isPdf ? (
                             <button
                               onClick={() => setSelectedPdf(newsletter)}
-                              className="flex-1 bg-orange-500 hover:bg-white hover:text-black text-white px-4 py-2.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider"
+                              className="flex-1 bg-orange-400 hover:bg-white hover:text-black text-white px-4 py-2.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider"
                             >
                               <Eye className="w-4 h-4" />
                               Read Now
@@ -307,7 +307,7 @@ const Newsletters = () => {
                               href={newsletter.fileUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex-1 bg-orange-500 hover:bg-white hover:text-black text-white px-4 py-2.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider"
+                              className="flex-1 bg-orange-400 hover:bg-white hover:text-black text-white px-4 py-2.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider"
                             >
                               <Eye className="w-4 h-4" />
                               Open
@@ -345,7 +345,7 @@ const Newsletters = () => {
                       onClick={() => setCurrentPage(page)}
                       className={`px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider transition-all ${
                         currentPage === page
-                          ? 'bg-orange-500/20 text-orange-400 border border-orange-500/40'
+                          ? 'bg-orange-400/20 text-orange-300 border border-orange-400/40'
                           : 'bg-white/5 text-gray-400 border border-white/10 hover:border-white/20 hover:text-white'
                       }`}
                     >

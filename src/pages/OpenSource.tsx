@@ -130,7 +130,7 @@ const LANG_COLORS: Record<string, string> = {
   Python: 'bg-blue-500/20 text-blue-300 border-blue-500/20',
   JavaScript: 'bg-yellow-500/20 text-yellow-300 border-yellow-500/20',
   TypeScript: 'bg-blue-400/20 text-blue-200 border-blue-400/20',
-  Rust: 'bg-orange-600/20 text-orange-300 border-orange-600/20',
+  Rust: 'bg-orange-500/20 text-orange-300 border-orange-500/20',
   SQL: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/20',
   Markdown: 'bg-gray-500/20 text-gray-300 border-gray-500/20',
 };
@@ -145,7 +145,7 @@ const OpenSource = () => {
   const filtered = selectedCategory === 'All' ? PROJECTS : PROJECTS.filter(p => p.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-orange-500/20">
+    <div className="min-h-screen bg-black text-white selection:bg-orange-400/20">
 
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -153,13 +153,13 @@ const OpenSource = () => {
 
         <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
           <div className="animate-fade-in-up">
-            <span className="text-[10px] uppercase tracking-[0.4em] text-orange-400/80 font-mono mb-8 inline-block bg-white/5 px-4 py-2 rounded-full border border-white/10">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-orange-300/80 font-mono mb-8 inline-block bg-white/5 px-4 py-2 rounded-full border border-white/10">
               Community Code
             </span>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
             <h1 className="text-5xl md:text-8xl font-display font-bold mb-6 leading-none uppercase tracking-tight text-white mt-6">
-              Open <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Source</span>
+              Open <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-300">Source</span>
             </h1>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
@@ -187,7 +187,7 @@ const OpenSource = () => {
 
         {/* Filter + Grid */}
         <section className="relative py-24 bg-black overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-px bg-orange-500/50" />
+          <div className="absolute top-0 left-0 w-full h-px bg-orange-400/50" />
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             {/* Category filter */}
@@ -198,7 +198,7 @@ const OpenSource = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-5 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-colors duration-200 ${
                     selectedCategory === cat
-                      ? 'bg-orange-500/20 text-orange-400 border border-orange-500/40'
+                      ? 'bg-orange-400/20 text-orange-300 border border-orange-400/40'
                       : 'bg-white/5 text-gray-400 border border-white/10 hover:border-white/20 hover:text-white'
                   }`}
                 >
@@ -217,14 +217,14 @@ const OpenSource = () => {
                   rel="noopener noreferrer"
                   className="group bg-gray-900/20 border border-white/5 hover:border-white/10 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 flex flex-col relative overflow-hidden"
                 >
-                  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-300/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Code2 className="w-4 h-4 text-gray-400 group-hover:text-orange-400/80 transition-colors duration-200" />
+                        <Code2 className="w-4 h-4 text-gray-400 group-hover:text-orange-300/80 transition-colors duration-200" />
                       </div>
-                      <h3 className="text-sm font-bold text-white group-hover:text-orange-400/90 transition-colors duration-200 uppercase tracking-tight">
+                      <h3 className="text-sm font-bold text-white group-hover:text-orange-300/90 transition-colors duration-200 uppercase tracking-tight">
                         {project.name}
                       </h3>
                     </div>
@@ -251,14 +251,14 @@ const OpenSource = () => {
 
         {/* CTA */}
         <section className="relative py-32 bg-black overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-px bg-orange-500/50" />
+          <div className="absolute top-0 left-0 w-full h-px bg-orange-400/50" />
 
           <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <span className="text-[10px] uppercase tracking-[0.4em] text-orange-400/80 font-mono mb-6 inline-block bg-black px-4 py-2 rounded-full border border-white/10">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-orange-300/80 font-mono mb-6 inline-block bg-black px-4 py-2 rounded-full border border-white/10">
               Contribute
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8 tracking-tight uppercase leading-tight mt-6">
-              Build With <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Us</span>
+              Build With <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-300">Us</span>
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed font-light max-w-2xl mx-auto mb-12">
               Join our community of developers, researchers, and educators building the future of financial literacy.
